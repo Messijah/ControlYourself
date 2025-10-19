@@ -17,6 +17,7 @@
 "main.remaining" = "المتبقي";
 "main.panic" = "طوارئ";
 "main.settings" = "الإعدادات";
+"main.statistics" = "Statistics";
 "main.take_one" = "خذ %@";
 "main.take_one_ready" = "خذ %@! ✨";
 "main.start_day" = "ابدأ يومك بـ%@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "وقت السنوس التالي!";
 "notification.body" = "انتهى المؤقت. استمتع!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "مرحبًا بك في";
+"paywall.feature_balance_title" = "حافظ على التوازن";
+"paywall.feature_balance_desc" = "نظم استهلاكك دون التوقف تمامًا";
+"paywall.feature_progress_title" = "تتبع تقدمك";
+"paywall.feature_progress_desc" = "شاهد إحصائياتك وتقدمك مع مرور الوقت";
+"paywall.feature_panic_title" = "وضع الطوارئ";
+"paywall.feature_panic_desc" = "مرونة عندما تحتاجها";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "المؤقت مرئي دائمًا في Dynamic Island";
+"paywall.trial_period" = "7 أيام تجربة مجانية";
+"paywall.start_trial" = "ابدأ التجربة المجانية";
+"paywall.restore_purchases" = "استعادة المشتريات";
+"paywall.cancel_anytime" = "الإلغاء في أي وقت. بدون التزامات.";
+"paywall.error_title" = "حدث خطأ ما";
+"paywall.error_message" = "لا يمكن إتمام الشراء. حاول مرة أخرى.";
+"paywall.yearly" = "سنوي";
+"paywall.monthly" = "شهري";
+"paywall.per_year" = "سنة";
+"paywall.per_month" = "شهر";
+"paywall.after_trial" = "بعد التجربة";
+
+/* Welcome Tagline */
+"welcome.tagline" = "تحكم في رغبتك";
+
+/* Statistics */
+"statistics.title" = "الإحصائيات";
+"statistics.days_in_balance" = "أيام في التوازن";
+"statistics.days_since_start" = "أيام منذ البداية";
+"statistics.average_per_day" = "المتوسط في اليوم";
+"statistics.average" = "المتوسط";
+"statistics.current_streak" = "السلسلة الحالية";
+"statistics.days_in_row" = "أيام متتالية";
+"statistics.total_used" = "إجمالي الاستخدام";
+"statistics.since_start" = "منذ البداية";
+"statistics.keep_balance_title" = "حافظ على التوازن";
+"statistics.keep_balance_desc" = "تُظهر إحصائياتك مدى نجاحك في الحفاظ على التوازن المخطط له مع مرور الوقت.";
+"statistics.reset_button" = "إعادة تعيين الإحصائيات";
+"statistics.reset_alert_title" = "إعادة تعيين الإحصائيات؟";
+"statistics.reset_alert_message" = "سيتم حذف جميع الإحصائيات بشكل دائم. لا يمكن التراجع عن ذلك.";
+

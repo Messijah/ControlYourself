@@ -17,6 +17,7 @@
 "main.remaining" = "剩餘";
 "main.panic" = "緊急";
 "main.settings" = "設定";
+"main.statistics" = "Statistics";
 "main.take_one" = "來一個%@";
 "main.take_one_ready" = "來一個%@！ ✨";
 "main.start_day" = "用%@開始新的一天！";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "下一個鼻煙的時間！";
 "notification.body" = "你的計時器已過期。享受吧！";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "歡迎使用";
+"paywall.feature_balance_title" = "保持平衡";
+"paywall.feature_balance_desc" = "在不完全停止的情況下調節消費";
+"paywall.feature_progress_title" = "追蹤進度";
+"paywall.feature_progress_desc" = "查看您的統計數據和隨時間的進展";
+"paywall.feature_panic_title" = "緊急模式";
+"paywall.feature_panic_desc" = "需要時的靈活性";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "計時器始終顯示在Dynamic Island中";
+"paywall.trial_period" = "7天免費試用";
+"paywall.start_trial" = "開始免費試用";
+"paywall.restore_purchases" = "恢復購買";
+"paywall.cancel_anytime" = "隨時取消。無需承諾。";
+"paywall.error_title" = "出了點問題";
+"paywall.error_message" = "無法完成購買。請重試。";
+"paywall.yearly" = "年度";
+"paywall.monthly" = "月度";
+"paywall.per_year" = "年";
+"paywall.per_month" = "月";
+"paywall.after_trial" = "試用後";
+
+/* Welcome Tagline */
+"welcome.tagline" = "控制你的衝動";
+
+/* Statistics */
+"statistics.title" = "統計";
+"statistics.days_in_balance" = "保持平衡的天數";
+"statistics.days_since_start" = "自開始以來的天數";
+"statistics.average_per_day" = "每天平均";
+"statistics.average" = "平均";
+"statistics.current_streak" = "當前連續記錄";
+"statistics.days_in_row" = "連續天數";
+"statistics.total_used" = "總使用量";
+"statistics.since_start" = "自開始以來";
+"statistics.keep_balance_title" = "保持平衡";
+"statistics.keep_balance_desc" = "您的統計數據顯示您隨時間保持計劃平衡的情況。";
+"statistics.reset_button" = "重置統計";
+"statistics.reset_alert_title" = "重置統計？";
+"statistics.reset_alert_message" = "所有統計數據將被永久刪除。此操作無法撤消。";
+

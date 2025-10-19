@@ -240,12 +240,8 @@ struct LockScreenLiveActivityView: View {
         return 0.0
     }
 
-    // Get localized substance name for display
+    // Get substance name for display (already localized from SnusManager)
     private func displaySubstanceName() -> String {
-        // For cigarettes, use singular form "cigarett" instead of "cigaretter"
-        if context.state.substanceName == "cigaretter" {
-            return "cigarett"
-        }
         return context.state.substanceName
     }
 

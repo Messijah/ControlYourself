@@ -60,7 +60,7 @@ struct PaywallView: View {
                         }
 
                         VStack(spacing: 8) {
-                            Text("Välkommen till")
+                            Text(NSLocalizedString("paywall.welcome_to", comment: ""))
                                 .font(.system(size: 20, weight: .medium, design: .rounded))
                                 .foregroundColor(.white.opacity(0.8))
 
@@ -73,10 +73,10 @@ struct PaywallView: View {
 
                     // Features
                     VStack(alignment: .leading, spacing: 16) {
-                        FeatureRow(icon: "timer", title: "Håll balansen", description: "Reglera ditt intag utan att sluta helt")
-                        FeatureRow(icon: "chart.line.uptrend.xyaxis", title: "Följ din framgång", description: "Se din statistik och progress över tid")
-                        FeatureRow(icon: "bolt.shield.fill", title: "Panikläge", description: "Flexibilitet när du behöver det")
-                        FeatureRow(icon: "moon.stars.fill", title: "Dynamic Island", description: "Timer alltid synlig i Dynamic Island")
+                        FeatureRow(icon: "timer", title: NSLocalizedString("paywall.feature_balance_title", comment: ""), description: NSLocalizedString("paywall.feature_balance_desc", comment: ""))
+                        FeatureRow(icon: "chart.line.uptrend.xyaxis", title: NSLocalizedString("paywall.feature_progress_title", comment: ""), description: NSLocalizedString("paywall.feature_progress_desc", comment: ""))
+                        FeatureRow(icon: "bolt.shield.fill", title: NSLocalizedString("paywall.feature_panic_title", comment: ""), description: NSLocalizedString("paywall.feature_panic_desc", comment: ""))
+                        FeatureRow(icon: "moon.stars.fill", title: NSLocalizedString("paywall.feature_island_title", comment: ""), description: NSLocalizedString("paywall.feature_island_desc", comment: ""))
                     }
                     .padding(.horizontal, 24)
 
@@ -101,7 +101,7 @@ struct PaywallView: View {
                     }
 
                     // Trial info
-                    Text("7 dagars gratis provperiod")
+                    Text(NSLocalizedString("paywall.trial_period", comment: ""))
                         .font(.system(size: 15, weight: .semibold, design: .rounded))
                         .foregroundColor(.white.opacity(0.9))
                         .padding(.horizontal, 18)
@@ -122,7 +122,7 @@ struct PaywallView: View {
                         }
                     } label: {
                         HStack(spacing: 14) {
-                            Text("Starta gratis provperiod")
+                            Text(NSLocalizedString("paywall.start_trial", comment: ""))
                                 .font(.system(size: 18, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)
 
@@ -175,7 +175,7 @@ struct PaywallView: View {
                             await subscriptionManager.restorePurchases()
                         }
                     } label: {
-                        Text("Återställ köp")
+                        Text(NSLocalizedString("paywall.restore_purchases", comment: ""))
                             .font(.system(size: 14, weight: .medium, design: .rounded))
                             .foregroundColor(.white.opacity(0.7))
                             .underline()
@@ -183,7 +183,7 @@ struct PaywallView: View {
                     .padding(.bottom, 8)
 
                     // Fine print
-                    Text("Avbryt när som helst. Ingen bindningstid.")
+                    Text(NSLocalizedString("paywall.cancel_anytime", comment: ""))
                         .font(.system(size: 12, weight: .regular, design: .rounded))
                         .foregroundColor(.white.opacity(0.5))
                         .multilineTextAlignment(.center)
@@ -192,7 +192,7 @@ struct PaywallView: View {
                 }
             }
         }
-        .alert("Något gick fel", isPresented: $showError) {
+        .alert(NSLocalizedString("paywall.error_title", comment: ""), isPresented: $showError) {
             Button("OK", role: .cancel) {}
         } message: {
             Text(errorMessage)
@@ -228,7 +228,7 @@ struct PaywallView: View {
                 dismiss()
             }
         } catch {
-            errorMessage = "Köpet kunde inte genomföras. Försök igen."
+            errorMessage = NSLocalizedString("paywall.error_message", comment: "")
             showError = true
         }
 
@@ -301,7 +301,7 @@ struct SubscriptionOptionCard: View {
 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(isYearly ? "Helår" : "Månad")
+                        Text(isYearly ? NSLocalizedString("paywall.yearly", comment: "") : NSLocalizedString("paywall.monthly", comment: ""))
                             .font(.system(size: 18, weight: .bold, design: .rounded))
                             .foregroundColor(.white)
 
@@ -318,7 +318,7 @@ struct SubscriptionOptionCard: View {
                         }
                     }
 
-                    Text("\(product.displayPrice)/\(isYearly ? "år" : "mån") efter provperiod")
+                    Text("\(product.displayPrice)/\(isYearly ? NSLocalizedString("paywall.per_year", comment: "") : NSLocalizedString("paywall.per_month", comment: "")) \(NSLocalizedString("paywall.after_trial", comment: ""))")
                         .font(.system(size: 13, weight: .medium, design: .rounded))
                         .foregroundColor(.white.opacity(0.7))
                 }

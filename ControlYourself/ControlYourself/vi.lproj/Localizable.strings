@@ -17,6 +17,7 @@
 "main.remaining" = "Còn lại";
 "main.panic" = "Khẩn cấp";
 "main.settings" = "Cài đặt";
+"main.statistics" = "Statistics";
 "main.take_one" = "Dùng %@";
 "main.take_one_ready" = "Dùng %@! ✨";
 "main.start_day" = "Bắt đầu ngày với %@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Đến giờ snus tiếp theo!";
 "notification.body" = "Đồng hồ của bạn đã hết. Tận hưởng nhé!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Chào mừng đến với";
+"paywall.feature_balance_title" = "Giữ cân bằng";
+"paywall.feature_balance_desc" = "Điều chỉnh mức tiêu thụ mà không cần dừng hoàn toàn";
+"paywall.feature_progress_title" = "Theo dõi tiến độ của bạn";
+"paywall.feature_progress_desc" = "Xem thống kê và tiến độ của bạn theo thời gian";
+"paywall.feature_panic_title" = "Chế độ khẩn cấp";
+"paywall.feature_panic_desc" = "Linh hoạt khi bạn cần";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Bộ đếm thời gian luôn hiển thị trong Dynamic Island";
+"paywall.trial_period" = "Dùng thử miễn phí 7 ngày";
+"paywall.start_trial" = "Bắt đầu dùng thử miễn phí";
+"paywall.restore_purchases" = "Khôi phục mua hàng";
+"paywall.cancel_anytime" = "Hủy bất cứ lúc nào. Không cam kết.";
+"paywall.error_title" = "Đã xảy ra lỗi";
+"paywall.error_message" = "Không thể hoàn tất giao dịch mua. Vui lòng thử lại.";
+"paywall.yearly" = "Hàng năm";
+"paywall.monthly" = "Hàng tháng";
+"paywall.per_year" = "năm";
+"paywall.per_month" = "tháng";
+"paywall.after_trial" = "sau khi dùng thử";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kiểm soát ham muốn của bạn";
+
+/* Statistics */
+"statistics.title" = "Thống kê";
+"statistics.days_in_balance" = "Ngày cân bằng";
+"statistics.days_since_start" = "ngày kể từ khi bắt đầu";
+"statistics.average_per_day" = "Trung bình mỗi ngày";
+"statistics.average" = "trung bình";
+"statistics.current_streak" = "Chuỗi hiện tại";
+"statistics.days_in_row" = "ngày liên tiếp";
+"statistics.total_used" = "Tổng số đã sử dụng";
+"statistics.since_start" = "kể từ khi bắt đầu";
+"statistics.keep_balance_title" = "Giữ cân bằng";
+"statistics.keep_balance_desc" = "Thống kê của bạn cho thấy bạn duy trì sự cân bằng theo kế hoạch tốt như thế nào theo thời gian.";
+"statistics.reset_button" = "Đặt lại thống kê";
+"statistics.reset_alert_title" = "Đặt lại thống kê?";
+"statistics.reset_alert_message" = "Tất cả thống kê sẽ bị xóa vĩnh viễn. Không thể hoàn tác.";
+

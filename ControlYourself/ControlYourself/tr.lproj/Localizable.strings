@@ -17,6 +17,7 @@
 "main.remaining" = "Kalan";
 "main.panic" = "Acil";
 "main.settings" = "Ayarlar";
+"main.statistics" = "Statistics";
 "main.take_one" = "Bir %@ al";
 "main.take_one_ready" = "Bir %@ al! ✨";
 "main.start_day" = "%@ ile güne başla!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Bir sonraki snus zamanı!";
 "notification.body" = "Zamanlayıcınız doldu. Tadını çıkar!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Hoş geldiniz";
+"paywall.feature_balance_title" = "Dengeyi koru";
+"paywall.feature_balance_desc" = "Tamamen bırakmadan tüketiminizi düzenleyin";
+"paywall.feature_progress_title" = "İlerlemenizi takip edin";
+"paywall.feature_progress_desc" = "İstatistiklerinizi ve zaman içindeki ilerlemenizi görün";
+"paywall.feature_panic_title" = "Panik Modu";
+"paywall.feature_panic_desc" = "İhtiyacınız olduğunda esneklik";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Zamanlayıcı her zaman Dynamic Island'da görünür";
+"paywall.trial_period" = "7 gün ücretsiz deneme süresi";
+"paywall.start_trial" = "Ücretsiz denemeyi başlat";
+"paywall.restore_purchases" = "Satın alımları geri yükle";
+"paywall.cancel_anytime" = "İstediğiniz zaman iptal edin. Taahhüt yok.";
+"paywall.error_title" = "Bir şeyler yanlış gitti";
+"paywall.error_message" = "Satın alma tamamlanamadı. Tekrar deneyin.";
+"paywall.yearly" = "Yıllık";
+"paywall.monthly" = "Aylık";
+"paywall.per_year" = "yıl";
+"paywall.per_month" = "ay";
+"paywall.after_trial" = "denemeden sonra";
+
+/* Welcome Tagline */
+"welcome.tagline" = "İsteğinizi kontrol edin";
+
+/* Statistics */
+"statistics.title" = "İstatistikler";
+"statistics.days_in_balance" = "Dengede geçen günler";
+"statistics.days_since_start" = "başlangıçtan bu yana gün";
+"statistics.average_per_day" = "Günlük ortalama";
+"statistics.average" = "ortalama";
+"statistics.current_streak" = "Mevcut seri";
+"statistics.days_in_row" = "ardışık gün";
+"statistics.total_used" = "Toplam kullanım";
+"statistics.since_start" = "başlangıçtan bu yana";
+"statistics.keep_balance_title" = "Dengeyi koru";
+"statistics.keep_balance_desc" = "İstatistikleriniz, planlanan dengenizi zaman içinde ne kadar iyi koruduğunuzu gösterir.";
+"statistics.reset_button" = "İstatistikleri sıfırla";
+"statistics.reset_alert_title" = "İstatistikler sıfırlansın mı?";
+"statistics.reset_alert_message" = "Tüm istatistikler kalıcı olarak silinecektir. Bu geri alınamaz.";
+

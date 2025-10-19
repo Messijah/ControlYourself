@@ -17,6 +17,7 @@
 "main.remaining" = "Kvar";
 "main.panic" = "Panik";
 "main.settings" = "Inställningar";
+"main.statistics" = "Statistik";
 "main.take_one" = "Ta en %@";
 "main.take_one_ready" = "Ta en %@! ✨";
 "main.start_day" = "Starta dagen med en %@!";
@@ -149,3 +150,58 @@
 /* Notifications */
 "notification.title" = "Dags för nästa snus!";
 "notification.body" = "Din timer har gått ut. Det är dags att njuta!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Notiser vid timer klar";
+"settings.timer_notification_subtitle" = "Vibration och ljud när timern når noll";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer-format";
+"settings.timer_format_subtitle" = "Hur timern ska visas";
+"settings.timer_format_hours" = "Timmar";
+"settings.timer_format_hours_example" = "t.ex. 02";
+"settings.timer_format_hours_minutes" = "Timmar:Minuter";
+"settings.timer_format_hours_minutes_example" = "t.ex. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Timmar:Minuter:Sekunder";
+"settings.timer_format_hours_minutes_seconds_example" = "t.ex. 02:30:45";
+
+/* Paywall */
+"paywall.welcome_to" = "Välkommen till";
+"paywall.feature_balance_title" = "Håll balansen";
+"paywall.feature_balance_desc" = "Reglera ditt intag utan att sluta helt";
+"paywall.feature_progress_title" = "Följ din framgång";
+"paywall.feature_progress_desc" = "Se din statistik och progress över tid";
+"paywall.feature_panic_title" = "Panikläge";
+"paywall.feature_panic_desc" = "Flexibilitet när du behöver det";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer alltid synlig i Dynamic Island";
+"paywall.trial_period" = "7 dagars gratis provperiod";
+"paywall.start_trial" = "Starta gratis provperiod";
+"paywall.restore_purchases" = "Återställ köp";
+"paywall.cancel_anytime" = "Avbryt när som helst. Ingen bindningstid.";
+"paywall.error_title" = "Något gick fel";
+"paywall.error_message" = "Köpet kunde inte genomföras. Försök igen.";
+"paywall.yearly" = "Helår";
+"paywall.monthly" = "Månad";
+"paywall.per_year" = "år";
+"paywall.per_month" = "mån";
+"paywall.after_trial" = "efter provperiod";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontrollera din längtan";
+
+/* Statistics */
+"statistics.title" = "Statistik";
+"statistics.days_in_balance" = "Dagar i balans";
+"statistics.days_since_start" = "dagar sedan start";
+"statistics.average_per_day" = "Snitt per dag";
+"statistics.average" = "genomsnitt";
+"statistics.current_streak" = "Nuvarande rad";
+"statistics.days_in_row" = "dagar i rad";
+"statistics.total_used" = "Totalt använt";
+"statistics.since_start" = "sedan start";
+"statistics.keep_balance_title" = "Håll balansen";
+"statistics.keep_balance_desc" = "Din statistik visar hur bra du håller din planerade balans över tid.";
+"statistics.reset_button" = "Återställ statistik";
+"statistics.reset_alert_title" = "Återställ statistik?";
+"statistics.reset_alert_message" = "All statistik kommer att raderas permanent. Detta kan inte ångras.";

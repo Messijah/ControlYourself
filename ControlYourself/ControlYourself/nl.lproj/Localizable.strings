@@ -17,6 +17,7 @@
 "main.remaining" = "Over";
 "main.panic" = "Paniek";
 "main.settings" = "Instellingen";
+"main.statistics" = "Statistics";
 "main.take_one" = "Neem een %@";
 "main.take_one_ready" = "Neem een %@! ✨";
 "main.start_day" = "Start de dag met een %@!";
@@ -149,3 +150,61 @@
 /* Notifications */
 "notification.title" = "Tijd voor de volgende snus!";
 "notification.body" = "Je timer is afgelopen. Tijd om te genieten!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Welkom bij";
+"paywall.feature_balance_title" = "Hou de balans";
+"paywall.feature_balance_desc" = "Reguleer je gebruik zonder volledig te stoppen";
+"paywall.feature_progress_title" = "Volg je vooruitgang";
+"paywall.feature_progress_desc" = "Bekijk je statistieken en vooruitgang in de loop van de tijd";
+"paywall.feature_panic_title" = "Paniektoestand";
+"paywall.feature_panic_desc" = "Flexibiliteit wanneer je het nodig hebt";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer altijd zichtbaar in Dynamic Island";
+"paywall.trial_period" = "7 dagen gratis proefperiode";
+"paywall.start_trial" = "Start gratis proefperiode";
+"paywall.restore_purchases" = "Herstel aankopen";
+"paywall.cancel_anytime" = "Annuleer op elk moment. Geen verplichtingen.";
+"paywall.error_title" = "Er is iets misgegaan";
+"paywall.error_message" = "De aankoop kon niet worden voltooid. Probeer het opnieuw.";
+"paywall.yearly" = "Jaarlijks";
+"paywall.monthly" = "Maandelijks";
+"paywall.per_year" = "jaar";
+"paywall.per_month" = "maand";
+"paywall.after_trial" = "na proefperiode";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Beheers je drang";
+
+/* Statistics */
+"statistics.title" = "Statistieken";
+"statistics.days_in_balance" = "Dagen in balans";
+"statistics.days_since_start" = "dagen sinds start";
+"statistics.average_per_day" = "Gemiddeld per dag";
+"statistics.average" = "gemiddeld";
+"statistics.current_streak" = "Huidige reeks";
+"statistics.days_in_row" = "dagen op rij";
+"statistics.total_used" = "Totaal gebruikt";
+"statistics.since_start" = "sinds start";
+"statistics.keep_balance_title" = "Hou de balans";
+"statistics.keep_balance_desc" = "Je statistieken tonen hoe goed je je geplande balans in de loop van de tijd houdt.";
+"statistics.reset_button" = "Reset statistieken";
+"statistics.reset_alert_title" = "Statistieken resetten?";
+"statistics.reset_alert_message" = "Alle statistieken worden permanent verwijderd. Dit kan niet ongedaan worden gemaakt.";

@@ -17,6 +17,7 @@
 "main.remaining" = "Pozostało";
 "main.panic" = "Awaryjne";
 "main.settings" = "Ustawienia";
+"main.statistics" = "Statistics";
 "main.take_one" = "Weź %@";
 "main.take_one_ready" = "Weź %@! ✨";
 "main.start_day" = "Rozpocznij dzień z %@!";
@@ -149,3 +150,61 @@
 /* Notifications */
 "notification.title" = "Czas na kolejnego snusa!";
 "notification.body" = "Twój timer wygasł. Ciesz się!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Witaj w";
+"paywall.feature_balance_title" = "Zachowaj równowagę";
+"paywall.feature_balance_desc" = "Reguluj spożycie bez całkowitego zaprzestania";
+"paywall.feature_progress_title" = "Śledź swoje postępy";
+"paywall.feature_progress_desc" = "Zobacz swoje statystyki i postępy w czasie";
+"paywall.feature_panic_title" = "Tryb paniki";
+"paywall.feature_panic_desc" = "Elastyczność kiedy jej potrzebujesz";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer zawsze widoczny w Dynamic Island";
+"paywall.trial_period" = "7 dni darmowego okresu próbnego";
+"paywall.start_trial" = "Rozpocznij darmowy okres próbny";
+"paywall.restore_purchases" = "Przywróć zakupy";
+"paywall.cancel_anytime" = "Anuluj w każdej chwili. Bez zobowiązań.";
+"paywall.error_title" = "Coś poszło nie tak";
+"paywall.error_message" = "Zakup nie mógł zostać ukończony. Spróbuj ponownie.";
+"paywall.yearly" = "Rocznie";
+"paywall.monthly" = "Miesięcznie";
+"paywall.per_year" = "rok";
+"paywall.per_month" = "miesiąc";
+"paywall.after_trial" = "po okresie próbnym";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontroluj swoje pragnienie";
+
+/* Statistics */
+"statistics.title" = "Statystyki";
+"statistics.days_in_balance" = "Dni w równowadze";
+"statistics.days_since_start" = "dni od początku";
+"statistics.average_per_day" = "Średnia dziennie";
+"statistics.average" = "średnia";
+"statistics.current_streak" = "Obecna seria";
+"statistics.days_in_row" = "dni z rzędu";
+"statistics.total_used" = "Całkowite użycie";
+"statistics.since_start" = "od początku";
+"statistics.keep_balance_title" = "Zachowaj równowagę";
+"statistics.keep_balance_desc" = "Twoje statystyki pokazują jak dobrze utrzymujesz zaplanowaną równowagę w czasie.";
+"statistics.reset_button" = "Resetuj statystyki";
+"statistics.reset_alert_title" = "Zresetować statystyki?";
+"statistics.reset_alert_message" = "Wszystkie statystyki zostaną trwale usunięte. Nie można tego cofnąć.";

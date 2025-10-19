@@ -40,7 +40,7 @@ struct StatisticsView: View {
                             .font(.system(size: 32, weight: .bold))
                             .foregroundStyle(AppTheme.successGradient)
 
-                        Text("Statistik")
+                        Text(NSLocalizedString("statistics.title", comment: ""))
                             .font(.system(size: 36, weight: .bold, design: .rounded))
                             .foregroundColor(.white)
 
@@ -52,9 +52,9 @@ struct StatisticsView: View {
                     VStack(spacing: 16) {
                         StatCard(
                             icon: "calendar.badge.checkmark",
-                            title: "Dagar i balans",
+                            title: NSLocalizedString("statistics.days_in_balance", comment: ""),
                             value: "\(statisticsManager.daysInBalance)",
-                            subtitle: "dagar sedan start",
+                            subtitle: NSLocalizedString("statistics.days_since_start", comment: ""),
                             gradient: LinearGradient(
                                 colors: [.green, .mint],
                                 startPoint: .topLeading,
@@ -64,9 +64,9 @@ struct StatisticsView: View {
 
                         StatCard(
                             icon: "chart.bar.fill",
-                            title: "Snitt per dag",
+                            title: NSLocalizedString("statistics.average_per_day", comment: ""),
                             value: String(format: "%.1f", statisticsManager.averagePerDay),
-                            subtitle: "genomsnitt",
+                            subtitle: NSLocalizedString("statistics.average", comment: ""),
                             gradient: LinearGradient(
                                 colors: [.blue, .cyan],
                                 startPoint: .topLeading,
@@ -76,9 +76,9 @@ struct StatisticsView: View {
 
                         StatCard(
                             icon: "flame.fill",
-                            title: "Current streak",
+                            title: NSLocalizedString("statistics.current_streak", comment: ""),
                             value: "\(statisticsManager.currentStreak)",
-                            subtitle: "dagar i rad",
+                            subtitle: NSLocalizedString("statistics.days_in_row", comment: ""),
                             gradient: LinearGradient(
                                 colors: [.orange, .red],
                                 startPoint: .topLeading,
@@ -88,9 +88,9 @@ struct StatisticsView: View {
 
                         StatCard(
                             icon: "number.circle.fill",
-                            title: "Totalt använt",
+                            title: NSLocalizedString("statistics.total_used", comment: ""),
                             value: "\(statisticsManager.totalSubstancesUsed)",
-                            subtitle: "sedan start",
+                            subtitle: NSLocalizedString("statistics.since_start", comment: ""),
                             gradient: LinearGradient(
                                 colors: [.purple, .indigo],
                                 startPoint: .topLeading,
@@ -108,11 +108,11 @@ struct StatisticsView: View {
                                 .foregroundColor(.blue)
 
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Håll balansen")
+                                Text(NSLocalizedString("statistics.keep_balance_title", comment: ""))
                                     .font(.system(size: 15, weight: .bold, design: .rounded))
                                     .foregroundColor(.white)
 
-                                Text("Din statistik visar hur bra du håller din planerade balans över tid.")
+                                Text(NSLocalizedString("statistics.keep_balance_desc", comment: ""))
                                     .font(.system(size: 13, weight: .regular, design: .rounded))
                                     .foregroundColor(.white.opacity(0.75))
                                     .fixedSize(horizontal: false, vertical: true)
@@ -131,7 +131,7 @@ struct StatisticsView: View {
                             Image(systemName: "arrow.counterclockwise.circle.fill")
                                 .font(.system(size: 20, weight: .semibold))
 
-                            Text("Återställ statistik")
+                            Text(NSLocalizedString("statistics.reset_button", comment: ""))
                                 .font(.system(size: 17, weight: .semibold, design: .rounded))
                         }
                         .foregroundColor(.white)
@@ -156,15 +156,15 @@ struct StatisticsView: View {
             }
         }
         .foregroundColor(.white)
-        .alert("Återställ statistik?", isPresented: $showResetConfirmation) {
-            Button("Avbryt", role: .cancel) { }
-            Button("Återställ", role: .destructive) {
+        .alert(NSLocalizedString("statistics.reset_alert_title", comment: ""), isPresented: $showResetConfirmation) {
+            Button(NSLocalizedString("alert.cancel", comment: ""), role: .cancel) { }
+            Button(NSLocalizedString("alert.reset", comment: ""), role: .destructive) {
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.success)
                 statisticsManager.resetAllStatistics()
             }
         } message: {
-            Text("All statistik kommer att raderas permanent. Detta kan inte ångras.")
+            Text(NSLocalizedString("statistics.reset_alert_message", comment: ""))
         }
     }
 }

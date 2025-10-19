@@ -17,6 +17,7 @@
 "main.remaining" = "Jäljellä";
 "main.panic" = "Hätä";
 "main.settings" = "Asetukset";
+"main.statistics" = "Statistics";
 "main.take_one" = "Ota %@";
 "main.take_one_ready" = "Ota %@! ✨";
 "main.start_day" = "Aloita päivä %@!";
@@ -149,3 +150,61 @@
 /* Notifications */
 "notification.title" = "Seuraavan nuuskan aika!";
 "notification.body" = "Ajastimesi umpeutui. Nauti!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Tervetuloa";
+"paywall.feature_balance_title" = "Pidä tasapaino";
+"paywall.feature_balance_desc" = "Säätele käyttöäsi lopettamatta kokonaan";
+"paywall.feature_progress_title" = "Seuraa edistymistäsi";
+"paywall.feature_progress_desc" = "Katso tilastojasi ja edistymistäsi ajan myötä";
+"paywall.feature_panic_title" = "Paniikkitila";
+"paywall.feature_panic_desc" = "Joustavuutta kun tarvitset sitä";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Ajastin aina näkyvissä Dynamic Islandissa";
+"paywall.trial_period" = "7 päivän maksuton kokeilujakso";
+"paywall.start_trial" = "Aloita maksuton kokeilu";
+"paywall.restore_purchases" = "Palauta ostokset";
+"paywall.cancel_anytime" = "Peruuta milloin tahansa. Ei sitoumuksia.";
+"paywall.error_title" = "Jokin meni pieleen";
+"paywall.error_message" = "Ostosta ei voitu suorittaa. Yritä uudelleen.";
+"paywall.yearly" = "Vuosittain";
+"paywall.monthly" = "Kuukausittain";
+"paywall.per_year" = "vuosi";
+"paywall.per_month" = "kuukausi";
+"paywall.after_trial" = "kokeilun jälkeen";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Hallitse himoasi";
+
+/* Statistics */
+"statistics.title" = "Tilastot";
+"statistics.days_in_balance" = "Päivää tasapainossa";
+"statistics.days_since_start" = "päivää alusta";
+"statistics.average_per_day" = "Keskiarvo päivässä";
+"statistics.average" = "keskiarvo";
+"statistics.current_streak" = "Nykyinen putki";
+"statistics.days_in_row" = "päivää peräkkäin";
+"statistics.total_used" = "Yhteensä käytetty";
+"statistics.since_start" = "alusta lähtien";
+"statistics.keep_balance_title" = "Pidä tasapaino";
+"statistics.keep_balance_desc" = "Tilastosi näyttävät kuinka hyvin pidät suunnitellun tasapainosi ajan myötä.";
+"statistics.reset_button" = "Nollaa tilastot";
+"statistics.reset_alert_title" = "Nollataanko tilastot?";
+"statistics.reset_alert_message" = "Kaikki tilastot poistetaan pysyvästi. Tätä ei voi peruuttaa.";

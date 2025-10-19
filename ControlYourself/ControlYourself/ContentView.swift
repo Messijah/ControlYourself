@@ -507,6 +507,15 @@ struct NjutningsInställningarView: View {
     @State private var snusInterval: Int = 2  // Default: 2 hours
     @State private var paniksnus: Int = 5     // Default: 5 panic per week
 
+    // Localized substance name for display
+    private var localizedSubstanceName: String {
+        if selectedNjutning == .cigaretter {
+            return NSLocalizedString("substance.cigarettes", comment: "")
+        } else {
+            return NSLocalizedString("substance.snus", comment: "")
+        }
+    }
+
     var body: some View {
         ZStack {
             AppTheme.primaryGradient
@@ -520,7 +529,7 @@ struct NjutningsInställningarView: View {
                             .font(.system(size: 16, weight: .medium, design: .rounded))
                             .foregroundColor(.white.opacity(0.7))
 
-                        Text(selectedNjutning.rawValue)
+                        Text(localizedSubstanceName)
                             .font(.system(size: 32, weight: .bold, design: .rounded))
                             .foregroundStyle(AppTheme.accentGradient)
                     }
@@ -536,7 +545,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "number.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), selectedNjutning.rawValue.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), localizedSubstanceName.lowercased()))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -561,7 +570,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), selectedNjutning.rawValue.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), localizedSubstanceName.lowercased()))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -586,7 +595,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), selectedNjutning.rawValue.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), localizedSubstanceName.lowercased()))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -750,7 +759,7 @@ struct WelcomeView: View {
                     .opacity(logoOpacity)
 
                 // Tagline - bigger and more prominent with warm purple gradient
-                Text("Control your URGE")
+                Text(NSLocalizedString("welcome.tagline", comment: ""))
                     .font(.system(size: 38, weight: .bold, design: .rounded))
                     .foregroundStyle(
                         LinearGradient(

@@ -17,6 +17,7 @@
 "main.remaining" = "Maradt";
 "main.panic" = "Vészhelyzeti";
 "main.settings" = "Beállítások";
+"main.statistics" = "Statistics";
 "main.take_one" = "Végy egy %@";
 "main.take_one_ready" = "Végy egy %@! ✨";
 "main.start_day" = "Kezdd a napot %@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Ideje a következő snusnak!";
 "notification.body" = "Az időzítőd lejárt. Élvezd!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Üdvözlünk a";
+"paywall.feature_balance_title" = "Tartsd az egyensúlyt";
+"paywall.feature_balance_desc" = "Szabályozd a fogyasztást anélkül, hogy teljesen abbahagynád";
+"paywall.feature_progress_title" = "Kövesd a haladásod";
+"paywall.feature_progress_desc" = "Nézd meg a statisztikáidat és a haladásod idővel";
+"paywall.feature_panic_title" = "Pánik mód";
+"paywall.feature_panic_desc" = "Rugalmasság amikor szükséged van rá";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Az időzítő mindig látható a Dynamic Island-ben";
+"paywall.trial_period" = "7 napos ingyenes próbaidőszak";
+"paywall.start_trial" = "Ingyenes próbaidőszak indítása";
+"paywall.restore_purchases" = "Vásárlások visszaállítása";
+"paywall.cancel_anytime" = "Bármikor lemondható. Nincs kötelezettség.";
+"paywall.error_title" = "Valami hiba történt";
+"paywall.error_message" = "A vásárlás nem fejeződött be. Próbáld újra.";
+"paywall.yearly" = "Évente";
+"paywall.monthly" = "Havonta";
+"paywall.per_year" = "év";
+"paywall.per_month" = "hónap";
+"paywall.after_trial" = "próbaidőszak után";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontrolláld a vágyad";
+
+/* Statistics */
+"statistics.title" = "Statisztikák";
+"statistics.days_in_balance" = "Napok egyensúlyban";
+"statistics.days_since_start" = "nap a kezdet óta";
+"statistics.average_per_day" = "Napi átlag";
+"statistics.average" = "átlag";
+"statistics.current_streak" = "Jelenlegi sorozat";
+"statistics.days_in_row" = "nap egymás után";
+"statistics.total_used" = "Összesen felhasznált";
+"statistics.since_start" = "a kezdet óta";
+"statistics.keep_balance_title" = "Tartsd az egyensúlyt";
+"statistics.keep_balance_desc" = "A statisztikáid megmutatják, mennyire jól tartod a tervezett egyensúlyod idővel.";
+"statistics.reset_button" = "Statisztikák visszaállítása";
+"statistics.reset_alert_title" = "Statisztikák visszaállítása?";
+"statistics.reset_alert_message" = "Minden statisztika véglegesen törlődik. Ez nem vonható vissza.";
+

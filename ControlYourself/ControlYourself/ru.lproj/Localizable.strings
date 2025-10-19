@@ -17,6 +17,7 @@
 "main.remaining" = "Осталось";
 "main.panic" = "Паника";
 "main.settings" = "Настройки";
+"main.statistics" = "Statistics";
 "main.take_one" = "Взять %@";
 "main.take_one_ready" = "Взять %@! ✨";
 "main.start_day" = "Начать день с %@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Время для следующего снюса!";
 "notification.body" = "Твой таймер истёк. Время наслаждаться!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Добро пожаловать в";
+"paywall.feature_balance_title" = "Держите баланс";
+"paywall.feature_balance_desc" = "Регулируйте потребление без полного отказа";
+"paywall.feature_progress_title" = "Отслеживайте прогресс";
+"paywall.feature_progress_desc" = "Просматривайте статистику и прогресс со временем";
+"paywall.feature_panic_title" = "Экстренный режим";
+"paywall.feature_panic_desc" = "Гибкость когда вам нужно";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Таймер всегда виден в Dynamic Island";
+"paywall.trial_period" = "7 дней бесплатного пробного периода";
+"paywall.start_trial" = "Начать бесплатный пробный период";
+"paywall.restore_purchases" = "Восстановить покупки";
+"paywall.cancel_anytime" = "Отменить в любое время. Никаких обязательств.";
+"paywall.error_title" = "Что-то пошло не так";
+"paywall.error_message" = "Покупка не может быть завершена. Попробуйте снова.";
+"paywall.yearly" = "Годовая";
+"paywall.monthly" = "Месячная";
+"paywall.per_year" = "год";
+"paywall.per_month" = "месяц";
+"paywall.after_trial" = "после пробного периода";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Контролируйте свое желание";
+
+/* Statistics */
+"statistics.title" = "Статистика";
+"statistics.days_in_balance" = "Дней в балансе";
+"statistics.days_since_start" = "дней с начала";
+"statistics.average_per_day" = "Среднее в день";
+"statistics.average" = "среднее";
+"statistics.current_streak" = "Текущая серия";
+"statistics.days_in_row" = "дней подряд";
+"statistics.total_used" = "Всего использовано";
+"statistics.since_start" = "с начала";
+"statistics.keep_balance_title" = "Держите баланс";
+"statistics.keep_balance_desc" = "Ваша статистика показывает, насколько хорошо вы поддерживаете запланированный баланс со временем.";
+"statistics.reset_button" = "Сбросить статистику";
+"statistics.reset_alert_title" = "Сбросить статистику?";
+"statistics.reset_alert_message" = "Вся статистика будет удалена навсегда. Это нельзя отменить.";
+

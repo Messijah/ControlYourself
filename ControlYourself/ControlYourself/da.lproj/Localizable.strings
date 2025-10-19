@@ -17,6 +17,7 @@
 "main.remaining" = "Tilbage";
 "main.panic" = "Nød";
 "main.settings" = "Indstillinger";
+"main.statistics" = "Statistics";
 "main.take_one" = "Tag en %@";
 "main.take_one_ready" = "Tag en %@! ✨";
 "main.start_day" = "Start dagen med %@!";
@@ -149,3 +150,61 @@
 /* Notifications */
 "notification.title" = "Tid til næste snus!";
 "notification.body" = "Din timer er udløbet. Nyd det!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Velkommen til";
+"paywall.feature_balance_title" = "Hold balancen";
+"paywall.feature_balance_desc" = "Reguler dit indtag uden at stoppe helt";
+"paywall.feature_progress_title" = "Følg din fremgang";
+"paywall.feature_progress_desc" = "Se din statistik og fremgang over tid";
+"paywall.feature_panic_title" = "Nødtilstand";
+"paywall.feature_panic_desc" = "Fleksibilitet når du har brug for det";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer altid synlig i Dynamic Island";
+"paywall.trial_period" = "7 dages gratis prøveperiode";
+"paywall.start_trial" = "Start gratis prøveperiode";
+"paywall.restore_purchases" = "Gendan køb";
+"paywall.cancel_anytime" = "Annuller når som helst. Ingen binding.";
+"paywall.error_title" = "Noget gik galt";
+"paywall.error_message" = "Købet kunne ikke gennemføres. Prøv igen.";
+"paywall.yearly" = "Årligt";
+"paywall.monthly" = "Månedligt";
+"paywall.per_year" = "år";
+"paywall.per_month" = "måned";
+"paywall.after_trial" = "efter prøveperiode";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontroller din trang";
+
+/* Statistics */
+"statistics.title" = "Statistik";
+"statistics.days_in_balance" = "Dage i balance";
+"statistics.days_since_start" = "dage siden start";
+"statistics.average_per_day" = "Gennemsnit pr. dag";
+"statistics.average" = "gennemsnit";
+"statistics.current_streak" = "Nuværende serie";
+"statistics.days_in_row" = "dage i træk";
+"statistics.total_used" = "Totalt brugt";
+"statistics.since_start" = "siden start";
+"statistics.keep_balance_title" = "Hold balancen";
+"statistics.keep_balance_desc" = "Din statistik viser hvor godt du holder din planlagte balance over tid.";
+"statistics.reset_button" = "Nulstil statistik";
+"statistics.reset_alert_title" = "Nulstil statistik?";
+"statistics.reset_alert_message" = "Al statistik vil blive slettet permanent. Dette kan ikke fortrydes.";

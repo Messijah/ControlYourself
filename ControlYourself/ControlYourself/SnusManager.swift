@@ -32,13 +32,22 @@ class SnusManager: ObservableObject {
     @Published var paniksnusLeft: Int
     @Published var countdownTime: TimeInterval
     @Published var paniksnus: Int
-    @Published var substanceName: String = "snus" // Lowercase substance name for dynamic text
+    @Published var substanceName: String = "snus" // Lowercase substance name for dynamic text (internal identifier)
     @Published var snusInterval: TimeInterval // Tid mellan snusar i sekunder.
     private var timer: Timer?
     private var isTimerRunning: Bool = false
     private var currentActivity: Activity<SnusTimerAttributes>?
     private var timerEndDate: Date? // Track the actual end date to avoid time drift
     private var dailyCheckTimer: Timer? // Timer to check for daily reset
+
+    // Computed property for localized substance name
+    var localizedSubstanceName: String {
+        if substanceName.lowercased().contains("cigar") {
+            return NSLocalizedString("substance.cigarettes", comment: "")
+        } else {
+            return NSLocalizedString("substance.snus", comment: "")
+        }
+    }
 
     // Public computed property to access timer end date for UI
     var currentTimerEndDate: Date? {
@@ -427,7 +436,7 @@ class SnusManager: ObservableObject {
         let currentSnusLeft = await MainActor.run { snusLeft }
         let currentCountdownTime = await MainActor.run { countdownTime }
         let currentSnusInterval = await MainActor.run { snusInterval }
-        let currentSubstanceName = await MainActor.run { substanceName }
+        let currentSubstanceName = await MainActor.run { localizedSubstanceName }
 
         let attributes = SnusTimerAttributes(
             startTime: startTime,
@@ -489,7 +498,7 @@ class SnusManager: ObservableObject {
             snusLeft: snusLeft,
             totalTime: snusInterval,
             celebrationMessage: message,
-            substanceName: substanceName
+            substanceName: localizedSubstanceName
         )
 
         Task {
@@ -511,7 +520,7 @@ class SnusManager: ObservableObject {
             snusLeft: snusLeft,
             totalTime: snusInterval,
             celebrationMessage: celebrationMessages().randomElement(),
-            substanceName: substanceName
+            substanceName: localizedSubstanceName
         )
 
         await activity.end(

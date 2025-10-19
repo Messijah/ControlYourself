@@ -17,6 +17,7 @@
 "main.remaining" = "残り";
 "main.panic" = "緊急";
 "main.settings" = "設定";
+"main.statistics" = "Statistics";
 "main.take_one" = "%@を吸う";
 "main.take_one_ready" = "%@を吸おう！ ✨";
 "main.start_day" = "%@で一日を始めよう！";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "次のスヌースの時間！";
 "notification.body" = "タイマーが終了しました。楽しんで！";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "ようこそ";
+"paywall.feature_balance_title" = "バランスを保つ";
+"paywall.feature_balance_desc" = "完全にやめることなく消費を調整する";
+"paywall.feature_progress_title" = "進捗を追跡";
+"paywall.feature_progress_desc" = "統計と進捗を時間とともに確認";
+"paywall.feature_panic_title" = "パニックモード";
+"paywall.feature_panic_desc" = "必要なときの柔軟性";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Dynamic Islandでタイマーが常に表示";
+"paywall.trial_period" = "7日間無料トライアル";
+"paywall.start_trial" = "無料トライアルを開始";
+"paywall.restore_purchases" = "購入を復元";
+"paywall.cancel_anytime" = "いつでもキャンセル可能。契約不要。";
+"paywall.error_title" = "エラーが発生しました";
+"paywall.error_message" = "購入を完了できませんでした。もう一度お試しください。";
+"paywall.yearly" = "年間";
+"paywall.monthly" = "月間";
+"paywall.per_year" = "年";
+"paywall.per_month" = "月";
+"paywall.after_trial" = "トライアル後";
+
+/* Welcome Tagline */
+"welcome.tagline" = "欲求をコントロール";
+
+/* Statistics */
+"statistics.title" = "統計";
+"statistics.days_in_balance" = "バランスを保った日数";
+"statistics.days_since_start" = "開始からの日数";
+"statistics.average_per_day" = "1日の平均";
+"statistics.average" = "平均";
+"statistics.current_streak" = "現在の連続記録";
+"statistics.days_in_row" = "連続日数";
+"statistics.total_used" = "総使用量";
+"statistics.since_start" = "開始から";
+"statistics.keep_balance_title" = "バランスを保つ";
+"statistics.keep_balance_desc" = "統計は、計画したバランスを時間とともにどれだけうまく維持しているかを示します。";
+"statistics.reset_button" = "統計をリセット";
+"statistics.reset_alert_title" = "統計をリセットしますか？";
+"statistics.reset_alert_message" = "すべての統計が完全に削除されます。元に戻すことはできません。";
+

@@ -1,7 +1,7 @@
 /* Welcome & Setup */
 "welcome.title" = "Welcome!";
 "welcome.subtitle" = "Choose what you want to control";
-"substance.snus" = "Snus";
+"substance.snus" = "Nicotine pouch";
 "substance.cigarettes" = "Cigarettes";
 "setup.title" = "Settings for";
 "setup.weekday_start" = "Weekday start time";
@@ -17,6 +17,7 @@
 "main.remaining" = "Left";
 "main.panic" = "Panic";
 "main.settings" = "Settings";
+"main.statistics" = "Statistics";
 "main.take_one" = "Take a %@";
 "main.take_one_ready" = "Take a %@! ✨";
 "main.start_day" = "Start the day with a %@!";
@@ -147,5 +148,60 @@
 "alert.ok" = "OK";
 
 /* Notifications */
-"notification.title" = "Time for the next snus!";
+"notification.title" = "Timer complete!";
 "notification.body" = "Your timer has expired. Time to enjoy!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+/* Paywall */
+"paywall.welcome_to" = "Welcome to";
+"paywall.feature_balance_title" = "Keep the balance";
+"paywall.feature_balance_desc" = "Regulate your intake without quitting completely";
+"paywall.feature_progress_title" = "Track your progress";
+"paywall.feature_progress_desc" = "See your statistics and progress over time";
+"paywall.feature_panic_title" = "Panic mode";
+"paywall.feature_panic_desc" = "Flexibility when you need it";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer always visible in Dynamic Island";
+"paywall.trial_period" = "7 days free trial";
+"paywall.start_trial" = "Start free trial";
+"paywall.restore_purchases" = "Restore purchases";
+"paywall.cancel_anytime" = "Cancel anytime. No commitment.";
+"paywall.error_title" = "Something went wrong";
+"paywall.error_message" = "The purchase could not be completed. Try again.";
+"paywall.yearly" = "Yearly";
+"paywall.monthly" = "Monthly";
+"paywall.per_year" = "year";
+"paywall.per_month" = "month";
+"paywall.after_trial" = "after trial";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Control your URGE";
+
+/* Statistics */
+"statistics.title" = "Statistics";
+"statistics.days_in_balance" = "Days in balance";
+"statistics.days_since_start" = "days since start";
+"statistics.average_per_day" = "Average per day";
+"statistics.average" = "average";
+"statistics.current_streak" = "Current streak";
+"statistics.days_in_row" = "days in a row";
+"statistics.total_used" = "Total used";
+"statistics.since_start" = "since start";
+"statistics.keep_balance_title" = "Keep the balance";
+"statistics.keep_balance_desc" = "Your statistics show how well you maintain your planned balance over time.";
+"statistics.reset_button" = "Reset statistics";
+"statistics.reset_alert_title" = "Reset statistics?";
+"statistics.reset_alert_message" = "All statistics will be permanently deleted. This cannot be undone.";

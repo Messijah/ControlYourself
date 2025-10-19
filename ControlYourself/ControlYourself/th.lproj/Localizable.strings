@@ -17,6 +17,7 @@
 "main.remaining" = "เหลืออยู่";
 "main.panic" = "ฉุกเฉิน";
 "main.settings" = "การตั้งค่า";
+"main.statistics" = "Statistics";
 "main.take_one" = "ใช้%@";
 "main.take_one_ready" = "ใช้%@! ✨";
 "main.start_day" = "เริ่มวันด้วย%@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "เวลาสนัสตัวต่อไป!";
 "notification.body" = "ตัวจับเวลาของคุณหมดเวลาแล้ว สนุกนะ!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "ยินดีต้อนรับสู่";
+"paywall.feature_balance_title" = "รักษาสมดุล";
+"paywall.feature_balance_desc" = "ควบคุมการบริโภคโดยไม่ต้องหยุดโดยสมบูรณ์";
+"paywall.feature_progress_title" = "ติดตามความคืบหน้าของคุณ";
+"paywall.feature_progress_desc" = "ดูสถิติและความคืบหน้าของคุณเมื่อเวลาผ่านไป";
+"paywall.feature_panic_title" = "โหมดฉุกเฉิน";
+"paywall.feature_panic_desc" = "ความยืดหยุ่นเมื่อคุณต้องการ";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "ตัวจับเวลาที่มองเห็นได้เสมอใน Dynamic Island";
+"paywall.trial_period" = "ทดลองใช้ฟรี 7 วัน";
+"paywall.start_trial" = "เริ่มทดลองใช้ฟรี";
+"paywall.restore_purchases" = "กู้คืนการซื้อ";
+"paywall.cancel_anytime" = "ยกเลิกได้ทุกเมื่อ ไม่มีข้อผูกมัด";
+"paywall.error_title" = "เกิดข้อผิดพลาด";
+"paywall.error_message" = "ไม่สามารถทำการซื้อให้เสร็จสมบูรณ์ได้ ลองอีกครั้ง";
+"paywall.yearly" = "รายปี";
+"paywall.monthly" = "รายเดือน";
+"paywall.per_year" = "ปี";
+"paywall.per_month" = "เดือน";
+"paywall.after_trial" = "หลังจากทดลองใช้";
+
+/* Welcome Tagline */
+"welcome.tagline" = "ควบคุมความต้องการของคุณ";
+
+/* Statistics */
+"statistics.title" = "สถิติ";
+"statistics.days_in_balance" = "วันที่มีความสมดุล";
+"statistics.days_since_start" = "วันนับจากเริ่มต้น";
+"statistics.average_per_day" = "เฉลี่ยต่อวัน";
+"statistics.average" = "เฉลี่ย";
+"statistics.current_streak" = "สถิติติดต่อกันปัจจุบัน";
+"statistics.days_in_row" = "วันติดต่อกัน";
+"statistics.total_used" = "ใช้ทั้งหมด";
+"statistics.since_start" = "นับจากเริ่มต้น";
+"statistics.keep_balance_title" = "รักษาสมดุล";
+"statistics.keep_balance_desc" = "สถิติของคุณแสดงให้เห็นว่าคุณรักษาสมดุลตามแผนได้ดีแค่ไหนเมื่อเวลาผ่านไป";
+"statistics.reset_button" = "รีเซ็ตสถิติ";
+"statistics.reset_alert_title" = "รีเซ็ตสถิติ?";
+"statistics.reset_alert_message" = "สถิติทั้งหมดจะถูกลบอย่างถาวร ไม่สามารถย้อนกลับได้";
+

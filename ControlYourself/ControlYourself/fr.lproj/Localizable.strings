@@ -17,6 +17,7 @@
 "main.remaining" = "Restant";
 "main.panic" = "Panique";
 "main.settings" = "Paramètres";
+"main.statistics" = "Statistics";
 "main.take_one" = "Prendre un %@";
 "main.take_one_ready" = "Prends un %@ ! ✨";
 "main.start_day" = "Commence la journée avec un %@ !";
@@ -149,3 +150,61 @@
 /* Notifications */
 "notification.title" = "C'est l'heure du prochain snus !";
 "notification.body" = "Ton minuteur a expiré. C'est l'heure d'en profiter !";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Bienvenue sur";
+"paywall.feature_balance_title" = "Gardez l'équilibre";
+"paywall.feature_balance_desc" = "Réglez votre consommation sans arrêter complètement";
+"paywall.feature_progress_title" = "Suivez vos progrès";
+"paywall.feature_progress_desc" = "Voyez vos statistiques et progrès au fil du temps";
+"paywall.feature_panic_title" = "Mode panique";
+"paywall.feature_panic_desc" = "Flexibilité quand vous en avez besoin";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Minuteur toujours visible dans Dynamic Island";
+"paywall.trial_period" = "7 jours d'essai gratuit";
+"paywall.start_trial" = "Commencer l'essai gratuit";
+"paywall.restore_purchases" = "Restaurer les achats";
+"paywall.cancel_anytime" = "Annulez à tout moment. Sans engagement.";
+"paywall.error_title" = "Quelque chose s'est mal passé";
+"paywall.error_message" = "L'achat n'a pas pu être finalisé. Réessayez.";
+"paywall.yearly" = "Annuel";
+"paywall.monthly" = "Mensuel";
+"paywall.per_year" = "an";
+"paywall.per_month" = "mois";
+"paywall.after_trial" = "après l'essai";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Contrôlez votre envie";
+
+/* Statistics */
+"statistics.title" = "Statistiques";
+"statistics.days_in_balance" = "Jours en équilibre";
+"statistics.days_since_start" = "jours depuis le début";
+"statistics.average_per_day" = "Moyenne par jour";
+"statistics.average" = "moyenne";
+"statistics.current_streak" = "Série actuelle";
+"statistics.days_in_row" = "jours d'affilée";
+"statistics.total_used" = "Total utilisé";
+"statistics.since_start" = "depuis le début";
+"statistics.keep_balance_title" = "Gardez l'équilibre";
+"statistics.keep_balance_desc" = "Vos statistiques montrent à quel point vous maintenez votre équilibre prévu au fil du temps.";
+"statistics.reset_button" = "Réinitialiser les statistiques";
+"statistics.reset_alert_title" = "Réinitialiser les statistiques?";
+"statistics.reset_alert_message" = "Toutes les statistiques seront supprimées définitivement. Cela ne peut pas être annulé.";

@@ -17,6 +17,7 @@
 "main.remaining" = "Απομένουν";
 "main.panic" = "Έκτακτο";
 "main.settings" = "Ρυθμίσεις";
+"main.statistics" = "Statistics";
 "main.take_one" = "Πάρε ένα %@";
 "main.take_one_ready" = "Πάρε ένα %@! ✨";
 "main.start_day" = "Ξεκίνα τη μέρα με %@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Ώρα για το επόμενο snus!";
 "notification.body" = "Το χρονόμετρό σου έληξε. Απόλαυσέ το!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Καλώς ήρθατε στο";
+"paywall.feature_balance_title" = "Διατηρήστε την ισορροπία";
+"paywall.feature_balance_desc" = "Ρυθμίστε την κατανάλωση χωρίς να σταματήσετε εντελώς";
+"paywall.feature_progress_title" = "Παρακολουθήστε την πρόοδό σας";
+"paywall.feature_progress_desc" = "Δείτε τα στατιστικά και την πρόοδό σας με το χρόνο";
+"paywall.feature_panic_title" = "Λειτουργία Πανικού";
+"paywall.feature_panic_desc" = "Ευελιξία όταν τη χρειάζεστε";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Χρονόμετρο πάντα ορατό στο Dynamic Island";
+"paywall.trial_period" = "7 ημέρες δωρεάν δοκιμαστική περίοδος";
+"paywall.start_trial" = "Έναρξη δωρεάν δοκιμής";
+"paywall.restore_purchases" = "Επαναφορά αγορών";
+"paywall.cancel_anytime" = "Ακύρωση ανά πάσα στιγμή. Χωρίς δεσμεύσεις.";
+"paywall.error_title" = "Κάτι πήγε στραβά";
+"paywall.error_message" = "Η αγορά δεν ολοκληρώθηκε. Δοκιμάστε ξανά.";
+"paywall.yearly" = "Ετήσια";
+"paywall.monthly" = "Μηνιαία";
+"paywall.per_year" = "έτος";
+"paywall.per_month" = "μήνας";
+"paywall.after_trial" = "μετά τη δοκιμή";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Ελέγξτε την παρόρμησή σας";
+
+/* Statistics */
+"statistics.title" = "Στατιστικά";
+"statistics.days_in_balance" = "Ημέρες σε ισορροπία";
+"statistics.days_since_start" = "ημέρες από την έναρξη";
+"statistics.average_per_day" = "Μέσος όρος ανά ημέρα";
+"statistics.average" = "μέσος όρος";
+"statistics.current_streak" = "Τρέχουσα σειρά";
+"statistics.days_in_row" = "ημέρες στη σειρά";
+"statistics.total_used" = "Συνολική χρήση";
+"statistics.since_start" = "από την έναρξη";
+"statistics.keep_balance_title" = "Διατηρήστε την ισορροπία";
+"statistics.keep_balance_desc" = "Τα στατιστικά σας δείχνουν πόσο καλά διατηρείτε την προγραμματισμένη ισορροπία σας με το χρόνο.";
+"statistics.reset_button" = "Επαναφορά στατιστικών";
+"statistics.reset_alert_title" = "Επαναφορά στατιστικών;";
+"statistics.reset_alert_message" = "Όλα τα στατιστικά θα διαγραφούν οριστικά. Αυτό δεν μπορεί να αναιρεθεί.";
+

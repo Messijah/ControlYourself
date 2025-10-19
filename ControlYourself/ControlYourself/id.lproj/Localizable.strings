@@ -17,6 +17,7 @@
 "main.remaining" = "Tersisa";
 "main.panic" = "Darurat";
 "main.settings" = "Pengaturan";
+"main.statistics" = "Statistics";
 "main.take_one" = "Ambil %@";
 "main.take_one_ready" = "Ambil %@! ✨";
 "main.start_day" = "Mulai hari dengan %@!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "Waktunya snus berikutnya!";
 "notification.body" = "Timermu habis. Nikmati!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Selamat datang di";
+"paywall.feature_balance_title" = "Jaga keseimbangan";
+"paywall.feature_balance_desc" = "Atur konsumsi tanpa berhenti sepenuhnya";
+"paywall.feature_progress_title" = "Lacak kemajuan Anda";
+"paywall.feature_progress_desc" = "Lihat statistik dan kemajuan Anda dari waktu ke waktu";
+"paywall.feature_panic_title" = "Mode Panik";
+"paywall.feature_panic_desc" = "Fleksibilitas saat Anda membutuhkannya";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer selalu terlihat di Dynamic Island";
+"paywall.trial_period" = "Uji coba gratis 7 hari";
+"paywall.start_trial" = "Mulai uji coba gratis";
+"paywall.restore_purchases" = "Pulihkan pembelian";
+"paywall.cancel_anytime" = "Batalkan kapan saja. Tanpa komitmen.";
+"paywall.error_title" = "Terjadi kesalahan";
+"paywall.error_message" = "Pembelian tidak dapat diselesaikan. Coba lagi.";
+"paywall.yearly" = "Tahunan";
+"paywall.monthly" = "Bulanan";
+"paywall.per_year" = "tahun";
+"paywall.per_month" = "bulan";
+"paywall.after_trial" = "setelah uji coba";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kendalikan dorongan Anda";
+
+/* Statistics */
+"statistics.title" = "Statistik";
+"statistics.days_in_balance" = "Hari dalam keseimbangan";
+"statistics.days_since_start" = "hari sejak mulai";
+"statistics.average_per_day" = "Rata-rata per hari";
+"statistics.average" = "rata-rata";
+"statistics.current_streak" = "Rentetan saat ini";
+"statistics.days_in_row" = "hari berturut-turut";
+"statistics.total_used" = "Total penggunaan";
+"statistics.since_start" = "sejak mulai";
+"statistics.keep_balance_title" = "Jaga keseimbangan";
+"statistics.keep_balance_desc" = "Statistik Anda menunjukkan seberapa baik Anda menjaga keseimbangan yang direncanakan dari waktu ke waktu.";
+"statistics.reset_button" = "Reset statistik";
+"statistics.reset_alert_title" = "Reset statistik?";
+"statistics.reset_alert_message" = "Semua statistik akan dihapus secara permanen. Ini tidak dapat dibatalkan.";
+

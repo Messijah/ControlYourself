@@ -17,6 +17,7 @@
 "main.remaining" = "남음";
 "main.panic" = "긴급";
 "main.settings" = "설정";
+"main.statistics" = "Statistics";
 "main.take_one" = "%@ 하나";
 "main.take_one_ready" = "%@ 하나! ✨";
 "main.start_day" = "%@로 하루를 시작하세요!";
@@ -149,3 +150,62 @@
 /* Notifications */
 "notification.title" = "다음 스누스 시간!";
 "notification.body" = "타이머가 끝났어요. 즐기세요!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Completion alerts";
+"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer display";
+"settings.timer_format_subtitle" = "How timer is shown";
+"settings.timer_format_hours" = "Hours only";
+"settings.timer_format_hours_example" = "e.g. 02";
+"settings.timer_format_hours_minutes" = "Hours:Minutes";
+"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
+"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "환영합니다";
+"paywall.feature_balance_title" = "균형 유지하기";
+"paywall.feature_balance_desc" = "완전히 중단하지 않고 소비를 조절하세요";
+"paywall.feature_progress_title" = "진행 상황 추적";
+"paywall.feature_progress_desc" = "시간이 지남에 따라 통계와 진행 상황을 확인하세요";
+"paywall.feature_panic_title" = "비상 모드";
+"paywall.feature_panic_desc" = "필요할 때 유연성";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Dynamic Island에서 항상 타이머 표시";
+"paywall.trial_period" = "7일 무료 체험";
+"paywall.start_trial" = "무료 체험 시작";
+"paywall.restore_purchases" = "구매 복원";
+"paywall.cancel_anytime" = "언제든지 취소 가능. 약정 없음.";
+"paywall.error_title" = "문제가 발생했습니다";
+"paywall.error_message" = "구매를 완료할 수 없습니다. 다시 시도하세요.";
+"paywall.yearly" = "연간";
+"paywall.monthly" = "월간";
+"paywall.per_year" = "년";
+"paywall.per_month" = "월";
+"paywall.after_trial" = "체험 후";
+
+/* Welcome Tagline */
+"welcome.tagline" = "충동 조절하기";
+
+/* Statistics */
+"statistics.title" = "통계";
+"statistics.days_in_balance" = "균형을 유지한 날";
+"statistics.days_since_start" = "시작 이후 일수";
+"statistics.average_per_day" = "하루 평균";
+"statistics.average" = "평균";
+"statistics.current_streak" = "현재 연속 기록";
+"statistics.days_in_row" = "연속 일수";
+"statistics.total_used" = "총 사용량";
+"statistics.since_start" = "시작 이후";
+"statistics.keep_balance_title" = "균형 유지하기";
+"statistics.keep_balance_desc" = "통계는 시간이 지남에 따라 계획된 균형을 얼마나 잘 유지하는지 보여줍니다.";
+"statistics.reset_button" = "통계 재설정";
+"statistics.reset_alert_title" = "통계를 재설정하시겠습니까?";
+"statistics.reset_alert_message" = "모든 통계가 영구적으로 삭제됩니다. 되돌릴 수 없습니다.";
+

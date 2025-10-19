@@ -333,7 +333,7 @@ struct LandingPageView: View {
                                     .foregroundColor(.white)
                             }
 
-                            Text(isFirstOfDay ? String(format: NSLocalizedString("main.start_day", comment: ""), snusManager.substanceName == "cigaretter" ? "cigarett" : snusManager.substanceName) : (isReady ? String(format: NSLocalizedString("main.take_one_ready", comment: ""), snusManager.substanceName == "cigaretter" ? "cigarett" : snusManager.substanceName) : String(format: NSLocalizedString("main.take_one", comment: ""), snusManager.substanceName == "cigaretter" ? "cigarett" : snusManager.substanceName)))
+                            Text(isFirstOfDay ? String(format: NSLocalizedString("main.start_day", comment: ""), snusManager.localizedSubstanceName) : (isReady ? String(format: NSLocalizedString("main.take_one_ready", comment: ""), snusManager.localizedSubstanceName) : String(format: NSLocalizedString("main.take_one", comment: ""), snusManager.localizedSubstanceName)))
                                 .font(.system(size: 17, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)
                                 .lineLimit(1)
@@ -477,7 +477,7 @@ struct LandingPageView: View {
                                             endPoint: .bottomTrailing
                                         )
                                     )
-                                Text("Statistik")
+                                Text(NSLocalizedString("main.statistics", comment: ""))
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
                             }
                             .foregroundColor(.white)
@@ -1039,7 +1039,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.substanceName))
+                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1079,7 +1079,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.substanceName))
+                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1120,7 +1120,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "checkmark.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.substanceName))
+                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1158,7 +1158,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.orange)
-                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.substanceName))
+                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1250,7 +1250,7 @@ struct SettingsView: View {
                             resetDay()
                         }
                     } message: {
-                        Text(String(format: NSLocalizedString("alert.reset_day_message", comment: ""), snusManager.substanceName))
+                        Text(String(format: NSLocalizedString("alert.reset_day_message", comment: ""), snusManager.localizedSubstanceName))
                     }
 
                     // Change Substance Button
@@ -1381,11 +1381,11 @@ struct SettingsView: View {
                                 )
 
                             VStack(alignment: .leading, spacing: 6) {
-                                Text("Notiser vid timer klar")
+                                Text(NSLocalizedString("settings.timer_notification_title", comment: ""))
                                     .font(.system(size: 15, weight: .bold, design: .rounded))
                                     .foregroundColor(.white)
 
-                                Text("Vibration och ljud när timern når noll")
+                                Text(NSLocalizedString("settings.timer_notification_subtitle", comment: ""))
                                     .font(.system(size: 13, weight: .medium, design: .rounded))
                                     .foregroundColor(.white.opacity(0.75))
                                     .fixedSize(horizontal: false, vertical: true)
@@ -1422,11 +1422,11 @@ struct SettingsView: View {
                                     )
 
                                 VStack(alignment: .leading, spacing: 4) {
-                                    Text("Timer-format")
+                                    Text(NSLocalizedString("settings.timer_format_title", comment: ""))
                                         .font(.system(size: 15, weight: .bold, design: .rounded))
                                         .foregroundColor(.white)
 
-                                    Text("Hur timern ska visas")
+                                    Text(NSLocalizedString("settings.timer_format_subtitle", comment: ""))
                                         .font(.system(size: 13, weight: .medium, design: .rounded))
                                         .foregroundColor(.white.opacity(0.75))
                                 }
@@ -1443,10 +1443,10 @@ struct SettingsView: View {
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
-                                            Text("Timmar")
+                                            Text(NSLocalizedString("settings.timer_format_hours", comment: ""))
                                                 .font(.system(size: 15, weight: .semibold, design: .rounded))
                                                 .foregroundColor(.white)
-                                            Text("t.ex. 02")
+                                            Text(NSLocalizedString("settings.timer_format_hours_example", comment: ""))
                                                 .font(.system(size: 13, weight: .medium, design: .rounded))
                                                 .foregroundColor(.white.opacity(0.7))
                                         }
@@ -1478,10 +1478,10 @@ struct SettingsView: View {
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
-                                            Text("Timmar:Minuter")
+                                            Text(NSLocalizedString("settings.timer_format_hours_minutes", comment: ""))
                                                 .font(.system(size: 15, weight: .semibold, design: .rounded))
                                                 .foregroundColor(.white)
-                                            Text("t.ex. 02:30")
+                                            Text(NSLocalizedString("settings.timer_format_hours_minutes_example", comment: ""))
                                                 .font(.system(size: 13, weight: .medium, design: .rounded))
                                                 .foregroundColor(.white.opacity(0.7))
                                         }
@@ -1513,10 +1513,10 @@ struct SettingsView: View {
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
-                                            Text("Timmar:Minuter:Sekunder")
+                                            Text(NSLocalizedString("settings.timer_format_hours_minutes_seconds", comment: ""))
                                                 .font(.system(size: 15, weight: .semibold, design: .rounded))
                                                 .foregroundColor(.white)
-                                            Text("t.ex. 02:30:45")
+                                            Text(NSLocalizedString("settings.timer_format_hours_minutes_seconds_example", comment: ""))
                                                 .font(.system(size: 13, weight: .medium, design: .rounded))
                                                 .foregroundColor(.white.opacity(0.7))
                                         }
