@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Welcome!";
+"welcome.subtitle" = "Choose what you want to control";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Cigarettes";
+"setup.title" = "Settings for";
+"setup.weekday_start" = "Weekday start time";
+"setup.weekend_start" = "Weekend start time";
+"setup.amount_per_day" = "Amount of %@ per day";
+"setup.interval_between" = "Interval between %@";
+"setup.hours" = "hours";
+"setup.panic_per_week" = "Panic %@ per week";
+"setup.save_continue" = "Save & Continue";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Left";
+"main.panic" = "Panic";
+"main.settings" = "Settings";
+"main.take_one" = "Take a %@";
+"main.take_one_ready" = "Take a %@! ✨";
+"main.start_day" = "Start the day with a %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "You can do it! 💪";
+"encouragement.hold_on" = "Hold on, almost there!";
+"encouragement.good_job" = "Great job so far!";
+"encouragement.keep_going" = "Keep going!";
+"encouragement.you_are_strong" = "You are strong! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Perfect timing! 🎉";
+"celebration.well_done" = "Well done! ⭐";
+"celebration.you_can_take_one" = "You can take one now! 🎊";
+"celebration.time_is_up" = "Time's up! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Let's go buddy! 💪";
+"morning.new_day" = "A new day, a new chance! 🌅";
+"morning.welcome_back" = "Welcome back! 😊";
+"morning.ready" = "Ready for a new day? 🚀";
+"morning.here_we_go" = "Here we go! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Wait a bit longer!";
+"alert.take_anyway" = "Take anyway";
+"alert.ok_wait" = "Okay, I'll wait";
+"alert.time_remaining" = "You have %@ left. Are you sure you want to take one now?";
+
+/* Settings */
+"settings.title" = "Settings";
+"settings.weekday_start" = "Weekday start time";
+"settings.weekend_start" = "Weekend start time";
+"settings.interval" = "Interval between %@";
+"settings.panic_per_week" = "Panic %@ per week";
+"settings.amount_left_today" = "Amount of %@ left today";
+"settings.panic_left" = "Panic %@ left";
+"settings.save" = "Save settings";
+"settings.reset_day" = "Reset day";
+"settings.change_substance" = "Change substance";
+"settings.dynamic_island_title" = "Turn off Dynamic Island?";
+"settings.dynamic_island_message" = "Swipe away the timer notification on the lock screen to hide the Dynamic Island/Live Activity display.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Show timer in Dynamic Island when app is closed";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Are you sure? If you change the amount, you also accept that you have zero discipline 😬";
+"cheat.we_see_you" = "Cheating a bit now? We see you... 👀";
+"cheat.come_on" = "Come on now. You're better than this! 💪";
+"cheat.little_cheater" = "You little cheater! But okay then... 😏";
+"cheat.self_control" = "Self-control was the app's name, wasn't it? 🤔";
+"cheat.you_know" = "You know this is cheating, right? 🙈";
+"cheat.nice_job" = "Nice job! ...said no one ever 😅";
+"cheat.first_step" = "The first step towards change is... not cheating maybe? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! You're taking this seriously! Great job! 💪";
+"interval_praise.discipline" = "See that? That's what we call discipline! ⭐";
+"interval_praise.fantastic" = "Fantastic! You're getting stronger with every hour! 🔥";
+"interval_praise.way_forward" = "That's it! This is the way forward! 🚀";
+"interval_praise.respect" = "Respect! You're showing real self-control! 👑";
+"interval_praise.continue" = "YES! Keep this up and you'll go far! ✨";
+"interval_praise.attitude" = "That's the right attitude! Impressive! 💎";
+"interval_praise.strong" = "Strong as a bear! Keep it up! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... Decreasing the time? That's backwards! 😬";
+"interval_warning.less_control" = "Are you sure? Less time = less control... 🤔";
+"interval_warning.wrong_way" = "Oops, we're going the wrong way here! Think again! 😅";
+"interval_warning.not_right" = "That wasn't quite the right direction... 👀";
+"interval_warning.more_snus" = "Less waiting time = more snus. Is that really what you want? 🙈";
+"interval_warning.decrease" = "Hey, we're trying to REDUCE snus, not increase! 😬";
+"interval_warning.backwards_person" = "Going backwards! But okay, it's your choice... 🤷‍♂️";
+"interval_warning.alert" = "Warning! You're going the wrong way! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Finally! Fewer panic snus = more control! 💪";
+"panic_praise.mature" = "This is mature! Good decision! ⭐";
+"panic_praise.yes" = "YES! You don't need as many safety snus! 🎉";
+"panic_praise.look_at_you" = "Look at you! Strong as hell! 🔥";
+"panic_praise.impressive" = "Impressive discipline! Keep going! 👑";
+"panic_praise.trust" = "You trust yourself more now! Love it! ✨";
+"panic_praise.right_decision" = "Right decision! You can manage with less! 💎";
+"panic_praise.winner" = "That's how winners think! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Increasing the safety snus? Feeling unsafe? 😬";
+"panic_warning.less_trust" = "More panic = less trust in yourself... 🤔";
+"panic_warning.really_need" = "Hmm... Do you really need more panic snus? 😅";
+"panic_warning.lack_confidence" = "That smells like lack of confidence! 👀";
+"panic_warning.wrong_direction" = "More panic snus? We're going the wrong way! 🙈";
+"panic_warning.afraid" = "Are you afraid you won't make it? Believe in yourself! 💪";
+"panic_warning.backup" = "More backup = less trust. Think about it! 🤷‍♂️";
+"panic_warning.strength" = "Warning! You don't trust your own strength! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Increasing the amount? That's cheating, buddy! 😬";
+"panic_left.we_see" = "Nope, that's not how it works! We see you! 👀";
+"panic_left.creative" = "Creative, but still cheating! 😅";
+"panic_left.thought" = "Did you think we wouldn't notice? 🤔";
+"panic_left.cheating" = "That's pure cheating! 🙈";
+"panic_left.tsk" = "Cheating a bit with the panic snus? Tsk tsk! 😏";
+"panic_left.remember" = "Self-control, remember? 🤷‍♂️";
+"panic_left.no_no" = "No no no! This isn't how it should be done! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Cheating a little? 🤨";
+"alert.cheating_yes" = "Yes, I'm cheating";
+"alert.cheating_no" = "No, I regret it";
+"alert.fantastic_title" = "Fantastic! 🎉";
+"alert.thanks" = "Thanks! 💪";
+"alert.wrong_way_title" = "Wrong way! 😬";
+"alert.understand" = "I understand";
+"alert.good_job_title" = "Great job! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Okay, okay";
+"alert.cheater_title" = "Cheater! 👀";
+"alert.reset_day_title" = "Reset today's values?";
+"alert.cancel" = "Cancel";
+"alert.reset" = "Reset";
+"alert.reset_day_message" = "This resets the day to start and takes you back to the 'Start the day with a %@' mode.";
+"alert.change_substance_title" = "Change substance?";
+"alert.change" = "Change";
+"alert.change_substance_message" = "This resets ALL settings and lets you choose between snus and cigarettes again. The app will restart.";
+"alert.restart_app_title" = "Restart app";
+"alert.restart_app_message" = "Open the app again to choose a new substance.";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "Time for the next snus!";
+"notification.body" = "Your timer has expired. Time to enjoy!";

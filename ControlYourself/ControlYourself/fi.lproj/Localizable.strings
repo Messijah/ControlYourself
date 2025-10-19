@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Tervetuloa!";
+"welcome.subtitle" = "Valitse mitä haluat hallita";
+"substance.snus" = "Nuuska";
+"substance.cigarettes" = "Tupakat";
+"setup.title" = "Asetukset";
+"setup.weekday_start" = "Arkipäivän aloitusaika";
+"setup.weekend_start" = "Viikonlopun aloitusaika";
+"setup.amount_per_day" = "Päivittäinen %@ määrä";
+"setup.interval_between" = "%@ välinen aika";
+"setup.hours" = "tuntia";
+"setup.panic_per_week" = "Hätä-%@ viikossa";
+"setup.save_continue" = "Tallenna ja jatka";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Jäljellä";
+"main.panic" = "Hätä";
+"main.settings" = "Asetukset";
+"main.take_one" = "Ota %@";
+"main.take_one_ready" = "Ota %@! ✨";
+"main.start_day" = "Aloita päivä %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Pystyt tähän! 💪";
+"encouragement.hold_on" = "Pidä pintasi, melkein perillä!";
+"encouragement.good_job" = "Tähän mennessä loistavaa!";
+"encouragement.keep_going" = "Jatka vaan!";
+"encouragement.you_are_strong" = "Olet vahva! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Täydellinen ajoitus! 🎉";
+"celebration.well_done" = "Hienosti tehty! ⭐";
+"celebration.you_can_take_one" = "Voit ottaa nyt! 🎊";
+"celebration.time_is_up" = "Aika umpeutui! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Mennään! 💪";
+"morning.new_day" = "Uusi päivä, uusi mahdollisuus! 🌅";
+"morning.welcome_back" = "Tervetuloa takaisin! 😊";
+"morning.ready" = "Valmis uuteen päivään? 🚀";
+"morning.here_we_go" = "Tässä mennään! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Odota vielä hetki!";
+"alert.take_anyway" = "Otan silti";
+"alert.ok_wait" = "Ok, odotan";
+"alert.time_remaining" = "%@ jäljellä. Oletko varma että haluat nyt?";
+
+/* Settings */
+"settings.title" = "Asetukset";
+"settings.weekday_start" = "Arkipäivän aloitusaika";
+"settings.weekend_start" = "Viikonlopun aloitusaika";
+"settings.interval" = "%@ välinen aika";
+"settings.panic_per_week" = "Hätä-%@ viikossa";
+"settings.amount_left_today" = "Tänään jäljellä %@";
+"settings.panic_left" = "Hätä-%@ jäljellä";
+"settings.save" = "Tallenna asetukset";
+"settings.reset_day" = "Nollaa päivä";
+"settings.change_substance" = "Vaihda ainetta";
+"settings.dynamic_island_title" = "Sammuta Dynamic Island?";
+"settings.dynamic_island_message" = "Pyyhkäise ajastimen ilmoitusta lukitusnäytöllä piilottaaksesi Dynamic Islandin/Live Activityn.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Näytä ajastin Dynamic Islandissa kun sovellus on suljettu";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Oletko varma? Jos muutat määrää, hyväksyt myös että itsekurisi on nolla 😬";
+"cheat.we_see_you" = "Huijaatko vähän? Näemme sinut... 👀";
+"cheat.come_on" = "Hei nyt. Olet parempi kuin tämä! 💪";
+"cheat.little_cheater" = "Pieni huijari! Mutta okei... 😏";
+"cheat.self_control" = "Sovelluksen nimi oli itsehillintä, eikö ollutkin? 🤔";
+"cheat.you_know" = "Tiedät että tämä on huijausta, eikö niin? 🙈";
+"cheat.nice_job" = "Hienoa työtä! ...ei kukaan ole koskaan sanonut 😅";
+"cheat.first_step" = "Ensimmäinen askel muutokseen on... ehkä olla huijaamatta? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Vau! Otat tämän tosissasi! Hienosti! 💪";
+"interval_praise.discipline" = "Näetkö? Tätä me kutsumme kurinalaisuudeksi! ⭐";
+"interval_praise.fantastic" = "Mahtavaa! Vahvistut joka tunti! 🔥";
+"interval_praise.way_forward" = "Juuri näin! Tämä on oikea tie! 🚀";
+"interval_praise.respect" = "Respekti! Näytät todellista itsehillintää! 👑";
+"interval_praise.continue" = "KYLLÄ! Jatka näin niin pääset pitkälle! ✨";
+"interval_praise.attitude" = "Tämä on oikea asenne! Vaikuttavaa! 💎";
+"interval_praise.strong" = "Vahva kuin karhu! Jatka! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... vähennät aikaa? Se on takapakkia! 😬";
+"interval_warning.less_control" = "Oletko varma? Vähemmän aikaa = vähemmän kontrollia... 🤔";
+"interval_warning.wrong_way" = "Hupsis, olemme menossa väärään suuntaan! Mieti uudelleen! 😅";
+"interval_warning.not_right" = "Se ei ollut oikea suunta... 👀";
+"interval_warning.more_snus" = "Vähemmän odotusta = enemmän nuuskaa. Haluatko todella tämän? 🙈";
+"interval_warning.decrease" = "Hei, yritämme vähentää nuuskaa, emme lisätä! 😬";
+"interval_warning.backwards_person" = "Menet taaksepäin! Mutta okei, se on sinun valintasi... 🤷‍♂️";
+"interval_warning.alert" = "Varoitus! Menet väärään suuntaan! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Vihdoinkin! Vähemmän hätä = enemmän kontrollia! 💪";
+"panic_praise.mature" = "Tämä on kypsää! Hyvä päätös! ⭐";
+"panic_praise.yes" = "KYLLÄ! Et tarvitse niin paljon varanuuskaa! 🎉";
+"panic_praise.look_at_you" = "Katso itseäsi! Supervahva! 🔥";
+"panic_praise.impressive" = "Vaikuttavaa kurinalaisuutta! Jatka! 👑";
+"panic_praise.trust" = "Luotat nyt itseesi enemmän! Tykkään! ✨";
+"panic_praise.right_decision" = "Oikea päätös! Pärjäät vähemmällä! 💎";
+"panic_praise.winner" = "Näin voittajat ajattelevat! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Lisäät varanuuskaa? Tunnetko olosi turvattomaksi? 😬";
+"panic_warning.less_trust" = "Enemmän hätää = vähemmän luottamusta itseesi... 🤔";
+"panic_warning.really_need" = "Hmm... tarvitsetko todella enemmän hätänuuskaa? 😅";
+"panic_warning.lack_confidence" = "Se haisee itseluottamuksen puutteelta! 👀";
+"panic_warning.wrong_direction" = "Enemmän hätänuuskaa? Olemme menossa väärään suuntaan! 🙈";
+"panic_warning.afraid" = "Pelkäätkö ettet pärjää? Luota itseesi! 💪";
+"panic_warning.backup" = "Enemmän varaa = vähemmän luottamusta. Mieti sitä! 🤷‍♂️";
+"panic_warning.strength" = "Varoitus! Et luota omaan vahvuuteesi! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Lisäät määrää? Se on huijausta, kaveri! 😬";
+"panic_left.we_see" = "Ei, ei näin tehdä! Näemme! 👀";
+"panic_left.creative" = "Luovaa mutta silti huijausta! 😅";
+"panic_left.thought" = "Luulitko ettemme huomaa? 🤔";
+"panic_left.cheating" = "Se on puhdasta huijausta! 🙈";
+"panic_left.tsk" = "Huijaat vähän hätänuuskalla? Tsih tsih! 😏";
+"panic_left.remember" = "Itsehillintä, muistatko? 🤷‍♂️";
+"panic_left.no_no" = "Ei ei ei! Ei näin tehdä! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Huijaatko vähän? 🤨";
+"alert.cheating_yes" = "Kyllä, huijaan";
+"alert.cheating_no" = "En, kadun";
+"alert.fantastic_title" = "Mahtavaa! 🎉";
+"alert.thanks" = "Kiitos! 💪";
+"alert.wrong_way_title" = "Väärä suunta! 😬";
+"alert.understand" = "Ymmärrän";
+"alert.good_job_title" = "Hyvää työtä! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Okei, okei";
+"alert.cheater_title" = "Huijari! 👀";
+"alert.reset_day_title" = "Nollataanko tämän päivän arvot?";
+"alert.cancel" = "Peruuta";
+"alert.reset" = "Nollaa";
+"alert.reset_day_message" = "Tämä nollaa päivän alkuun ja palaa \"Aloita päivä %@\" tilaan.";
+"alert.change_substance_title" = "Vaihdetaanko ainetta?";
+"alert.change" = "Vaihda";
+"alert.change_substance_message" = "Tämä nollaa kaikki asetukset ja antaa sinun valita uudelleen nuuskan ja tupakka väliltä. Sovellus käynnistyy uudelleen.";
+"alert.restart_app_title" = "Käynnistä sovellus uudelleen";
+"alert.restart_app_message" = "Avaa sovellus uudelleen valitaksesi uuden aineen.";
+"alert.ok" = "Ok";
+
+/* Notifications */
+"notification.title" = "Seuraavan nuuskan aika!";
+"notification.body" = "Ajastimesi umpeutui. Nauti!";

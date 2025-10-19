@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Üdvözlünk!";
+"welcome.subtitle" = "Válaszd ki, mit szeretnél kontrollálni";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Cigaretta";
+"setup.title" = "Beállítások";
+"setup.weekday_start" = "Hétköznapi kezdési idő";
+"setup.weekend_start" = "Hétvégi kezdési idő";
+"setup.amount_per_day" = "Napi %@ mennyiség";
+"setup.interval_between" = "%@ közötti intervallum";
+"setup.hours" = "óra";
+"setup.panic_per_week" = "Heti vészhelyzeti %@";
+"setup.save_continue" = "Mentés és folytatás";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Maradt";
+"main.panic" = "Vészhelyzeti";
+"main.settings" = "Beállítások";
+"main.take_one" = "Végy egy %@";
+"main.take_one_ready" = "Végy egy %@! ✨";
+"main.start_day" = "Kezdd a napot %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Meg tudod csinálni! 💪";
+"encouragement.hold_on" = "Tartsd ki, majdnem megvagy!";
+"encouragement.good_job" = "Eddig remekül megy!";
+"encouragement.keep_going" = "Csak így tovább!";
+"encouragement.you_are_strong" = "Erős vagy! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Tökéletes időzítés! 🎉";
+"celebration.well_done" = "Remek munka! ⭐";
+"celebration.you_can_take_one" = "Most vehetsz egyet! 🎊";
+"celebration.time_is_up" = "Lejárt az idő! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Rajta! 💪";
+"morning.new_day" = "Új nap, új lehetőség! 🌅";
+"morning.welcome_back" = "Üdv újra! 😊";
+"morning.ready" = "Készen állsz az új napra? 🚀";
+"morning.here_we_go" = "Kezdjük! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Várj még egy kicsit!";
+"alert.take_anyway" = "Akkor is veszek";
+"alert.ok_wait" = "Oké, várok";
+"alert.time_remaining" = "%@ van hátra. Biztos most akarod?";
+
+/* Settings */
+"settings.title" = "Beállítások";
+"settings.weekday_start" = "Hétköznapi kezdési idő";
+"settings.weekend_start" = "Hétvégi kezdési idő";
+"settings.interval" = "%@ közötti intervallum";
+"settings.panic_per_week" = "Heti vészhelyzeti %@";
+"settings.amount_left_today" = "Ma maradt %@";
+"settings.panic_left" = "Maradt vészhelyzeti %@";
+"settings.save" = "Beállítások mentése";
+"settings.reset_day" = "Mai nap visszaállítása";
+"settings.change_substance" = "Anyag módosítása";
+"settings.dynamic_island_title" = "Dynamic Island kikapcsolása?";
+"settings.dynamic_island_message" = "Húzd el az időzítő értesítést a zárolási képernyőn a Dynamic Island/Live Activity elrejtéséhez.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Időzítő megjelenítése a Dynamic Islandben, amikor az app be van zárva";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Biztos vagy benne? Ha megváltoztatod a számot, azt is elfogadod, hogy nulla az önfegyelmed 😬";
+"cheat.we_see_you" = "Kicsit csalsz? Látunk... 👀";
+"cheat.come_on" = "Gyerünk már. Ennél jobb vagy! 💪";
+"cheat.little_cheater" = "Kis csaló! De oké... 😏";
+"cheat.self_control" = "Az app neve nem önkontroll volt? 🤔";
+"cheat.you_know" = "Tudod, hogy ez csalás, ugye? 🙈";
+"cheat.nice_job" = "Szép munka! ...ezt soha senki nem mondta 😅";
+"cheat.first_step" = "A változás első lépése... talán nem csalni? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Komolyan veszed! Remek! 💪";
+"interval_praise.discipline" = "Látod? Ezt nevezzük fegyelemnek! ⭐";
+"interval_praise.fantastic" = "Fantasztikus! Minden órával erősebb leszel! 🔥";
+"interval_praise.way_forward" = "Pontosan így! Ez a helyes út! 🚀";
+"interval_praise.respect" = "Respect! Igazi önkontrollt mutatsz! 👑";
+"interval_praise.continue" = "IGEN! Így folytasd és messzire jutsz! ✨";
+"interval_praise.attitude" = "Ez a helyes hozzáállás! Lenyűgöző! 💎";
+"interval_praise.strong" = "Erős, mint a medve! Folytasd! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... csökkented az időt? Ez visszalépés! 😬";
+"interval_warning.less_control" = "Biztos vagy benne? Kevesebb idő = kevesebb kontroll... 🤔";
+"interval_warning.wrong_way" = "Hoppá, rossz irányba megyünk! Gondold át! 😅";
+"interval_warning.not_right" = "Ez nem volt a helyes irány... 👀";
+"interval_warning.more_snus" = "Kevesebb várakozás = több snus. Tényleg ezt akarod? 🙈";
+"interval_warning.decrease" = "Hé, csökkenteni próbáljuk a snust, nem növelni! 😬";
+"interval_warning.backwards_person" = "Visszafelé mész! De oké, ez a te döntésed... 🤷‍♂️";
+"interval_warning.alert" = "Figyelem! Rossz irányba mész! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Végre! Kevesebb vészhelyzeti = több kontroll! 💪";
+"panic_praise.mature" = "Ez érett! Jó döntés! ⭐";
+"panic_praise.yes" = "IGEN! Nincs szükséged ennyi tartalék snusra! 🎉";
+"panic_praise.look_at_you" = "Nézd magad! Szuper erős! 🔥";
+"panic_praise.impressive" = "Lenyűgöző fegyelem! Folytasd! 👑";
+"panic_praise.trust" = "Most jobban bízol magadban! Szeretem! ✨";
+"panic_praise.right_decision" = "Helyes döntés! Boldogulsz kevesebbel is! 💎";
+"panic_praise.winner" = "Így gondolkodnak a győztesek! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Növeled a tartalék snust? Bizonytalannak érzed magad? 😬";
+"panic_warning.less_trust" = "Több vészhelyzeti = kevesebb önbizalom... 🤔";
+"panic_warning.really_need" = "Hmm... tényleg szükséged van több vészhelyzeti snusra? 😅";
+"panic_warning.lack_confidence" = "Ez önbizalomhiány szaga! 👀";
+"panic_warning.wrong_direction" = "Több vészhelyzeti snus? Rossz irányba megyünk! 🙈";
+"panic_warning.afraid" = "Félsz, hogy nem sikerül? Bízz magadban! 💪";
+"panic_warning.backup" = "Több tartalék = kevesebb bizalom. Gondold át! 🤷‍♂️";
+"panic_warning.strength" = "Figyelem! Nem bízol a saját erődben! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Növeled a számot? Ez csalás, haver! 😬";
+"panic_left.we_see" = "Nem, nem így kell csinálni! Látunk! 👀";
+"panic_left.creative" = "Kreatív, de még mindig csalás! 😅";
+"panic_left.thought" = "Azt hitted, nem vesszük észre? 🤔";
+"panic_left.cheating" = "Ez tiszta csalás! 🙈";
+"panic_left.tsk" = "Kicsit csalsz a vészhelyzeti snussal? Ccc! 😏";
+"panic_left.remember" = "Önkontroll, emlékszel? 🤷‍♂️";
+"panic_left.no_no" = "Nem nem nem! Nem így kell csinálni! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Kicsit csalsz? 🤨";
+"alert.cheating_yes" = "Igen, csalok";
+"alert.cheating_no" = "Nem, megbántam";
+"alert.fantastic_title" = "Fantasztikus! 🎉";
+"alert.thanks" = "Köszi! 💪";
+"alert.wrong_way_title" = "Rossz irány! 😬";
+"alert.understand" = "Értem";
+"alert.good_job_title" = "Remek munka! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Oké, oké";
+"alert.cheater_title" = "Csaló! 👀";
+"alert.reset_day_title" = "Visszaállítod a mai értékeket?";
+"alert.cancel" = "Mégse";
+"alert.reset" = "Visszaállítás";
+"alert.reset_day_message" = "Ez visszaállítja a mai napot a kezdésre és visszatér a \"Kezdd a napot %@\" módba.";
+"alert.change_substance_title" = "Módosítod az anyagot?";
+"alert.change" = "Módosítás";
+"alert.change_substance_message" = "Ez visszaállítja az összes beállítást és újra választhatsz a snus és cigaretta között. Az app újraindul.";
+"alert.restart_app_title" = "App újraindítása";
+"alert.restart_app_message" = "Nyisd meg újra az appot az új anyag kiválasztásához.";
+"alert.ok" = "Oké";
+
+/* Notifications */
+"notification.title" = "Ideje a következő snusnak!";
+"notification.body" = "Az időzítőd lejárt. Élvezd!";

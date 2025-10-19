@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Chào mừng!";
+"welcome.subtitle" = "Chọn thứ bạn muốn kiểm soát";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Thuốc lá";
+"setup.title" = "Cài đặt";
+"setup.weekday_start" = "Giờ bắt đầu ngày thường";
+"setup.weekend_start" = "Giờ bắt đầu cuối tuần";
+"setup.amount_per_day" = "Số lượng %@ mỗi ngày";
+"setup.interval_between" = "Khoảng cách giữa %@";
+"setup.hours" = "giờ";
+"setup.panic_per_week" = "%@ khẩn cấp mỗi tuần";
+"setup.save_continue" = "Lưu và tiếp tục";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Còn lại";
+"main.panic" = "Khẩn cấp";
+"main.settings" = "Cài đặt";
+"main.take_one" = "Dùng %@";
+"main.take_one_ready" = "Dùng %@! ✨";
+"main.start_day" = "Bắt đầu ngày với %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Bạn làm được! 💪";
+"encouragement.hold_on" = "Giữ vững, sắp đến nơi rồi!";
+"encouragement.good_job" = "Đến giờ làm rất tốt!";
+"encouragement.keep_going" = "Tiếp tục nào!";
+"encouragement.you_are_strong" = "Bạn rất mạnh mẽ! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Thời điểm hoàn hảo! 🎉";
+"celebration.well_done" = "Làm tốt lắm! ⭐";
+"celebration.you_can_take_one" = "Bây giờ bạn có thể dùng rồi! 🎊";
+"celebration.time_is_up" = "Hết giờ rồi! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Bắt đầu thôi! 💪";
+"morning.new_day" = "Ngày mới, cơ hội mới! 🌅";
+"morning.welcome_back" = "Chào mừng trở lại! 😊";
+"morning.ready" = "Sẵn sàng cho ngày mới chưa? 🚀";
+"morning.here_we_go" = "Bắt đầu nào! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Đợi thêm chút nữa!";
+"alert.take_anyway" = "Vẫn dùng";
+"alert.ok_wait" = "Ok, tôi sẽ đợi";
+"alert.time_remaining" = "Còn %@. Bạn chắc chắn muốn bây giờ?";
+
+/* Settings */
+"settings.title" = "Cài đặt";
+"settings.weekday_start" = "Giờ bắt đầu ngày thường";
+"settings.weekend_start" = "Giờ bắt đầu cuối tuần";
+"settings.interval" = "Khoảng cách giữa %@";
+"settings.panic_per_week" = "%@ khẩn cấp mỗi tuần";
+"settings.amount_left_today" = "%@ còn lại hôm nay";
+"settings.panic_left" = "%@ khẩn cấp còn lại";
+"settings.save" = "Lưu cài đặt";
+"settings.reset_day" = "Đặt lại ngày";
+"settings.change_substance" = "Đổi chất";
+"settings.dynamic_island_title" = "Tắt Dynamic Island?";
+"settings.dynamic_island_message" = "Vuốt thông báo đồng hồ trên màn hình khóa để ẩn hiển thị Dynamic Island/Live Activity.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Hiển thị đồng hồ trong Dynamic Island khi app đóng";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Bạn chắc chứ? Nếu thay đổi số lượng, bạn cũng chấp nhận kỷ luật tự giác của mình bằng không 😬";
+"cheat.we_see_you" = "Gian lận một chút à? Chúng tôi thấy đấy... 👀";
+"cheat.come_on" = "Thôi nào. Bạn tốt hơn thế này! 💪";
+"cheat.little_cheater" = "Kẻ gian lận nhỏ! Nhưng được rồi... 😏";
+"cheat.self_control" = "App tên là tự kiểm soát mà nhỉ? 🤔";
+"cheat.you_know" = "Bạn biết đây là gian lận, phải không? 🙈";
+"cheat.nice_job" = "Làm tốt lắm! ...không ai nói thế bao giờ 😅";
+"cheat.first_step" = "Bước đầu tiên để thay đổi là... có lẽ đừng gian lận? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Bạn nghiêm túc đấy! Tốt lắm! 💪";
+"interval_praise.discipline" = "Thấy không? Đây là điều chúng tôi gọi là kỷ luật! ⭐";
+"interval_praise.fantastic" = "Tuyệt vời! Bạn mạnh mẽ hơn mỗi giờ! 🔥";
+"interval_praise.way_forward" = "Đúng vậy! Đây là con đường đúng! 🚀";
+"interval_praise.respect" = "Tôn trọng! Bạn đang thể hiện sự tự kiểm soát thật sự! 👑";
+"interval_praise.continue" = "ĐÚNG! Tiếp tục như vậy và bạn sẽ đi xa! ✨";
+"interval_praise.attitude" = "Đây là thái độ đúng! Ấn tượng! 💎";
+"interval_praise.strong" = "Mạnh như gấu! Tiếp tục! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... giảm thời gian? Đó là lùi lại! 😬";
+"interval_warning.less_control" = "Bạn chắc chứ? Ít thời gian hơn = ít kiểm soát hơn... 🤔";
+"interval_warning.wrong_way" = "Ối, chúng ta đang đi sai hướng! Nghĩ lại đi! 😅";
+"interval_warning.not_right" = "Đó không phải hướng đúng... 👀";
+"interval_warning.more_snus" = "Chờ ít hơn = nhiều snus hơn. Bạn thật sự muốn điều này? 🙈";
+"interval_warning.decrease" = "Này, chúng ta đang cố giảm snus, không phải tăng! 😬";
+"interval_warning.backwards_person" = "Đang lùi lại! Nhưng được, đó là lựa chọn của bạn... 🤷‍♂️";
+"interval_warning.alert" = "Cảnh báo! Bạn đang đi sai hướng! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Cuối cùng! Ít khẩn cấp hơn = kiểm soát nhiều hơn! 💪";
+"panic_praise.mature" = "Điều này chín chắn! Quyết định tốt! ⭐";
+"panic_praise.yes" = "ĐÚNG! Bạn không cần nhiều snus dự phòng như vậy! 🎉";
+"panic_praise.look_at_you" = "Nhìn bạn này! Siêu mạnh! 🔥";
+"panic_praise.impressive" = "Kỷ luật ấn tượng! Tiếp tục! 👑";
+"panic_praise.trust" = "Bây giờ bạn tin tưởng bản thân nhiều hơn! Thích! ✨";
+"panic_praise.right_decision" = "Quyết định đúng! Bạn có thể xử lý với ít hơn! 💎";
+"panic_praise.winner" = "Người chiến thắng nghĩ như vậy đấy! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Tăng snus dự phòng? Cảm thấy không an toàn? 😬";
+"panic_warning.less_trust" = "Nhiều khẩn cấp hơn = ít tin tưởng bản thân hơn... 🤔";
+"panic_warning.really_need" = "Hmm... bạn thật sự cần thêm snus khẩn cấp? 😅";
+"panic_warning.lack_confidence" = "Có mùi thiếu tự tin! 👀";
+"panic_warning.wrong_direction" = "Thêm snus khẩn cấp? Chúng ta đang đi sai hướng! 🙈";
+"panic_warning.afraid" = "Sợ không làm được à? Tin vào bản thân! 💪";
+"panic_warning.backup" = "Nhiều dự phòng hơn = ít tin tưởng hơn. Nghĩ về điều đó! 🤷‍♂️";
+"panic_warning.strength" = "Cảnh báo! Bạn không tin vào sức mạnh của mình! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Tăng số lượng? Đó là gian lận, bạn ơi! 😬";
+"panic_left.we_see" = "Không, không làm như vậy! Chúng tôi thấy! 👀";
+"panic_left.creative" = "Sáng tạo nhưng vẫn là gian lận! 😅";
+"panic_left.thought" = "Nghĩ chúng tôi không để ý à? 🤔";
+"panic_left.cheating" = "Đó là gian lận thuần túy! 🙈";
+"panic_left.tsk" = "Gian lận một chút với snus khẩn cấp? Xấu hổ! 😏";
+"panic_left.remember" = "Tự kiểm soát, nhớ không? 🤷‍♂️";
+"panic_left.no_no" = "Không không không! Không làm như vậy! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Gian lận một chút? 🤨";
+"alert.cheating_yes" = "Vâng, tôi gian lận";
+"alert.cheating_no" = "Không, tôi hối hận";
+"alert.fantastic_title" = "Tuyệt vời! 🎉";
+"alert.thanks" = "Cảm ơn! 💪";
+"alert.wrong_way_title" = "Sai hướng! 😬";
+"alert.understand" = "Tôi hiểu";
+"alert.good_job_title" = "Làm tốt lắm! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Ok, ok";
+"alert.cheater_title" = "Kẻ gian lận! 👀";
+"alert.reset_day_title" = "Đặt lại giá trị hôm nay?";
+"alert.cancel" = "Hủy";
+"alert.reset" = "Đặt lại";
+"alert.reset_day_message" = "Điều này sẽ đặt lại ngày về đầu và quay về chế độ \"Bắt đầu ngày với %@\".";
+"alert.change_substance_title" = "Đổi chất?";
+"alert.change" = "Đổi";
+"alert.change_substance_message" = "Điều này sẽ đặt lại tất cả cài đặt và cho phép bạn chọn lại giữa snus và thuốc lá. App sẽ khởi động lại.";
+"alert.restart_app_title" = "Khởi động lại app";
+"alert.restart_app_message" = "Mở app lại để chọn chất mới.";
+"alert.ok" = "Ok";
+
+/* Notifications */
+"notification.title" = "Đến giờ snus tiếp theo!";
+"notification.body" = "Đồng hồ của bạn đã hết. Tận hưởng nhé!";

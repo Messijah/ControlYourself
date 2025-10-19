@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Hoş geldiniz!";
+"welcome.subtitle" = "Kontrol etmek istediğiniz şeyi seçin";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Sigara";
+"setup.title" = "Ayarlar";
+"setup.weekday_start" = "Hafta içi başlangıç saati";
+"setup.weekend_start" = "Hafta sonu başlangıç saati";
+"setup.amount_per_day" = "Günlük %@ sayısı";
+"setup.interval_between" = "%@ arasındaki süre";
+"setup.hours" = "saat";
+"setup.panic_per_week" = "Haftalık acil %@";
+"setup.save_continue" = "Kaydet ve devam et";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Kalan";
+"main.panic" = "Acil";
+"main.settings" = "Ayarlar";
+"main.take_one" = "Bir %@ al";
+"main.take_one_ready" = "Bir %@ al! ✨";
+"main.start_day" = "%@ ile güne başla!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Yapabilirsin! 💪";
+"encouragement.hold_on" = "Dayan, neredeyse geldin!";
+"encouragement.good_job" = "Şu ana kadar harika gidiyorsun!";
+"encouragement.keep_going" = "Devam et!";
+"encouragement.you_are_strong" = "Güçlüsün! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Mükemmel zamanlama! 🎉";
+"celebration.well_done" = "Aferin! ⭐";
+"celebration.you_can_take_one" = "Artık alabilirsin! 🎊";
+"celebration.time_is_up" = "Süre doldu! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Hadi başlayalım! 💪";
+"morning.new_day" = "Yeni gün, yeni fırsat! 🌅";
+"morning.welcome_back" = "Tekrar hoş geldin! 😊";
+"morning.ready" = "Yeni güne hazır mısın? 🚀";
+"morning.here_we_go" = "İşte başlıyoruz! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Biraz daha bekle!";
+"alert.take_anyway" = "Yine de al";
+"alert.ok_wait" = "Tamam, beklerim";
+"alert.time_remaining" = "%@ kaldı. Şimdi almak istediğinden emin misin?";
+
+/* Settings */
+"settings.title" = "Ayarlar";
+"settings.weekday_start" = "Hafta içi başlangıç saati";
+"settings.weekend_start" = "Hafta sonu başlangıç saati";
+"settings.interval" = "%@ arasındaki süre";
+"settings.panic_per_week" = "Haftalık acil %@";
+"settings.amount_left_today" = "Bugün kalan %@";
+"settings.panic_left" = "Kalan acil %@";
+"settings.save" = "Ayarları kaydet";
+"settings.reset_day" = "Bugünü sıfırla";
+"settings.change_substance" = "Maddeyi değiştir";
+"settings.dynamic_island_title" = "Dynamic Island kapatılsın mı?";
+"settings.dynamic_island_message" = "Dynamic Island/Canlı Etkinlik görüntüsünü gizlemek için kilit ekranındaki zamanlayıcı bildirimini kaydırın.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Uygulama kapalıyken Dynamic Island'da zamanlayıcıyı göster";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Emin misin? Sayıyı değiştirirsen, kendine kontrolünün sıfır olduğunu da kabul etmiş olursun 😬";
+"cheat.we_see_you" = "Biraz hile mi yapıyorsun? Görüyoruz... 👀";
+"cheat.come_on" = "Hadi ama. Bundan daha iyisin! 💪";
+"cheat.little_cheater" = "Küçük hileci! Ama tamam... 😏";
+"cheat.self_control" = "Uygulamanın adı öz kontrol değil miydi? 🤔";
+"cheat.you_know" = "Bunun hile olduğunu biliyorsun, değil mi? 🙈";
+"cheat.nice_job" = "Aferin! ...hiç kimse öyle demedi 😅";
+"cheat.first_step" = "Değişimin ilk adımı... belki hile yapmamak? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Vay be! Ciddiye alıyorsun! Aferin! 💪";
+"interval_praise.discipline" = "Gördün mü? Buna disiplin diyoruz! ⭐";
+"interval_praise.fantastic" = "Harika! Her saat daha güçlü oluyorsun! 🔥";
+"interval_praise.way_forward" = "İşte bu! Bu doğru yol! 🚀";
+"interval_praise.respect" = "Saygı! Gerçek öz kontrolü gösteriyorsun! 👑";
+"interval_praise.continue" = "EVET! Böyle devam edersen çok ileri gidersin! ✨";
+"interval_praise.attitude" = "İşte doğru tutum bu! Etkileyici! 💎";
+"interval_praise.strong" = "Ayı gibi güçlü! Devam et! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... süreyi azaltıyor musun? Bu geriye gitmek! 😬";
+"interval_warning.less_control" = "Emin misin? Daha az süre = daha az kontrol... 🤔";
+"interval_warning.wrong_way" = "Eyvah, yanlış yöne gidiyoruz! Tekrar düşün! 😅";
+"interval_warning.not_right" = "Bu doğru yön değildi... 👀";
+"interval_warning.more_snus" = "Daha az bekleme = daha fazla snus. Gerçekten bunu mu istiyorsun? 🙈";
+"interval_warning.decrease" = "Hey, snusu azaltmaya çalışıyoruz, artırmıyoruz! 😬";
+"interval_warning.backwards_person" = "Geriye gidiyorsun! Ama tamam, bu senin seçimin... 🤷‍♂️";
+"interval_warning.alert" = "Uyarı! Yanlış yöne gidiyorsun! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Sonunda! Daha az acil = daha fazla kontrol! 💪";
+"panic_praise.mature" = "Bu olgun! İyi karar! ⭐";
+"panic_praise.yes" = "EVET! O kadar güvenlik snusuna ihtiyacın yok! 🎉";
+"panic_praise.look_at_you" = "Bak sana! Süper güçlü! 🔥";
+"panic_praise.impressive" = "Etkileyici disiplin! Devam et! 👑";
+"panic_praise.trust" = "Artık kendine daha çok güveniyorsun! Harika! ✨";
+"panic_praise.right_decision" = "Doğru karar! Daha azıyla idare edebilirsin! 💎";
+"panic_praise.winner" = "Kazananlar böyle düşünür! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Güvenlik snusu artırıyor musun? Güvensiz mi hissediyorsun? 😬";
+"panic_warning.less_trust" = "Daha fazla acil = kendine daha az güven... 🤔";
+"panic_warning.really_need" = "Hmm... gerçekten daha fazla acil snusa ihtiyacın var mı? 😅";
+"panic_warning.lack_confidence" = "Bu özgüven eksikliği kokuyor! 👀";
+"panic_warning.wrong_direction" = "Daha fazla acil snus? Yanlış yöne gidiyoruz! 🙈";
+"panic_warning.afraid" = "Başaramayacağından mı korkuyorsun? Kendine güven! 💪";
+"panic_warning.backup" = "Daha fazla yedek = daha az güven. Düşün bunu! 🤷‍♂️";
+"panic_warning.strength" = "Uyarı! Kendi gücüne güvenmiyorsun! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Sayıyı artırıyor musun? Bu hile dostum! 😬";
+"panic_left.we_see" = "Hayır, böyle yapılmaz! Görüyoruz! 👀";
+"panic_left.creative" = "Yaratıcı ama yine de hile! 😅";
+"panic_left.thought" = "Fark etmeyeceğimizi mi düşündün? 🤔";
+"panic_left.cheating" = "Bu tam bir hile! 🙈";
+"panic_left.tsk" = "Acil snusla biraz hile mi? Ayıp ayıp! 😏";
+"panic_left.remember" = "Öz kontrol, hatırlıyor musun? 🤷‍♂️";
+"panic_left.no_no" = "Hayır hayır hayır! Böyle yapılmaz! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Biraz hile mi? 🤨";
+"alert.cheating_yes" = "Evet, hile yapıyorum";
+"alert.cheating_no" = "Hayır, pişmanım";
+"alert.fantastic_title" = "Harika! 🎉";
+"alert.thanks" = "Teşekkürler! 💪";
+"alert.wrong_way_title" = "Yanlış yön! 😬";
+"alert.understand" = "Anladım";
+"alert.good_job_title" = "Aferin! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Tamam, tamam";
+"alert.cheater_title" = "Hileci! 👀";
+"alert.reset_day_title" = "Bugünün değerlerini sıfırla?";
+"alert.cancel" = "İptal";
+"alert.reset" = "Sıfırla";
+"alert.reset_day_message" = "Bu bugünü başlangıca sıfırlar ve \"%@ ile güne başla\" moduna döner.";
+"alert.change_substance_title" = "Maddeyi değiştir?";
+"alert.change" = "Değiştir";
+"alert.change_substance_message" = "Bu tüm ayarları sıfırlar ve snus ile sigara arasında tekrar seçim yapmanızı sağlar. Uygulama yeniden başlatılacak.";
+"alert.restart_app_title" = "Uygulamayı yeniden başlat";
+"alert.restart_app_message" = "Yeni maddeyi seçmek için uygulamayı tekrar açın.";
+"alert.ok" = "Tamam";
+
+/* Notifications */
+"notification.title" = "Bir sonraki snus zamanı!";
+"notification.body" = "Zamanlayıcınız doldu. Tadını çıkar!";

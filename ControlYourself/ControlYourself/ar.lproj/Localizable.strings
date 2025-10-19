@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "مرحباً!";
+"welcome.subtitle" = "اختر ما تريد التحكم به";
+"substance.snus" = "السنوس";
+"substance.cigarettes" = "السجائر";
+"setup.title" = "الإعدادات";
+"setup.weekday_start" = "وقت بدء أيام الأسبوع";
+"setup.weekend_start" = "وقت بدء عطلة نهاية الأسبوع";
+"setup.amount_per_day" = "عدد %@ يومياً";
+"setup.interval_between" = "الفترة بين %@";
+"setup.hours" = "ساعات";
+"setup.panic_per_week" = "%@ الطوارئ أسبوعياً";
+"setup.save_continue" = "حفظ ومتابعة";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "المتبقي";
+"main.panic" = "طوارئ";
+"main.settings" = "الإعدادات";
+"main.take_one" = "خذ %@";
+"main.take_one_ready" = "خذ %@! ✨";
+"main.start_day" = "ابدأ يومك بـ%@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "تستطيع فعلها! 💪";
+"encouragement.hold_on" = "تمسك، أنت قريب!";
+"encouragement.good_job" = "أداء رائع حتى الآن!";
+"encouragement.keep_going" = "استمر!";
+"encouragement.you_are_strong" = "أنت قوي! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "توقيت مثالي! 🎉";
+"celebration.well_done" = "أحسنت! ⭐";
+"celebration.you_can_take_one" = "يمكنك أخذ واحد الآن! 🎊";
+"celebration.time_is_up" = "انتهى الوقت! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "هيا نبدأ! 💪";
+"morning.new_day" = "يوم جديد، فرصة جديدة! 🌅";
+"morning.welcome_back" = "مرحباً بعودتك! 😊";
+"morning.ready" = "مستعد ليوم جديد؟ 🚀";
+"morning.here_we_go" = "لنبدأ! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "انتظر قليلاً!";
+"alert.take_anyway" = "خذ على أي حال";
+"alert.ok_wait" = "حسناً، سأنتظر";
+"alert.time_remaining" = "تبقى %@. هل أنت متأكد أنك تريد الآن؟";
+
+/* Settings */
+"settings.title" = "الإعدادات";
+"settings.weekday_start" = "وقت بدء أيام الأسبوع";
+"settings.weekend_start" = "وقت بدء عطلة نهاية الأسبوع";
+"settings.interval" = "الفترة بين %@";
+"settings.panic_per_week" = "%@ الطوارئ أسبوعياً";
+"settings.amount_left_today" = "%@ المتبقي اليوم";
+"settings.panic_left" = "%@ الطوارئ المتبقي";
+"settings.save" = "حفظ الإعدادات";
+"settings.reset_day" = "إعادة تعيين اليوم";
+"settings.change_substance" = "تغيير المادة";
+"settings.dynamic_island_title" = "إيقاف Dynamic Island؟";
+"settings.dynamic_island_message" = "اسحب إشعار المؤقت على شاشة القفل لإخفاء عرض Dynamic Island/النشاط المباشر.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "إظهار المؤقت في Dynamic Island عند إغلاق التطبيق";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "هل أنت متأكد؟ إذا غيرت العدد، فأنت تقبل أيضاً أن انضباطك الذاتي صفر 😬";
+"cheat.we_see_you" = "تغش قليلاً؟ نراك... 👀";
+"cheat.come_on" = "هيا. أنت أفضل من هذا! 💪";
+"cheat.little_cheater" = "أيها الغشاش الصغير! لكن حسناً... 😏";
+"cheat.self_control" = "ألم يكن اسم التطبيق ضبط النفس؟ 🤔";
+"cheat.you_know" = "أنت تعلم أن هذا غش، أليس كذلك؟ 🙈";
+"cheat.nice_job" = "عمل جيد! ...لم يقل أحد ذلك أبداً 😅";
+"cheat.first_step" = "الخطوة الأولى للتغيير هي... ربما عدم الغش؟ 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "واو! أنت جاد في هذا! أحسنت! 💪";
+"interval_praise.discipline" = "أرأيت؟ هذا ما نسميه الانضباط! ⭐";
+"interval_praise.fantastic" = "رائع! تصبح أقوى كل ساعة! 🔥";
+"interval_praise.way_forward" = "هكذا تماماً! هذا هو الطريق الصحيح! 🚀";
+"interval_praise.respect" = "احترام! تُظهر ضبط نفس حقيقي! 👑";
+"interval_praise.continue" = "نعم! استمر هكذا وستذهب بعيداً! ✨";
+"interval_praise.attitude" = "هذا هو الموقف الصحيح! مثير للإعجاب! 💎";
+"interval_praise.strong" = "قوي كالدب! استمر! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "همم... تقلل الوقت؟ هذا تراجع! 😬";
+"interval_warning.less_control" = "هل أنت متأكد؟ وقت أقل = سيطرة أقل... 🤔";
+"interval_warning.wrong_way" = "أوه، نسير في الاتجاه الخاطئ! فكر مرة أخرى! 😅";
+"interval_warning.not_right" = "لم يكن ذلك الاتجاه الصحيح... 👀";
+"interval_warning.more_snus" = "وقت انتظار أقل = سنوس أكثر. هل هذا ما تريده حقاً؟ 🙈";
+"interval_warning.decrease" = "مهلاً، نحاول تقليل السنوس، لا زيادته! 😬";
+"interval_warning.backwards_person" = "تتراجع! لكن حسناً، هذا اختيارك... 🤷‍♂️";
+"interval_warning.alert" = "تحذير! تسير في الاتجاه الخاطئ! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "أخيراً! طوارئ أقل = سيطرة أكثر! 💪";
+"panic_praise.mature" = "هذا نضج! قرار جيد! ⭐";
+"panic_praise.yes" = "نعم! لا تحتاج كل هذا السنوس الاحتياطي! 🎉";
+"panic_praise.look_at_you" = "انظر إليك! قوي للغاية! 🔥";
+"panic_praise.impressive" = "انضباط مثير للإعجاب! استمر! 👑";
+"panic_praise.trust" = "تثق بنفسك أكثر الآن! رائع! ✨";
+"panic_praise.right_decision" = "قرار صحيح! يمكنك التعامل بأقل! 💎";
+"panic_praise.winner" = "هكذا يفكر الفائزون! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "تزيد السنوس الاحتياطي؟ تشعر بعدم الأمان؟ 😬";
+"panic_warning.less_trust" = "طوارئ أكثر = ثقة أقل بالنفس... 🤔";
+"panic_warning.really_need" = "همم... هل تحتاج حقاً المزيد من سنوس الطوارئ؟ 😅";
+"panic_warning.lack_confidence" = "تلك رائحة نقص الثقة! 👀";
+"panic_warning.wrong_direction" = "المزيد من سنوس الطوارئ؟ نسير في الاتجاه الخاطئ! 🙈";
+"panic_warning.afraid" = "هل تخاف من عدم قدرتك؟ ثق بنفسك! 💪";
+"panic_warning.backup" = "احتياطي أكثر = ثقة أقل. فكر في الأمر! 🤷‍♂️";
+"panic_warning.strength" = "تحذير! لا تثق بقوتك! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "تزيد العدد؟ هذا غش يا صديقي! 😬";
+"panic_left.we_see" = "لا، هذه ليست الطريقة! نراك! 👀";
+"panic_left.creative" = "إبداعي لكنه ما زال غشاً! 😅";
+"panic_left.thought" = "ظننت أننا لن نلاحظ؟ 🤔";
+"panic_left.cheating" = "هذا غش خالص! 🙈";
+"panic_left.tsk" = "تغش قليلاً بسنوس الطوارئ؟ تسك تسك! 😏";
+"panic_left.remember" = "ضبط النفس، تذكر؟ 🤷‍♂️";
+"panic_left.no_no" = "لا لا لا! هذه ليست الطريقة! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "تغش قليلاً؟ 🤨";
+"alert.cheating_yes" = "نعم، أغش";
+"alert.cheating_no" = "لا، أنا نادم";
+"alert.fantastic_title" = "رائع! 🎉";
+"alert.thanks" = "شكراً! 💪";
+"alert.wrong_way_title" = "اتجاه خاطئ! 😬";
+"alert.understand" = "فهمت";
+"alert.good_job_title" = "أحسنت! 🌟";
+"alert.hmm_title" = "همم... 🤔";
+"alert.ok_ok" = "حسناً، حسناً";
+"alert.cheater_title" = "غشاش! 👀";
+"alert.reset_day_title" = "إعادة تعيين قيم اليوم؟";
+"alert.cancel" = "إلغاء";
+"alert.reset" = "إعادة تعيين";
+"alert.reset_day_message" = "سيؤدي هذا إلى إعادة تعيين اليوم إلى البداية والعودة إلى وضع \"ابدأ يومك بـ%@\".";
+"alert.change_substance_title" = "تغيير المادة؟";
+"alert.change" = "تغيير";
+"alert.change_substance_message" = "سيؤدي هذا إلى إعادة تعيين جميع الإعدادات والسماح لك بالاختيار مرة أخرى بين السنوس والسجائر. سيتم إعادة تشغيل التطبيق.";
+"alert.restart_app_title" = "إعادة تشغيل التطبيق";
+"alert.restart_app_message" = "افتح التطبيق مرة أخرى لاختيار مادة جديدة.";
+"alert.ok" = "حسناً";
+
+/* Notifications */
+"notification.title" = "وقت السنوس التالي!";
+"notification.body" = "انتهى المؤقت. استمتع!";

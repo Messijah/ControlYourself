@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Selamat datang!";
+"welcome.subtitle" = "Pilih apa yang ingin kamu kontrol";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Rokok";
+"setup.title" = "Pengaturan";
+"setup.weekday_start" = "Waktu mulai hari kerja";
+"setup.weekend_start" = "Waktu mulai akhir pekan";
+"setup.amount_per_day" = "Jumlah %@ per hari";
+"setup.interval_between" = "Interval antara %@";
+"setup.hours" = "jam";
+"setup.panic_per_week" = "%@ darurat per minggu";
+"setup.save_continue" = "Simpan dan lanjutkan";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Tersisa";
+"main.panic" = "Darurat";
+"main.settings" = "Pengaturan";
+"main.take_one" = "Ambil %@";
+"main.take_one_ready" = "Ambil %@! ✨";
+"main.start_day" = "Mulai hari dengan %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Kamu bisa! 💪";
+"encouragement.hold_on" = "Tahan, hampir sampai!";
+"encouragement.good_job" = "Sejauh ini bagus!";
+"encouragement.keep_going" = "Terus lanjutkan!";
+"encouragement.you_are_strong" = "Kamu kuat! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Waktu yang sempurna! 🎉";
+"celebration.well_done" = "Kerja bagus! ⭐";
+"celebration.you_can_take_one" = "Sekarang kamu bisa ambil! 🎊";
+"celebration.time_is_up" = "Waktunya habis! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Ayo mulai! 💪";
+"morning.new_day" = "Hari baru, kesempatan baru! 🌅";
+"morning.welcome_back" = "Selamat datang kembali! 😊";
+"morning.ready" = "Siap untuk hari baru? 🚀";
+"morning.here_we_go" = "Ayo kita mulai! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Tunggu sebentar!";
+"alert.take_anyway" = "Tetap ambil";
+"alert.ok_wait" = "Ok, aku tunggu";
+"alert.time_remaining" = "%@ tersisa. Yakin sekarang?";
+
+/* Settings */
+"settings.title" = "Pengaturan";
+"settings.weekday_start" = "Waktu mulai hari kerja";
+"settings.weekend_start" = "Waktu mulai akhir pekan";
+"settings.interval" = "Interval antara %@";
+"settings.panic_per_week" = "%@ darurat per minggu";
+"settings.amount_left_today" = "%@ tersisa hari ini";
+"settings.panic_left" = "%@ darurat tersisa";
+"settings.save" = "Simpan pengaturan";
+"settings.reset_day" = "Reset hari";
+"settings.change_substance" = "Ganti zat";
+"settings.dynamic_island_title" = "Matikan Dynamic Island?";
+"settings.dynamic_island_message" = "Geser notifikasi timer di layar kunci untuk menyembunyikan tampilan Dynamic Island/Live Activity.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Tampilkan timer di Dynamic Island saat app ditutup";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Yakin? Kalau kamu ubah jumlahnya, kamu juga terima disiplin dirimu nol 😬";
+"cheat.we_see_you" = "Curang sedikit? Kami lihat... 👀";
+"cheat.come_on" = "Ayolah. Kamu lebih baik dari ini! 💪";
+"cheat.little_cheater" = "Penipu kecil! Tapi ya sudah... 😏";
+"cheat.self_control" = "Nama appnya kontrol diri kan? 🤔";
+"cheat.you_know" = "Kamu tahu ini curang, kan? 🙈";
+"cheat.nice_job" = "Kerja bagus! ...tidak ada yang pernah bilang 😅";
+"cheat.first_step" = "Langkah pertama untuk berubah adalah... mungkin jangan curang? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Kamu serius! Bagus! 💪";
+"interval_praise.discipline" = "Lihat? Ini yang kami sebut disiplin! ⭐";
+"interval_praise.fantastic" = "Fantastis! Kamu makin kuat tiap jam! 🔥";
+"interval_praise.way_forward" = "Tepat sekali! Ini jalan yang benar! 🚀";
+"interval_praise.respect" = "Hormat! Kamu tunjukkan kontrol diri sejati! 👑";
+"interval_praise.continue" = "YA! Terus begini dan kamu akan jauh! ✨";
+"interval_praise.attitude" = "Ini sikap yang benar! Mengesankan! 💎";
+"interval_praise.strong" = "Kuat seperti beruang! Lanjutkan! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... kurangi waktu? Itu mundur! 😬";
+"interval_warning.less_control" = "Yakin? Waktu lebih sedikit = kontrol lebih sedikit... 🤔";
+"interval_warning.wrong_way" = "Aduh, kita jalan salah arah! Pikir lagi! 😅";
+"interval_warning.not_right" = "Itu bukan arah yang benar... 👀";
+"interval_warning.more_snus" = "Tunggu lebih sedikit = snus lebih banyak. Yakin ini yang kamu mau? 🙈";
+"interval_warning.decrease" = "Hei, kita coba kurangi snus, bukan tambah! 😬";
+"interval_warning.backwards_person" = "Jalan mundur! Tapi ya sudah, pilihanmu... 🤷‍♂️";
+"interval_warning.alert" = "Peringatan! Kamu jalan salah arah! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Akhirnya! Darurat lebih sedikit = kontrol lebih banyak! 💪";
+"panic_praise.mature" = "Ini dewasa! Keputusan bagus! ⭐";
+"panic_praise.yes" = "YA! Kamu nggak butuh banyak snus cadangan! 🎉";
+"panic_praise.look_at_you" = "Lihat dirimu! Super kuat! 🔥";
+"panic_praise.impressive" = "Disiplin yang mengesankan! Lanjutkan! 👑";
+"panic_praise.trust" = "Sekarang kamu lebih percaya diri! Suka! ✨";
+"panic_praise.right_decision" = "Keputusan tepat! Kamu bisa dengan lebih sedikit! 💎";
+"panic_praise.winner" = "Begini cara berpikir pemenang! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Tambah snus cadangan? Merasa tidak aman? 😬";
+"panic_warning.less_trust" = "Lebih banyak darurat = lebih sedikit percaya diri... 🤔";
+"panic_warning.really_need" = "Hmm... kamu benar-benar butuh lebih banyak snus darurat? 😅";
+"panic_warning.lack_confidence" = "Itu bau kurang percaya diri! 👀";
+"panic_warning.wrong_direction" = "Lebih banyak snus darurat? Kita jalan salah arah! 🙈";
+"panic_warning.afraid" = "Takut nggak bisa? Percaya diri! 💪";
+"panic_warning.backup" = "Lebih banyak cadangan = lebih sedikit kepercayaan. Pikirin! 🤷‍♂️";
+"panic_warning.strength" = "Peringatan! Kamu nggak percaya kekuatanmu! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Tambah jumlah? Itu curang, bro! 😬";
+"panic_left.we_see" = "Nggak, bukan begini caranya! Kami lihat! 👀";
+"panic_left.creative" = "Kreatif tapi tetap curang! 😅";
+"panic_left.thought" = "Kira kami nggak sadar? 🤔";
+"panic_left.cheating" = "Itu curang murni! 🙈";
+"panic_left.tsk" = "Curang sedikit dengan snus darurat? Ck ck! 😏";
+"panic_left.remember" = "Kontrol diri, ingat? 🤷‍♂️";
+"panic_left.no_no" = "Tidak tidak tidak! Bukan begini caranya! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Curang sedikit? 🤨";
+"alert.cheating_yes" = "Ya, aku curang";
+"alert.cheating_no" = "Tidak, aku menyesal";
+"alert.fantastic_title" = "Fantastis! 🎉";
+"alert.thanks" = "Terima kasih! 💪";
+"alert.wrong_way_title" = "Salah arah! 😬";
+"alert.understand" = "Aku mengerti";
+"alert.good_job_title" = "Kerja bagus! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Ok, ok";
+"alert.cheater_title" = "Penipu! 👀";
+"alert.reset_day_title" = "Reset nilai hari ini?";
+"alert.cancel" = "Batal";
+"alert.reset" = "Reset";
+"alert.reset_day_message" = "Ini akan reset hari ke awal dan kembali ke mode \"Mulai hari dengan %@\".";
+"alert.change_substance_title" = "Ganti zat?";
+"alert.change" = "Ganti";
+"alert.change_substance_message" = "Ini akan reset semua pengaturan dan biarkan kamu pilih lagi antara snus dan rokok. App akan restart.";
+"alert.restart_app_title" = "Restart app";
+"alert.restart_app_message" = "Buka app lagi untuk pilih zat baru.";
+"alert.ok" = "Ok";
+
+/* Notifications */
+"notification.title" = "Waktunya snus berikutnya!";
+"notification.body" = "Timermu habis. Nikmati!";

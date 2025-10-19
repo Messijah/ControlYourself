@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "Welkom!";
+"welcome.subtitle" = "Kies wat je wilt controleren";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Sigaretten";
+"setup.title" = "Instellingen voor";
+"setup.weekday_start" = "Starttijd doordeweeks";
+"setup.weekend_start" = "Starttijd weekend";
+"setup.amount_per_day" = "Aantal %@ per dag";
+"setup.interval_between" = "Interval tussen %@";
+"setup.hours" = "uren";
+"setup.panic_per_week" = "Paniek %@ per week";
+"setup.save_continue" = "Opslaan & Doorgaan";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Over";
+"main.panic" = "Paniek";
+"main.settings" = "Instellingen";
+"main.take_one" = "Neem een %@";
+"main.take_one_ready" = "Neem een %@! ✨";
+"main.start_day" = "Start de dag met een %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Je kan het! 💪";
+"encouragement.hold_on" = "Volhouden, je bent er bijna!";
+"encouragement.good_job" = "Goed bezig tot nu toe!";
+"encouragement.keep_going" = "Blijf doorgaan!";
+"encouragement.you_are_strong" = "Je bent sterk! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Perfect getimed! 🎉";
+"celebration.well_done" = "Goed gedaan! ⭐";
+"celebration.you_can_take_one" = "Je mag er nu een nemen! 🎊";
+"celebration.time_is_up" = "De tijd is om! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Laten we gaan maat! 💪";
+"morning.new_day" = "Een nieuwe dag, een nieuwe kans! 🌅";
+"morning.welcome_back" = "Welkom terug! 😊";
+"morning.ready" = "Klaar voor een nieuwe dag? 🚀";
+"morning.here_we_go" = "Daar gaan we! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Wacht nog even!";
+"alert.take_anyway" = "Toch nemen";
+"alert.ok_wait" = "Oké, ik wacht";
+"alert.time_remaining" = "Je hebt nog %@ te gaan. Weet je zeker dat je er nu een wilt nemen?";
+
+/* Settings */
+"settings.title" = "Instellingen";
+"settings.weekday_start" = "Starttijd doordeweeks";
+"settings.weekend_start" = "Starttijd weekend";
+"settings.interval" = "Interval tussen %@";
+"settings.panic_per_week" = "Paniek %@ per week";
+"settings.amount_left_today" = "Aantal %@ over vandaag";
+"settings.panic_left" = "Paniek %@ over";
+"settings.save" = "Instellingen opslaan";
+"settings.reset_day" = "Reset dag";
+"settings.change_substance" = "Verander middel";
+"settings.dynamic_island_title" = "Dynamic Island uitschakelen?";
+"settings.dynamic_island_message" = "Veeg de timer notificatie op het vergrendelscherm weg om de Dynamic Island/Live Activity weergave te verbergen.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Toon timer in Dynamic Island wanneer de app gesloten is";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Weet je het zeker? Als je het aantal aanpast, accepteer je ook dat je nul discipline hebt 😬";
+"cheat.we_see_you" = "Een beetje vals spelen nu? We zien je wel... 👀";
+"cheat.come_on" = "Kom op zeg. Je bent beter dan dit! 💪";
+"cheat.little_cheater" = "Valsspeler! Maar vooruit dan maar... 😏";
+"cheat.self_control" = "Zelfbeheersing was de naam van de app, toch? 🤔";
+"cheat.you_know" = "Je weet dat dit vals spelen is, toch? 🙈";
+"cheat.nice_job" = "Goed gedaan! ...zei niemand ooit 😅";
+"cheat.first_step" = "De eerste stap naar verandering is... misschien niet vals spelen? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Je neemt dit serieus! Top gedaan! 💪";
+"interval_praise.discipline" = "Zie je dat? Dat noemen we discipline! ⭐";
+"interval_praise.fantastic" = "Fantastisch! Je wordt sterker met elk uur! 🔥";
+"interval_praise.way_forward" = "Zo moet het! Dit is de weg vooruit! 🚀";
+"interval_praise.respect" = "Respect! Je toont echte zelfbeheersing! 👑";
+"interval_praise.continue" = "JA! Blijf dit volhouden en je komt ver! ✨";
+"interval_praise.attitude" = "Dat is de juiste instelling! Indrukwekkend! 💎";
+"interval_praise.strong" = "Sterk als een beer! Ga zo door! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... De tijd verlagen? Dat is achteruit! 😬";
+"interval_warning.less_control" = "Weet je het zeker? Minder tijd = minder controle... 🤔";
+"interval_warning.wrong_way" = "Oeps, we gaan hier de verkeerde kant op! Denk nog eens na! 😅";
+"interval_warning.not_right" = "Dat was niet helemaal de juiste richting... 👀";
+"interval_warning.more_snus" = "Minder wachttijd = meer snus. Is dat echt wat je wilt? 🙈";
+"interval_warning.decrease" = "Hé, we proberen snus te VERMINDEREN, niet verhogen! 😬";
+"interval_warning.backwards_person" = "Achteruit gaan! Maar goed, jouw keuze... 🤷‍♂️";
+"interval_warning.alert" = "Waarschuwing! Je gaat de verkeerde kant op! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Eindelijk! Minder paniek snus = meer controle! 💪";
+"panic_praise.mature" = "Dit is volwassen! Goede beslissing! ⭐";
+"panic_praise.yes" = "JA! Je hebt niet zoveel veiligheids snus nodig! 🎉";
+"panic_praise.look_at_you" = "Kijk jou eens! Sterk als wat! 🔥";
+"panic_praise.impressive" = "Indrukwekkende discipline! Blijf doorgaan! 👑";
+"panic_praise.trust" = "Je vertrouwt jezelf nu meer! Geweldig! ✨";
+"panic_praise.right_decision" = "Juiste beslissing! Je kunt het met minder! 💎";
+"panic_praise.winner" = "Zo denken winnaars! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "De veiligheids snus verhogen? Voel je je onzeker? 😬";
+"panic_warning.less_trust" = "Meer paniek = minder vertrouwen in jezelf... 🤔";
+"panic_warning.really_need" = "Hmm... Heb je echt meer paniek snus nodig? 😅";
+"panic_warning.lack_confidence" = "Dat ruikt naar gebrek aan vertrouwen! 👀";
+"panic_warning.wrong_direction" = "Meer paniek snus? We gaan de verkeerde kant op! 🙈";
+"panic_warning.afraid" = "Ben je bang dat je het niet redt? Geloof in jezelf! 💪";
+"panic_warning.backup" = "Meer backup = minder vertrouwen. Denk erover na! 🤷‍♂️";
+"panic_warning.strength" = "Waarschuwing! Je vertrouwt je eigen kracht niet! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Het aantal verhogen? Dat is vals spelen, maat! 😬";
+"panic_left.we_see" = "Nee, zo werkt het niet! We zien je wel! 👀";
+"panic_left.creative" = "Creatief, maar nog steeds vals spelen! 😅";
+"panic_left.thought" = "Dacht je dat we het niet zouden merken? 🤔";
+"panic_left.cheating" = "Dat is puur vals spelen! 🙈";
+"panic_left.tsk" = "Een beetje vals spelen met de paniek snus? Tsk tsk! 😏";
+"panic_left.remember" = "Zelfbeheersing, weet je nog? 🤷‍♂️";
+"panic_left.no_no" = "Nee nee nee! Zo hoort het niet! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Een beetje vals spelen? 🤨";
+"alert.cheating_yes" = "Ja, ik speel vals";
+"alert.cheating_no" = "Nee, ik heb spijt";
+"alert.fantastic_title" = "Fantastisch! 🎉";
+"alert.thanks" = "Bedankt! 💪";
+"alert.wrong_way_title" = "Verkeerde kant! 😬";
+"alert.understand" = "Ik begrijp het";
+"alert.good_job_title" = "Goed gedaan! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Oké, oké";
+"alert.cheater_title" = "Valsspeler! 👀";
+"alert.reset_day_title" = "De waarden van vandaag resetten?";
+"alert.cancel" = "Annuleren";
+"alert.reset" = "Reset";
+"alert.reset_day_message" = "Dit reset de dag naar het begin en brengt je terug naar de 'Start de dag met een %@' modus.";
+"alert.change_substance_title" = "Middel veranderen?";
+"alert.change" = "Verander";
+"alert.change_substance_message" = "Dit reset ALLE instellingen en laat je opnieuw kiezen tussen snus en sigaretten. De app zal herstarten.";
+"alert.restart_app_title" = "App herstarten";
+"alert.restart_app_message" = "Open de app opnieuw om een nieuw middel te kiezen.";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "Tijd voor de volgende snus!";
+"notification.body" = "Je timer is afgelopen. Tijd om te genieten!";

@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "¡Bienvenido!";
+"welcome.subtitle" = "Elige lo que quieres controlar";
+"substance.snus" = "Snus";
+"substance.cigarettes" = "Cigarrillos";
+"setup.title" = "Configuración para";
+"setup.weekday_start" = "Hora de inicio entre semana";
+"setup.weekend_start" = "Hora de inicio fin de semana";
+"setup.amount_per_day" = "Cantidad de %@ al día";
+"setup.interval_between" = "Intervalo entre %@";
+"setup.hours" = "horas";
+"setup.panic_per_week" = "%@ de emergencia por semana";
+"setup.save_continue" = "Guardar y continuar";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Quedan";
+"main.panic" = "Emergencia";
+"main.settings" = "Ajustes";
+"main.take_one" = "Tomar un %@";
+"main.take_one_ready" = "¡Toma un %@! ✨";
+"main.start_day" = "¡Empieza el día con un %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "¡Tú puedes! 💪";
+"encouragement.hold_on" = "¡Aguanta, casi lo logras!";
+"encouragement.good_job" = "¡Vas muy bien!";
+"encouragement.keep_going" = "¡Sigue así!";
+"encouragement.you_are_strong" = "¡Eres fuerte! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "¡Momento perfecto! 🎉";
+"celebration.well_done" = "¡Bien hecho! ⭐";
+"celebration.you_can_take_one" = "¡Ya puedes tomar uno! 🎊";
+"celebration.time_is_up" = "¡Se acabó el tiempo! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "¡Vamos amigo! 💪";
+"morning.new_day" = "¡Un nuevo día, una nueva oportunidad! 🌅";
+"morning.welcome_back" = "¡Bienvenido de vuelta! 😊";
+"morning.ready" = "¿Listo para un nuevo día? 🚀";
+"morning.here_we_go" = "¡Aquí vamos! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "¡Espera un poco más!";
+"alert.take_anyway" = "Tomar de todos modos";
+"alert.ok_wait" = "Vale, esperaré";
+"alert.time_remaining" = "Te quedan %@. ¿Estás seguro de que quieres tomar uno ahora?";
+
+/* Settings */
+"settings.title" = "Ajustes";
+"settings.weekday_start" = "Hora de inicio entre semana";
+"settings.weekend_start" = "Hora de inicio fin de semana";
+"settings.interval" = "Intervalo entre %@";
+"settings.panic_per_week" = "%@ de emergencia por semana";
+"settings.amount_left_today" = "Cantidad de %@ que quedan hoy";
+"settings.panic_left" = "%@ de emergencia restantes";
+"settings.save" = "Guardar ajustes";
+"settings.reset_day" = "Reiniciar día";
+"settings.change_substance" = "Cambiar sustancia";
+"settings.dynamic_island_title" = "¿Desactivar Dynamic Island?";
+"settings.dynamic_island_message" = "Desliza la notificación del temporizador en la pantalla de bloqueo para ocultar Dynamic Island/Live Activity.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Mostrar temporizador en Dynamic Island cuando la app está cerrada";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "¿Estás seguro? Si cambias la cantidad, también aceptas que no tienes ninguna disciplina 😬";
+"cheat.we_see_you" = "¿Haciendo trampas? Te vemos... 👀";
+"cheat.come_on" = "Venga ya. ¡Eres mejor que esto! 💪";
+"cheat.little_cheater" = "¡Tramposo! Pero bueno... 😏";
+"cheat.self_control" = "El autocontrol era el nombre de la app, ¿no? 🤔";
+"cheat.you_know" = "Sabes que esto es hacer trampa, ¿verdad? 🙈";
+"cheat.nice_job" = "¡Buen trabajo! ...dijo nadie nunca 😅";
+"cheat.first_step" = "El primer paso hacia el cambio es... ¿no hacer trampas quizás? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "¡Guau! ¡Te lo estás tomando en serio! ¡Genial! 💪";
+"interval_praise.discipline" = "¿Ves eso? ¡A eso le llamamos disciplina! ⭐";
+"interval_praise.fantastic" = "¡Fantástico! ¡Te haces más fuerte con cada hora! 🔥";
+"interval_praise.way_forward" = "¡Eso es! ¡Este es el camino! 🚀";
+"interval_praise.respect" = "¡Respeto! ¡Estás mostrando verdadero autocontrol! 👑";
+"interval_praise.continue" = "¡SÍ! ¡Sigue así y llegarás lejos! ✨";
+"interval_praise.attitude" = "¡Esa es la actitud correcta! ¡Impresionante! 💎";
+"interval_praise.strong" = "¡Fuerte como un oso! ¡Sigue así! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... ¿Reduciendo el tiempo? ¡Eso es ir hacia atrás! 😬";
+"interval_warning.less_control" = "¿Estás seguro? Menos tiempo = menos control... 🤔";
+"interval_warning.wrong_way" = "¡Ups, aquí vamos por mal camino! ¡Piénsalo otra vez! 😅";
+"interval_warning.not_right" = "Esa no era la dirección correcta... 👀";
+"interval_warning.more_snus" = "Menos tiempo de espera = más snus. ¿Es eso lo que realmente quieres? 🙈";
+"interval_warning.decrease" = "¡Oye, estamos intentando REDUCIR el snus, no aumentarlo! 😬";
+"interval_warning.backwards_person" = "¡Yendo hacia atrás! Pero bueno, es tu decisión... 🤷‍♂️";
+"interval_warning.alert" = "¡Advertencia! ¡Vas por mal camino! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "¡Por fin! Menos snus de emergencia = más control! 💪";
+"panic_praise.mature" = "¡Eso es ser maduro! ¡Buena decisión! ⭐";
+"panic_praise.yes" = "¡SÍ! ¡No necesitas tantos snus de seguridad! 🎉";
+"panic_praise.look_at_you" = "¡Mírate! ¡Fuerte como el acero! 🔥";
+"panic_praise.impressive" = "¡Disciplina impresionante! ¡Sigue así! 👑";
+"panic_praise.trust" = "¡Confías más en ti mismo ahora! ¡Me encanta! ✨";
+"panic_praise.right_decision" = "¡Decisión correcta! ¡Puedes arreglártelas con menos! 💎";
+"panic_praise.winner" = "¡Así es como piensan los ganadores! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "¿Aumentando los snus de seguridad? ¿Te sientes inseguro? 😬";
+"panic_warning.less_trust" = "Más emergencia = menos confianza en ti mismo... 🤔";
+"panic_warning.really_need" = "Hmm... ¿Realmente necesitas más snus de emergencia? 😅";
+"panic_warning.lack_confidence" = "¡Eso huele a falta de confianza! 👀";
+"panic_warning.wrong_direction" = "¿Más snus de emergencia? ¡Vamos por mal camino! 🙈";
+"panic_warning.afraid" = "¿Tienes miedo de no lograrlo? ¡Cree en ti mismo! 💪";
+"panic_warning.backup" = "Más respaldo = menos confianza. ¡Piénsalo! 🤷‍♂️";
+"panic_warning.strength" = "¡Advertencia! ¡No confías en tu propia fuerza! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "¿Aumentando la cantidad? ¡Eso es trampa, amigo! 😬";
+"panic_left.we_see" = "¡No, así no funciona! ¡Te vemos! 👀";
+"panic_left.creative" = "¡Creativo, pero sigue siendo trampa! 😅";
+"panic_left.thought" = "¿Pensaste que no nos daríamos cuenta? 🤔";
+"panic_left.cheating" = "¡Eso es pura trampa! 🙈";
+"panic_left.tsk" = "¿Haciendo trampa con los snus de emergencia? ¡Tsk tsk! 😏";
+"panic_left.remember" = "Autocontrol, ¿recuerdas? 🤷‍♂️";
+"panic_left.no_no" = "¡No no no! ¡Así no se hace! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "¿Haciendo trampas? 🤨";
+"alert.cheating_yes" = "Sí, hago trampa";
+"alert.cheating_no" = "No, me arrepiento";
+"alert.fantastic_title" = "¡Fantástico! 🎉";
+"alert.thanks" = "¡Gracias! 💪";
+"alert.wrong_way_title" = "¡Mal camino! 😬";
+"alert.understand" = "Entiendo";
+"alert.good_job_title" = "¡Buen trabajo! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Vale, vale";
+"alert.cheater_title" = "¡Tramposo! 👀";
+"alert.reset_day_title" = "¿Reiniciar los valores de hoy?";
+"alert.cancel" = "Cancelar";
+"alert.reset" = "Reiniciar";
+"alert.reset_day_message" = "Esto reinicia el día al inicio y te devuelve al modo 'Empieza el día con un %@'.";
+"alert.change_substance_title" = "¿Cambiar sustancia?";
+"alert.change" = "Cambiar";
+"alert.change_substance_message" = "Esto reinicia TODOS los ajustes y te permite elegir entre snus y cigarrillos de nuevo. La app se reiniciará.";
+"alert.restart_app_title" = "Reiniciar app";
+"alert.restart_app_message" = "Abre la app de nuevo para elegir una nueva sustancia.";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "¡Hora del siguiente snus!";
+"notification.body" = "Tu temporizador ha expirado. ¡Hora de disfrutar!";

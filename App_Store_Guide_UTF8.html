@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urge - App Store Submission Guide</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 15mm; }
+            .no-print { display: none; }
+            h1 { page-break-before: always; }
+            h1:first-of-type { page-break-before: avoid; }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f7fa;
+        }
+
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            color: #667eea;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
+            margin-top: 50px;
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        h1:first-of-type {
+            margin-top: 0;
+            font-size: 2.8em;
+            text-align: center;
+            border: none;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 40px;
+            font-size: 1.8em;
+            border-left: 6px solid #764ba2;
+            padding-left: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-top: 30px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #555;
+            margin-top: 25px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+            border: 1px solid #e1e4e8;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 5px solid #667eea;
+            line-height: 1.6;
+        }
+
+        pre code {
+            background: transparent;
+            color: #f8f8f2;
+            padding: 0;
+            border: none;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        em {
+            color: #555;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px solid #667eea;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            background: #f0f4ff;
+            border-bottom-color: #764ba2;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 6px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border-left: 6px solid #17a2b8;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        blockquote {
+            border-left: 5px solid #667eea;
+            padding: 15px 25px;
+            margin: 25px 0;
+            background: #f0f4ff;
+            border-radius: 6px;
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e1e4e8;
+            margin: 40px 0;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .print-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(102, 126, 234, 0.6);
+        }
+
+        .print-button:active {
+            transform: translateY(-1px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 14px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Spara som PDF</button>
+    <div class="container">
+        <h1>📱 APP STORE SUBMISSION GUIDE</h1>
+        <h3 style="text-align: center; color: #764ba2; margin-top: -10px;">URGE (CONTROL YOURSELF)</h3>
+        <p style="text-align: center; font-size: 1.1em; color: #666;">Komplett steg-för-steg guide - Du kan inte misslyckas! 🚀</p>
+
+        <hr>
+
+        <p><em>OBS: Detta är en förhandsvisning. Öppna den fullständiga markdown-filen i TextEdit och spara som PDF för att få hela guiden med all information.</em></p>
+
+        <div class="info">
+            <h3 style="margin-top: 0;">📍 Hur du skapar komplett PDF:</h3>
+            <ol>
+                <li><strong>Öppna filen:</strong> <code>APP_STORE_SUBMISSION_GUIDE.md</code> i TextEdit</li>
+                <li><strong>Tryck:</strong> Command + P (Print)</li>
+                <li><strong>Välj:</strong> "PDF" → "Save as PDF"</li>
+                <li><strong>Spara:</strong> Som <code>Urge_App_Store_Guide.pdf</code></li>
+            </ol>
+        </div>
+
+        <h2>📋 INNEHÅLL I GUIDEN</h2>
+
+        <ol>
+            <li><strong>Pre-flight Checklist</strong> - Kolla av innan start</li>
+            <li><strong>Skapa App Store Connect Account</strong> - Apple Developer setup</li>
+            <li><strong>Certifikat & Provisioning Profiles</strong> - Signing configuration</li>
+            <li><strong>Konfigurera App i Xcode</strong> - Build settings</li>
+            <li><strong>Skapa App i App Store Connect</strong> - Initial app setup</li>
+            <li><strong>Konfigurera In-App Purchases</strong> - Subscription setup</li>
+            <li><strong>Bygga & Arkivera Appen</strong> - Archive process</li>
+            <li><strong>Ladda upp till App Store Connect</strong> - Upload process</li>
+            <li><strong>Fyll i App-information</strong> - Metadata & screenshots</li>
+            <li><strong>Skicka in för Granskning</strong> - Final submission</li>
+            <li><strong>Vanliga Problem & Lösningar</strong> - Troubleshooting</li>
+        </ol>
+
+        <h2>✅ Vad som redan är KLART i din app</h2>
+
+        <div class="success">
+            <ul style="margin: 0;">
+                <li>✅ Bundle ID: com.JensEH.ControlYourself</li>
+                <li>✅ Development Team: 63PV439858</li>
+                <li>✅ Version: 1.0 (Build 1)</li>
+                <li>✅ App Icon: Purple gradient (komplett)</li>
+                <li>✅ Localizations: 26 språk</li>
+                <li>✅ In-App Purchases: urge.plus.monthly & urge.plus.yearly</li>
+                <li>✅ Dynamic Island: Funktionell</li>
+                <li>✅ Live Activities: Funktionell</li>
+                <li>✅ Privacy: App Groups konfigurerade</li>
+            </ul>
+        </div>
+
+        <h2>🚀 Snabbstart: 3 Kritiska Steg</h2>
+
+        <div class="warning">
+            <h3 style="margin-top: 0;">1. Privacy Policy på GitHub (15 min)</h3>
+            <ol>
+                <li>Skapa repository på GitHub</li>
+                <li>Ladda upp <code>docs/privacy-policy.html</code></li>
+                <li>Aktivera GitHub Pages</li>
+                <li>Få URL: <code>https://[username].github.io/ControlYourself/privacy-policy.html</code></li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            <h3 style="margin-top: 0;">2. Screenshots (15 min)</h3>
+            <ol>
+                <li>Öppna Simulator (iPhone 15 Pro Max)</li>
+                <li>Kör appen från Xcode</li>
+                <li>Ta minst 3 screenshots (Command + S)</li>
+                <li>Spara i mapp för senare uppladdning</li>
+            </ol>
+        </div>
+
+        <div class="warning">
+            <h3 style="margin-top: 0;">3. Följ Huvudguiden (2-3 timmar)</h3>
+            <ol>
+                <li>Build & Archive appen</li>
+                <li>Ladda upp till App Store Connect</li>
+                <li>Fyll i all metadata</li>
+                <li>Submit for Review</li>
+            </ol>
+        </div>
+
+        <h2>📞 Support & Dokumentation</h2>
+
+        <p><strong>Alla guider finns i:</strong></p>
+        <ul>
+            <li><code>APP_STORE_SUBMISSION_GUIDE.md</code> - Huvudguide (denna fil)</li>
+            <li><code>GITHUB_SETUP_GUIDE.md</code> - Privacy Policy setup</li>
+            <li><code>FINAL_CHECKLIST.md</code> - Snabb checklista</li>
+            <li><code>APP_AUDIT_REPORT.md</code> - Fullständig app-granskning</li>
+        </ul>
+
+        <div class="highlight">
+            <h3 style="margin-top: 0; color: white;">🎯 DU ÄR REDO!</h3>
+            <p style="margin-bottom: 0;">Appen är testad, designen är perfekt, koden är solid. Nu är det bara att följa guiden steg för steg!</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; color: #999; font-size: 0.9em;">
+            <em>Skapad med ❤️ av Claude Code<br>
+            För Urge - Control Your Habits v1.0<br>
+            2025-10-19</em>
+        </p>
+    </div>
+</body>
+</html>

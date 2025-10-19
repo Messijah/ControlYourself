@@ -1,0 +1,151 @@
+/* Welcome & Setup */
+"welcome.title" = "欢迎！";
+"welcome.subtitle" = "选择你想控制的东西";
+"substance.snus" = "鼻烟";
+"substance.cigarettes" = "香烟";
+"setup.title" = "设置";
+"setup.weekday_start" = "工作日开始时间";
+"setup.weekend_start" = "周末开始时间";
+"setup.amount_per_day" = "每天%@数量";
+"setup.interval_between" = "%@间隔";
+"setup.hours" = "小时";
+"setup.panic_per_week" = "每周紧急%@";
+"setup.save_continue" = "保存并继续";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "剩余";
+"main.panic" = "紧急";
+"main.settings" = "设置";
+"main.take_one" = "来一个%@";
+"main.take_one_ready" = "来一个%@！ ✨";
+"main.start_day" = "用%@开始新的一天！";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "你能行！ 💪";
+"encouragement.hold_on" = "坚持住，快到了！";
+"encouragement.good_job" = "到目前为止做得很好！";
+"encouragement.keep_going" = "继续加油！";
+"encouragement.you_are_strong" = "你很强大！ 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "时机完美！ 🎉";
+"celebration.well_done" = "干得好！ ⭐";
+"celebration.you_can_take_one" = "现在可以来一个了！ 🎊";
+"celebration.time_is_up" = "时间到！ ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "开始吧！ 💪";
+"morning.new_day" = "新的一天，新的机会！ 🌅";
+"morning.welcome_back" = "欢迎回来！ 😊";
+"morning.ready" = "准备好迎接新的一天了吗？ 🚀";
+"morning.here_we_go" = "出发！ 🔥";
+
+/* Alerts */
+"alert.wait_title" = "再等一会儿！";
+"alert.take_anyway" = "还是要来";
+"alert.ok_wait" = "好的，我等";
+"alert.time_remaining" = "还剩%@。你确定现在就要吗？";
+
+/* Settings */
+"settings.title" = "设置";
+"settings.weekday_start" = "工作日开始时间";
+"settings.weekend_start" = "周末开始时间";
+"settings.interval" = "%@间隔";
+"settings.panic_per_week" = "每周紧急%@";
+"settings.amount_left_today" = "今天剩余%@";
+"settings.panic_left" = "剩余紧急%@";
+"settings.save" = "保存设置";
+"settings.reset_day" = "重置今天";
+"settings.change_substance" = "更换物质";
+"settings.dynamic_island_title" = "关闭Dynamic Island？";
+"settings.dynamic_island_message" = "在锁屏上滑动计时器通知以隐藏Dynamic Island/实时活动显示。";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "应用关闭时在Dynamic Island中显示计时器";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "你确定吗？如果你改变数量，你也接受自己自制力为零 😬";
+"cheat.we_see_you" = "现在作弊一点？我们看着呢... 👀";
+"cheat.come_on" = "来吧。你比这更好！ 💪";
+"cheat.little_cheater" = "小骗子！但好吧... 😏";
+"cheat.self_control" = "应用名字不是叫自我控制吗？ 🤔";
+"cheat.you_know" = "你知道这是作弊，对吧？ 🙈";
+"cheat.nice_job" = "干得好！...从来没人这么说过 😅";
+"cheat.first_step" = "改变的第一步是...也许不要作弊？ 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "哇！你很认真！做得好！ 💪";
+"interval_praise.discipline" = "看到了吗？这就是我们所说的自律！ ⭐";
+"interval_praise.fantastic" = "太棒了！你每小时都在变强！ 🔥";
+"interval_praise.way_forward" = "就是这样！这是前进的道路！ 🚀";
+"interval_praise.respect" = "尊敬！你展示了真正的自我控制！ 👑";
+"interval_praise.continue" = "是的！继续这样你会走得很远！ ✨";
+"interval_praise.attitude" = "这就是正确的态度！令人印象深刻！ 💎";
+"interval_praise.strong" = "像熊一样强壮！继续！ 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "嗯...减少时间？那是倒退！ 😬";
+"interval_warning.less_control" = "你确定吗？时间少 = 控制少... 🤔";
+"interval_warning.wrong_way" = "哎呀，我们走错方向了！再想想！ 😅";
+"interval_warning.not_right" = "那不太对...  👀";
+"interval_warning.more_snus" = "等待时间少 = 鼻烟多。这真的是你想要的吗？ 🙈";
+"interval_warning.decrease" = "嘿，我们试图减少鼻烟，不是增加！ 😬";
+"interval_warning.backwards_person" = "在倒退！但好吧，这是你的选择... 🤷‍♂️";
+"interval_warning.alert" = "警告！你走错方向了！ ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "终于！紧急鼻烟少 = 控制多！ 💪";
+"panic_praise.mature" = "这很成熟！好决定！ ⭐";
+"panic_praise.yes" = "是的！你不需要那么多安全鼻烟！ 🎉";
+"panic_praise.look_at_you" = "看看你！强得不得了！ 🔥";
+"panic_praise.impressive" = "令人印象深刻的自律！继续！ 👑";
+"panic_praise.trust" = "你现在更信任自己了！喜欢！ ✨";
+"panic_praise.right_decision" = "正确的决定！你可以用更少的！ 💎";
+"panic_praise.winner" = "这就是赢家的思维方式！ 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "增加安全鼻烟？感到不安全？ 😬";
+"panic_warning.less_trust" = "更多紧急 = 对自己的信任更少... 🤔";
+"panic_warning.really_need" = "嗯...你真的需要更多紧急鼻烟吗？ 😅";
+"panic_warning.lack_confidence" = "那闻起来像缺乏信心！ 👀";
+"panic_warning.wrong_direction" = "更多紧急鼻烟？我们走错方向了！ 🙈";
+"panic_warning.afraid" = "你害怕做不到吗？相信自己！ 💪";
+"panic_warning.backup" = "更多备份 = 更少信任。想想吧！ 🤷‍♂️";
+"panic_warning.strength" = "警告！你不相信自己的力量！ ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "增加数量？那是作弊，伙计！ 😬";
+"panic_left.we_see" = "不，不是这样做的！我们看着呢！ 👀";
+"panic_left.creative" = "有创意，但还是作弊！ 😅";
+"panic_left.thought" = "你以为我们不会注意到吗？ 🤔";
+"panic_left.cheating" = "那是纯粹的作弊！ 🙈";
+"panic_left.tsk" = "用紧急鼻烟作弊一点？啧啧！ 😏";
+"panic_left.remember" = "自我控制，记得吗？ 🤷‍♂️";
+"panic_left.no_no" = "不不不！不应该这样做！ ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "作弊一点？ 🤨";
+"alert.cheating_yes" = "是的，我在作弊";
+"alert.cheating_no" = "不，我后悔了";
+"alert.fantastic_title" = "太棒了！ 🎉";
+"alert.thanks" = "谢谢！ 💪";
+"alert.wrong_way_title" = "错误的方向！ 😬";
+"alert.understand" = "我明白了";
+"alert.good_job_title" = "干得好！ 🌟";
+"alert.hmm_title" = "嗯... 🤔";
+"alert.ok_ok" = "好的，好的";
+"alert.cheater_title" = "骗子！ 👀";
+"alert.reset_day_title" = "重置今天的值？";
+"alert.cancel" = "取消";
+"alert.reset" = "重置";
+"alert.reset_day_message" = "这将重置今天到开始并返回到"用%@开始新的一天"模式。";
+"alert.change_substance_title" = "更换物质？";
+"alert.change" = "更换";
+"alert.change_substance_message" = "这将重置所有设置并让你再次在鼻烟和香烟之间选择。应用将重启。";
+"alert.restart_app_title" = "重启应用";
+"alert.restart_app_message" = "再次打开应用以选择新物质。";
+"alert.ok" = "好";
+
+/* Notifications */
+"notification.title" = "下一个鼻烟的时间！";
+"notification.body" = "你的计时器已过期。享受吧！";
