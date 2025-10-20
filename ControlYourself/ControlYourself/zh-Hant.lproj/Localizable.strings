@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "重置統計？";
 "statistics.reset_alert_message" = "所有統計數據將被永久刪除。此操作無法撤消。";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "%@時間到! 🎉";
+"celebration.enjoy_substance" = "享受%@! 🔥";
+"celebration.its_time" = "現在是時候了! ✨";
+"celebration.take_one_now" = "現在來一個! 💪";
+"celebration.ready" = "準備好了! 😊";
+"celebration.ready_to_enjoy" = "準備享受! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "節省 %@";
+

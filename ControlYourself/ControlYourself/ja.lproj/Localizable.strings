@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "統計をリセットしますか？";
 "statistics.reset_alert_message" = "すべての統計が完全に削除されます。元に戻すことはできません。";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "%@の時間だ! 🎉";
+"celebration.enjoy_substance" = "%@を楽しもう! 🔥";
+"celebration.its_time" = "今が時間だ! ✨";
+"celebration.take_one_now" = "今吸おう! 💪";
+"celebration.ready" = "準備完了! 😊";
+"celebration.ready_to_enjoy" = "楽しむ準備完了! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "%@を節約";
+

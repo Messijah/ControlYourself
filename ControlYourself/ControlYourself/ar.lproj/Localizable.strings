@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "إعادة تعيين الإحصائيات؟";
 "statistics.reset_alert_message" = "سيتم حذف جميع الإحصائيات بشكل دائم. لا يمكن التراجع عن ذلك.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "وقت %@! 🎉";
+"celebration.enjoy_substance" = "استمتع بـ%@! 🔥";
+"celebration.its_time" = "حان الوقت الآن! ✨";
+"celebration.take_one_now" = "خذ واحدة الآن! 💪";
+"celebration.ready" = "جاهز! 😊";
+"celebration.ready_to_enjoy" = "جاهز للاستمتاع! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "وفر %@";
+

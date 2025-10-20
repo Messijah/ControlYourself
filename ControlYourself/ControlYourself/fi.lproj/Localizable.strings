@@ -208,3 +208,14 @@
 "statistics.reset_button" = "Nollaa tilastot";
 "statistics.reset_alert_title" = "Nollataanko tilastot?";
 "statistics.reset_alert_message" = "Kaikki tilastot poistetaan pysyvästi. Tätä ei voi peruuttaa.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@-aika! 🎉";
+"celebration.enjoy_substance" = "Nauti %@! 🔥";
+"celebration.its_time" = "Nyt on aika! ✨";
+"celebration.take_one_now" = "Ota yksi nyt! 💪";
+"celebration.ready" = "Valmis! 😊";
+"celebration.ready_to_enjoy" = "Valmis nauttimaan! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Säästä %@";

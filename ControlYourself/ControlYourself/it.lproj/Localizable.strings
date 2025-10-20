@@ -208,3 +208,14 @@
 "statistics.reset_button" = "Ripristina statistiche";
 "statistics.reset_alert_title" = "Ripristinare le statistiche?";
 "statistics.reset_alert_message" = "Tutte le statistiche verranno eliminate permanentemente. Questa operazione non può essere annullata.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "È l'ora del %@! 🎉";
+"celebration.enjoy_substance" = "Goditi un %@! 🔥";
+"celebration.its_time" = "È il momento! ✨";
+"celebration.take_one_now" = "Prendine uno ora! 💪";
+"celebration.ready" = "Pronto! 😊";
+"celebration.ready_to_enjoy" = "Pronto a goderti! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Risparmia %@";

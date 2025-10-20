@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Đặt lại thống kê?";
 "statistics.reset_alert_message" = "Tất cả thống kê sẽ bị xóa vĩnh viễn. Không thể hoàn tác.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "Giờ %@! 🎉";
+"celebration.enjoy_substance" = "Thưởng thức %@! 🔥";
+"celebration.its_time" = "Bây giờ là lúc! ✨";
+"celebration.take_one_now" = "Dùng ngay bây giờ! 💪";
+"celebration.ready" = "Sẵn sàng! 😊";
+"celebration.ready_to_enjoy" = "Sẵn sàng thưởng thức! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Tiết kiệm %@";
+

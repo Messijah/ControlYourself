@@ -172,7 +172,17 @@ struct GlassCard<Content: View>: View {
 
 // MARK: - App Content
 enum Njutning: String {
-    case snus = "Snus", cigaretter = "Cigaretter"
+    case snus = "snus"
+    case cigaretter = "cigarettes"
+
+    var localizedName: String {
+        switch self {
+        case .snus:
+            return NSLocalizedString("substance.snus", comment: "")
+        case .cigaretter:
+            return NSLocalizedString("substance.cigarettes", comment: "")
+        }
+    }
 }
 
 struct ContentView: View {

@@ -208,3 +208,14 @@
 "statistics.reset_button" = "Nulstil statistik";
 "statistics.reset_alert_title" = "Nulstil statistik?";
 "statistics.reset_alert_message" = "Al statistik vil blive slettet permanent. Dette kan ikke fortrydes.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@-tid! 🎉";
+"celebration.enjoy_substance" = "Nyd en %@! 🔥";
+"celebration.its_time" = "Nu er det tid! ✨";
+"celebration.take_one_now" = "Tag en nu! 💪";
+"celebration.ready" = "Klar! 😊";
+"celebration.ready_to_enjoy" = "Klar til at nyde! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Spar %@";

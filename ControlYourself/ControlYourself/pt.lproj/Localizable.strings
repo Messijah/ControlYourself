@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Redefinir estatísticas?";
 "statistics.reset_alert_message" = "Todas as estatísticas serão excluídas permanentemente. Isso não pode ser desfeito.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "Hora do %@! 🎉";
+"celebration.enjoy_substance" = "Aproveite um %@! 🔥";
+"celebration.its_time" = "É hora agora! ✨";
+"celebration.take_one_now" = "Pegue um agora! 💪";
+"celebration.ready" = "Pronto! 😊";
+"celebration.ready_to_enjoy" = "Pronto para aproveitar! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Economize %@";
+

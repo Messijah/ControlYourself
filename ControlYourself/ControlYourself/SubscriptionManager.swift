@@ -202,7 +202,7 @@ class SubscriptionManager: ObservableObject {
         formatter.locale = yearlyProduct.priceFormatStyle.locale
 
         if let savingsString = formatter.string(from: NSDecimalNumber(decimal: savings)) {
-            return "Spara \(savingsString)"
+            return String(format: NSLocalizedString("subscription.save_amount", comment: ""), savingsString)
         }
         return ""
     }

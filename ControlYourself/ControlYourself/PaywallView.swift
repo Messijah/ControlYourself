@@ -193,7 +193,7 @@ struct PaywallView: View {
             }
         }
         .alert(NSLocalizedString("paywall.error_title", comment: ""), isPresented: $showError) {
-            Button("OK", role: .cancel) {}
+            Button(NSLocalizedString("alert.ok", comment: ""), role: .cancel) {}
         } message: {
             Text(errorMessage)
         }

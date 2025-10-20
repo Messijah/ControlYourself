@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "รีเซ็ตสถิติ?";
 "statistics.reset_alert_message" = "สถิติทั้งหมดจะถูกลบอย่างถาวร ไม่สามารถย้อนกลับได้";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "เวลา%@! 🎉";
+"celebration.enjoy_substance" = "เพลิดเพลินกับ%@! 🔥";
+"celebration.its_time" = "ตอนนี้ถึงเวลาแล้ว! ✨";
+"celebration.take_one_now" = "ใช้ตอนนี้เลย! 💪";
+"celebration.ready" = "พร้อม! 😊";
+"celebration.ready_to_enjoy" = "พร้อมที่จะเพลิดเพลิน! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "ประหยัด %@";
+

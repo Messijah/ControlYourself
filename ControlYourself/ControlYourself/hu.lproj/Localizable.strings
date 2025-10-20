@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Statisztikák visszaállítása?";
 "statistics.reset_alert_message" = "Minden statisztika véglegesen törlődik. Ez nem vonható vissza.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "%@ ideje! 🎉";
+"celebration.enjoy_substance" = "Élvezz egy %@! 🔥";
+"celebration.its_time" = "Most itt az idő! ✨";
+"celebration.take_one_now" = "Vegyél egyet most! 💪";
+"celebration.ready" = "Kész! 😊";
+"celebration.ready_to_enjoy" = "Kész az élvezetre! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Takarítsd meg %@";
+

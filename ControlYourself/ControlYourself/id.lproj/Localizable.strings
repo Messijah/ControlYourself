@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Reset statistik?";
 "statistics.reset_alert_message" = "Semua statistik akan dihapus secara permanen. Ini tidak dapat dibatalkan.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "Waktunya %@! 🎉";
+"celebration.enjoy_substance" = "Nikmati %@! 🔥";
+"celebration.its_time" = "Sekarang waktunya! ✨";
+"celebration.take_one_now" = "Ambil sekarang! 💪";
+"celebration.ready" = "Siap! 😊";
+"celebration.ready_to_enjoy" = "Siap menikmati! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Hemat %@";
+

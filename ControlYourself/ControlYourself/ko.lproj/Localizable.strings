@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "통계를 재설정하시겠습니까?";
 "statistics.reset_alert_message" = "모든 통계가 영구적으로 삭제됩니다. 되돌릴 수 없습니다.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "%@ 시간! 🎉";
+"celebration.enjoy_substance" = "%@ 즐기세요! 🔥";
+"celebration.its_time" = "지금이 시간이에요! ✨";
+"celebration.take_one_now" = "지금 하나 하세요! 💪";
+"celebration.ready" = "준비 완료! 😊";
+"celebration.ready_to_enjoy" = "즐길 준비 완료! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "%@ 절약";
+

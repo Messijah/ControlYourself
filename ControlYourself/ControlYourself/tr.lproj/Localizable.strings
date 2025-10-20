@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "İstatistikler sıfırlansın mı?";
 "statistics.reset_alert_message" = "Tüm istatistikler kalıcı olarak silinecektir. Bu geri alınamaz.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "%@ zamanı! 🎉";
+"celebration.enjoy_substance" = "Bir %@ tadını çıkar! 🔥";
+"celebration.its_time" = "Şimdi tam zamanı! ✨";
+"celebration.take_one_now" = "Şimdi bir tane al! 💪";
+"celebration.ready" = "Hazır! 😊";
+"celebration.ready_to_enjoy" = "Tadını çıkarmaya hazır! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Tasarruf et %@";
+

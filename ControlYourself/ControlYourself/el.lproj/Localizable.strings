@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Επαναφορά στατιστικών;";
 "statistics.reset_alert_message" = "Όλα τα στατιστικά θα διαγραφούν οριστικά. Αυτό δεν μπορεί να αναιρεθεί.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "Ώρα για %@! 🎉";
+"celebration.enjoy_substance" = "Απόλαυσε ένα %@! 🔥";
+"celebration.its_time" = "Τώρα είναι η ώρα! ✨";
+"celebration.take_one_now" = "Πάρε ένα τώρα! 💪";
+"celebration.ready" = "Έτοιμος! 😊";
+"celebration.ready_to_enjoy" = "Έτοιμος να απολαύσεις! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Εξοικονόμησε %@";
+

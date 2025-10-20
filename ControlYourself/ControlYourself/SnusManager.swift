@@ -59,31 +59,16 @@ class SnusManager: ObservableObject {
 
     // Celebration messages for when timer completes - dynamically generated based on substance
     private func celebrationMessages() -> [String] {
-        let isCigarette = substanceName.lowercased().contains("cigar")
-
-        if isCigarette {
-            return [
-                "Cigarettdags! 🎉",
-                "Bra jobbat! ⭐",
-                "Njut av en cigg! 🔥",
-                "Nu är det dags! ✨",
-                "Ta en nu! 💪",
-                "Färdig! 😊",
-                "Redo att njuta! 🎊",
-                "Perfekt timing! 🌟"
-            ]
-        } else {
-            return [
-                "Snusdags! 🎉",
-                "Bra jobbat! ⭐",
-                "Njut av en snus! 🔥",
-                "Nu är det dags! ✨",
-                "Ta en nu! 💪",
-                "Färdig! 😊",
-                "Redo att njuta! 🎊",
-                "Perfekt timing! 🌟"
-            ]
-        }
+        return [
+            String(format: NSLocalizedString("celebration.substance_time", comment: ""), localizedSubstanceName),
+            NSLocalizedString("celebration.well_done", comment: ""),
+            String(format: NSLocalizedString("celebration.enjoy_substance", comment: ""), localizedSubstanceName),
+            NSLocalizedString("celebration.its_time", comment: ""),
+            NSLocalizedString("celebration.take_one_now", comment: ""),
+            NSLocalizedString("celebration.ready", comment: ""),
+            NSLocalizedString("celebration.ready_to_enjoy", comment: ""),
+            NSLocalizedString("celebration.perfect_timing", comment: "")
+        ]
     }
 
     init() {
@@ -365,9 +350,9 @@ class SnusManager: ObservableObject {
 
         let content = UNMutableNotificationContent()
         // Use a random celebration message instead of static localized string
-        let celebrationMessage = celebrationMessages().randomElement() ?? "Nu är det dags! ✨"
+        let celebrationMessage = celebrationMessages().randomElement() ?? NSLocalizedString("celebration.its_time", comment: "")
         content.title = celebrationMessage
-        content.body = "Timern är klar. Njut!"
+        content.body = NSLocalizedString("notification.body", comment: "")
         content.sound = .default
         content.interruptionLevel = .timeSensitive // Makes sure notification shows up
 

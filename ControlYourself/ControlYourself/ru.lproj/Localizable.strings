@@ -209,3 +209,14 @@
 "statistics.reset_alert_title" = "Сбросить статистику?";
 "statistics.reset_alert_message" = "Вся статистика будет удалена навсегда. Это нельзя отменить.";
 
+/* New Celebration Messages */
+"celebration.substance_time" = "Время %@! 🎉";
+"celebration.enjoy_substance" = "Наслаждайся %@! 🔥";
+"celebration.its_time" = "Сейчас самое время! ✨";
+"celebration.take_one_now" = "Возьми сейчас! 💪";
+"celebration.ready" = "Готово! 😊";
+"celebration.ready_to_enjoy" = "Готов наслаждаться! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Сэкономь %@";
+

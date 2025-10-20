@@ -205,3 +205,14 @@
 "statistics.reset_button" = "Återställ statistik";
 "statistics.reset_alert_title" = "Återställ statistik?";
 "statistics.reset_alert_message" = "All statistik kommer att raderas permanent. Detta kan inte ångras.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@dags! 🎉";
+"celebration.enjoy_substance" = "Njut av en %@! 🔥";
+"celebration.its_time" = "Nu är det dags! ✨";
+"celebration.take_one_now" = "Ta en nu! 💪";
+"celebration.ready" = "Färdig! 😊";
+"celebration.ready_to_enjoy" = "Redo att njuta! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Spara %@";
