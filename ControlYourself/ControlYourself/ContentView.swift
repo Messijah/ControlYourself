@@ -768,9 +768,9 @@ struct WelcomeView: View {
                     .scaleEffect(logoScale)
                     .opacity(logoOpacity)
 
-                // Tagline - bigger and more prominent with warm purple gradient
-                Text(NSLocalizedString("welcome.tagline", comment: ""))
-                    .font(.system(size: 38, weight: .bold, design: .rounded))
+                // App name - simple and universal
+                Text("Urge")
+                    .font(.system(size: 48, weight: .bold, design: .rounded))
                     .foregroundStyle(
                         LinearGradient(
                             colors: [
