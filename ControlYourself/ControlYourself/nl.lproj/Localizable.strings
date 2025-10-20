@@ -17,7 +17,7 @@
 "main.remaining" = "Over";
 "main.panic" = "Paniek";
 "main.settings" = "Instellingen";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statistieken";
 "main.take_one" = "Neem een %@";
 "main.take_one_ready" = "Neem een %@! ✨";
 "main.start_day" = "Start de dag met een %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Je timer is afgelopen. Tijd om te genieten!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Voltooiingsmeldingen";
+"settings.timer_notification_subtitle" = "Trillen en geluid bij voltooiing";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Timerweergave";
+"settings.timer_format_subtitle" = "Hoe de timer wordt weergegeven";
+"settings.timer_format_hours" = "Alleen uren";
+"settings.timer_format_hours_example" = "bijv. 02";
+"settings.timer_format_hours_minutes" = "Uren:Minuten";
+"settings.timer_format_hours_minutes_example" = "bijv. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Uren:Minuten:Seconden";
+"settings.timer_format_hours_minutes_seconds_example" = "bijv. 02:30:45";
 
 
 

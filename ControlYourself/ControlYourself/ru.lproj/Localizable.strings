@@ -17,7 +17,7 @@
 "main.remaining" = "Осталось";
 "main.panic" = "Паника";
 "main.settings" = "Настройки";
-"main.statistics" = "Statistics";
+"main.statistics" = "Статистика";
 "main.take_one" = "Взять %@";
 "main.take_one_ready" = "Взять %@! ✨";
 "main.start_day" = "Начать день с %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Твой таймер истёк. Время наслаждаться!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Оповещения о завершении";
+"settings.timer_notification_subtitle" = "Вибрация и звук при завершении";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Отображение таймера";
+"settings.timer_format_subtitle" = "Как отображается таймер";
+"settings.timer_format_hours" = "Только часы";
+"settings.timer_format_hours_example" = "напр. 02";
+"settings.timer_format_hours_minutes" = "Часы:Минуты";
+"settings.timer_format_hours_minutes_example" = "напр. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Часы:Минуты:Секунды";
+"settings.timer_format_hours_minutes_seconds_example" = "напр. 02:30:45";
 
 
 

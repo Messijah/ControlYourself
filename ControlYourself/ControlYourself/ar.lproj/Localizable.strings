@@ -17,7 +17,7 @@
 "main.remaining" = "المتبقي";
 "main.panic" = "طوارئ";
 "main.settings" = "الإعدادات";
-"main.statistics" = "Statistics";
+"main.statistics" = "الإحصائيات";
 "main.take_one" = "خذ %@";
 "main.take_one_ready" = "خذ %@! ✨";
 "main.start_day" = "ابدأ يومك بـ%@!";
@@ -152,18 +152,18 @@
 "notification.body" = "انتهى المؤقت. استمتع!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "تنبيهات الإنتهاء";
+"settings.timer_notification_subtitle" = "الاهتزاز والصوت عند الانتهاء";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "عرض المؤقت";
+"settings.timer_format_subtitle" = "كيفية عرض المؤقت";
+"settings.timer_format_hours" = "الساعات فقط";
+"settings.timer_format_hours_example" = "مثال 02";
+"settings.timer_format_hours_minutes" = "ساعات:دقائق";
+"settings.timer_format_hours_minutes_example" = "مثال 02:30";
+"settings.timer_format_hours_minutes_seconds" = "ساعات:دقائق:ثواني";
+"settings.timer_format_hours_minutes_seconds_example" = "مثال 02:30:45";
 
 
 

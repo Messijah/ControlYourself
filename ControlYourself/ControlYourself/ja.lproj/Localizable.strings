@@ -17,7 +17,7 @@
 "main.remaining" = "残り";
 "main.panic" = "緊急";
 "main.settings" = "設定";
-"main.statistics" = "Statistics";
+"main.statistics" = "統計";
 "main.take_one" = "%@を吸う";
 "main.take_one_ready" = "%@を吸おう！ ✨";
 "main.start_day" = "%@で一日を始めよう！";
@@ -152,18 +152,18 @@
 "notification.body" = "タイマーが終了しました。楽しんで！";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "完了アラート";
+"settings.timer_notification_subtitle" = "完了時に振動と音";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "タイマー表示";
+"settings.timer_format_subtitle" = "タイマーの表示方法";
+"settings.timer_format_hours" = "時間のみ";
+"settings.timer_format_hours_example" = "例 02";
+"settings.timer_format_hours_minutes" = "時間:分";
+"settings.timer_format_hours_minutes_example" = "例 02:30";
+"settings.timer_format_hours_minutes_seconds" = "時間:分:秒";
+"settings.timer_format_hours_minutes_seconds_example" = "例 02:30:45";
 
 
 

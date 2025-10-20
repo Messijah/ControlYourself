@@ -17,7 +17,7 @@
 "main.remaining" = "Tersisa";
 "main.panic" = "Darurat";
 "main.settings" = "Pengaturan";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statistik";
 "main.take_one" = "Ambil %@";
 "main.take_one_ready" = "Ambil %@! ✨";
 "main.start_day" = "Mulai hari dengan %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Timermu habis. Nikmati!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Pemberitahuan selesai";
+"settings.timer_notification_subtitle" = "Getar dan suara saat selesai";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Tampilan timer";
+"settings.timer_format_subtitle" = "Bagaimana timer ditampilkan";
+"settings.timer_format_hours" = "Hanya jam";
+"settings.timer_format_hours_example" = "mis. 02";
+"settings.timer_format_hours_minutes" = "Jam:Menit";
+"settings.timer_format_hours_minutes_example" = "mis. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Jam:Menit:Detik";
+"settings.timer_format_hours_minutes_seconds_example" = "mis. 02:30:45";
 
 
 

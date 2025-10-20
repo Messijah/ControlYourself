@@ -17,7 +17,7 @@
 "main.remaining" = "Jäljellä";
 "main.panic" = "Hätä";
 "main.settings" = "Asetukset";
-"main.statistics" = "Statistics";
+"main.statistics" = "Tilastot";
 "main.take_one" = "Ota %@";
 "main.take_one_ready" = "Ota %@! ✨";
 "main.start_day" = "Aloita päivä %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Ajastimesi umpeutui. Nauti!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Valmistumisilmoitukset";
+"settings.timer_notification_subtitle" = "Värinä ja ääni valmistuessa";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Ajastimen näyttö";
+"settings.timer_format_subtitle" = "Miten ajastin näytetään";
+"settings.timer_format_hours" = "Vain tunnit";
+"settings.timer_format_hours_example" = "esim. 02";
+"settings.timer_format_hours_minutes" = "Tunnit:Minuutit";
+"settings.timer_format_hours_minutes_example" = "esim. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Tunnit:Minuutit:Sekunnit";
+"settings.timer_format_hours_minutes_seconds_example" = "esim. 02:30:45";
 
 
 

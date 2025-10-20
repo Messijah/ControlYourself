@@ -17,7 +17,7 @@
 "main.remaining" = "Kalan";
 "main.panic" = "Acil";
 "main.settings" = "Ayarlar";
-"main.statistics" = "Statistics";
+"main.statistics" = "İstatistikler";
 "main.take_one" = "Bir %@ al";
 "main.take_one_ready" = "Bir %@ al! ✨";
 "main.start_day" = "%@ ile güne başla!";
@@ -152,18 +152,18 @@
 "notification.body" = "Zamanlayıcınız doldu. Tadını çıkar!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Tamamlanma uyarıları";
+"settings.timer_notification_subtitle" = "Bittiğinde titreşim ve ses";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Zamanlayıcı görünümü";
+"settings.timer_format_subtitle" = "Zamanlayıcı nasıl gösterilir";
+"settings.timer_format_hours" = "Sadece saatler";
+"settings.timer_format_hours_example" = "örn. 02";
+"settings.timer_format_hours_minutes" = "Saat:Dakika";
+"settings.timer_format_hours_minutes_example" = "örn. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Saat:Dakika:Saniye";
+"settings.timer_format_hours_minutes_seconds_example" = "örn. 02:30:45";
 
 
 

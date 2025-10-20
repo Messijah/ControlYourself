@@ -17,7 +17,7 @@
 "main.remaining" = "Restant";
 "main.panic" = "Panique";
 "main.settings" = "Paramètres";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statistiques";
 "main.take_one" = "Prendre un %@";
 "main.take_one_ready" = "Prends un %@ ! ✨";
 "main.start_day" = "Commence la journée avec un %@ !";
@@ -152,18 +152,18 @@
 "notification.body" = "Ton minuteur a expiré. C'est l'heure d'en profiter !";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Alertes de fin";
+"settings.timer_notification_subtitle" = "Vibration et son à la fin";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Affichage du minuteur";
+"settings.timer_format_subtitle" = "Comment le minuteur est affiché";
+"settings.timer_format_hours" = "Heures seulement";
+"settings.timer_format_hours_example" = "ex. 02";
+"settings.timer_format_hours_minutes" = "Heures:Minutes";
+"settings.timer_format_hours_minutes_example" = "ex. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Heures:Minutes:Secondes";
+"settings.timer_format_hours_minutes_seconds_example" = "ex. 02:30:45";
 
 
 

@@ -17,7 +17,7 @@
 "main.remaining" = "Igjen";
 "main.panic" = "Panikk";
 "main.settings" = "Innstillinger";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statistikk";
 "main.take_one" = "Ta en %@";
 "main.take_one_ready" = "Ta en %@! ✨";
 "main.start_day" = "Start dagen med en %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Din timer har gått ut. Det er dags å nyte!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Varslinger ved fullføring";
+"settings.timer_notification_subtitle" = "Vibrer og lyd når ferdig";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Timervisning";
+"settings.timer_format_subtitle" = "Hvordan timeren vises";
+"settings.timer_format_hours" = "Kun timer";
+"settings.timer_format_hours_example" = "f.eks. 02";
+"settings.timer_format_hours_minutes" = "Timer:Minutter";
+"settings.timer_format_hours_minutes_example" = "f.eks. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Timer:Minutter:Sekunder";
+"settings.timer_format_hours_minutes_seconds_example" = "f.eks. 02:30:45";
 
 
 
@@ -174,7 +174,7 @@
 "paywall.feature_balance_desc" = "Reguler forbruket ditt uten å slutte helt";
 "paywall.feature_progress_title" = "Følg fremgangen din";
 "paywall.feature_progress_desc" = "Se statistikken og fremgangen din over tid";
-"paywall.feature_panic_title" = "Panikkm odus";
+"paywall.feature_panic_title" = "Panikkmodus";
 "paywall.feature_panic_desc" = "Fleksibilitet når du trenger det";
 "paywall.feature_island_title" = "Dynamic Island";
 "paywall.feature_island_desc" = "Tidtaker alltid synlig i Dynamic Island";

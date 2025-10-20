@@ -17,7 +17,7 @@
 "main.remaining" = "남음";
 "main.panic" = "긴급";
 "main.settings" = "설정";
-"main.statistics" = "Statistics";
+"main.statistics" = "통계";
 "main.take_one" = "%@ 하나";
 "main.take_one_ready" = "%@ 하나! ✨";
 "main.start_day" = "%@로 하루를 시작하세요!";
@@ -152,18 +152,18 @@
 "notification.body" = "타이머가 끝났어요. 즐기세요!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "완료 알림";
+"settings.timer_notification_subtitle" = "완료 시 진동 및 소리";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "타이머 표시";
+"settings.timer_format_subtitle" = "타이머 표시 방법";
+"settings.timer_format_hours" = "시간만";
+"settings.timer_format_hours_example" = "예: 02";
+"settings.timer_format_hours_minutes" = "시간:분";
+"settings.timer_format_hours_minutes_example" = "예: 02:30";
+"settings.timer_format_hours_minutes_seconds" = "시간:분:초";
+"settings.timer_format_hours_minutes_seconds_example" = "예: 02:30:45";
 
 
 

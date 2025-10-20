@@ -17,7 +17,7 @@
 "main.remaining" = "Απομένουν";
 "main.panic" = "Έκτακτο";
 "main.settings" = "Ρυθμίσεις";
-"main.statistics" = "Statistics";
+"main.statistics" = "Στατιστικά";
 "main.take_one" = "Πάρε ένα %@";
 "main.take_one_ready" = "Πάρε ένα %@! ✨";
 "main.start_day" = "Ξεκίνα τη μέρα με %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Το χρονόμετρό σου έληξε. Απόλαυσέ το!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Ειδοποιήσεις ολοκλήρωσης";
+"settings.timer_notification_subtitle" = "Δόνηση και ήχος όταν τελειώσει";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Εμφάνιση χρονομέτρου";
+"settings.timer_format_subtitle" = "Πώς εμφανίζεται το χρονόμετρο";
+"settings.timer_format_hours" = "Μόνο ώρες";
+"settings.timer_format_hours_example" = "π.χ. 02";
+"settings.timer_format_hours_minutes" = "Ώρες:Λεπτά";
+"settings.timer_format_hours_minutes_example" = "π.χ. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Ώρες:Λεπτά:Δευτερόλεπτα";
+"settings.timer_format_hours_minutes_seconds_example" = "π.χ. 02:30:45";
 
 
 

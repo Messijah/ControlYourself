@@ -17,7 +17,7 @@
 "main.remaining" = "Zbývá";
 "main.panic" = "Nouzový";
 "main.settings" = "Nastavení";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statistiky";
 "main.take_one" = "Dej si %@";
 "main.take_one_ready" = "Dej si %@! ✨";
 "main.start_day" = "Začni den s %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Tvůj časovač vypršel. Užij si to!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Upozornění na dokončení";
+"settings.timer_notification_subtitle" = "Vibrace a zvuk při dokončení";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Zobrazení časovače";
+"settings.timer_format_subtitle" = "Jak se zobrazuje časovač";
+"settings.timer_format_hours" = "Pouze hodiny";
+"settings.timer_format_hours_example" = "např. 02";
+"settings.timer_format_hours_minutes" = "Hodiny:Minuty";
+"settings.timer_format_hours_minutes_example" = "např. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hodiny:Minuty:Sekundy";
+"settings.timer_format_hours_minutes_seconds_example" = "např. 02:30:45";
 
 
 

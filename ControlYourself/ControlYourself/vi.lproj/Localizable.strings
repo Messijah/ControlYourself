@@ -17,7 +17,7 @@
 "main.remaining" = "Còn lại";
 "main.panic" = "Khẩn cấp";
 "main.settings" = "Cài đặt";
-"main.statistics" = "Statistics";
+"main.statistics" = "Thống kê";
 "main.take_one" = "Dùng %@";
 "main.take_one_ready" = "Dùng %@! ✨";
 "main.start_day" = "Bắt đầu ngày với %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Đồng hồ của bạn đã hết. Tận hưởng nhé!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Cảnh báo hoàn thành";
+"settings.timer_notification_subtitle" = "Rung và âm thanh khi hoàn thành";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Hiển thị bộ đếm thời gian";
+"settings.timer_format_subtitle" = "Cách hiển thị bộ đếm thời gian";
+"settings.timer_format_hours" = "Chỉ giờ";
+"settings.timer_format_hours_example" = "vd. 02";
+"settings.timer_format_hours_minutes" = "Giờ:Phút";
+"settings.timer_format_hours_minutes_example" = "vd. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Giờ:Phút:Giây";
+"settings.timer_format_hours_minutes_seconds_example" = "vd. 02:30:45";
 
 
 

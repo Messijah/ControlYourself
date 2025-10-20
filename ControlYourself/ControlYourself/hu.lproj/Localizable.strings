@@ -17,7 +17,7 @@
 "main.remaining" = "Maradt";
 "main.panic" = "Vészhelyzeti";
 "main.settings" = "Beállítások";
-"main.statistics" = "Statistics";
+"main.statistics" = "Statisztika";
 "main.take_one" = "Végy egy %@";
 "main.take_one_ready" = "Végy egy %@! ✨";
 "main.start_day" = "Kezdd a napot %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Az időzítőd lejárt. Élvezd!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Befejezési értesítések";
+"settings.timer_notification_subtitle" = "Rezgés és hang befejezéskor";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Időzítő megjelenítés";
+"settings.timer_format_subtitle" = "Hogyan jelenjen meg az időzítő";
+"settings.timer_format_hours" = "Csak órák";
+"settings.timer_format_hours_example" = "pl. 02";
+"settings.timer_format_hours_minutes" = "Órák:Percek";
+"settings.timer_format_hours_minutes_example" = "pl. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Órák:Percek:Másodpercek";
+"settings.timer_format_hours_minutes_seconds_example" = "pl. 02:30:45";
 
 
 

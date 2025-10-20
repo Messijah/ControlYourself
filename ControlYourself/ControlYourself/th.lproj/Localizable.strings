@@ -17,7 +17,7 @@
 "main.remaining" = "เหลืออยู่";
 "main.panic" = "ฉุกเฉิน";
 "main.settings" = "การตั้งค่า";
-"main.statistics" = "Statistics";
+"main.statistics" = "สถิติ";
 "main.take_one" = "ใช้%@";
 "main.take_one_ready" = "ใช้%@! ✨";
 "main.start_day" = "เริ่มวันด้วย%@!";
@@ -152,18 +152,18 @@
 "notification.body" = "ตัวจับเวลาของคุณหมดเวลาแล้ว สนุกนะ!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "การแจ้งเตือนเสร็จสิ้น";
+"settings.timer_notification_subtitle" = "สั่นและเสียงเมื่อเสร็จ";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "การแสดงผลตัวจับเวลา";
+"settings.timer_format_subtitle" = "วิธีแสดงตัวจับเวลา";
+"settings.timer_format_hours" = "เฉพาะชั่วโมง";
+"settings.timer_format_hours_example" = "เช่น 02";
+"settings.timer_format_hours_minutes" = "ชั่วโมง:นาที";
+"settings.timer_format_hours_minutes_example" = "เช่น 02:30";
+"settings.timer_format_hours_minutes_seconds" = "ชั่วโมง:นาที:วินาที";
+"settings.timer_format_hours_minutes_seconds_example" = "เช่น 02:30:45";
 
 
 

@@ -17,7 +17,7 @@
 "main.remaining" = "剩余";
 "main.panic" = "紧急";
 "main.settings" = "设置";
-"main.statistics" = "Statistics";
+"main.statistics" = "统计";
 "main.take_one" = "来一个%@";
 "main.take_one_ready" = "来一个%@！ ✨";
 "main.start_day" = "用%@开始新的一天！";
@@ -152,18 +152,18 @@
 "notification.body" = "你的计时器已过期。享受吧！";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "完成提醒";
+"settings.timer_notification_subtitle" = "完成时振动和声音";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "计时器显示";
+"settings.timer_format_subtitle" = "计时器显示方式";
+"settings.timer_format_hours" = "仅小时";
+"settings.timer_format_hours_example" = "例如 02";
+"settings.timer_format_hours_minutes" = "小时:分钟";
+"settings.timer_format_hours_minutes_example" = "例如 02:30";
+"settings.timer_format_hours_minutes_seconds" = "小时:分钟:秒";
+"settings.timer_format_hours_minutes_seconds_example" = "例如 02:30:45";
 
 
 

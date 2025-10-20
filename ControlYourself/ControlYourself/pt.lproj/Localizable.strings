@@ -17,7 +17,7 @@
 "main.remaining" = "Restante";
 "main.panic" = "Emergência";
 "main.settings" = "Configurações";
-"main.statistics" = "Statistics";
+"main.statistics" = "Estatísticas";
 "main.take_one" = "Pegar um %@";
 "main.take_one_ready" = "Pegue um %@! ✨";
 "main.start_day" = "Comece o dia com um %@!";
@@ -152,18 +152,18 @@
 "notification.body" = "Seu cronômetro expirou. Hora de aproveitar!";
 
 /* Timer Notifications Settings */
-"settings.timer_notification_title" = "Completion alerts";
-"settings.timer_notification_subtitle" = "Vibrate and sound when done";
+"settings.timer_notification_title" = "Alertas de conclusão";
+"settings.timer_notification_subtitle" = "Vibração e som ao concluir";
 
 /* Timer Format Settings */
-"settings.timer_format_title" = "Timer display";
-"settings.timer_format_subtitle" = "How timer is shown";
-"settings.timer_format_hours" = "Hours only";
-"settings.timer_format_hours_example" = "e.g. 02";
-"settings.timer_format_hours_minutes" = "Hours:Minutes";
-"settings.timer_format_hours_minutes_example" = "e.g. 02:30";
-"settings.timer_format_hours_minutes_seconds" = "Hours:Minutes:Seconds";
-"settings.timer_format_hours_minutes_seconds_example" = "e.g. 02:30:45";
+"settings.timer_format_title" = "Exibição do temporizador";
+"settings.timer_format_subtitle" = "Como o temporizador é mostrado";
+"settings.timer_format_hours" = "Apenas horas";
+"settings.timer_format_hours_example" = "ex. 02";
+"settings.timer_format_hours_minutes" = "Horas:Minutos";
+"settings.timer_format_hours_minutes_example" = "ex. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Horas:Minutos:Segundos";
+"settings.timer_format_hours_minutes_seconds_example" = "ex. 02:30:45";
 
 
 
