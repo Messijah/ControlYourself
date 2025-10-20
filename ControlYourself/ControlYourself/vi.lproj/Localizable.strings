@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Hủy bất cứ lúc nào. Không cam kết.";
 "paywall.error_title" = "Đã xảy ra lỗi";
 "paywall.error_message" = "Không thể hoàn tất giao dịch mua. Vui lòng thử lại.";
+"paywall.error_verification" = "Xác minh giao dịch mua thất bại. Vui lòng liên hệ hỗ trợ.";
 "paywall.yearly" = "Hàng năm";
 "paywall.monthly" = "Hàng tháng";
 "paywall.per_year" = "năm";

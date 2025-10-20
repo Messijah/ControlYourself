@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "الإلغاء في أي وقت. بدون التزامات.";
 "paywall.error_title" = "حدث خطأ ما";
 "paywall.error_message" = "لا يمكن إتمام الشراء. حاول مرة أخرى.";
+"paywall.error_verification" = "فشل التحقق من الشراء. يرجى الاتصال بالدعم.";
 "paywall.yearly" = "سنوي";
 "paywall.monthly" = "شهري";
 "paywall.per_year" = "سنة";

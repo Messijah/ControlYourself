@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Avbryt når som helst. Ingen binding.";
 "paywall.error_title" = "Noe gikk galt";
 "paywall.error_message" = "Kjøpet kunne ikke fullføres. Prøv igjen.";
+"paywall.error_verification" = "Kjøpsverifisering mislyktes. Kontakt support.";
 "paywall.yearly" = "Årlig";
 "paywall.monthly" = "Månedlig";
 "paywall.per_year" = "år";

@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Annulla in qualsiasi momento. Nessun impegno.";
 "paywall.error_title" = "Qualcosa è andato storto";
 "paywall.error_message" = "L'acquisto non può essere completato. Riprova.";
+"paywall.error_verification" = "Verifica dell'acquisto fallita. Si prega di contattare l'assistenza.";
 "paywall.yearly" = "Annuale";
 "paywall.monthly" = "Mensile";
 "paywall.per_year" = "anno";

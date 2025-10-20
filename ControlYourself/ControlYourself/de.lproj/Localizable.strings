@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Jederzeit kündbar. Keine Bindung.";
 "paywall.error_title" = "Etwas ist schiefgelaufen";
 "paywall.error_message" = "Der Kauf konnte nicht abgeschlossen werden. Versuche es erneut.";
+"paywall.error_verification" = "Kaufverifizierung fehlgeschlagen. Bitte kontaktiere den Support.";
 "paywall.yearly" = "Jährlich";
 "paywall.monthly" = "Monatlich";
 "paywall.per_year" = "Jahr";

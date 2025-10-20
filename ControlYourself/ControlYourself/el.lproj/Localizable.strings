@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Ακύρωση ανά πάσα στιγμή. Χωρίς δεσμεύσεις.";
 "paywall.error_title" = "Κάτι πήγε στραβά";
 "paywall.error_message" = "Η αγορά δεν ολοκληρώθηκε. Δοκιμάστε ξανά.";
+"paywall.error_verification" = "Η επαλήθευση αγοράς απέτυχε. Επικοινωνήστε με την υποστήριξη.";
 "paywall.yearly" = "Ετήσια";
 "paywall.monthly" = "Μηνιαία";
 "paywall.per_year" = "έτος";

@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "언제든지 취소 가능. 약정 없음.";
 "paywall.error_title" = "문제가 발생했습니다";
 "paywall.error_message" = "구매를 완료할 수 없습니다. 다시 시도하세요.";
+"paywall.error_verification" = "구매 확인에 실패했습니다. 지원팀에 문의하십시오.";
 "paywall.yearly" = "연간";
 "paywall.monthly" = "월간";
 "paywall.per_year" = "년";

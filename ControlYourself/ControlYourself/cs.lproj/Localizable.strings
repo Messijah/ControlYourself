@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Zrušte kdykoli. Žádné závazky.";
 "paywall.error_title" = "Něco se pokazilo";
 "paywall.error_message" = "Nákup nelze dokončit. Zkuste to znovu.";
+"paywall.error_verification" = "Ověření nákupu selhalo. Kontaktujte prosím podporu.";
 "paywall.yearly" = "Ročně";
 "paywall.monthly" = "Měsíčně";
 "paywall.per_year" = "rok";

@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Peruuta milloin tahansa. Ei sitoumuksia.";
 "paywall.error_title" = "Jokin meni pieleen";
 "paywall.error_message" = "Ostosta ei voitu suorittaa. Yritä uudelleen.";
+"paywall.error_verification" = "Oston vahvistus epäonnistui. Ota yhteyttä tukeen.";
 "paywall.yearly" = "Vuosittain";
 "paywall.monthly" = "Kuukausittain";
 "paywall.per_year" = "vuosi";

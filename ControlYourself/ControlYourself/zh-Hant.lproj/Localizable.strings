@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "隨時取消。無需承諾。";
 "paywall.error_title" = "出了點問題";
 "paywall.error_message" = "無法完成購買。請重試。";
+"paywall.error_verification" = "購買驗證失敗。請聯繫客服。";
 "paywall.yearly" = "年度";
 "paywall.monthly" = "月度";
 "paywall.per_year" = "年";

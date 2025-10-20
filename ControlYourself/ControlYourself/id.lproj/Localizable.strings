@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Batalkan kapan saja. Tanpa komitmen.";
 "paywall.error_title" = "Terjadi kesalahan";
 "paywall.error_message" = "Pembelian tidak dapat diselesaikan. Coba lagi.";
+"paywall.error_verification" = "Verifikasi pembelian gagal. Silakan hubungi dukungan.";
 "paywall.yearly" = "Tahunan";
 "paywall.monthly" = "Bulanan";
 "paywall.per_year" = "tahun";

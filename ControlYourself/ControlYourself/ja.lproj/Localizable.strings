@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "いつでもキャンセル可能。契約不要。";
 "paywall.error_title" = "エラーが発生しました";
 "paywall.error_message" = "購入を完了できませんでした。もう一度お試しください。";
+"paywall.error_verification" = "購入の確認に失敗しました。サポートに連絡してください。";
 "paywall.yearly" = "年間";
 "paywall.monthly" = "月間";
 "paywall.per_year" = "年";

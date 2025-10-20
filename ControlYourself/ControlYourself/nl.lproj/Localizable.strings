@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Annuleer op elk moment. Geen verplichtingen.";
 "paywall.error_title" = "Er is iets misgegaan";
 "paywall.error_message" = "De aankoop kon niet worden voltooid. Probeer het opnieuw.";
+"paywall.error_verification" = "Aankoopverificatie mislukt. Neem contact op met ondersteuning.";
 "paywall.yearly" = "Jaarlijks";
 "paywall.monthly" = "Maandelijks";
 "paywall.per_year" = "jaar";

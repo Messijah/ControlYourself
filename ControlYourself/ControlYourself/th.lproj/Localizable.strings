@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "ยกเลิกได้ทุกเมื่อ ไม่มีข้อผูกมัด";
 "paywall.error_title" = "เกิดข้อผิดพลาด";
 "paywall.error_message" = "ไม่สามารถทำการซื้อให้เสร็จสมบูรณ์ได้ ลองอีกครั้ง";
+"paywall.error_verification" = "การตรวจสอบการซื้อล้มเหลว โปรดติดต่อฝ่ายสนับสนุน";
 "paywall.yearly" = "รายปี";
 "paywall.monthly" = "รายเดือน";
 "paywall.per_year" = "ปี";

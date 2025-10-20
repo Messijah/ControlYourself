@@ -181,6 +181,7 @@
 "paywall.cancel_anytime" = "Avbryt när som helst. Ingen bindningstid.";
 "paywall.error_title" = "Något gick fel";
 "paywall.error_message" = "Köpet kunde inte genomföras. Försök igen.";
+"paywall.error_verification" = "Köpverifiering misslyckades. Kontakta support.";
 "paywall.yearly" = "Helår";
 "paywall.monthly" = "Månad";
 "paywall.per_year" = "år";

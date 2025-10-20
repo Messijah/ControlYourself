@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Отменить в любое время. Никаких обязательств.";
 "paywall.error_title" = "Что-то пошло не так";
 "paywall.error_message" = "Покупка не может быть завершена. Попробуйте снова.";
+"paywall.error_verification" = "Проверка покупки не удалась. Пожалуйста, свяжитесь со службой поддержки.";
 "paywall.yearly" = "Годовая";
 "paywall.monthly" = "Месячная";
 "paywall.per_year" = "год";

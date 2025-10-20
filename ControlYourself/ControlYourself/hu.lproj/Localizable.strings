@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "Bármikor lemondható. Nincs kötelezettség.";
 "paywall.error_title" = "Valami hiba történt";
 "paywall.error_message" = "A vásárlás nem fejeződött be. Próbáld újra.";
+"paywall.error_verification" = "A vásárlás ellenőrzése sikertelen. Kérjük, lépjen kapcsolatba az ügyfélszolgálattal.";
 "paywall.yearly" = "Évente";
 "paywall.monthly" = "Havonta";
 "paywall.per_year" = "év";

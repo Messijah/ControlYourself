@@ -184,6 +184,7 @@
 "paywall.cancel_anytime" = "İstediğiniz zaman iptal edin. Taahhüt yok.";
 "paywall.error_title" = "Bir şeyler yanlış gitti";
 "paywall.error_message" = "Satın alma tamamlanamadı. Tekrar deneyin.";
+"paywall.error_verification" = "Satın alma doğrulaması başarısız oldu. Lütfen destek ile iletişime geçin.";
 "paywall.yearly" = "Yıllık";
 "paywall.monthly" = "Aylık";
 "paywall.per_year" = "yıl";
