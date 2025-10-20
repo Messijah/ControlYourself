@@ -137,11 +137,13 @@ class SnusManager: ObservableObject {
                 self.countdownTime = remainingTime
                 self.timerEndDate = timerStartTime.addingTimeInterval(self.snusInterval)
             } else {
-                // Timer completed
+                // Timer completed - update all settings to maintain consistency
                 self.countdownTime = 0
                 self.timerEndDate = nil
                 defaults.set(false, forKey: UserDefaultsKeys.isTimerActive)
                 defaults.set(0, forKey: UserDefaultsKeys.countdownTime)
+                // IMPORTANT: Save all settings to prevent state desync
+                self.saveSettings()
             }
         }
 
@@ -158,6 +160,17 @@ class SnusManager: ObservableObject {
                 self.restoreTimerIfNeeded()
             }
         }
+    }
+
+    deinit {
+        // Remove all NotificationCenter observers
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .NSCalendarDayChanged, object: nil)
+
+        // Invalidate timers
+        timer?.invalidate()
+        dailyCheckTimer?.invalidate()
     }
 
     private func restoreTimerIfNeeded() {
@@ -273,21 +286,31 @@ class SnusManager: ObservableObject {
         // Timer for UI updates only - Live Activity updates itself automatically
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
-            if self.countdownTime > 0 {
-                self.countdownTime -= 1
-                // DO NOT update Live Activity every second - it updates itself!
+
+            // Recalculate countdown from timerEndDate to prevent drift
+            if let endDate = self.timerEndDate {
+                let remaining = endDate.timeIntervalSinceNow
+                if remaining > 0 {
+                    self.countdownTime = remaining
+                    // DO NOT update Live Activity every second - it updates itself!
+                } else {
+                    // Timer reached zero - update Live Activity with final state
+                    self.countdownTime = 0
+                    self.updateLiveActivity()
+                    self.scheduleNotification()
+
+                    // Save countdownTime = 0 to UserDefaults
+                    SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
+
+                    // Delay stopping timer slightly to let Live Activity update propagate
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self.stopTimer()
+                    }
+                }
             } else {
-                // Timer reached zero - update Live Activity with final state
-                self.countdownTime = 0
-                self.updateLiveActivity()
-                self.scheduleNotification()
-
-                // Save countdownTime = 0 to UserDefaults
-                SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
-
-                // Delay stopping timer slightly to let Live Activity update propagate
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    self.stopTimer()
+                // Fallback - should not happen in normal operation
+                if self.countdownTime > 0 {
+                    self.countdownTime = max(0, self.countdownTime - 1)
                 }
             }
         }
@@ -308,21 +331,31 @@ class SnusManager: ObservableObject {
         // Timer for UI updates only - Live Activity updates itself automatically
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
-            if self.countdownTime > 0 {
-                self.countdownTime -= 1
-                // DO NOT update Live Activity every second - it updates itself!
+
+            // Recalculate countdown from timerEndDate to prevent drift
+            if let endDate = self.timerEndDate {
+                let remaining = endDate.timeIntervalSinceNow
+                if remaining > 0 {
+                    self.countdownTime = remaining
+                    // DO NOT update Live Activity every second - it updates itself!
+                } else {
+                    // Timer reached zero - update Live Activity with final state
+                    self.countdownTime = 0
+                    self.updateLiveActivity()
+                    self.scheduleNotification()
+
+                    // Save countdownTime = 0 to UserDefaults
+                    SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
+
+                    // Delay stopping timer slightly to let Live Activity update propagate
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                        self.stopTimer()
+                    }
+                }
             } else {
-                // Timer reached zero - update Live Activity with final state
-                self.countdownTime = 0
-                self.updateLiveActivity()
-                self.scheduleNotification()
-
-                // Save countdownTime = 0 to UserDefaults
-                SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
-
-                // Delay stopping timer slightly to let Live Activity update propagate
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    self.stopTimer()
+                // Fallback - should not happen in normal operation
+                if self.countdownTime > 0 {
+                    self.countdownTime = max(0, self.countdownTime - 1)
                 }
             }
         }

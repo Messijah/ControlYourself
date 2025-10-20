@@ -227,7 +227,18 @@ struct PaywallView: View {
                 // Purchase successful - dismiss paywall
                 dismiss()
             }
+            // If transaction is nil, user cancelled or pending - don't show error
+        } catch let error as StoreError {
+            // Our custom verification error
+            switch error {
+            case .failedVerification:
+                errorMessage = NSLocalizedString("paywall.error_verification", comment: "")
+                showError = true
+            }
         } catch {
+            // Any other errors (network, StoreKit, etc.)
+            // User cancellation is already handled by purchase() returning nil
+            print("Purchase error: \(error.localizedDescription)")
             errorMessage = NSLocalizedString("paywall.error_message", comment: "")
             showError = true
         }
