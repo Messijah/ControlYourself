@@ -400,7 +400,6 @@ struct NjutningsValView: View {
                 VStack(spacing: 20) {
                     ChoiceCard(
                         title: NSLocalizedString("substance.snus", comment: "Snus"),
-                        icon: "leaf.fill",
                         gradient: AppTheme.accentGradient
                     ) {
                         selection = .snus
@@ -410,7 +409,6 @@ struct NjutningsValView: View {
 
                     ChoiceCard(
                         title: NSLocalizedString("substance.cigarettes", comment: "Cigarettes"),
-                        icon: "smoke.fill",
                         gradient: AppTheme.cigaretteGradient
                     ) {
                         selection = .cigaretter
@@ -435,33 +433,12 @@ struct NjutningsValView: View {
 
 struct ChoiceCard: View {
     let title: String
-    let icon: String
     let gradient: LinearGradient
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
             HStack(spacing: 20) {
-                Image(systemName: icon)
-                    .font(.system(size: 32, weight: .semibold))
-                    .foregroundColor(.white)
-                    .frame(width: 60, height: 60)
-                    .background(
-                        Circle()
-                            .fill(
-                                LinearGradient(
-                                    colors: [Color.white.opacity(0.25), Color.white.opacity(0.1)],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
-                                )
-                            )
-                            .overlay(
-                                Circle()
-                                    .stroke(Color.white.opacity(0.3), lineWidth: 1.5)
-                            )
-                    )
-                    .shadow(color: gradient.startColor.opacity(0.4), radius: 12, x: 0, y: 4)
-
                 Text(title)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
@@ -476,15 +453,15 @@ struct ChoiceCard: View {
             .background(
                 ZStack {
                     RoundedRectangle(cornerRadius: 24)
-                        .fill(gradient.opacity(0.25))
+                        .fill(gradient.opacity(0.45))
 
                     RoundedRectangle(cornerRadius: 24)
-                        .fill(.ultraThinMaterial.opacity(0.6))
+                        .fill(.ultraThinMaterial.opacity(0.4))
 
                     RoundedRectangle(cornerRadius: 24)
                         .stroke(
                             LinearGradient(
-                                colors: [Color.white.opacity(0.4), Color.white.opacity(0.1)],
+                                colors: [Color.white.opacity(0.5), Color.white.opacity(0.2)],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             ),
@@ -492,7 +469,7 @@ struct ChoiceCard: View {
                         )
                 }
             )
-            .shadow(color: gradient.startColor.opacity(0.3), radius: 20, x: 0, y: 10)
+            .shadow(color: gradient.startColor.opacity(0.4), radius: 20, x: 0, y: 10)
         }
         .buttonStyle(ScaleButtonStyle())
     }
