@@ -1067,7 +1067,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1107,7 +1107,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1148,7 +1148,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "checkmark.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1186,7 +1186,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.orange)
-                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }

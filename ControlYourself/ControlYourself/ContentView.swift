@@ -541,7 +541,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "number.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -566,7 +566,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -591,7 +591,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), localizedSubstanceNameSingular))
+                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
