@@ -2,7 +2,7 @@
 "welcome.title" = "Hoş geldiniz!";
 "welcome.subtitle" = "Kontrol etmek istediğiniz şeyi seçin";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "Sigara";
+"substance.cigarettes" = "sigara";
 "setup.title" = "Ayarlar";
 "setup.weekday_start" = "Hafta içi başlangıç saati";
 "setup.weekend_start" = "Hafta sonu başlangıç saati";

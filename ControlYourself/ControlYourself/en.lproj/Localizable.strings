@@ -2,7 +2,7 @@
 "welcome.title" = "Welcome!";
 "welcome.subtitle" = "Choose what you want to control";
 "substance.snus" = "Nicotine pouch";
-"substance.cigarettes" = "Cigarettes";
+"substance.cigarettes" = "cigarette";
 "setup.title" = "Settings for";
 "setup.weekday_start" = "Weekday start time";
 "setup.weekend_start" = "Weekend start time";

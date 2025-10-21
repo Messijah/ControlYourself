@@ -2,7 +2,7 @@
 "welcome.title" = "Καλώς ήρθες!";
 "welcome.subtitle" = "Διάλεξε τι θέλεις να ελέγξεις";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "Τσιγάρα";
+"substance.cigarettes" = "τσιγάρο";
 "setup.title" = "Ρυθμίσεις";
 "setup.weekday_start" = "Ώρα έναρξης καθημερινής";
 "setup.weekend_start" = "Ώρα έναρξης Σαββατοκύριακου";

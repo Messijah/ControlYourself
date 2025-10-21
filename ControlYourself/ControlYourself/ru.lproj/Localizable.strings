@@ -2,7 +2,7 @@
 "welcome.title" = "Добро пожаловать!";
 "welcome.subtitle" = "Выбери, что хочешь контролировать";
 "substance.snus" = "Снюс";
-"substance.cigarettes" = "Сигареты";
+"substance.cigarettes" = "сигарета";
 "setup.title" = "Настройки для";
 "setup.weekday_start" = "Время начала в будни";
 "setup.weekend_start" = "Время начала в выходные";
