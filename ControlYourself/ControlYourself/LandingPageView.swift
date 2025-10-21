@@ -67,14 +67,42 @@ struct LandingPageView: View {
         return !hasStartedToday
     }
 
-    var currentGradient: LinearGradient {
+    // Dynamic gradient that changes smoothly based on progress
+    // Red (start) -> Yellow (50%) -> Green (100%)
+    func progressGradient(for progress: Double, isReady: Bool) -> LinearGradient {
         if isReady {
-            return AppTheme.successGradient
-        } else if snusManager.countdownTime <= 300 {
-            return AppTheme.warningGradient
-        } else {
-            return AppTheme.dangerGradient
+            return LinearGradient(
+                colors: [.green, .mint],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         }
+
+        if progress < 0.5 {
+            // Red to Yellow gradient (0% - 50%)
+            let localProgress = progress / 0.5
+            let startColor = Color(red: 1.0, green: localProgress * 0.9, blue: 0.0)
+            let endColor = Color(red: 1.0, green: localProgress * 1.0, blue: 0.0)
+            return LinearGradient(
+                colors: [startColor, endColor],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        } else {
+            // Yellow to Green gradient (50% - 100%)
+            let localProgress = (progress - 0.5) / 0.5
+            let startRed = 1.0 - (localProgress * 0.5)
+            let endRed = 1.0 - localProgress
+            return LinearGradient(
+                colors: [Color(red: startRed, green: 1.0, blue: 0.0), Color(red: endRed, green: 1.0, blue: 0.0)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        }
+    }
+
+    var currentGradient: LinearGradient {
+        return progressGradient(for: progress, isReady: isReady)
     }
 
     var body: some View {
