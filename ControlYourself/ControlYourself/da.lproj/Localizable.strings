@@ -2,7 +2,9 @@
 "welcome.title" = "Velkommen!";
 "welcome.subtitle" = "Vælg hvad du vil kontrollere";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "cigaret";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigaretter";
+"substance.cigarettes_singular" = "cigaret";
 "setup.title" = "Indstillinger";
 "setup.weekday_start" = "Hverdag start tidspunkt";
 "setup.weekend_start" = "Weekend start tidspunkt";

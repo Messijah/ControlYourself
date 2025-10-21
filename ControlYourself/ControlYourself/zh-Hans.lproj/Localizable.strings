@@ -2,7 +2,9 @@
 "welcome.title" = "欢迎！";
 "welcome.subtitle" = "选择你想控制的东西";
 "substance.snus" = "鼻烟";
+"substance.snus_singular" = "鼻烟";
 "substance.cigarettes" = "香烟";
+"substance.cigarettes_singular" = "香烟";
 "setup.title" = "设置";
 "setup.weekday_start" = "工作日开始时间";
 "setup.weekend_start" = "周末开始时间";

@@ -2,7 +2,9 @@
 "welcome.title" = "Vítejte!";
 "welcome.subtitle" = "Vyberte, co chcete kontrolovat";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "cigareta";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigarety";
+"substance.cigarettes_singular" = "cigareta";
 "setup.title" = "Nastavení";
 "setup.weekday_start" = "Začátek pracovního dne";
 "setup.weekend_start" = "Začátek víkendu";

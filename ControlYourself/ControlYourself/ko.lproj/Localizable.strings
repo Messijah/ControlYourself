@@ -2,7 +2,9 @@
 "welcome.title" = "환영합니다!";
 "welcome.subtitle" = "조절하고 싶은 것을 선택하세요";
 "substance.snus" = "스누스";
+"substance.snus_singular" = "스누스";
 "substance.cigarettes" = "담배";
+"substance.cigarettes_singular" = "담배";
 "setup.title" = "설정";
 "setup.weekday_start" = "평일 시작 시간";
 "setup.weekend_start" = "주말 시작 시간";

@@ -2,7 +2,9 @@
 "welcome.title" = "Selamat datang!";
 "welcome.subtitle" = "Pilih apa yang ingin kamu kontrol";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "rokok";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Rokok";
+"substance.cigarettes_singular" = "rokok";
 "setup.title" = "Pengaturan";
 "setup.weekday_start" = "Waktu mulai hari kerja";
 "setup.weekend_start" = "Waktu mulai akhir pekan";

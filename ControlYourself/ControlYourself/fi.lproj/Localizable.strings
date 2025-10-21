@@ -2,7 +2,9 @@
 "welcome.title" = "Tervetuloa!";
 "welcome.subtitle" = "Valitse mitä haluat hallita";
 "substance.snus" = "Nuuska";
-"substance.cigarettes" = "tupakka";
+"substance.snus_singular" = "nuuska";
+"substance.cigarettes" = "Tupakat";
+"substance.cigarettes_singular" = "tupakka";
 "setup.title" = "Asetukset";
 "setup.weekday_start" = "Arkipäivän aloitusaika";
 "setup.weekend_start" = "Viikonlopun aloitusaika";

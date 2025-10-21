@@ -2,7 +2,9 @@
 "welcome.title" = "مرحباً!";
 "welcome.subtitle" = "اختر ما تريد التحكم به";
 "substance.snus" = "السنوس";
-"substance.cigarettes" = "السيجارة";
+"substance.snus_singular" = "السنوس";
+"substance.cigarettes" = "السجائر";
+"substance.cigarettes_singular" = "السيجارة";
 "setup.title" = "الإعدادات";
 "setup.weekday_start" = "وقت بدء أيام الأسبوع";
 "setup.weekend_start" = "وقت بدء عطلة نهاية الأسبوع";

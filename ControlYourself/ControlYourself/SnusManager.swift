@@ -40,12 +40,21 @@ class SnusManager: ObservableObject {
     private var timerEndDate: Date? // Track the actual end date to avoid time drift
     private var dailyCheckTimer: Timer? // Timer to check for daily reset
 
-    // Computed property for localized substance name
+    // Computed property for localized substance name (plural/title form)
     var localizedSubstanceName: String {
         if substanceName.lowercased().contains("cigar") {
             return NSLocalizedString("substance.cigarettes", comment: "")
         } else {
             return NSLocalizedString("substance.snus", comment: "")
+        }
+    }
+
+    // Computed property for localized substance name in singular form (for use in sentences)
+    var localizedSubstanceNameSingular: String {
+        if substanceName.lowercased().contains("cigar") {
+            return NSLocalizedString("substance.cigarettes_singular", comment: "")
+        } else {
+            return NSLocalizedString("substance.snus_singular", comment: "")
         }
     }
 
@@ -60,9 +69,9 @@ class SnusManager: ObservableObject {
     // Celebration messages for when timer completes - dynamically generated based on substance
     private func celebrationMessages() -> [String] {
         return [
-            String(format: NSLocalizedString("celebration.substance_time", comment: ""), localizedSubstanceName),
+            String(format: NSLocalizedString("celebration.substance_time", comment: ""), localizedSubstanceNameSingular),
             NSLocalizedString("celebration.well_done", comment: ""),
-            String(format: NSLocalizedString("celebration.enjoy_substance", comment: ""), localizedSubstanceName),
+            String(format: NSLocalizedString("celebration.enjoy_substance", comment: ""), localizedSubstanceNameSingular),
             NSLocalizedString("celebration.its_time", comment: ""),
             NSLocalizedString("celebration.take_one_now", comment: ""),
             NSLocalizedString("celebration.ready", comment: ""),

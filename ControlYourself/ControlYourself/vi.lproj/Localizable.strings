@@ -2,7 +2,9 @@
 "welcome.title" = "Chào mừng!";
 "welcome.subtitle" = "Chọn thứ bạn muốn kiểm soát";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "thuốc lá";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Thuốc lá";
+"substance.cigarettes_singular" = "thuốc lá";
 "setup.title" = "Cài đặt";
 "setup.weekday_start" = "Giờ bắt đầu ngày thường";
 "setup.weekend_start" = "Giờ bắt đầu cuối tuần";

@@ -361,7 +361,7 @@ struct LandingPageView: View {
                                     .foregroundColor(.white)
                             }
 
-                            Text(isFirstOfDay ? String(format: NSLocalizedString("main.start_day", comment: ""), snusManager.localizedSubstanceName) : (isReady ? String(format: NSLocalizedString("main.take_one_ready", comment: ""), snusManager.localizedSubstanceName) : String(format: NSLocalizedString("main.take_one", comment: ""), snusManager.localizedSubstanceName)))
+                            Text(isFirstOfDay ? String(format: NSLocalizedString("main.start_day", comment: ""), snusManager.localizedSubstanceNameSingular) : (isReady ? String(format: NSLocalizedString("main.take_one_ready", comment: ""), snusManager.localizedSubstanceNameSingular) : String(format: NSLocalizedString("main.take_one", comment: ""), snusManager.localizedSubstanceNameSingular)))
                                 .font(.system(size: 17, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)
                                 .lineLimit(1)
@@ -1067,7 +1067,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceName))
+                                        Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1107,7 +1107,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.localizedSubstanceName))
+                                        Text(String(format: NSLocalizedString("settings.panic_per_week", comment: ""), snusManager.localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1148,7 +1148,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "checkmark.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.localizedSubstanceName))
+                                        Text(String(format: NSLocalizedString("settings.amount_left_today", comment: ""), snusManager.localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1186,7 +1186,7 @@ struct SettingsView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.orange)
-                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.localizedSubstanceName))
+                                        Text(String(format: NSLocalizedString("settings.panic_left", comment: ""), snusManager.localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -1278,7 +1278,7 @@ struct SettingsView: View {
                             resetDay()
                         }
                     } message: {
-                        Text(String(format: NSLocalizedString("alert.reset_day_message", comment: ""), snusManager.localizedSubstanceName))
+                        Text(String(format: NSLocalizedString("alert.reset_day_message", comment: ""), snusManager.localizedSubstanceNameSingular))
                     }
 
                     // Change Substance Button

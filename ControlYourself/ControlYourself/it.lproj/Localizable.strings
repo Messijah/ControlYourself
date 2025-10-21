@@ -2,7 +2,9 @@
 "welcome.title" = "Benvenuto!";
 "welcome.subtitle" = "Scegli cosa vuoi controllare";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "sigaretta";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Sigarette";
+"substance.cigarettes_singular" = "sigaretta";
 "setup.title" = "Impostazioni per";
 "setup.weekday_start" = "Orario di inizio giorni feriali";
 "setup.weekend_start" = "Orario di inizio weekend";

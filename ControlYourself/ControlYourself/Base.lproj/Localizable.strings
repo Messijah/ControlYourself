@@ -2,7 +2,9 @@
 "welcome.title" = "Välkommen!";
 "welcome.subtitle" = "Välj vad du vill kontrollera";
 "substance.snus" = "Nicotine pouch";
-"substance.cigarettes" = "cigarett";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigaretter";
+"substance.cigarettes_singular" = "cigarett";
 "setup.title" = "Inställningar för";
 "setup.weekday_start" = "Vardag starttid";
 "setup.weekend_start" = "Helg starttid";

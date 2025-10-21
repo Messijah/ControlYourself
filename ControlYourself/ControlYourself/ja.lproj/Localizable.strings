@@ -2,7 +2,9 @@
 "welcome.title" = "ようこそ！";
 "welcome.subtitle" = "コントロールしたいものを選択";
 "substance.snus" = "スヌース";
+"substance.snus_singular" = "スヌース";
 "substance.cigarettes" = "タバコ";
+"substance.cigarettes_singular" = "タバコ";
 "setup.title" = "設定";
 "setup.weekday_start" = "平日の開始時刻";
 "setup.weekend_start" = "週末の開始時刻";

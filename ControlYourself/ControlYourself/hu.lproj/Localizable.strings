@@ -2,7 +2,9 @@
 "welcome.title" = "Üdvözlünk!";
 "welcome.subtitle" = "Válaszd ki, mit szeretnél kontrollálni";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "cigaretta";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigaretta";
+"substance.cigarettes_singular" = "cigaretta";
 "setup.title" = "Beállítások";
 "setup.weekday_start" = "Hétköznapi kezdési idő";
 "setup.weekend_start" = "Hétvégi kezdési idő";

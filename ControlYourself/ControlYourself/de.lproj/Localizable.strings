@@ -2,7 +2,9 @@
 "welcome.title" = "Willkommen!";
 "welcome.subtitle" = "Wähle, was du kontrollieren möchtest";
 "substance.snus" = "Snus";
-"substance.cigarettes" = "Zigarette";
+"substance.snus_singular" = "Snus";
+"substance.cigarettes" = "Zigaretten";
+"substance.cigarettes_singular" = "Zigarette";
 "setup.title" = "Einstellungen für";
 "setup.weekday_start" = "Startzeit Wochentag";
 "setup.weekend_start" = "Startzeit Wochenende";

@@ -2,7 +2,9 @@
 "welcome.title" = "ยินดีต้อนรับ!";
 "welcome.subtitle" = "เลือกสิ่งที่คุณต้องการควบคุม";
 "substance.snus" = "สนัส";
+"substance.snus_singular" = "สนัส";
 "substance.cigarettes" = "บุหรี่";
+"substance.cigarettes_singular" = "บุหรี่";
 "setup.title" = "การตั้งค่า";
 "setup.weekday_start" = "เวลาเริ่มต้นวันธรรมดา";
 "setup.weekend_start" = "เวลาเริ่มต้นวันหยุดสุดสัปดาห์";

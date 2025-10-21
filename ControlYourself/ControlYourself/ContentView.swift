@@ -494,12 +494,21 @@ struct NjutningsInställningarView: View {
     @State private var snusInterval: Int = 2  // Default: 2 hours
     @State private var paniksnus: Int = 5     // Default: 5 panic per week
 
-    // Localized substance name for display
+    // Localized substance name for display (plural/title form)
     private var localizedSubstanceName: String {
         if selectedNjutning == .cigaretter {
             return NSLocalizedString("substance.cigarettes", comment: "")
         } else {
             return NSLocalizedString("substance.snus", comment: "")
+        }
+    }
+
+    // Localized substance name in singular form (for use in sentences)
+    private var localizedSubstanceNameSingular: String {
+        if selectedNjutning == .cigaretter {
+            return NSLocalizedString("substance.cigarettes_singular", comment: "")
+        } else {
+            return NSLocalizedString("substance.snus_singular", comment: "")
         }
     }
 
@@ -532,7 +541,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "number.circle.fill")
                                             .foregroundColor(.green)
-                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), localizedSubstanceName.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.amount_per_day", comment: "Amount per day"), localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -557,7 +566,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "clock.fill")
                                             .foregroundStyle(AppTheme.accentGradient)
-                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), localizedSubstanceName.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.interval_between", comment: "Interval between"), localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
@@ -582,7 +591,7 @@ struct NjutningsInställningarView: View {
                                     HStack {
                                         Image(systemName: "flame.fill")
                                             .foregroundColor(.red)
-                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), localizedSubstanceName.lowercased()))
+                                        Text(String(format: NSLocalizedString("setup.panic_per_week", comment: "Panic per week"), localizedSubstanceNameSingular))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
                                     }
