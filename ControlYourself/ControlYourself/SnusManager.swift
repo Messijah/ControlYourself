@@ -12,16 +12,19 @@ private enum UserDefaultsKeys {
     static let paniksnus = "paniksnus"
     static let snusInterval = "snusInterval"
     static let countdownTime = "countdownTime"
+    static let dailyGoal = "dailyGoal"
+    static let selectedSubstance = "selectedSubstance"
+    static let isTimerActive = "isTimerActive"
+    static let timerStartTime = "timerStartTime"
+    static let hasStartedTimerToday = "hasStartedTimerToday"
+    static let hasBeenInitialized = "hasBeenInitialized"
+    static let hasConfiguredSettings = "hasConfiguredSettings"
     static let lastActiveTime = "lastActiveTime"
     static let lastSnusTime = "lastSnusTime"
     static let lastResetDate = "lastResetDate"
     static let lastWeekResetDate = "lastWeekResetDate"
-    static let hasConfiguredSettings = "hasConfiguredSettings"
-    static let timerStartTime = "timerStartTime"
-    static let isTimerActive = "isTimerActive"
-    static let hasBeenInitialized = "hasBeenInitialized"
-    static let selectedSubstance = "selectedSubstance"
-    static let dailyGoal = "dailyGoal"  // The user's goal for antal per dag
+    static let isDynamicIslandEnabled = "isDynamicIslandEnabled"
+    static let isTimerNotificationEnabled = "isTimerNotificationEnabled"
 }
 
 class SnusManager: ObservableObject {
@@ -129,7 +132,7 @@ class SnusManager: ObservableObject {
 
         // If timer wasn't active, check if we've started today and load countdown time
         if !defaults.bool(forKey: UserDefaultsKeys.isTimerActive) {
-            let hasStartedToday = defaults.bool(forKey: "hasStartedTimerToday")
+            let hasStartedToday = defaults.bool(forKey: UserDefaultsKeys.hasStartedTimerToday)
             if hasStartedToday {
                 // Load saved countdown time
                 self.countdownTime = defaults.double(forKey: UserDefaultsKeys.countdownTime)
@@ -373,7 +376,7 @@ class SnusManager: ObservableObject {
     private func scheduleNotification() {
         // Check if user has enabled timer completion notifications
         let defaults = SnusManager.sharedDefaults
-        let isNotificationEnabled = defaults.object(forKey: "isTimerNotificationEnabled") as? Bool ?? true
+        let isNotificationEnabled = defaults.object(forKey: UserDefaultsKeys.isTimerNotificationEnabled) as? Bool ?? true
 
         guard isNotificationEnabled else {
             print("⏰ Timer completion notifications are disabled by user")
@@ -428,7 +431,7 @@ class SnusManager: ObservableObject {
 
         // Check if user has disabled Dynamic Island in settings
         let defaults = SnusManager.sharedDefaults
-        let isDynamicIslandEnabled = defaults.object(forKey: "isDynamicIslandEnabled") as? Bool ?? true
+        let isDynamicIslandEnabled = defaults.object(forKey: UserDefaultsKeys.isDynamicIslandEnabled) as? Bool ?? true
 
         print("   isDynamicIslandEnabled setting: \(isDynamicIslandEnabled)")
 
@@ -744,7 +747,7 @@ class SnusManager: ObservableObject {
         countdownTime = snusInterval
 
         // Clear timer state
-        SnusManager.sharedDefaults.set(false, forKey: "hasStartedTimerToday")
+        SnusManager.sharedDefaults.set(false, forKey: UserDefaultsKeys.hasStartedTimerToday)
         SnusManager.sharedDefaults.set(false, forKey: UserDefaultsKeys.isTimerActive)
         SnusManager.sharedDefaults.removeObject(forKey: UserDefaultsKeys.timerStartTime)
 

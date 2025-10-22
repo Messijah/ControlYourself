@@ -8,6 +8,8 @@
 import SwiftUI
 import UserNotifications
 
+// NOTE: AppTheme is also defined in DesignSystem.swift
+// Keep this local copy to avoid compilation order issues
 // MARK: - Design System
 struct AppTheme {
     static let primaryGradient = LinearGradient(
@@ -57,8 +59,8 @@ struct AppTheme {
 
     static let cigaretteGradient = LinearGradient(
         gradient: Gradient(colors: [
-            Color(red: 0.95, green: 0.40, blue: 0.67),  // Pink
-            Color(red: 0.85, green: 0.30, blue: 0.85)   // Magenta/Purple
+            Color(red: 0.95, green: 0.40, blue: 0.67),
+            Color(red: 0.85, green: 0.30, blue: 0.85)
         ]),
         startPoint: .leading,
         endPoint: .trailing
@@ -67,6 +69,7 @@ struct AppTheme {
     static let accent = Color(red: 0.42, green: 0.36, blue: 0.90)
 }
 
+// MARK: - Button Styles
 struct ModernButtonStyle: ButtonStyle {
     var gradient: LinearGradient
     var isDisabled: Bool = false

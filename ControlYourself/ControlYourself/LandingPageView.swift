@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+// MARK: - UserDefaults Keys
+private enum UserDefaultsKeys {
+    static let timerDisplayFormat = "timerDisplayFormat"
+    static let isDynamicIslandEnabled = "isDynamicIslandEnabled"
+    static let isTimerNotificationEnabled = "isTimerNotificationEnabled"
+}
+
 struct LandingPageView: View {
     @ObservedObject var snusManager: SnusManager
     @ObservedObject var statisticsManager: StatisticsManager
@@ -637,7 +644,7 @@ struct LandingPageView: View {
 
             // Load timer display format from UserDefaults
             let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-            timerDisplayFormat = defaults.string(forKey: "timerDisplayFormat") ?? "HH:MM"
+            timerDisplayFormat = defaults.string(forKey: UserDefaultsKeys.timerDisplayFormat) ?? "HH:MM"
 
             // Set random message index on appear
             if isFirstOfDay {
@@ -659,7 +666,7 @@ struct LandingPageView: View {
             // When settings view is dismissed, reload timer display format
             if oldValue == true && newValue == false {
                 let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                timerDisplayFormat = defaults.string(forKey: "timerDisplayFormat") ?? "HH:MM"
+                timerDisplayFormat = defaults.string(forKey: UserDefaultsKeys.timerDisplayFormat) ?? "HH:MM"
             }
         }
         .onReceive(timer) { _ in
@@ -1016,19 +1023,19 @@ struct SettingsView: View {
 
         // Load Dynamic Island setting (default to true if not set)
         let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-        if defaults.object(forKey: "isDynamicIslandEnabled") == nil {
-            defaults.set(true, forKey: "isDynamicIslandEnabled") // Set default
+        if defaults.object(forKey: UserDefaultsKeys.isDynamicIslandEnabled) == nil {
+            defaults.set(true, forKey: UserDefaultsKeys.isDynamicIslandEnabled) // Set default
         }
-        _isDynamicIslandEnabled = State(initialValue: defaults.bool(forKey: "isDynamicIslandEnabled"))
+        _isDynamicIslandEnabled = State(initialValue: defaults.bool(forKey: UserDefaultsKeys.isDynamicIslandEnabled))
 
         // Load Timer Notification setting (default to true if not set)
-        if defaults.object(forKey: "isTimerNotificationEnabled") == nil {
-            defaults.set(true, forKey: "isTimerNotificationEnabled") // Set default
+        if defaults.object(forKey: UserDefaultsKeys.isTimerNotificationEnabled) == nil {
+            defaults.set(true, forKey: UserDefaultsKeys.isTimerNotificationEnabled) // Set default
         }
-        _isTimerNotificationEnabled = State(initialValue: defaults.bool(forKey: "isTimerNotificationEnabled"))
+        _isTimerNotificationEnabled = State(initialValue: defaults.bool(forKey: UserDefaultsKeys.isTimerNotificationEnabled))
 
         // Load Timer Display Format setting (default to "HH:MM" if not set)
-        let savedFormat = defaults.string(forKey: "timerDisplayFormat") ?? "HH:MM"
+        let savedFormat = defaults.string(forKey: UserDefaultsKeys.timerDisplayFormat) ?? "HH:MM"
         _timerDisplayFormat = State(initialValue: savedFormat)
     }
 
@@ -1372,7 +1379,7 @@ struct SettingsView: View {
                                 set: { newValue in
                                     isDynamicIslandEnabled = newValue
                                     let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                                    defaults.set(newValue, forKey: "isDynamicIslandEnabled")
+                                    defaults.set(newValue, forKey: UserDefaultsKeys.isDynamicIslandEnabled)
 
                                     if !newValue {
                                         // Turning off - end Live Activity immediately
@@ -1426,7 +1433,7 @@ struct SettingsView: View {
                                 set: { newValue in
                                     isTimerNotificationEnabled = newValue
                                     let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                                    defaults.set(newValue, forKey: "isTimerNotificationEnabled")
+                                    defaults.set(newValue, forKey: UserDefaultsKeys.isTimerNotificationEnabled)
                                 }
                             ))
                             .tint(.green)
@@ -1467,7 +1474,7 @@ struct SettingsView: View {
                                     generator.impactOccurred()
                                     timerDisplayFormat = "HH"
                                     let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                                    defaults.set("HH", forKey: "timerDisplayFormat")
+                                    defaults.set("HH", forKey: UserDefaultsKeys.timerDisplayFormat)
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
@@ -1502,7 +1509,7 @@ struct SettingsView: View {
                                     generator.impactOccurred()
                                     timerDisplayFormat = "HH:MM"
                                     let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                                    defaults.set("HH:MM", forKey: "timerDisplayFormat")
+                                    defaults.set("HH:MM", forKey: UserDefaultsKeys.timerDisplayFormat)
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
@@ -1537,7 +1544,7 @@ struct SettingsView: View {
                                     generator.impactOccurred()
                                     timerDisplayFormat = "HH:MM:SS"
                                     let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
-                                    defaults.set("HH:MM:SS", forKey: "timerDisplayFormat")
+                                    defaults.set("HH:MM:SS", forKey: UserDefaultsKeys.timerDisplayFormat)
                                 } label: {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {

@@ -7,6 +7,12 @@
 
 import Foundation
 
+// MARK: - UserDefaults Keys
+private enum UserDefaultsKeys {
+    static let completedDays = "completedDays"
+    static let dailyUsage = "dailyUsage"
+}
+
 class StatisticsManager: ObservableObject {
     private let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
 
@@ -90,7 +96,7 @@ class StatisticsManager: ObservableObject {
     // MARK: - Data Management
 
     private func getCompletedDays() -> [Date] {
-        guard let data = defaults.data(forKey: "completedDays"),
+        guard let data = defaults.data(forKey: UserDefaultsKeys.completedDays),
               let dates = try? JSONDecoder().decode([Date].self, from: data) else {
             return []
         }
@@ -99,12 +105,12 @@ class StatisticsManager: ObservableObject {
 
     private func saveCompletedDays(_ days: [Date]) {
         if let data = try? JSONEncoder().encode(days) {
-            defaults.set(data, forKey: "completedDays")
+            defaults.set(data, forKey: UserDefaultsKeys.completedDays)
         }
     }
 
     private func getDailyUsage() -> [Date: Int] {
-        guard let data = defaults.data(forKey: "dailyUsage"),
+        guard let data = defaults.data(forKey: UserDefaultsKeys.dailyUsage),
               let usage = try? JSONDecoder().decode([Date: Int].self, from: data) else {
             return [:]
         }
@@ -113,14 +119,14 @@ class StatisticsManager: ObservableObject {
 
     private func saveDailyUsage(_ usage: [Date: Int]) {
         if let data = try? JSONEncoder().encode(usage) {
-            defaults.set(data, forKey: "dailyUsage")
+            defaults.set(data, forKey: UserDefaultsKeys.dailyUsage)
         }
     }
 
     // MARK: - Reset (for substance change)
 
     func resetAllStatistics() {
-        defaults.removeObject(forKey: "completedDays")
-        defaults.removeObject(forKey: "dailyUsage")
+        defaults.removeObject(forKey: UserDefaultsKeys.completedDays)
+        defaults.removeObject(forKey: UserDefaultsKeys.dailyUsage)
     }
 }
