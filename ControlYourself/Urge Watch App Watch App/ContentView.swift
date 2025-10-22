@@ -96,19 +96,19 @@ struct ContentView: View {
                             WKInterfaceDevice.current().play(.success)
                             connectivity.takeSnus()
                         } else {
-                            // Show warning if trying to take too early
+                            // Show warning if trying to take too early (same as iPhone)
                             showEarlyWarning = true
                         }
                     } label: {
                         Label(
-                            connectivity.countdownTime <= 0 ? "Take One" : "Wait...",
-                            systemImage: connectivity.countdownTime <= 0 ? "hand.tap.fill" : "clock.fill"
+                            "Take One",
+                            systemImage: "hand.tap.fill"
                         )
                         .frame(maxWidth: .infinity)
                         .font(.headline)
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(connectivity.countdownTime <= 0 ? .green : .gray)
+                    .tint(connectivity.countdownTime <= 0 ? .green : .purple)
 
                     // Panic button
                     if connectivity.paniksnusLeft > 0 {
