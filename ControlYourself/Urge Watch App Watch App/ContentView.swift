@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Combine
+import WatchKit
+import UserNotifications
 
 struct ContentView: View {
     @StateObject private var connectivity = WatchConnectivityManager.shared
     @State private var currentTime = Date()
+    @State private var wasTimerRunning = false
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -88,6 +91,8 @@ struct ContentView: View {
                     // Main action button
                     Button {
                         if connectivity.isReady {
+                            // Haptic feedback for success
+                            WKInterfaceDevice.current().play(.success)
                             connectivity.takeSnus()
                         }
                     } label: {
@@ -105,6 +110,8 @@ struct ContentView: View {
                     // Panic button
                     if connectivity.paniksnusLeft > 0 {
                         Button {
+                            // Haptic feedback for warning/panic action
+                            WKInterfaceDevice.current().play(.notification)
                             connectivity.usePanic()
                         } label: {
                             Label("Use Panic", systemImage: "bolt.fill")
@@ -126,9 +133,16 @@ struct ContentView: View {
                 let remaining = endDate.timeIntervalSinceNow
                 if remaining > 0 {
                     connectivity.countdownTime = remaining
+                    wasTimerRunning = true
                 } else {
                     connectivity.countdownTime = 0
                     connectivity.timerEndDate = nil
+
+                    // Play haptic feedback when timer completes (only once)
+                    if wasTimerRunning {
+                        WKInterfaceDevice.current().play(.success)
+                        wasTimerRunning = false
+                    }
                 }
             }
         }

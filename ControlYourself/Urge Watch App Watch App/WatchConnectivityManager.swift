@@ -8,6 +8,7 @@
 import Foundation
 import WatchConnectivity
 import Combine
+import ClockKit
 
 class WatchConnectivityManager: NSObject, ObservableObject {
     static let shared = WatchConnectivityManager()
@@ -26,10 +27,23 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             WCSession.default.delegate = self
             WCSession.default.activate()
         }
+
+        // Initialize notification manager
+        _ = NotificationManager.shared
     }
 
     var isReady: Bool {
         return countdownTime == 0
+    }
+
+    // MARK: - Complication Updates
+
+    private func updateComplications() {
+        let server = CLKComplicationServer.sharedInstance()
+        for complication in server.activeComplications ?? [] {
+            server.reloadTimeline(for: complication)
+        }
+        print("🔄 Updated complications")
     }
 
     // MARK: - Send Actions to iPhone
@@ -119,8 +133,14 @@ extension WatchConnectivityManager: WCSessionDelegate {
             if let timerEndDateTimestamp = applicationContext["timerEndDate"] as? TimeInterval,
                timerEndDateTimestamp > 0 {
                 self.timerEndDate = Date(timeIntervalSince1970: timerEndDateTimestamp)
+
+                // Schedule notification for timer completion
+                NotificationManager.shared.scheduleTimerCompleteNotification(at: self.timerEndDate!)
             } else {
                 self.timerEndDate = nil
+
+                // Cancel notification if timer is cleared
+                NotificationManager.shared.cancelTimerNotification()
             }
 
             if let substanceName = applicationContext["substanceName"] as? String {
@@ -128,6 +148,9 @@ extension WatchConnectivityManager: WCSessionDelegate {
             }
 
             print("✅ Updated from context: countdown=\(self.countdownTime)s, left=\(self.snusLeft)")
+
+            // Update complications with new data
+            self.updateComplications()
         }
     }
 
@@ -150,6 +173,9 @@ extension WatchConnectivityManager: WCSessionDelegate {
             if let substanceName = message["substanceName"] as? String {
                 self.substanceName = substanceName
             }
+
+            // Update complications with new data
+            self.updateComplications()
         }
     }
 }
