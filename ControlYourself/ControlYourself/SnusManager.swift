@@ -4,6 +4,14 @@ import Combine
 import UserNotifications
 import UIKit
 import ActivityKit
+import WatchConnectivity
+
+// MARK: - Notification Names
+extension Notification.Name {
+    static let takeSnusFromWatch = Notification.Name("takeSnusFromWatch")
+    static let usePanicFromWatch = Notification.Name("usePanicFromWatch")
+    static let watchRequestsUpdate = Notification.Name("watchRequestsUpdate")
+}
 
 // MARK: - UserDefaults Keys
 private enum UserDefaultsKeys {
@@ -165,6 +173,9 @@ class SnusManager: ObservableObject {
         // Check for daily/weekly reset on app launch
         checkForDailyReset()
 
+        // Setup Watch Connectivity listeners
+        setupWatchConnectivity()
+
         // AFTER init is done, restore timer asynchronously (NON-BLOCKING)
         // This prevents blocking main thread during app startup
         Task {
@@ -172,6 +183,60 @@ class SnusManager: ObservableObject {
                 self.restoreTimerIfNeeded()
             }
         }
+    }
+
+    // MARK: - Watch Connectivity
+
+    private func setupWatchConnectivity() {
+        // Initialize Watch Connectivity
+        _ = WatchConnectivityManager.shared
+
+        // Listen for actions from Watch
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleTakeSnusFromWatch),
+            name: .takeSnusFromWatch,
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleUsePanicFromWatch),
+            name: .usePanicFromWatch,
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleWatchRequestsUpdate),
+            name: .watchRequestsUpdate,
+            object: nil
+        )
+    }
+
+    @objc private func handleTakeSnusFromWatch() {
+        print("⌚ Watch triggered: Take snus")
+        takeSnus()
+    }
+
+    @objc private func handleUsePanicFromWatch() {
+        print("⌚ Watch triggered: Use panic")
+        usePanicSnus()
+    }
+
+    @objc private func handleWatchRequestsUpdate() {
+        print("⌚ Watch requested update")
+        sendUpdateToWatch()
+    }
+
+    private func sendUpdateToWatch() {
+        WatchConnectivityManager.shared.updateContext(
+            countdownTime: countdownTime,
+            snusLeft: snusLeft,
+            paniksnusLeft: paniksnusLeft,
+            timerEndDate: timerEndDate,
+            substanceName: substanceName
+        )
     }
 
     deinit {
@@ -607,14 +672,20 @@ class SnusManager: ObservableObject {
 
         // Start countdown immediately
         startCountdown()
+
+        // Send update to Watch
+        sendUpdateToWatch()
     }
 
-    func usePaniksnus() {
+    func usePanicSnus() {
         guard paniksnusLeft > 0 else { return }
 
         // Only decrease panic snus count, don't touch the timer
         paniksnusLeft -= 1
         saveSettings()
+
+        // Send update to Watch
+        sendUpdateToWatch()
     }
 
     func saveSettings() {
@@ -772,5 +843,130 @@ class SnusManager: ObservableObject {
         saveSettings()
 
         print("✅ Weekly reset complete - paniksnusLeft: \(paniksnusLeft)")
+    }
+}
+//
+//  WatchConnectivityManager.swift
+//  ControlYourself
+//
+//  Manages communication between iPhone and Apple Watch
+//
+
+import Foundation
+import WatchConnectivity
+
+class WatchConnectivityManager: NSObject, ObservableObject {
+    static let shared = WatchConnectivityManager()
+
+    private override init() {
+        super.init()
+
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+    }
+
+    // MARK: - Send Data to Watch
+
+    /// Send timer data to Watch
+    func sendTimerUpdate(countdownTime: TimeInterval, snusLeft: Int, paniksnusLeft: Int, isReady: Bool, substanceName: String) {
+        guard WCSession.default.isReachable else {
+            print("❌ Watch not reachable")
+            return
+        }
+
+        let message: [String: Any] = [
+            "countdownTime": countdownTime,
+            "snusLeft": snusLeft,
+            "paniksnusLeft": paniksnusLeft,
+            "isReady": isReady,
+            "substanceName": substanceName,
+            "timestamp": Date().timeIntervalSince1970
+        ]
+
+        WCSession.default.sendMessage(message, replyHandler: nil) { error in
+            print("❌ Failed to send message: \(error.localizedDescription)")
+        }
+
+        print("✅ Sent timer update to Watch: countdown=\(countdownTime)s, left=\(snusLeft)")
+    }
+
+    /// Update Watch with application context (persistent data)
+    func updateContext(countdownTime: TimeInterval, snusLeft: Int, paniksnusLeft: Int, timerEndDate: Date?, substanceName: String) {
+        do {
+            let context: [String: Any] = [
+                "countdownTime": countdownTime,
+                "snusLeft": snusLeft,
+                "paniksnusLeft": paniksnusLeft,
+                "timerEndDate": timerEndDate?.timeIntervalSince1970 ?? 0,
+                "substanceName": substanceName
+            ]
+
+            try WCSession.default.updateApplicationContext(context)
+            print("✅ Updated Watch context")
+        } catch {
+            print("❌ Failed to update context: \(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - WCSessionDelegate
+
+extension WatchConnectivityManager: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if let error = error {
+            print("❌ WCSession activation failed: \(error.localizedDescription)")
+        } else {
+            print("✅ WCSession activated with state: \(activationState.rawValue)")
+        }
+    }
+
+    #if os(iOS)
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("⚠️ WCSession became inactive")
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("⚠️ WCSession deactivated")
+        WCSession.default.activate()
+    }
+    #endif
+
+    // MARK: - Receive Messages from Watch
+
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        DispatchQueue.main.async {
+            if let action = message["action"] as? String {
+                print("📩 Received action from Watch: \(action)")
+
+                switch action {
+                case "takeSnus":
+                    // Watch wants to trigger "take snus"
+                    // Post notification that iPhone app can listen to
+                    NotificationCenter.default.post(name: .takeSnusFromWatch, object: nil)
+                    replyHandler(["status": "success"])
+
+                case "usePanic":
+                    // Watch wants to use panic snus
+                    NotificationCenter.default.post(name: .usePanicFromWatch, object: nil)
+                    replyHandler(["status": "success"])
+
+                case "requestUpdate":
+                    // Watch requests current state
+                    // Reply will be handled by SnusManager
+                    NotificationCenter.default.post(name: .watchRequestsUpdate, object: nil)
+                    replyHandler(["status": "updating"])
+
+                default:
+                    replyHandler(["status": "unknown_action"])
+                }
+            }
+        }
+    }
+
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("📩 Received application context from Watch")
+        // Handle context updates if needed
     }
 }

@@ -447,7 +447,7 @@ struct LandingPageView: View {
                         Button {
                             let generator = UINotificationFeedbackGenerator()
                             generator.notificationOccurred(.warning)
-                            snusManager.usePaniksnus()
+                            snusManager.usePanicSnus()
 
                             // Animate only panic counter
                             animatePanicLeftCounter()
