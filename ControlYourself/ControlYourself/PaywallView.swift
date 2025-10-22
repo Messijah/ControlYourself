@@ -184,7 +184,7 @@ struct PaywallView: View {
 
                     // REQUIRED: Privacy Policy and Terms of Use links
                     HStack(spacing: 16) {
-                        Link(destination: URL(string: "https://jenseklund.se/urge/privacy-policy")!) {
+                        Link(destination: URL(string: "https://messijah.github.io/ControlYourself/privacy-policy.html")!) {
                             Text("Privacy Policy")
                                 .font(.system(size: 12, weight: .medium, design: .rounded))
                                 .foregroundColor(.white.opacity(0.7))
@@ -194,7 +194,7 @@ struct PaywallView: View {
                         Text("•")
                             .foregroundColor(.white.opacity(0.4))
 
-                        Link(destination: URL(string: "https://jenseklund.se/urge/terms")!) {
+                        Link(destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!) {
                             Text("Terms of Use")
                                 .font(.system(size: 12, weight: .medium, design: .rounded))
                                 .foregroundColor(.white.opacity(0.7))
