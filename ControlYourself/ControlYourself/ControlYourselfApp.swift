@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct ControlYourselfApp: App {
+    init() {
+        // Initialize Watch Connectivity on app launch
+        _ = WatchConnectivityManager.shared
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

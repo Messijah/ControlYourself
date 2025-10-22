@@ -181,6 +181,9 @@ class SnusManager: ObservableObject {
         Task {
             await MainActor.run {
                 self.restoreTimerIfNeeded()
+
+                // Send initial data to Watch after restoration
+                self.sendUpdateToWatch()
             }
         }
     }
