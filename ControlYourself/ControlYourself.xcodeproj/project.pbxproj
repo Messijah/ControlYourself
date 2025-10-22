@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		965B06CA838C418BBF4494A6 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EF559B4D84332A84560F8 /* PaywallView.swift */; };
 		9A4F7BACC4624404B9D33DAD /* ControlYourselfWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 929DE0A519F542BAA6833B55 /* ControlYourselfWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A68A1D9DD2D047AFAF5C89E6 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 46433DECF6004C64AA48417F /* Configuration.storekit */; };
+		B4AAB8552EA8D05500480F6A /* Urge Watch App Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B4AAB84B2EA8D05300480F6A /* Urge Watch App Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4FEDE8B2BB6AABE005DF867 /* ControlYourselfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDE8A2BB6AABE005DF867 /* ControlYourselfApp.swift */; };
 		B4FEDE8D2BB6AABE005DF867 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FEDE8C2BB6AABE005DF867 /* ContentView.swift */; };
 		B4FEDE8F2BB6AAC0005DF867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FEDE8E2BB6AAC0005DF867 /* Assets.xcassets */; };
@@ -36,6 +37,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 9AEEF96170A44236AC4380D9;
 			remoteInfo = ControlYourselfWidgetExtension;
+		};
+		B4AAB8532EA8D05500480F6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4FEDE7F2BB6AABE005DF867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4AAB84A2EA8D05300480F6A;
+			remoteInfo = "Urge Watch App Watch App";
 		};
 		B4FEDE982BB6AAC0005DF867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +73,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4AAB8562EA8D05500480F6A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B4AAB8552EA8D05500480F6A /* Urge Watch App Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +96,7 @@
 		79A48108FDFA466A9A421F38 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		7E6F082D30FD4FD798F1C35C /* SnusTimerActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnusTimerActivity.swift; sourceTree = "<group>"; };
 		929DE0A519F542BAA6833B55 /* ControlYourselfWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ControlYourselfWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4AAB84B2EA8D05300480F6A /* Urge Watch App Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Urge Watch App Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDE872BB6AABE005DF867 /* ControlYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FEDE8A2BB6AABE005DF867 /* ControlYourselfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlYourselfApp.swift; sourceTree = "<group>"; };
 		B4FEDE8C2BB6AABE005DF867 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,8 +140,19 @@
 		LOCSTRING0028 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B4AAB84C2EA8D05300480F6A /* Urge Watch App Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Urge Watch App Watch App"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		3FBCA332BD2D45ACB92E3D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AAB8482EA8D05300480F6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,6 +189,7 @@
 				B4FEDE892BB6AABE005DF867 /* ControlYourself */,
 				B4FEDE9A2BB6AAC0005DF867 /* ControlYourselfTests */,
 				B4FEDEA42BB6AAC0005DF867 /* ControlYourselfUITests */,
+				B4AAB84C2EA8D05300480F6A /* Urge Watch App Watch App */,
 				B4FEDE882BB6AABE005DF867 /* Products */,
 				C0FFB6648E0C4218A13B60B1 /* ControlYourselfWidgetExtension */,
 			);
@@ -170,6 +202,7 @@
 				B4FEDE972BB6AAC0005DF867 /* ControlYourselfTests.xctest */,
 				B4FEDEA12BB6AAC0005DF867 /* ControlYourselfUITests.xctest */,
 				929DE0A519F542BAA6833B55 /* ControlYourselfWidgetExtension.appex */,
+				B4AAB84B2EA8D05300480F6A /* Urge Watch App Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +284,28 @@
 			productReference = 929DE0A519F542BAA6833B55 /* ControlYourselfWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		B4AAB84A2EA8D05300480F6A /* Urge Watch App Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4AAB8592EA8D05500480F6A /* Build configuration list for PBXNativeTarget "Urge Watch App Watch App" */;
+			buildPhases = (
+				B4AAB8472EA8D05300480F6A /* Sources */,
+				B4AAB8482EA8D05300480F6A /* Frameworks */,
+				B4AAB8492EA8D05300480F6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B4AAB84C2EA8D05300480F6A /* Urge Watch App Watch App */,
+			);
+			name = "Urge Watch App Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Urge Watch App Watch App";
+			productReference = B4AAB84B2EA8D05300480F6A /* Urge Watch App Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B4FEDE862BB6AABE005DF867 /* ControlYourself */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4FEDEAB2BB6AAC0005DF867 /* Build configuration list for PBXNativeTarget "ControlYourself" */;
@@ -260,11 +315,13 @@
 				B4FEDE852BB6AABE005DF867 /* Resources */,
 				LOCSCRIPT001 /* Copy Localization Files */,
 				9A4F7BACC4624404B9D33DAD00 /* Embed Foundation Extensions */,
+				B4AAB8562EA8D05500480F6A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				244683F02EDC460C938C27F7 /* PBXTargetDependency */,
+				B4AAB8542EA8D05500480F6A /* PBXTargetDependency */,
 			);
 			name = ControlYourself;
 			productName = ControlYourself;
@@ -314,9 +371,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					B4AAB84A2EA8D05300480F6A = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 					B4FEDE862BB6AABE005DF867 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -371,12 +431,20 @@
 				B4FEDE962BB6AAC0005DF867 /* ControlYourselfTests */,
 				B4FEDEA02BB6AAC0005DF867 /* ControlYourselfUITests */,
 				9AEEF96170A44236AC4380D9 /* ControlYourselfWidgetExtension */,
+				B4AAB84A2EA8D05300480F6A /* Urge Watch App Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1C195025E2B546B8B3965E9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4AAB8492EA8D05300480F6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,6 +521,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B4AAB8472EA8D05300480F6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B4FEDE832BB6AABE005DF867 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +579,11 @@
 			isa = PBXTargetDependency;
 			target = 9AEEF96170A44236AC4380D9 /* ControlYourselfWidgetExtension */;
 			targetProxy = 60906EB736C94AFBAF1CA9C6 /* PBXContainerItemProxy */;
+		};
+		B4AAB8542EA8D05500480F6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4AAB84A2EA8D05300480F6A /* Urge Watch App Watch App */;
+			targetProxy = B4AAB8532EA8D05500480F6A /* PBXContainerItemProxy */;
 		};
 		B4FEDE992BB6AAC0005DF867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -579,6 +659,73 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4AAB8572EA8D05500480F6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Urge Watch App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JensEH.ControlYourself;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JensEH.ControlYourself.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		B4AAB8582EA8D05500480F6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63PV439858;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Urge Watch App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.JensEH.ControlYourself;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JensEH.ControlYourself.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
@@ -878,6 +1025,15 @@
 			buildConfigurations = (
 				F0F66A9B7EF148A18CB9961F /* Debug */,
 				4E5BE85BAED2451882B77B07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4AAB8592EA8D05500480F6A /* Build configuration list for PBXNativeTarget "Urge Watch App Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4AAB8572EA8D05500480F6A /* Debug */,
+				B4AAB8582EA8D05500480F6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
