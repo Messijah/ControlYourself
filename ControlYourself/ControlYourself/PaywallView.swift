@@ -182,6 +182,27 @@ struct PaywallView: View {
                     }
                     .padding(.bottom, 8)
 
+                    // REQUIRED: Privacy Policy and Terms of Use links
+                    HStack(spacing: 16) {
+                        Link(destination: URL(string: "https://jenseklund.se/urge/privacy-policy")!) {
+                            Text("Privacy Policy")
+                                .font(.system(size: 12, weight: .medium, design: .rounded))
+                                .foregroundColor(.white.opacity(0.7))
+                                .underline()
+                        }
+
+                        Text("•")
+                            .foregroundColor(.white.opacity(0.4))
+
+                        Link(destination: URL(string: "https://jenseklund.se/urge/terms")!) {
+                            Text("Terms of Use")
+                                .font(.system(size: 12, weight: .medium, design: .rounded))
+                                .foregroundColor(.white.opacity(0.7))
+                                .underline()
+                        }
+                    }
+                    .padding(.bottom, 8)
+
                     // Fine print
                     Text(NSLocalizedString("paywall.cancel_anytime", comment: ""))
                         .font(.system(size: 12, weight: .regular, design: .rounded))
