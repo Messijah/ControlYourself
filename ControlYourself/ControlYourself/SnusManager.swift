@@ -215,6 +215,10 @@ class SnusManager: ObservableObject {
             name: .watchRequestsUpdate,
             object: nil
         )
+
+        // Send initial data immediately (synchronously)
+        // This ensures Watch gets data as soon as connection is established
+        sendUpdateToWatch()
     }
 
     @objc private func handleTakeSnusFromWatch() {

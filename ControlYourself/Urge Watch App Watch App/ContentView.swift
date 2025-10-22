@@ -14,6 +14,7 @@ struct ContentView: View {
     @StateObject private var connectivity = WatchConnectivityManager.shared
     @State private var currentTime = Date()
     @State private var wasTimerRunning = false
+    @State private var showEarlyWarning = false
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -34,7 +35,7 @@ struct ContentView: View {
 
                 // Timer Display
                 VStack(spacing: 8) {
-                    if connectivity.isReady {
+                    if connectivity.countdownTime <= 0 {
                         // Ready to take
                         Image(systemName: "checkmark.seal.fill")
                             .font(.system(size: 40))
@@ -90,22 +91,24 @@ struct ContentView: View {
                 VStack(spacing: 10) {
                     // Main action button
                     Button {
-                        if connectivity.isReady {
+                        if connectivity.countdownTime <= 0 {
                             // Haptic feedback for success
                             WKInterfaceDevice.current().play(.success)
                             connectivity.takeSnus()
+                        } else {
+                            // Show warning if trying to take too early
+                            showEarlyWarning = true
                         }
                     } label: {
                         Label(
-                            connectivity.isReady ? "Take One" : "Wait...",
-                            systemImage: connectivity.isReady ? "hand.tap.fill" : "clock.fill"
+                            connectivity.countdownTime <= 0 ? "Take One" : "Wait...",
+                            systemImage: connectivity.countdownTime <= 0 ? "hand.tap.fill" : "clock.fill"
                         )
                         .frame(maxWidth: .infinity)
                         .font(.headline)
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(connectivity.isReady ? .green : .gray)
-                    .disabled(!connectivity.isReady)
+                    .tint(connectivity.countdownTime <= 0 ? .green : .gray)
 
                     // Panic button
                     if connectivity.paniksnusLeft > 0 {
@@ -149,6 +152,15 @@ struct ContentView: View {
         .onAppear {
             // Request initial update
             connectivity.requestUpdate()
+        }
+        .alert("Wait a bit longer!", isPresented: $showEarlyWarning) {
+            Button("Take anyway", role: .destructive) {
+                WKInterfaceDevice.current().play(.notification)
+                connectivity.takeSnus()
+            }
+            Button("Okay, I'll wait", role: .cancel) {}
+        } message: {
+            Text("You have \(timeString(from: connectivity.countdownTime)) left. Are you sure you want to take one now?")
         }
     }
 
