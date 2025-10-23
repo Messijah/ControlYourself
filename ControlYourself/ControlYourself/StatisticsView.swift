@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+// MARK: - iPad Layout Helper
+private extension View {
+    var isIPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+}
+
 struct StatisticsView: View {
     @ObservedObject var statisticsManager: StatisticsManager
     @Environment(\.presentationMode) var presentationMode
@@ -154,6 +161,8 @@ struct StatisticsView: View {
                 }
                 .padding(.bottom, 40)
             }
+            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: .infinity) // Center on iPad
         }
         .foregroundColor(.white)
         .alert(NSLocalizedString("statistics.reset_alert_title", comment: ""), isPresented: $showResetConfirmation) {

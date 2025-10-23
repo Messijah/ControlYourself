@@ -8,6 +8,21 @@
 
 import SwiftUI
 
+// MARK: - iPad Layout Helper
+extension View {
+    var isIPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    func adaptiveFrame(maxWidth: CGFloat) -> some View {
+        self.frame(maxWidth: isIPad ? maxWidth : .infinity)
+    }
+
+    func adaptivePadding(_ edges: Edge.Set = .all, _ length: CGFloat) -> some View {
+        self.padding(edges, isIPad ? length * 1.5 : length)
+    }
+}
+
 // MARK: - UserDefaults Keys
 private enum UserDefaultsKeys {
     static let timerDisplayFormat = "timerDisplayFormat"
@@ -113,12 +128,13 @@ struct LandingPageView: View {
     }
 
     var body: some View {
-        ZStack {
-            // Modern mesh gradient background
-            MeshGradientBackground()
-                .ignoresSafeArea()
+        GeometryReader { geometry in
+            ZStack {
+                // Modern mesh gradient background
+                MeshGradientBackground()
+                    .ignoresSafeArea()
 
-            VStack(spacing: 0) {
+                VStack(spacing: 0) {
                 // Top Stats Bar with glassmorphism
                 HStack(spacing: 16) {
                     ModernStatCard(
@@ -628,6 +644,9 @@ struct LandingPageView: View {
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
             }
+            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: .infinity) // Center on iPad
+        }
         }
         .sheet(isPresented: $showingSettings) {
             SettingsView(snusManager: snusManager, onRestartApp: {
@@ -1580,6 +1599,8 @@ struct SettingsView: View {
                 }
                 .padding(.bottom, 40)
             }
+            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: .infinity) // Center on iPad
         }
         .foregroundColor(.white)
         .alert(NSLocalizedString("alert.cheating_title", comment: ""), isPresented: $showCheatAlert) {

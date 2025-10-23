@@ -8,6 +8,13 @@
 import SwiftUI
 import UserNotifications
 
+// MARK: - iPad Layout Helper
+private extension View {
+    var isIPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
+}
+
 // NOTE: AppTheme is also defined in DesignSystem.swift
 // Keep this local copy to avoid compilation order issues
 // MARK: - Design System
@@ -421,6 +428,8 @@ struct NjutningsValView: View {
                 }
                 .padding(.horizontal, 32)
             }
+            .frame(maxWidth: isIPad ? 500 : .infinity)
+            .frame(maxWidth: .infinity) // Center on iPad
         }
         .onAppear {
             withAnimation(.easeInOut(duration: 10).repeatForever(autoreverses: true)) {
@@ -639,6 +648,8 @@ struct NjutningsInställningarView: View {
                 }
                 .padding(.bottom, 40)
             }
+            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: .infinity) // Center on iPad
         }
         .foregroundColor(.white)
     }
