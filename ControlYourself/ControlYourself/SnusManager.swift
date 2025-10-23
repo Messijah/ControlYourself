@@ -5,6 +5,8 @@ import UserNotifications
 import UIKit
 import ActivityKit
 import WatchConnectivity
+import AVFoundation
+import AudioToolbox
 
 // MARK: - Notification Names
 extension Notification.Name {
@@ -457,11 +459,16 @@ class SnusManager: ObservableObject {
 
         print("⏰ Timer reached 0 - triggering notifications and haptics")
 
-        // Trigger haptic feedback (works when app is open)
+        // Trigger haptic feedback AND sound (works when app is open)
         DispatchQueue.main.async {
-            print("📳 Triggering haptic feedback")
+            print("📳 Triggering haptic feedback and sound")
+
+            // Play system sound (this works even when app is in foreground)
+            AudioServicesPlaySystemSound(SystemSoundID(1315)) // Anticipate.caf - nice completion sound
+
+            // Also trigger haptic
             let generator = UINotificationFeedbackGenerator()
-            generator.prepare() // Prepare the generator for better responsiveness
+            generator.prepare()
             generator.notificationOccurred(.success)
         }
 
