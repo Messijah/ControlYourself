@@ -8,10 +8,8 @@
 import SwiftUI
 
 // MARK: - iPad Layout Helper
-private extension View {
-    var isIPad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad
-    }
+fileprivate var isIPad: Bool {
+    UIDevice.current.userInterfaceIdiom == .pad
 }
 
 struct StatisticsView: View {

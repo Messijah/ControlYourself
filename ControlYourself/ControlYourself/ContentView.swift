@@ -9,10 +9,8 @@ import SwiftUI
 import UserNotifications
 
 // MARK: - iPad Layout Helper
-private extension View {
-    var isIPad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad
-    }
+fileprivate var isIPad: Bool {
+    UIDevice.current.userInterfaceIdiom == .pad
 }
 
 // NOTE: AppTheme is also defined in DesignSystem.swift

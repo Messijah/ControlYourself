@@ -9,18 +9,8 @@
 import SwiftUI
 
 // MARK: - iPad Layout Helper
-extension View {
-    var isIPad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad
-    }
-
-    func adaptiveFrame(maxWidth: CGFloat) -> some View {
-        self.frame(maxWidth: isIPad ? maxWidth : .infinity)
-    }
-
-    func adaptivePadding(_ edges: Edge.Set = .all, _ length: CGFloat) -> some View {
-        self.padding(edges, isIPad ? length * 1.5 : length)
-    }
+fileprivate var isIPad: Bool {
+    UIDevice.current.userInterfaceIdiom == .pad
 }
 
 // MARK: - UserDefaults Keys
