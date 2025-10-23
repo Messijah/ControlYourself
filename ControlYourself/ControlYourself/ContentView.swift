@@ -426,7 +426,7 @@ struct NjutningsValView: View {
                 }
                 .padding(.horizontal, 32)
             }
-            .frame(maxWidth: isIPad ? 500 : .infinity)
+            .frame(maxWidth: isIPad ? 900 : .infinity)
             .frame(maxWidth: .infinity) // Center on iPad
         }
         .onAppear {
@@ -646,7 +646,7 @@ struct NjutningsInställningarView: View {
                 }
                 .padding(.bottom, 40)
             }
-            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: isIPad ? 900 : .infinity)
             .frame(maxWidth: .infinity) // Center on iPad
         }
         .foregroundColor(.white)

@@ -159,7 +159,7 @@ struct StatisticsView: View {
                 }
                 .padding(.bottom, 40)
             }
-            .frame(maxWidth: isIPad ? 600 : .infinity)
+            .frame(maxWidth: isIPad ? 900 : .infinity)
             .frame(maxWidth: .infinity) // Center on iPad
         }
         .foregroundColor(.white)
