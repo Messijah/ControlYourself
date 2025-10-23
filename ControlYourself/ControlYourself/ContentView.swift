@@ -625,7 +625,8 @@ struct NjutningsInställningarView: View {
                         snusManager.substanceName = selectedNjutning.rawValue.lowercased()
                         snusManager.snusLeft = antalPerDag              // Set antal per dag
                         snusManager.snusInterval = TimeInterval(snusInterval * 3600)  // Convert hours to seconds
-                        snusManager.paniksnus = paniksnus
+                        snusManager.paniksnus = paniksnus                // Set max panic per week
+                        snusManager.paniksnusLeft = paniksnus            // Set current panic left to max
 
                         snusManager.saveSettings()
                         onSettingsSaved()
