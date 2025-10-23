@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urge - Privacy Policy / Integritetspolicy</title>
+    <title>Urge - Privacy Policy</title>
     <style>
         * {
             margin: 0;
@@ -12,89 +12,72 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            padding: 60px;
-            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background: #ffffff;
+            padding: 0;
         }
 
         .header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e8ecef;
+            background: #f5f5f7;
+            border-bottom: 1px solid #d2d2d7;
+            padding: 32px 20px;
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        .header-content {
+            max-width: 980px;
+            margin: 0 auto;
         }
 
-        .logo svg {
-            width: 48px;
-            height: 48px;
-            fill: white;
+        .app-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
         }
 
         h1 {
-            color: #1a202c;
-            margin-bottom: 8px;
-            font-size: 2.8em;
+            font-size: 48px;
             font-weight: 700;
+            color: #1d1d1f;
             letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            color: #64748b;
-            font-size: 1.1em;
-            font-weight: 400;
+            margin-bottom: 16px;
+            line-height: 1.1;
         }
 
         .lang-toggle {
-            text-align: center;
-            margin-bottom: 40px;
+            margin-top: 20px;
         }
 
         .lang-toggle button {
-            background: #f1f5f9;
-            color: #475569;
-            border: 2px solid transparent;
-            padding: 12px 28px;
-            margin: 0 6px;
-            border-radius: 10px;
+            background: #ffffff;
+            color: #1d1d1f;
+            border: 1px solid #d2d2d7;
+            padding: 8px 16px;
+            margin-right: 8px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.2s ease;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
         }
 
         .lang-toggle button:hover {
-            background: #e2e8f0;
-            transform: translateY(-1px);
+            background: #e8e8ed;
         }
 
         .lang-toggle button.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: transparent;
+            background: #0071e3;
+            color: #ffffff;
+            border-color: #0071e3;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 60px 20px 100px;
         }
 
         .content {
@@ -106,36 +89,61 @@
         }
 
         .last-updated {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.95em;
-            margin-bottom: 40px;
-            padding: 15px;
-            background: #f8fafc;
-            border-radius: 8px;
+            color: #6e6e73;
+            font-size: 14px;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #d2d2d7;
         }
 
-        .summary-box {
-            background: linear-gradient(135deg, #f0f4ff 0%, #f5f3ff 100%);
-            padding: 30px;
+        .toc {
+            background: #f5f5f7;
+            border: 1px solid #d2d2d7;
             border-radius: 12px;
-            border-left: 4px solid #667eea;
-            margin: 30px 0;
+            padding: 32px;
+            margin-bottom: 48px;
         }
 
-        .summary-box p {
-            margin: 0;
-            font-size: 1.05em;
-            line-height: 1.7;
+        .toc h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: item;
+            padding-left: 0;
+        }
+
+        .toc li {
+            counter-increment: item;
+            margin-bottom: 8px;
+        }
+
+        .toc li::before {
+            content: counter(item) ". ";
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .toc a {
+            color: #1d1d1f;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: #0071e3;
         }
 
         h2 {
-            color: #1a202c;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 32px;
             font-weight: 700;
+            color: #1d1d1f;
+            margin-top: 64px;
+            margin-bottom: 24px;
             letter-spacing: -0.3px;
+            line-height: 1.2;
         }
 
         h2:first-of-type {
@@ -143,430 +151,543 @@
         }
 
         h3 {
-            color: #334155;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 1.4em;
+            font-size: 24px;
             font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 24px;
+            margin-bottom: 12px;
         }
 
         p {
             margin-bottom: 16px;
-            color: #475569;
-            font-size: 1.05em;
+            color: #1d1d1f;
+            font-size: 17px;
         }
 
         strong {
-            color: #1e293b;
             font-weight: 600;
         }
 
-        ul {
-            margin: 20px 0 20px 30px;
+        ul, ol {
+            margin: 16px 0 24px 24px;
         }
 
         li {
-            margin-bottom: 12px;
-            color: #475569;
-            font-size: 1.05em;
-            line-height: 1.7;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 25px 0;
-        }
-
-        .info-card {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .info-card h4 {
-            color: #667eea;
-            font-size: 1.1em;
             margin-bottom: 8px;
-            font-weight: 600;
+            color: #1d1d1f;
+            font-size: 17px;
         }
 
-        .info-card p {
-            font-size: 0.95em;
+        .info-box {
+            background: #f5f5f7;
+            border-left: 4px solid #0071e3;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .info-box p {
             margin: 0;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 16px;
+            margin: 24px 0;
+            padding: 24px;
+            background: #f5f5f7;
+            border-radius: 8px;
+        }
+
+        .legal-grid dt {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        .legal-grid dd {
+            color: #1d1d1f;
         }
 
         .section-divider {
             height: 1px;
-            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-            margin: 40px 0;
+            background: #d2d2d7;
+            margin: 64px 0;
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
+            background: #f5f5f7;
+            border: 1px solid #d2d2d7;
             border-radius: 12px;
-            margin-top: 50px;
-            text-align: center;
+            padding: 40px;
+            margin-top: 64px;
         }
 
-        .contact-section h3 {
-            color: white;
+        .contact-section h2 {
             margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.6em;
+            margin-bottom: 16px;
+            font-size: 28px;
         }
 
         .contact-section p {
-            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 12px;
         }
 
         .contact-section a {
-            color: white;
+            color: #0071e3;
             text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-            transition: border-color 0.2s;
-            padding-bottom: 2px;
+            font-weight: 500;
         }
 
         .contact-section a:hover {
-            border-bottom-color: white;
+            text-decoration: underline;
         }
 
         .footer {
             text-align: center;
-            color: #94a3b8;
-            font-size: 0.9em;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid #e2e8f0;
+            color: #6e6e73;
+            font-size: 12px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #d2d2d7;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 30px;
-            }
-
             h1 {
-                font-size: 2.2em;
+                font-size: 36px;
             }
 
             h2 {
-                font-size: 1.7em;
+                font-size: 28px;
             }
 
             h3 {
-                font-size: 1.25em;
+                font-size: 21px;
+            }
+
+            .legal-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .legal-grid dt {
+                margin-top: 16px;
+            }
+
+            .legal-grid dt:first-child {
+                margin-top: 0;
             }
         }
 
-        @media (max-width: 480px) {
+        @media print {
             body {
-                padding: 20px 10px;
+                background: white;
             }
 
-            .container {
-                padding: 30px 20px;
+            .lang-toggle {
+                display: none;
             }
 
-            h1 {
-                font-size: 1.8em;
+            .header {
+                border-bottom: 2px solid #000;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="1.5"/>
-                    <circle cx="12" cy="6" r="1.5"/>
-                    <circle cx="16.5" cy="8" r="1.5"/>
-                    <circle cx="16.5" cy="16" r="1.5"/>
-                    <circle cx="12" cy="18" r="1.5"/>
-                    <circle cx="7.5" cy="16" r="1.5"/>
-                    <circle cx="7.5" cy="8" r="1.5"/>
-                </svg>
+    <div class="header">
+        <div class="header-content">
+            <div class="app-name">URGE</div>
+            <h1>Privacy Policy</h1>
+            <div class="lang-toggle">
+                <button class="active" onclick="switchLang('en')">English</button>
+                <button onclick="switchLang('sv')">Svenska</button>
             </div>
-            <h1>Urge</h1>
-            <div class="subtitle">Privacy Policy / Integritetspolicy</div>
         </div>
+    </div>
 
-        <div class="lang-toggle">
-            <button class="active" onclick="switchLang('en')">🇬🇧 English</button>
-            <button onclick="switchLang('sv')">🇸🇪 Svenska</button>
-        </div>
-
+    <div class="container">
         <!-- ENGLISH VERSION -->
         <div id="en-content" class="content active">
-            <h2>Privacy Policy</h2>
-            <div class="last-updated">Effective Date: October 23, 2025 | Last Updated: October 23, 2025</div>
-
-            <div class="summary-box">
-                <p><strong>Privacy-First Design:</strong> Urge is built with privacy as a fundamental principle. All user data is stored exclusively on your device. We do not collect, transmit, or store any personal information on external servers.</p>
+            <div class="last-updated">
+                Effective Date: October 23, 2025<br>
+                Last Updated: October 23, 2025
             </div>
 
-            <h3>1. Introduction</h3>
-            <p>This Privacy Policy describes how Urge ("we," "our," or "the App") handles user information. Urge is designed as a privacy-focused application that operates entirely on-device without external data collection or transmission.</p>
-
-            <h3>2. Information Collection and Storage</h3>
-            <p><strong>Data Collection:</strong> Urge does not collect any personal data, usage analytics, or behavioral information from users.</p>
-
-            <p><strong>Local Storage:</strong> The following information is stored exclusively on your device using iOS local storage (UserDefaults and App Groups):</p>
-            <ul>
-                <li>User preferences and configuration settings</li>
-                <li>Timer and countdown data</li>
-                <li>Usage statistics and progress tracking</li>
-                <li>Subscription status (managed through Apple's infrastructure)</li>
-            </ul>
-
-            <p>This locally stored data:</p>
-            <ul>
-                <li>Remains entirely within your device's secure storage</li>
-                <li>Is not transmitted to any external servers</li>
-                <li>Is permanently deleted upon app uninstallation</li>
-                <li>Can be reset manually through the app's settings interface</li>
-            </ul>
-
-            <h3>3. Third-Party Services</h3>
-            <p>Urge utilizes only the following Apple-provided service:</p>
-
-            <div class="info-card">
-                <h4>Apple StoreKit (In-App Purchases)</h4>
-                <p>Used exclusively for processing subscription payments. Apple handles all payment information in accordance with their privacy policy. We receive only subscription status information (active/inactive) and no financial or personal details.</p>
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                <ol>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#data-collection">Information Collection and Storage</a></li>
+                    <li><a href="#third-party">Third-Party Services</a></li>
+                    <li><a href="#notifications">Notifications and Local Features</a></li>
+                    <li><a href="#security">Data Security</a></li>
+                    <li><a href="#children">Children's Privacy</a></li>
+                    <li><a href="#gdpr">Rights Under GDPR</a></li>
+                    <li><a href="#ccpa">California Privacy Rights (CCPA)</a></li>
+                    <li><a href="#international">International Data Transfers</a></li>
+                    <li><a href="#changes">Changes to This Policy</a></li>
+                    <li><a href="#legal">Legal Information</a></li>
+                    <li><a href="#contact">Contact Information</a></li>
+                </ol>
             </div>
 
-            <p style="margin-top: 25px;">Urge explicitly does not use:</p>
+            <h2 id="introduction">1. Introduction</h2>
+            <p>This Privacy Policy describes how Urge ("Application," "we," "our," or "us") collects, uses, and discloses information about users of the Urge mobile application.</p>
+
+            <p>Urge is designed with privacy as a fundamental principle. The Application operates entirely on-device and does not transmit user data to external servers or third parties, except as specifically described in this Privacy Policy.</p>
+
+            <h2 id="data-collection">2. Information Collection and Storage</h2>
+
+            <h3>2.1 Data Collection Practices</h3>
+            <p>Urge does not collect, transmit, or process any personally identifiable information, usage analytics, or behavioral data from users on external servers.</p>
+
+            <h3>2.2 Local Data Storage</h3>
+            <p>The Application stores the following information exclusively on the user's device using iOS local storage mechanisms (UserDefaults and App Groups):</p>
             <ul>
-                <li>Analytics platforms (Google Analytics, Firebase Analytics, etc.)</li>
-                <li>Crash reporting services</li>
-                <li>Advertising networks or tracking SDKs</li>
-                <li>Social media integration</li>
-                <li>Cloud storage or backup services</li>
-                <li>Any third-party data collection tools</li>
+                <li>User configuration preferences and application settings</li>
+                <li>Timer and countdown state information</li>
+                <li>Usage statistics and progress tracking data</li>
+                <li>Subscription status information (managed through Apple's infrastructure)</li>
             </ul>
 
-            <h3>4. Notifications and Local Features</h3>
-            <p><strong>Local Notifications:</strong> When enabled, notifications are generated locally on your device and do not involve any server-side communication or data transmission.</p>
-
-            <p><strong>Dynamic Island & Live Activities:</strong> Timer displays utilize iOS ActivityKit and operate entirely on-device without external data transfer.</p>
-
-            <h3>5. Data Security</h3>
-            <p>Since all data remains on your device and is managed by iOS:</p>
+            <h3>2.3 Data Retention and Deletion</h3>
+            <p>All locally stored data:</p>
             <ul>
-                <li>Data is protected by your device's encryption and security features</li>
-                <li>No data transmission occurs, eliminating interception risks</li>
-                <li>Data access is controlled by iOS security and your device passcode/biometric authentication</li>
+                <li>Remains exclusively within the device's secure storage environment</li>
+                <li>Is subject to iOS security and encryption protocols</li>
+                <li>Is permanently deleted upon application uninstallation</li>
+                <li>Can be manually reset through the Application's settings interface</li>
             </ul>
 
-            <h3>6. Children's Privacy</h3>
-            <p>Urge does not knowingly collect any information from users of any age. The app's privacy-by-design architecture ensures compliance with children's privacy regulations including COPPA and GDPR requirements for minors.</p>
+            <h2 id="third-party">3. Third-Party Services</h2>
 
-            <h3>7. Your Rights Under GDPR</h3>
-            <p>As a European user, you have specific rights regarding your personal data. Since Urge does not collect or process personal data on servers, these rights are exercised directly on your device:</p>
+            <h3>3.1 Apple Services</h3>
+            <p>Urge integrates exclusively with Apple-provided services:</p>
 
+            <h4>StoreKit (In-App Purchases)</h4>
+            <p>Used solely for processing subscription transactions. Apple Inc. handles all payment information in accordance with their privacy policy. We receive only subscription status information (active/inactive) and do not have access to financial or payment details.</p>
+
+            <h3>3.2 Services Not Used</h3>
+            <p>The Application explicitly does not integrate with or utilize:</p>
             <ul>
-                <li><strong>Right to Access:</strong> All your data is accessible within the app's interface</li>
-                <li><strong>Right to Erasure:</strong> Delete all data by uninstalling the app or using the in-app reset function</li>
-                <li><strong>Right to Data Portability:</strong> Not applicable as no data is held by us</li>
-                <li><strong>Right to Object:</strong> Not applicable as no data processing occurs</li>
+                <li>Analytics platforms or services (including but not limited to Google Analytics, Firebase Analytics)</li>
+                <li>Crash reporting or diagnostic services</li>
+                <li>Advertising networks or tracking software development kits (SDKs)</li>
+                <li>Social media platforms or integration services</li>
+                <li>Cloud storage or synchronization services</li>
+                <li>Any third-party data collection, processing, or transmission tools</li>
             </ul>
 
-            <h3>8. California Privacy Rights (CCPA)</h3>
-            <p>California residents have specific privacy rights. However, since Urge does not collect, sell, or share personal information, most CCPA provisions do not apply. We do not:</p>
+            <h2 id="notifications">4. Notifications and Local Features</h2>
+
+            <h3>4.1 Local Notifications</h3>
+            <p>When enabled by the user, notifications are generated locally on the device using iOS notification services. No server-side communication or data transmission occurs in connection with notification delivery.</p>
+
+            <h3>4.2 Dynamic Island and Live Activities</h3>
+            <p>Timer displays utilize iOS ActivityKit framework and operate entirely on-device. No data is transmitted to external servers in connection with these features.</p>
+
+            <h2 id="security">5. Data Security</h2>
+
+            <p>The Application's security architecture relies on iOS-provided security mechanisms:</p>
             <ul>
-                <li>Collect personal information</li>
+                <li>Data is protected by device-level encryption and security features</li>
+                <li>No network transmission of user data eliminates interception and man-in-the-middle attack vectors</li>
+                <li>Access to locally stored data is controlled by iOS security mechanisms and user device authentication (passcode/biometric)</li>
+            </ul>
+
+            <h2 id="children">6. Children's Privacy</h2>
+
+            <p>Urge does not knowingly collect information from individuals of any age. The Application's privacy-by-design architecture ensures compliance with:</p>
+            <ul>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+                <li>General Data Protection Regulation (GDPR) requirements for processing data of minors</li>
+                <li>Other applicable children's privacy regulations</li>
+            </ul>
+
+            <h2 id="gdpr">7. Rights Under GDPR</h2>
+
+            <p>For users in the European Economic Area (EEA), United Kingdom, and Switzerland, the following rights apply under the General Data Protection Regulation:</p>
+
+            <h3>7.1 Right of Access</h3>
+            <p>All user data is accessible within the Application's interface. No data is held by us externally.</p>
+
+            <h3>7.2 Right to Erasure</h3>
+            <p>Users may delete all locally stored data by:</p>
+            <ul>
+                <li>Uninstalling the Application</li>
+                <li>Using the in-application reset function</li>
+            </ul>
+
+            <h3>7.3 Right to Data Portability</h3>
+            <p>Not applicable as no personal data is collected or held by the data controller.</p>
+
+            <h3>7.4 Right to Object</h3>
+            <p>Not applicable as no data processing activities occur beyond local device storage.</p>
+
+            <h2 id="ccpa">8. California Privacy Rights (CCPA)</h2>
+
+            <p>California residents have specific rights under the California Consumer Privacy Act. However, as Urge does not collect, sell, or share personal information as defined by the CCPA, most provisions do not apply.</p>
+
+            <p>We do not:</p>
+            <ul>
+                <li>Collect personal information from California residents</li>
                 <li>Sell personal information</li>
-                <li>Share personal information for cross-context behavioral advertising</li>
+                <li>Share personal information for cross-context behavioral advertising purposes</li>
             </ul>
 
-            <h3>9. International Data Transfers</h3>
-            <p>Urge does not transfer any data internationally as all data processing occurs locally on your device.</p>
+            <h2 id="international">9. International Data Transfers</h2>
 
-            <h3>10. Changes to This Privacy Policy</h3>
-            <p>We reserve the right to modify this Privacy Policy. Material changes will be communicated through:</p>
+            <p>The Application does not transfer data internationally. All data processing occurs locally on the user's device.</p>
+
+            <h2 id="changes">10. Changes to This Privacy Policy</h2>
+
+            <p>We reserve the right to modify this Privacy Policy at any time. Material changes will be communicated through:</p>
             <ul>
-                <li>An updated version of this document with a revised "Last Updated" date</li>
-                <li>In-app notification upon significant policy changes</li>
-                <li>Prior user consent if data collection practices change</li>
+                <li>Update to this document with revised "Last Updated" date</li>
+                <li>In-application notification regarding policy changes</li>
+                <li>Request for user consent if data collection practices materially change</li>
             </ul>
 
-            <p>Continued use of the app after policy changes constitutes acceptance of the updated policy.</p>
+            <p>Continued use of the Application following policy modifications constitutes acceptance of the updated Privacy Policy.</p>
 
             <div class="section-divider"></div>
 
-            <h3>11. Legal Information</h3>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Developer</h4>
-                    <p>Jens Eriksson Erikholm</p>
-                </div>
-                <div class="info-card">
-                    <h4>Jurisdiction</h4>
-                    <p>Sweden, European Union</p>
-                </div>
-                <div class="info-card">
-                    <h4>Compliance</h4>
-                    <p>GDPR, CCPA, COPPA compliant by design</p>
-                </div>
+            <h2 id="legal">11. Legal Information</h2>
+
+            <dl class="legal-grid">
+                <dt>Developer</dt>
+                <dd>Jens Eriksson Erikholm</dd>
+
+                <dt>Jurisdiction</dt>
+                <dd>Sweden, European Union</dd>
+
+                <dt>Compliance</dt>
+                <dd>General Data Protection Regulation (GDPR)<br>
+                    California Consumer Privacy Act (CCPA)<br>
+                    Children's Online Privacy Protection Act (COPPA)</dd>
+
+                <dt>Data Controller</dt>
+                <dd>Jens Eriksson Erikholm</dd>
+            </dl>
+
+            <div class="contact-section" id="contact">
+                <h2>12. Contact Information</h2>
+                <p>For questions, concerns, or requests regarding this Privacy Policy, please contact us through:</p>
+                <p><strong>Support:</strong> <a href="https://github.com/Messijah/ControlYourself/issues" target="_blank">https://github.com/Messijah/ControlYourself/issues</a></p>
+                <p>We aim to respond to all privacy-related inquiries within seventy-two (72) hours.</p>
             </div>
 
-            <div class="contact-section">
-                <h3>Contact Information</h3>
-                <p>For questions, concerns, or requests regarding this Privacy Policy:</p>
-                <p><strong>Support:</strong> <a href="https://github.com/Messijah/ControlYourself/issues" target="_blank">GitHub Issues</a></p>
-                <p>We aim to respond to all inquiries within 72 hours.</p>
+            <div class="footer">
+                <p>© 2025 Jens Eriksson Erikholm. All rights reserved.</p>
             </div>
         </div>
 
         <!-- SWEDISH VERSION -->
         <div id="sv-content" class="content">
-            <h2>Integritetspolicy</h2>
-            <div class="last-updated">Ikraftträdande: 23 oktober 2025 | Senast uppdaterad: 23 oktober 2025</div>
-
-            <div class="summary-box">
-                <p><strong>Integritet i fokus:</strong> Urge är byggd med integritet som grundprincip. All användardata lagras uteslutande på din enhet. Vi samlar inte in, överför eller lagrar någon personlig information på externa servrar.</p>
+            <div class="last-updated">
+                Ikraftträdande: 23 oktober 2025<br>
+                Senast uppdaterad: 23 oktober 2025
             </div>
 
-            <h3>1. Inledning</h3>
-            <p>Denna integritetspolicy beskriver hur Urge ("vi," "vår," eller "appen") hanterar användarinformation. Urge är utformad som en integritetsfokuserad applikation som fungerar helt på enheten utan extern datainsamling eller överföring.</p>
-
-            <h3>2. Insamling och lagring av information</h3>
-            <p><strong>Datainsamling:</strong> Urge samlar inte in någon personlig data, användaranalys eller beteendeinformation från användare.</p>
-
-            <p><strong>Lokal lagring:</strong> Följande information lagras uteslutande på din enhet med hjälp av iOS lokal lagring (UserDefaults och App Groups):</p>
-            <ul>
-                <li>Användarpreferenser och konfigurationsinställningar</li>
-                <li>Timer- och nedräkningsdata</li>
-                <li>Användningsstatistik och framstegsspårning</li>
-                <li>Prenumerationsstatus (hanteras via Apples infrastruktur)</li>
-            </ul>
-
-            <p>Denna lokalt lagrade data:</p>
-            <ul>
-                <li>Förblir helt inom din enhets säkra lagring</li>
-                <li>Överförs inte till externa servrar</li>
-                <li>Raderas permanent vid avinstallation av appen</li>
-                <li>Kan återställas manuellt via appens inställningar</li>
-            </ul>
-
-            <h3>3. Tredjepartstjänster</h3>
-            <p>Urge använder endast följande Apple-tillhandahållna tjänst:</p>
-
-            <div class="info-card">
-                <h4>Apple StoreKit (köp i appen)</h4>
-                <p>Används uteslutande för att behandla prenumerationsbetalningar. Apple hanterar all betalningsinformation i enlighet med deras integritetspolicy. Vi tar endast emot information om prenumerationsstatus (aktiv/inaktiv) och inga finansiella eller personliga detaljer.</p>
+            <div class="toc">
+                <h2>Innehållsförteckning</h2>
+                <ol>
+                    <li><a href="#inledning">Inledning</a></li>
+                    <li><a href="#datainsamling">Insamling och lagring av information</a></li>
+                    <li><a href="#tredjepartstjanster">Tredjepartstjänster</a></li>
+                    <li><a href="#notifikationer">Notifikationer och lokala funktioner</a></li>
+                    <li><a href="#sakerhet">Datasäkerhet</a></li>
+                    <li><a href="#barn">Barns integritet</a></li>
+                    <li><a href="#gdpr-rattigheter">Rättigheter enligt GDPR</a></li>
+                    <li><a href="#ccpa-rattigheter">Kaliforniska integritetsrättigheter (CCPA)</a></li>
+                    <li><a href="#internationellt">Internationella dataöverföringar</a></li>
+                    <li><a href="#andringar">Ändringar i denna policy</a></li>
+                    <li><a href="#juridisk">Juridisk information</a></li>
+                    <li><a href="#kontakt">Kontaktinformation</a></li>
+                </ol>
             </div>
 
-            <p style="margin-top: 25px;">Urge använder uttryckligen inte:</p>
+            <h2 id="inledning">1. Inledning</h2>
+            <p>Denna integritetspolicy beskriver hur Urge ("Applikationen", "vi", "vår" eller "oss") samlar in, använder och utlämnar information om användare av mobilapplikationen Urge.</p>
+
+            <p>Urge är utformad med integritet som en grundläggande princip. Applikationen fungerar helt på enheten och överför inte användardata till externa servrar eller tredje parter, förutom som specifikt beskrivs i denna integritetspolicy.</p>
+
+            <h2 id="datainsamling">2. Insamling och lagring av information</h2>
+
+            <h3>2.1 Datainsamlingsrutiner</h3>
+            <p>Urge samlar inte in, överför eller behandlar personligt identifierbar information, användaranalys eller beteendedata från användare på externa servrar.</p>
+
+            <h3>2.2 Lokal datalagring</h3>
+            <p>Applikationen lagrar följande information uteslutande på användarens enhet med hjälp av iOS lokala lagringsmekanismer (UserDefaults och App Groups):</p>
             <ul>
-                <li>Analysplattformar (Google Analytics, Firebase Analytics, etc.)</li>
-                <li>Kraschrapporteringstjänster</li>
-                <li>Annonsnätverk eller spårnings-SDK:er</li>
-                <li>Integration med sociala medier</li>
-                <li>Molnlagring eller säkerhetskopieringstjänster</li>
-                <li>Några tredjepartsverktyg för datainsamling</li>
+                <li>Användarkonfigurationspreferenser och applikationsinställningar</li>
+                <li>Timer- och nedräkningsstatusinformation</li>
+                <li>Användningsstatistik och framstegsspårningsdata</li>
+                <li>Prenumerationsstatusinformation (hanteras genom Apples infrastruktur)</li>
             </ul>
 
-            <h3>4. Notifikationer och lokala funktioner</h3>
-            <p><strong>Lokala notifikationer:</strong> När aktiverade genereras notifikationer lokalt på din enhet och involverar ingen serverkommunikation eller dataöverföring.</p>
-
-            <p><strong>Dynamic Island & Live Activities:</strong> Timervisningar använder iOS ActivityKit och fungerar helt på enheten utan extern dataöverföring.</p>
-
-            <h3>5. Datasäkerhet</h3>
-            <p>Eftersom all data finns kvar på din enhet och hanteras av iOS:</p>
+            <h3>2.3 Datalagring och radering</h3>
+            <p>All lokalt lagrad data:</p>
             <ul>
-                <li>Data skyddas av din enhets kryptering och säkerhetsfunktioner</li>
-                <li>Ingen dataöverföring sker, vilket eliminerar risker för avlyssning</li>
-                <li>Dataåtkomst kontrolleras av iOS-säkerhet och din enhets lösenord/biometrisk autentisering</li>
+                <li>Förblir uteslutande inom enhetens säkra lagringsmiljö</li>
+                <li>Är underkastad iOS säkerhets- och krypteringsprotokoll</li>
+                <li>Raderas permanent vid avinstallation av applikationen</li>
+                <li>Kan återställas manuellt genom applikationens inställningsgränssnitt</li>
             </ul>
 
-            <h3>6. Barns integritet</h3>
-            <p>Urge samlar medvetet inte in någon information från användare i någon ålder. Appens integritet-genom-design-arkitektur säkerställer efterlevnad av integritetsbestämmelser för barn inklusive COPPA och GDPR-krav för minderåriga.</p>
+            <h2 id="tredjepartstjanster">3. Tredjepartstjänster</h2>
 
-            <h3>7. Dina rättigheter enligt GDPR</h3>
-            <p>Som europeisk användare har du specifika rättigheter angående dina personuppgifter. Eftersom Urge inte samlar in eller behandlar personuppgifter på servrar, utövas dessa rättigheter direkt på din enhet:</p>
+            <h3>3.1 Apple-tjänster</h3>
+            <p>Urge integrerar uteslutande med Apple-tillhandahållna tjänster:</p>
 
+            <h4>StoreKit (köp i appen)</h4>
+            <p>Används enbart för att behandla prenumerationstransaktioner. Apple Inc. hanterar all betalningsinformation i enlighet med deras integritetspolicy. Vi tar endast emot prenumerationsstatusinformation (aktiv/inaktiv) och har inte tillgång till finansiella eller betalningsuppgifter.</p>
+
+            <h3>3.2 Tjänster som inte används</h3>
+            <p>Applikationen integrerar uttryckligen inte med eller använder:</p>
             <ul>
-                <li><strong>Rätt till åtkomst:</strong> All din data är tillgänglig i appens gränssnitt</li>
-                <li><strong>Rätt till radering:</strong> Radera all data genom att avinstallera appen eller använda appens återställningsfunktion</li>
-                <li><strong>Rätt till dataportabilitet:</strong> Ej tillämpligt eftersom ingen data innehas av oss</li>
-                <li><strong>Rätt att invända:</strong> Ej tillämpligt eftersom ingen databehandling sker</li>
+                <li>Analysplattformar eller tjänster (inklusive men inte begränsat till Google Analytics, Firebase Analytics)</li>
+                <li>Kraschrapporterings- eller diagnostiktjänster</li>
+                <li>Annonsnätverk eller spårningsprogramvaruutvecklingskit (SDK:er)</li>
+                <li>Sociala medieplattformar eller integrationstjänster</li>
+                <li>Molnlagrings- eller synkroniseringstjänster</li>
+                <li>Några tredjepartsverktyg för datainsamling, bearbetning eller överföring</li>
             </ul>
 
-            <h3>8. Kaliforniens integritetsrättigheter (CCPA)</h3>
-            <p>Invånare i Kalifornien har specifika integritetsrättigheter. Eftersom Urge dock inte samlar in, säljer eller delar personlig information, gäller inte de flesta CCPA-bestämmelser. Vi:</p>
+            <h2 id="notifikationer">4. Notifikationer och lokala funktioner</h2>
+
+            <h3>4.1 Lokala notifikationer</h3>
+            <p>När de aktiveras av användaren genereras notifikationer lokalt på enheten med hjälp av iOS notifikationstjänster. Ingen serverkommunikation eller dataöverföring sker i samband med notifikationsleverans.</p>
+
+            <h3>4.2 Dynamic Island och Live Activities</h3>
+            <p>Timervisningar använder iOS ActivityKit-ramverk och fungerar helt på enheten. Ingen data överförs till externa servrar i samband med dessa funktioner.</p>
+
+            <h2 id="sakerhet">5. Datasäkerhet</h2>
+
+            <p>Applikationens säkerhetsarkitektur förlitar sig på iOS-tillhandahållna säkerhetsmekanismer:</p>
             <ul>
-                <li>Samlar inte in personlig information</li>
+                <li>Data skyddas av kryptering och säkerhetsfunktioner på enhetsnivå</li>
+                <li>Ingen nätverksöverföring av användardata eliminerar avlyssnings- och man-in-the-middle-attackvektorer</li>
+                <li>Åtkomst till lokalt lagrad data kontrolleras av iOS säkerhetsmekanismer och användarenhetsautentisering (lösenord/biometrisk)</li>
+            </ul>
+
+            <h2 id="barn">6. Barns integritet</h2>
+
+            <p>Urge samlar medvetet inte in information från individer i någon ålder. Applikationens integritet-genom-design-arkitektur säkerställer efterlevnad av:</p>
+            <ul>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+                <li>Allmän dataskyddsförordning (GDPR) krav för behandling av data från minderåriga</li>
+                <li>Andra tillämpliga integritetsbestämmelser för barn</li>
+            </ul>
+
+            <h2 id="gdpr-rattigheter">7. Rättigheter enligt GDPR</h2>
+
+            <p>För användare i Europeiska ekonomiska samarbetsområdet (EES), Storbritannien och Schweiz gäller följande rättigheter enligt den allmänna dataskyddsförordningen:</p>
+
+            <h3>7.1 Rätt till åtkomst</h3>
+            <p>All användardata är tillgänglig i applikationens gränssnitt. Ingen data innehas av oss externt.</p>
+
+            <h3>7.2 Rätt till radering</h3>
+            <p>Användare kan radera all lokalt lagrad data genom att:</p>
+            <ul>
+                <li>Avinstallera applikationen</li>
+                <li>Använda applikationens återställningsfunktion</li>
+            </ul>
+
+            <h3>7.3 Rätt till dataportabilitet</h3>
+            <p>Ej tillämpligt eftersom ingen personuppgift samlas in eller innehas av personuppgiftsansvarig.</p>
+
+            <h3>7.4 Rätt att göra invändningar</h3>
+            <p>Ej tillämpligt eftersom inga databehandlingsaktiviteter förekommer utöver lokal enhetslagring.</p>
+
+            <h2 id="ccpa-rattigheter">8. Kaliforniska integritetsrättigheter (CCPA)</h2>
+
+            <p>Invånare i Kalifornien har specifika rättigheter enligt California Consumer Privacy Act. Eftersom Urge dock inte samlar in, säljer eller delar personlig information enligt CCPA:s definition, är de flesta bestämmelser inte tillämpliga.</p>
+
+            <p>Vi:</p>
+            <ul>
+                <li>Samlar inte in personlig information från invånare i Kalifornien</li>
                 <li>Säljer inte personlig information</li>
-                <li>Delar inte personlig information för kontextuell beteendereklam</li>
+                <li>Delar inte personlig information för kontextuella beteendereklamändamål</li>
             </ul>
 
-            <h3>9. Internationella dataöverföringar</h3>
-            <p>Urge överför inte data internationellt eftersom all databehandling sker lokalt på din enhet.</p>
+            <h2 id="internationellt">9. Internationella dataöverföringar</h2>
 
-            <h3>10. Ändringar i denna integritetspolicy</h3>
-            <p>Vi förbehåller oss rätten att ändra denna integritetspolicy. Väsentliga ändringar kommer att kommuniceras genom:</p>
+            <p>Applikationen överför inte data internationellt. All databehandling sker lokalt på användarens enhet.</p>
+
+            <h2 id="andringar">10. Ändringar i denna integritetspolicy</h2>
+
+            <p>Vi förbehåller oss rätten att ändra denna integritetspolicy när som helst. Väsentliga ändringar kommer att kommuniceras genom:</p>
             <ul>
-                <li>En uppdaterad version av detta dokument med ett reviderat datum för "Senast uppdaterad"</li>
-                <li>Notifiering i appen vid betydande policyändringar</li>
-                <li>Förhandsgodkännande från användare om datainsamlingspraxis ändras</li>
+                <li>Uppdatering av detta dokument med reviderat datum för "Senast uppdaterad"</li>
+                <li>Notifiering i applikationen angående policyändringar</li>
+                <li>Begäran om användarsamtycke om datainsamlingsrutiner väsentligt förändras</li>
             </ul>
 
-            <p>Fortsatt användning av appen efter policyändringar utgör acceptans av den uppdaterade policyn.</p>
+            <p>Fortsatt användning av applikationen efter policyändringar utgör acceptans av den uppdaterade integritetspolicyn.</p>
 
             <div class="section-divider"></div>
 
-            <h3>11. Juridisk information</h3>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Utvecklare</h4>
-                    <p>Jens Eriksson Erikholm</p>
-                </div>
-                <div class="info-card">
-                    <h4>Jurisdiktion</h4>
-                    <p>Sverige, Europeiska unionen</p>
-                </div>
-                <div class="info-card">
-                    <h4>Efterlevnad</h4>
-                    <p>GDPR-, CCPA-, COPPA-kompatibel genom design</p>
-                </div>
+            <h2 id="juridisk">11. Juridisk information</h2>
+
+            <dl class="legal-grid">
+                <dt>Utvecklare</dt>
+                <dd>Jens Eriksson Erikholm</dd>
+
+                <dt>Jurisdiktion</dt>
+                <dd>Sverige, Europeiska unionen</dd>
+
+                <dt>Efterlevnad</dt>
+                <dd>Allmän dataskyddsförordning (GDPR)<br>
+                    California Consumer Privacy Act (CCPA)<br>
+                    Children's Online Privacy Protection Act (COPPA)</dd>
+
+                <dt>Personuppgiftsansvarig</dt>
+                <dd>Jens Eriksson Erikholm</dd>
+            </dl>
+
+            <div class="contact-section" id="kontakt">
+                <h2>12. Kontaktinformation</h2>
+                <p>För frågor, synpunkter eller förfrågningar angående denna integritetspolicy, vänligen kontakta oss via:</p>
+                <p><strong>Support:</strong> <a href="https://github.com/Messijah/ControlYourself/issues" target="_blank">https://github.com/Messijah/ControlYourself/issues</a></p>
+                <p>Vi strävar efter att svara på alla integritetsrelaterade förfrågningar inom sjuttiotvå (72) timmar.</p>
             </div>
 
-            <div class="contact-section">
-                <h3>Kontaktinformation</h3>
-                <p>För frågor, synpunkter eller förfrågningar angående denna integritetspolicy:</p>
-                <p><strong>Support:</strong> <a href="https://github.com/Messijah/ControlYourself/issues" target="_blank">GitHub Issues</a></p>
-                <p>Vi strävar efter att svara på alla förfrågningar inom 72 timmar.</p>
+            <div class="footer">
+                <p>© 2025 Jens Eriksson Erikholm. Alla rättigheter förbehållna.</p>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2025 Urge. All rights reserved.</p>
         </div>
     </div>
 
     <script>
         function switchLang(lang) {
-            // Hide all content
             document.querySelectorAll('.content').forEach(el => {
                 el.classList.remove('active');
             });
 
-            // Show selected content
             document.getElementById(lang + '-content').classList.add('active');
 
-            // Update button states
             document.querySelectorAll('.lang-toggle button').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
+
+            // Update page title
+            if (lang === 'sv') {
+                document.querySelector('.header-content h1').textContent = 'Integritetspolicy';
+            } else {
+                document.querySelector('.header-content h1').textContent = 'Privacy Policy';
+            }
         }
     </script>
 </body>
