@@ -1,0 +1,225 @@
+/* Welcome & Setup */
+"welcome.title" = "환영합니다!";
+"welcome.subtitle" = "조절하고 싶은 것을 선택하세요";
+"substance.snus" = "스누스";
+"substance.snus_singular" = "스누스";
+"substance.cigarettes" = "담배";
+"substance.cigarettes_singular" = "담배";
+"setup.title" = "설정";
+"setup.weekday_start" = "평일 시작 시간";
+"setup.weekend_start" = "주말 시작 시간";
+"setup.amount_per_day" = "하루 %@ 개수";
+"setup.interval_between" = "%@ 간격";
+"setup.hours" = "시간";
+"setup.panic_per_week" = "주당 긴급 %@";
+"setup.save_continue" = "저장 후 계속";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "남음";
+"main.panic" = "긴급";
+"main.settings" = "설정";
+"main.statistics" = "통계";
+"main.take_one" = "%@ 하나";
+"main.take_one_ready" = "%@ 하나! ✨";
+"main.start_day" = "%@로 하루를 시작하세요!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "할 수 있어요! 💪";
+"encouragement.hold_on" = "조금만 더! 거의 다 왔어요!";
+"encouragement.good_job" = "지금까지 잘했어요!";
+"encouragement.keep_going" = "계속 가세요!";
+"encouragement.you_are_strong" = "당신은 강해요! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "완벽한 타이밍! 🎉";
+"celebration.well_done" = "잘했어요! ⭐";
+"celebration.you_can_take_one" = "이제 하나 할 수 있어요! 🎊";
+"celebration.time_is_up" = "시간 끝! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "시작해요! 💪";
+"morning.new_day" = "새로운 날, 새로운 기회! 🌅";
+"morning.welcome_back" = "다시 오신 걸 환영해요! 😊";
+"morning.ready" = "새로운 날 준비됐나요? 🚀";
+"morning.here_we_go" = "시작합니다! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "조금만 더 기다려요!";
+"alert.take_anyway" = "어쨌든 하기";
+"alert.ok_wait" = "알았어요, 기다릴게요";
+"alert.time_remaining" = "%@ 남았어요. 정말 지금 하시겠어요?";
+
+/* Settings */
+"settings.title" = "설정";
+"settings.weekday_start" = "평일 시작 시간";
+"settings.weekend_start" = "주말 시작 시간";
+"settings.interval" = "%@ 간격";
+"settings.panic_per_week" = "주당 긴급 %@";
+"settings.amount_left_today" = "오늘 남은 %@";
+"settings.panic_left" = "남은 긴급 %@";
+"settings.save" = "설정 저장";
+"settings.reset_day" = "오늘 초기화";
+"settings.change_substance" = "물질 변경";
+"settings.dynamic_island_title" = "Dynamic Island 끄기?";
+"settings.dynamic_island_message" = "잠금 화면의 타이머 알림을 스와이프하여 Dynamic Island/라이브 액티비티 표시를 숨깁니다.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "앱을 닫았을 때 Dynamic Island에 타이머 표시";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "확실해요? 개수를 바꾸면 자제력이 제로라는 걸 인정하는 거예요 😬";
+"cheat.we_see_you" = "좀 속이려고요? 보고 있어요... 👀";
+"cheat.come_on" = "이봐요. 당신은 이것보다 나아요! 💪";
+"cheat.little_cheater" = "작은 사기꾼! 하지만 좋아요... 😏";
+"cheat.self_control" = "앱 이름이 '자기조절'이었죠? 🤔";
+"cheat.you_know" = "이게 속임수라는 거 알죠? 🙈";
+"cheat.nice_job" = "잘했어요! ...아무도 그렇게 말한 적 없지만 😅";
+"cheat.first_step" = "변화를 위한 첫걸음은... 속이지 않는 것일지도? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "와! 진지하게 하고 있네요! 잘했어요! 💪";
+"interval_praise.discipline" = "보이죠? 이게 우리가 규율이라고 부르는 거예요! ⭐";
+"interval_praise.fantastic" = "환상적이에요! 매 시간마다 강해지고 있어요! 🔥";
+"interval_praise.way_forward" = "바로 그거예요! 이게 앞으로 나아가는 길이에요! 🚀";
+"interval_praise.respect" = "존경해요! 진정한 자기조절을 보여주고 있어요! 👑";
+"interval_praise.continue" = "YES! 이렇게 계속하면 멀리 갈 거예요! ✨";
+"interval_praise.attitude" = "그게 올바른 태도예요! 인상적이에요! 💎";
+"interval_praise.strong" = "곰처럼 강해요! 계속하세요! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "음... 시간을 줄이나요? 그건 후퇴예요! 😬";
+"interval_warning.less_control" = "확실해요? 시간이 적으면 = 통제력이 적어요... 🤔";
+"interval_warning.wrong_way" = "어머, 잘못된 방향으로 가고 있어요! 다시 생각해봐요! 😅";
+"interval_warning.not_right" = "그건 올바른 방향이 아니었어요... 👀";
+"interval_warning.more_snus" = "대기 시간이 적으면 = 스누스가 많아요. 정말 그걸 원하나요? 🙈";
+"interval_warning.decrease" = "이봐요, 스누스를 줄이려는 거지, 늘리려는 게 아니에요! 😬";
+"interval_warning.backwards_person" = "뒤로 가고 있어요! 하지만 좋아요, 당신의 선택이니까... 🤷‍♂️";
+"interval_warning.alert" = "경고! 잘못된 방향으로 가고 있어요! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "드디어! 긴급 스누스가 적으면 = 통제력이 많아요! 💪";
+"panic_praise.mature" = "이건 성숙해요! 좋은 결정이에요! ⭐";
+"panic_praise.yes" = "YES! 안전 스누스가 그렇게 많이 필요하지 않아요! 🎉";
+"panic_praise.look_at_you" = "봐요! 엄청 강해요! 🔥";
+"panic_praise.impressive" = "인상적인 규율! 계속하세요! 👑";
+"panic_praise.trust" = "이제 자신을 더 신뢰해요! 좋아요! ✨";
+"panic_praise.right_decision" = "올바른 결정! 적게 가지고도 관리할 수 있어요! 💎";
+"panic_praise.winner" = "승자들이 그렇게 생각해요! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "안전 스누스를 늘리나요? 불안해요? 😬";
+"panic_warning.less_trust" = "긴급이 많으면 = 자신에 대한 신뢰가 적어요... 🤔";
+"panic_warning.really_need" = "음... 정말로 긴급 스누스가 더 필요한가요? 😅";
+"panic_warning.lack_confidence" = "그건 자신감 부족 냄새가 나요! 👀";
+"panic_warning.wrong_direction" = "긴급 스누스를 더? 잘못된 방향이에요! 🙈";
+"panic_warning.afraid" = "할 수 없을까 봐 두려워요? 자신을 믿어요! 💪";
+"panic_warning.backup" = "백업이 많으면 = 신뢰가 적어요. 생각해봐요! 🤷‍♂️";
+"panic_warning.strength" = "경고! 자신의 힘을 신뢰하지 않아요! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "개수를 늘리나요? 그건 속임수예요, 친구! 😬";
+"panic_left.we_see" = "안 돼요, 그렇게 하는 게 아니에요! 보고 있어요! 👀";
+"panic_left.creative" = "창의적이지만, 여전히 속임수예요! 😅";
+"panic_left.thought" = "눈치채지 못할 거라고 생각했어요? 🤔";
+"panic_left.cheating" = "그건 완전한 속임수예요! 🙈";
+"panic_left.tsk" = "긴급 스누스로 좀 속이려고요? 쯧쯧! 😏";
+"panic_left.remember" = "자기조절, 기억나요? 🤷‍♂️";
+"panic_left.no_no" = "안돼 안돼 안돼! 이렇게 하는 게 아니에요! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "조금 속이려고요? 🤨";
+"alert.cheating_yes" = "네, 속이고 있어요";
+"alert.cheating_no" = "아니요, 후회해요";
+"alert.fantastic_title" = "환상적이에요! 🎉";
+"alert.thanks" = "감사해요! 💪";
+"alert.wrong_way_title" = "잘못된 방향! 😬";
+"alert.understand" = "이해했어요";
+"alert.good_job_title" = "잘했어요! 🌟";
+"alert.hmm_title" = "음... 🤔";
+"alert.ok_ok" = "알았어요, 알았어요";
+"alert.cheater_title" = "사기꾼! 👀";
+"alert.reset_day_title" = "오늘 값을 초기화할까요?";
+"alert.cancel" = "취소";
+"alert.reset" = "초기화";
+"alert.reset_day_message" = "오늘을 시작으로 초기화하고 '%@로 하루를 시작하세요' 모드로 돌아갑니다.";
+"alert.change_substance_title" = "물질을 변경할까요?";
+"alert.change" = "변경";
+"alert.change_substance_message" = "모든 설정을 초기화하고 스누스와 담배 중에서 다시 선택할 수 있습니다. 앱이 재시작됩니다.";
+"alert.restart_app_title" = "앱 재시작";
+"alert.restart_app_message" = "새로운 물질을 선택하려면 앱을 다시 열어주세요.";
+"alert.ok" = "확인";
+
+/* Notifications */
+"notification.title" = "다음 스누스 시간!";
+"notification.body" = "타이머가 끝났어요. 즐기세요!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "완료 알림";
+"settings.timer_notification_subtitle" = "완료 시 진동 및 소리";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "타이머 표시";
+"settings.timer_format_subtitle" = "타이머 표시 방법";
+"settings.timer_format_hours" = "시간만";
+"settings.timer_format_hours_example" = "예: 02";
+"settings.timer_format_hours_minutes" = "시간:분";
+"settings.timer_format_hours_minutes_example" = "예: 02:30";
+"settings.timer_format_hours_minutes_seconds" = "시간:분:초";
+"settings.timer_format_hours_minutes_seconds_example" = "예: 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "환영합니다";
+"paywall.feature_balance_title" = "균형 유지하기";
+"paywall.feature_balance_desc" = "완전히 중단하지 않고 소비를 조절하세요";
+"paywall.feature_progress_title" = "진행 상황 추적";
+"paywall.feature_progress_desc" = "시간이 지남에 따라 통계와 진행 상황을 확인하세요";
+"paywall.feature_panic_title" = "비상 모드";
+"paywall.feature_panic_desc" = "필요할 때 유연성";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Dynamic Island에서 항상 타이머 표시";
+"paywall.trial_period" = "7일 무료 체험";
+"paywall.start_trial" = "무료 체험 시작";
+"paywall.restore_purchases" = "구매 복원";
+"paywall.cancel_anytime" = "언제든지 취소 가능. 약정 없음.";
+"paywall.error_title" = "문제가 발생했습니다";
+"paywall.error_message" = "구매를 완료할 수 없습니다. 다시 시도하세요.";
+"paywall.error_verification" = "구매 확인에 실패했습니다. 지원팀에 문의하십시오.";
+"paywall.yearly" = "연간";
+"paywall.monthly" = "월간";
+"paywall.per_year" = "년";
+"paywall.per_month" = "월";
+"paywall.after_trial" = "체험 후";
+
+/* Welcome Tagline */
+"welcome.tagline" = "충동 조절하기";
+
+/* Statistics */
+"statistics.title" = "통계";
+"statistics.days_in_balance" = "균형을 유지한 날";
+"statistics.days_since_start" = "시작 이후 일수";
+"statistics.average_per_day" = "하루 평균";
+"statistics.average" = "평균";
+"statistics.current_streak" = "현재 연속 기록";
+"statistics.days_in_row" = "연속 일수";
+"statistics.total_used" = "총 사용량";
+"statistics.since_start" = "시작 이후";
+"statistics.keep_balance_title" = "균형 유지하기";
+"statistics.keep_balance_desc" = "통계는 시간이 지남에 따라 계획된 균형을 얼마나 잘 유지하는지 보여줍니다.";
+"statistics.reset_button" = "통계 재설정";
+"statistics.reset_alert_title" = "통계를 재설정하시겠습니까?";
+"statistics.reset_alert_message" = "모든 통계가 영구적으로 삭제됩니다. 되돌릴 수 없습니다.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@ 시간! 🎉";
+"celebration.enjoy_substance" = "%@ 즐기세요! 🔥";
+"celebration.its_time" = "지금이 시간이에요! ✨";
+"celebration.take_one_now" = "지금 하나 하세요! 💪";
+"celebration.ready" = "준비 완료! 😊";
+"celebration.ready_to_enjoy" = "즐길 준비 완료! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "%@ 절약";
+

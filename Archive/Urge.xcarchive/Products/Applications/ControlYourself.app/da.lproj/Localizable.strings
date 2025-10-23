@@ -1,0 +1,224 @@
+/* Welcome & Setup */
+"welcome.title" = "Velkommen!";
+"welcome.subtitle" = "Vælg hvad du vil kontrollere";
+"substance.snus" = "Snus";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigaretter";
+"substance.cigarettes_singular" = "cigaret";
+"setup.title" = "Indstillinger";
+"setup.weekday_start" = "Hverdag start tidspunkt";
+"setup.weekend_start" = "Weekend start tidspunkt";
+"setup.amount_per_day" = "Antal %@ pr. dag";
+"setup.interval_between" = "Interval mellem %@";
+"setup.hours" = "timer";
+"setup.panic_per_week" = "Nød-%@ pr. uge";
+"setup.save_continue" = "Gem og fortsæt";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Tilbage";
+"main.panic" = "Nød";
+"main.settings" = "Indstillinger";
+"main.statistics" = "Statistik";
+"main.take_one" = "Tag en %@";
+"main.take_one_ready" = "Tag en %@! ✨";
+"main.start_day" = "Start dagen med %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Du kan gøre det! 💪";
+"encouragement.hold_on" = "Hold ud, næsten der!";
+"encouragement.good_job" = "Du klarer det godt indtil videre!";
+"encouragement.keep_going" = "Fortsæt!";
+"encouragement.you_are_strong" = "Du er stærk! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Perfekt timing! 🎉";
+"celebration.well_done" = "Godt gået! ⭐";
+"celebration.you_can_take_one" = "Du kan tage en nu! 🎊";
+"celebration.time_is_up" = "Tiden er gået! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Lad os komme i gang! 💪";
+"morning.new_day" = "Ny dag, ny chance! 🌅";
+"morning.welcome_back" = "Velkommen tilbage! 😊";
+"morning.ready" = "Klar til en ny dag? 🚀";
+"morning.here_we_go" = "Her går vi! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Vent lidt endnu!";
+"alert.take_anyway" = "Tag den alligevel";
+"alert.ok_wait" = "Ok, jeg venter";
+"alert.time_remaining" = "%@ tilbage. Er du sikker på du vil nu?";
+
+/* Settings */
+"settings.title" = "Indstillinger";
+"settings.weekday_start" = "Hverdag start tidspunkt";
+"settings.weekend_start" = "Weekend start tidspunkt";
+"settings.interval" = "Interval mellem %@";
+"settings.panic_per_week" = "Nød-%@ pr. uge";
+"settings.amount_left_today" = "Tilbage i dag %@";
+"settings.panic_left" = "Nød-%@ tilbage";
+"settings.save" = "Gem indstillinger";
+"settings.reset_day" = "Nulstil dag";
+"settings.change_substance" = "Skift stof";
+"settings.dynamic_island_title" = "Slå Dynamic Island fra?";
+"settings.dynamic_island_message" = "Swipe timer-notifikationen på låseskærmen for at skjule Dynamic Island/Live Activity visning.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Vis timer i Dynamic Island når appen er lukket";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Er du sikker? Hvis du ændrer antallet accepterer du også at din selvdisciplin er nul 😬";
+"cheat.we_see_you" = "Snyder du lidt? Vi ser dig... 👀";
+"cheat.come_on" = "Kom nu. Du er bedre end det her! 💪";
+"cheat.little_cheater" = "Lille snyder! Men okay... 😏";
+"cheat.self_control" = "Appen hed selvkontrol, gjorde den ikke? 🤔";
+"cheat.you_know" = "Du ved det er snyd, ikke? 🙈";
+"cheat.nice_job" = "Godt klaret! ...sagde ingen nogensinde 😅";
+"cheat.first_step" = "Første skridt til forandring er... måske ikke at snyde? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Du tager det seriøst! Godt gået! 💪";
+"interval_praise.discipline" = "Ser du? Det er det vi kalder disciplin! ⭐";
+"interval_praise.fantastic" = "Fantastisk! Du bliver stærkere hver time! 🔥";
+"interval_praise.way_forward" = "Præcis sådan! Det er den rigtige vej! 🚀";
+"interval_praise.respect" = "Respekt! Du viser ægte selvkontrol! 👑";
+"interval_praise.continue" = "JA! Fortsæt sådan og du kommer langt! ✨";
+"interval_praise.attitude" = "Det er den rigtige attitude! Imponerende! 💎";
+"interval_praise.strong" = "Stærk som en bjørn! Fortsæt! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... reducerer du tiden? Det er baglæns! 😬";
+"interval_warning.less_control" = "Er du sikker? Mindre tid = mindre kontrol... 🤔";
+"interval_warning.wrong_way" = "Ups, vi går den forkerte vej! Tænk igen! 😅";
+"interval_warning.not_right" = "Det var ikke den rigtige retning... 👀";
+"interval_warning.more_snus" = "Mindre ventetid = mere snus. Er det virkelig det du vil? 🙈";
+"interval_warning.decrease" = "Hej, vi prøver at reducere snus, ikke øge! 😬";
+"interval_warning.backwards_person" = "Går baglæns! Men okay, det er dit valg... 🤷‍♂️";
+"interval_warning.alert" = "Advarsel! Du går den forkerte vej! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Endelig! Mindre nød = mere kontrol! 💪";
+"panic_praise.mature" = "Det er modent! God beslutning! ⭐";
+"panic_praise.yes" = "JA! Du behøver ikke så mange reserve-snus! 🎉";
+"panic_praise.look_at_you" = "Se på dig! Super stærk! 🔥";
+"panic_praise.impressive" = "Imponerende disciplin! Fortsæt! 👑";
+"panic_praise.trust" = "Du stoler mere på dig selv nu! Elsker det! ✨";
+"panic_praise.right_decision" = "Rigtig beslutning! Du kan klare det med mindre! 💎";
+"panic_praise.winner" = "Sådan tænker vindere! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Øger du reserve-snus? Føler du dig usikker? 😬";
+"panic_warning.less_trust" = "Mere nød = mindre tillid til dig selv... 🤔";
+"panic_warning.really_need" = "Hmm... har du virkelig brug for flere nød-snus? 😅";
+"panic_warning.lack_confidence" = "Det lugter af manglende selvtillid! 👀";
+"panic_warning.wrong_direction" = "Flere nød-snus? Vi går den forkerte vej! 🙈";
+"panic_warning.afraid" = "Er du bange for ikke at kunne klare det? Tro på dig selv! 💪";
+"panic_warning.backup" = "Flere backups = mindre tillid. Tænk over det! 🤷‍♂️";
+"panic_warning.strength" = "Advarsel! Du stoler ikke på din egen styrke! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Øger du antallet? Det er snyd, ven! 😬";
+"panic_left.we_see" = "Nej, sådan gør man ikke! Vi ser dig! 👀";
+"panic_left.creative" = "Kreativt men stadig snyd! 😅";
+"panic_left.thought" = "Troede du ikke vi ville lægge mærke til det? 🤔";
+"panic_left.cheating" = "Det er rent snyd! 🙈";
+"panic_left.tsk" = "Snyder lidt med nød-snus? Tsk tsk! 😏";
+"panic_left.remember" = "Selvkontrol, husker du? 🤷‍♂️";
+"panic_left.no_no" = "Nej nej nej! Sådan gør man ikke! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Snyder du lidt? 🤨";
+"alert.cheating_yes" = "Ja, jeg snyder";
+"alert.cheating_no" = "Nej, jeg fortryder";
+"alert.fantastic_title" = "Fantastisk! 🎉";
+"alert.thanks" = "Tak! 💪";
+"alert.wrong_way_title" = "Forkert vej! 😬";
+"alert.understand" = "Jeg forstår";
+"alert.good_job_title" = "Godt gået! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Ok, ok";
+"alert.cheater_title" = "Snyder! 👀";
+"alert.reset_day_title" = "Nulstil dagens værdier?";
+"alert.cancel" = "Annuller";
+"alert.reset" = "Nulstil";
+"alert.reset_day_message" = "Dette vil nulstille dagen til start og returnere til \"Start dagen med %@\" tilstand.";
+"alert.change_substance_title" = "Skift stof?";
+"alert.change" = "Skift";
+"alert.change_substance_message" = "Dette vil nulstille alle indstillinger og lade dig vælge mellem snus og cigaretter igen. Appen vil genstarte.";
+"alert.restart_app_title" = "Genstart app";
+"alert.restart_app_message" = "Åbn appen igen for at vælge nyt stof.";
+"alert.ok" = "Ok";
+
+/* Notifications */
+"notification.title" = "Tid til næste snus!";
+"notification.body" = "Din timer er udløbet. Nyd det!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Færdighedsalarmer";
+"settings.timer_notification_subtitle" = "Vibration og lyd når færdig";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timervisning";
+"settings.timer_format_subtitle" = "Hvordan timeren vises";
+"settings.timer_format_hours" = "Kun timer";
+"settings.timer_format_hours_example" = "f.eks. 02";
+"settings.timer_format_hours_minutes" = "Timer:Minutter";
+"settings.timer_format_hours_minutes_example" = "f.eks. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Timer:Minutter:Sekunder";
+"settings.timer_format_hours_minutes_seconds_example" = "f.eks. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Velkommen til";
+"paywall.feature_balance_title" = "Hold balancen";
+"paywall.feature_balance_desc" = "Reguler dit indtag uden at stoppe helt";
+"paywall.feature_progress_title" = "Følg din fremgang";
+"paywall.feature_progress_desc" = "Se din statistik og fremgang over tid";
+"paywall.feature_panic_title" = "Nødtilstand";
+"paywall.feature_panic_desc" = "Fleksibilitet når du har brug for det";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer altid synlig i Dynamic Island";
+"paywall.trial_period" = "7 dages gratis prøveperiode";
+"paywall.start_trial" = "Start gratis prøveperiode";
+"paywall.restore_purchases" = "Gendan køb";
+"paywall.cancel_anytime" = "Annuller når som helst. Ingen binding.";
+"paywall.error_title" = "Noget gik galt";
+"paywall.error_message" = "Købet kunne ikke gennemføres. Prøv igen.";
+"paywall.error_verification" = "Købsverifikation mislykkedes. Kontakt venligst support.";
+"paywall.yearly" = "Årligt";
+"paywall.monthly" = "Månedligt";
+"paywall.per_year" = "år";
+"paywall.per_month" = "måned";
+"paywall.after_trial" = "efter prøveperiode";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontroller din trang";
+
+/* Statistics */
+"statistics.title" = "Statistik";
+"statistics.days_in_balance" = "Dage i balance";
+"statistics.days_since_start" = "dage siden start";
+"statistics.average_per_day" = "Gennemsnit pr. dag";
+"statistics.average" = "gennemsnit";
+"statistics.current_streak" = "Nuværende serie";
+"statistics.days_in_row" = "dage i træk";
+"statistics.total_used" = "Totalt brugt";
+"statistics.since_start" = "siden start";
+"statistics.keep_balance_title" = "Hold balancen";
+"statistics.keep_balance_desc" = "Din statistik viser hvor godt du holder din planlagte balance over tid.";
+"statistics.reset_button" = "Nulstil statistik";
+"statistics.reset_alert_title" = "Nulstil statistik?";
+"statistics.reset_alert_message" = "Al statistik vil blive slettet permanent. Dette kan ikke fortrydes.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@-tid! 🎉";
+"celebration.enjoy_substance" = "Nyd en %@! 🔥";
+"celebration.its_time" = "Nu er det tid! ✨";
+"celebration.take_one_now" = "Tag en nu! 💪";
+"celebration.ready" = "Klar! 😊";
+"celebration.ready_to_enjoy" = "Klar til at nyde! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Spar %@";

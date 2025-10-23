@@ -1,0 +1,224 @@
+/* Welcome & Setup */
+"welcome.title" = "Vítejte!";
+"welcome.subtitle" = "Vyberte, co chcete kontrolovat";
+"substance.snus" = "Snus";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigarety";
+"substance.cigarettes_singular" = "cigareta";
+"setup.title" = "Nastavení";
+"setup.weekday_start" = "Začátek pracovního dne";
+"setup.weekend_start" = "Začátek víkendu";
+"setup.amount_per_day" = "Počet %@ denně";
+"setup.interval_between" = "Interval mezi %@";
+"setup.hours" = "hodiny";
+"setup.panic_per_week" = "Nouzových %@ týdně";
+"setup.save_continue" = "Uložit a pokračovat";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Zbývá";
+"main.panic" = "Nouzový";
+"main.settings" = "Nastavení";
+"main.statistics" = "Statistiky";
+"main.take_one" = "Dej si %@";
+"main.take_one_ready" = "Dej si %@! ✨";
+"main.start_day" = "Začni den s %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Zvládneš to! 💪";
+"encouragement.hold_on" = "Vydrž, skoro jsi tam!";
+"encouragement.good_job" = "Zatím to zvládáš skvěle!";
+"encouragement.keep_going" = "Pokračuj!";
+"encouragement.you_are_strong" = "Jsi silný! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Perfektní načasování! 🎉";
+"celebration.well_done" = "Výborně! ⭐";
+"celebration.you_can_take_one" = "Teď si můžeš dát! 🎊";
+"celebration.time_is_up" = "Čas vypršel! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Jdeme na to! 💪";
+"morning.new_day" = "Nový den, nová příležitost! 🌅";
+"morning.welcome_back" = "Vítej zpět! 😊";
+"morning.ready" = "Připraven na nový den? 🚀";
+"morning.here_we_go" = "Jdeme na to! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Počkej ještě chvíli!";
+"alert.take_anyway" = "Vezmu si to stejně";
+"alert.ok_wait" = "Ok, počkám";
+"alert.time_remaining" = "Zbývá %@. Opravdu to chceš teď?";
+
+/* Settings */
+"settings.title" = "Nastavení";
+"settings.weekday_start" = "Začátek pracovního dne";
+"settings.weekend_start" = "Začátek víkendu";
+"settings.interval" = "Interval mezi %@";
+"settings.panic_per_week" = "Nouzových %@ týdně";
+"settings.amount_left_today" = "Dnes zbývá %@";
+"settings.panic_left" = "Zbývá nouzových %@";
+"settings.save" = "Uložit nastavení";
+"settings.reset_day" = "Resetovat den";
+"settings.change_substance" = "Změnit látku";
+"settings.dynamic_island_title" = "Vypnout Dynamic Island?";
+"settings.dynamic_island_message" = "Přejeď oznámením časovače na uzamčené obrazovce, aby se skryl Dynamic Island/Live Activity.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Zobrazit časovač v Dynamic Islandu, když je aplikace zavřená";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Jsi si jistý? Když změníš počet, přijímáš také, že máš nulovou sebedisciplínu 😬";
+"cheat.we_see_you" = "Trochu podvádíš? Vidíme tě... 👀";
+"cheat.come_on" = "No tak. Jsi lepší než tohle! 💪";
+"cheat.little_cheater" = "Malý podvodníčku! Ale dobře... 😏";
+"cheat.self_control" = "Aplikace se jmenovala sebeovládání, ne? 🤔";
+"cheat.you_know" = "Víš, že je to podvod, že jo? 🙈";
+"cheat.nice_job" = "Dobrá práce! ...nikdo to nikdy neřekl 😅";
+"cheat.first_step" = "První krok ke změně je... možná nepodvádět? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Bereš to vážně! Výborně! 💪";
+"interval_praise.discipline" = "Vidíš? Tomu říkáme disciplína! ⭐";
+"interval_praise.fantastic" = "Fantastické! Každou hodinu jsi silnější! 🔥";
+"interval_praise.way_forward" = "Přesně tak! Tohle je ta správná cesta! 🚀";
+"interval_praise.respect" = "Respekt! Ukazuješ pravou sebekontrolu! 👑";
+"interval_praise.continue" = "ANO! Takhle pokračuj a dojdeš daleko! ✨";
+"interval_praise.attitude" = "Tohle je ten správný přístup! Působivé! 💎";
+"interval_praise.strong" = "Silný jako medvěd! Pokračuj! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... snižuješ čas? To je krok zpět! 😬";
+"interval_warning.less_control" = "Jsi si jistý? Méně času = méně kontroly... 🤔";
+"interval_warning.wrong_way" = "Jejda, jdeme špatným směrem! Rozmysli si to! 😅";
+"interval_warning.not_right" = "To nebyl správný směr... 👀";
+"interval_warning.more_snus" = "Kratší čekání = více snusu. Opravdu to chceš? 🙈";
+"interval_warning.decrease" = "Hele, snažíme se snus snížit, ne zvýšit! 😬";
+"interval_warning.backwards_person" = "Jdeš zpět! Ale dobře, je to tvoje volba... 🤷‍♂️";
+"interval_warning.alert" = "Varování! Jdeš špatným směrem! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Konečně! Méně nouzových = více kontroly! 💪";
+"panic_praise.mature" = "To je dospělé! Dobré rozhodnutí! ⭐";
+"panic_praise.yes" = "ANO! Nepotřebuješ tolik záložních snusů! 🎉";
+"panic_praise.look_at_you" = "Podívej se na sebe! Mega silný! 🔥";
+"panic_praise.impressive" = "Působivá disciplína! Pokračuj! 👑";
+"panic_praise.trust" = "Teď si víc věříš! Skvělé! ✨";
+"panic_praise.right_decision" = "Správné rozhodnutí! Zvládneš to s méně! 💎";
+"panic_praise.winner" = "Takhle přemýšlejí vítězové! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Zvyšuješ záložní snus? Cítíš se nejistě? 😬";
+"panic_warning.less_trust" = "Více nouzových = méně důvěry v sebe... 🤔";
+"panic_warning.really_need" = "Hmm... opravdu potřebuješ více nouzových snusů? 😅";
+"panic_warning.lack_confidence" = "To páchne nedostatkem sebevědomí! 👀";
+"panic_warning.wrong_direction" = "Více nouzových snusů? Jdeme špatným směrem! 🙈";
+"panic_warning.afraid" = "Bojíš se, že to nezvládneš? Věř si! 💪";
+"panic_warning.backup" = "Více záloh = méně důvěry. Rozmysli si to! 🤷‍♂️";
+"panic_warning.strength" = "Varování! Nevěříš ve svou sílu! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Zvyšuješ počet? To je podvod, kámo! 😬";
+"panic_left.we_see" = "Ne, takhle se to nedělá! Vidíme tě! 👀";
+"panic_left.creative" = "Kreativní, ale pořád podvod! 😅";
+"panic_left.thought" = "Myslel sis, že si toho nevšimneme? 🤔";
+"panic_left.cheating" = "To je čirý podvod! 🙈";
+"panic_left.tsk" = "Trochu podvádíš s nouzovými snusy? Ts ts! 😏";
+"panic_left.remember" = "Sebeovládání, pamatuješ? 🤷‍♂️";
+"panic_left.no_no" = "Ne ne ne! Takhle se to nedělá! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Trochu podvádíš? 🤨";
+"alert.cheating_yes" = "Ano, podvádím";
+"alert.cheating_no" = "Ne, lituju toho";
+"alert.fantastic_title" = "Fantastické! 🎉";
+"alert.thanks" = "Díky! 💪";
+"alert.wrong_way_title" = "Špatný směr! 😬";
+"alert.understand" = "Rozumím";
+"alert.good_job_title" = "Dobrá práce! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Ok, ok";
+"alert.cheater_title" = "Podvodníku! 👀";
+"alert.reset_day_title" = "Resetovat dnešní hodnoty?";
+"alert.cancel" = "Zrušit";
+"alert.reset" = "Resetovat";
+"alert.reset_day_message" = "Toto resetuje den na začátek a vrátí se do režimu \"Začni den s %@\".";
+"alert.change_substance_title" = "Změnit látku?";
+"alert.change" = "Změnit";
+"alert.change_substance_message" = "Toto resetuje všechna nastavení a umožní ti znovu vybrat mezi snusem a cigaretami. Aplikace se restartuje.";
+"alert.restart_app_title" = "Restartovat aplikaci";
+"alert.restart_app_message" = "Otevři aplikaci znovu pro výběr nové látky.";
+"alert.ok" = "Ok";
+
+/* Notifications */
+"notification.title" = "Čas na další snus!";
+"notification.body" = "Tvůj časovač vypršel. Užij si to!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Upozornění na dokončení";
+"settings.timer_notification_subtitle" = "Vibrace a zvuk při dokončení";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Zobrazení časovače";
+"settings.timer_format_subtitle" = "Jak se zobrazuje časovač";
+"settings.timer_format_hours" = "Pouze hodiny";
+"settings.timer_format_hours_example" = "např. 02";
+"settings.timer_format_hours_minutes" = "Hodiny:Minuty";
+"settings.timer_format_hours_minutes_example" = "např. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Hodiny:Minuty:Sekundy";
+"settings.timer_format_hours_minutes_seconds_example" = "např. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Vítejte v";
+"paywall.feature_balance_title" = "Udržujte rovnováhu";
+"paywall.feature_balance_desc" = "Regulujte příjem bez úplného přerušení";
+"paywall.feature_progress_title" = "Sledujte svůj pokrok";
+"paywall.feature_progress_desc" = "Zobrazit statistiky a pokrok v čase";
+"paywall.feature_panic_title" = "Nouzový režim";
+"paywall.feature_panic_desc" = "Flexibilita když ji potřebujete";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Časovač vždy viditelný v Dynamic Island";
+"paywall.trial_period" = "7 dní zkušební doba zdarma";
+"paywall.start_trial" = "Začít zkušební dobu";
+"paywall.restore_purchases" = "Obnovit nákupy";
+"paywall.cancel_anytime" = "Zrušte kdykoli. Žádné závazky.";
+"paywall.error_title" = "Něco se pokazilo";
+"paywall.error_message" = "Nákup nelze dokončit. Zkuste to znovu.";
+"paywall.error_verification" = "Ověření nákupu selhalo. Kontaktujte prosím podporu.";
+"paywall.yearly" = "Ročně";
+"paywall.monthly" = "Měsíčně";
+"paywall.per_year" = "rok";
+"paywall.per_month" = "měsíc";
+"paywall.after_trial" = "po zkušební době";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Ovládejte svou touhu";
+
+/* Statistics */
+"statistics.title" = "Statistiky";
+"statistics.days_in_balance" = "Dny v rovnováze";
+"statistics.days_since_start" = "dny od začátku";
+"statistics.average_per_day" = "Průměr za den";
+"statistics.average" = "průměr";
+"statistics.current_streak" = "Aktuální série";
+"statistics.days_in_row" = "dny v řadě";
+"statistics.total_used" = "Celkem použito";
+"statistics.since_start" = "od začátku";
+"statistics.keep_balance_title" = "Udržujte rovnováhu";
+"statistics.keep_balance_desc" = "Vaše statistiky ukazují, jak dobře udržujete plánovanou rovnováhu v čase.";
+"statistics.reset_button" = "Resetovat statistiky";
+"statistics.reset_alert_title" = "Resetovat statistiky?";
+"statistics.reset_alert_message" = "Všechny statistiky budou trvale smazány. Toto nelze vrátit zpět.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "Čas na %@! 🎉";
+"celebration.enjoy_substance" = "Užij si %@! 🔥";
+"celebration.its_time" = "Teď je čas! ✨";
+"celebration.take_one_now" = "Vezmi si teď! 💪";
+"celebration.ready" = "Hotovo! 😊";
+"celebration.ready_to_enjoy" = "Připraven užívat! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Ušetři %@";

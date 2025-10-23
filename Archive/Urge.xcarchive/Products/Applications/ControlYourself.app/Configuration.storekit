@@ -1,0 +1,137 @@
+{
+  "identifier" : "E5F8B0C4",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6737090501",
+    "_developerTeamID" : "L9JJMRNB2U",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 782042455.32743597,
+    "_locale" : "sv_SE",
+    "_storefront" : "SWE",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21517502",
+      "localizations" : [
+
+      ],
+      "name" : "Urge Plus",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "19",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6737090502",
+          "introductoryOffer" : {
+            "internalID" : "6737090503",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Håll din balans med Urge",
+              "displayName" : "Urge Plus Månad",
+              "locale" : "sv"
+            }
+          ],
+          "productID" : "urge.plus.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Urge Plus Monthly",
+          "subscriptionGroupID" : "21517502",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "169",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6737090504",
+          "introductoryOffer" : {
+            "internalID" : "6737090505",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W"
+          },
+          "localizations" : [
+            {
+              "description" : "Håll din balans med Urge - Spara 59 kr!",
+              "displayName" : "Urge Plus År",
+              "locale" : "sv"
+            }
+          ],
+          "productID" : "urge.plus.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Urge Plus Yearly",
+          "subscriptionGroupID" : "21517502",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

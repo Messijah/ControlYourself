@@ -1,0 +1,225 @@
+/* Welcome & Setup */
+"welcome.title" = "ようこそ！";
+"welcome.subtitle" = "コントロールしたいものを選択";
+"substance.snus" = "スヌース";
+"substance.snus_singular" = "スヌース";
+"substance.cigarettes" = "タバコ";
+"substance.cigarettes_singular" = "タバコ";
+"setup.title" = "設定";
+"setup.weekday_start" = "平日の開始時刻";
+"setup.weekend_start" = "週末の開始時刻";
+"setup.amount_per_day" = "1日あたりの%@の数";
+"setup.interval_between" = "%@の間隔";
+"setup.hours" = "時間";
+"setup.panic_per_week" = "週あたりの緊急%@";
+"setup.save_continue" = "保存して続行";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "残り";
+"main.panic" = "緊急";
+"main.settings" = "設定";
+"main.statistics" = "統計";
+"main.take_one" = "%@を吸う";
+"main.take_one_ready" = "%@を吸おう！ ✨";
+"main.start_day" = "%@で一日を始めよう！";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "君ならできる！ 💪";
+"encouragement.hold_on" = "もう少し！頑張れ！";
+"encouragement.good_job" = "今のところよくやってるよ！";
+"encouragement.keep_going" = "続けよう！";
+"encouragement.you_are_strong" = "君は強い！ 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "完璧なタイミング！ 🎉";
+"celebration.well_done" = "よくやった！ ⭐";
+"celebration.you_can_take_one" = "今吸ってもいいよ！ 🎊";
+"celebration.time_is_up" = "時間だ！ ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "さあ行こう！ 💪";
+"morning.new_day" = "新しい日、新しいチャンス！ 🌅";
+"morning.welcome_back" = "おかえり！ 😊";
+"morning.ready" = "新しい日の準備はいい？ 🚀";
+"morning.here_we_go" = "さあ始めよう！ 🔥";
+
+/* Alerts */
+"alert.wait_title" = "もう少し待とう！";
+"alert.take_anyway" = "とにかく吸う";
+"alert.ok_wait" = "わかった、待つ";
+"alert.time_remaining" = "あと%@残ってるよ。本当に今吸う？";
+
+/* Settings */
+"settings.title" = "設定";
+"settings.weekday_start" = "平日の開始時刻";
+"settings.weekend_start" = "週末の開始時刻";
+"settings.interval" = "%@の間隔";
+"settings.panic_per_week" = "週あたりの緊急%@";
+"settings.amount_left_today" = "今日の%@の残り";
+"settings.panic_left" = "緊急%@の残り";
+"settings.save" = "設定を保存";
+"settings.reset_day" = "今日をリセット";
+"settings.change_substance" = "物質を変更";
+"settings.dynamic_island_title" = "Dynamic Islandをオフにする？";
+"settings.dynamic_island_message" = "ロック画面のタイマー通知をスワイプして、Dynamic Island/ライブアクティビティの表示を非表示にします。";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "アプリを閉じたときにDynamic Islandにタイマーを表示";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "本気？数を変えるなら、自制心ゼロって認めることになるよ 😬";
+"cheat.we_see_you" = "ちょっとズルしてる？見てるよ... 👀";
+"cheat.come_on" = "おいおい。君はもっとできるはず！ 💪";
+"cheat.little_cheater" = "ズルい奴め！まあいいけど... 😏";
+"cheat.self_control" = "アプリ名は「セルフコントロール」だったよね？ 🤔";
+"cheat.you_know" = "これがズルだってわかってるよね？ 🙈";
+"cheat.nice_job" = "いい仕事だ！...って誰も言わないけどね 😅";
+"cheat.first_step" = "変化への第一歩は...ズルしないことかも？ 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "おお！本気だね！よくやった！ 💪";
+"interval_praise.discipline" = "見た？これが自制心ってやつだよ！ ⭐";
+"interval_praise.fantastic" = "素晴らしい！時間ごとに強くなってるよ！ 🔥";
+"interval_praise.way_forward" = "そうだ！これが正しい道！ 🚀";
+"interval_praise.respect" = "リスペクト！本当のセルフコントロールを見せてるね！ 👑";
+"interval_praise.continue" = "YES！この調子で行けば遠くまで行けるよ！ ✨";
+"interval_praise.attitude" = "それが正しい姿勢！すごいよ！ 💎";
+"interval_praise.strong" = "熊みたいに強い！続けて！ 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "うーん...時間を減らす？それは後退だよ！ 😬";
+"interval_warning.less_control" = "本気？時間が少ない = コントロールが少ない... 🤔";
+"interval_warning.wrong_way" = "おっと、間違った方向に行ってるよ！考え直して！ 😅";
+"interval_warning.not_right" = "それは正しい方向じゃないな... 👀";
+"interval_warning.more_snus" = "待ち時間が短い = スヌースが多い。本当にそれでいいの？ 🙈";
+"interval_warning.decrease" = "ちょっと、スヌースを減らそうとしてるんだよ、増やすんじゃない！ 😬";
+"interval_warning.backwards_person" = "後退してる！まあ、君の選択だけど... 🤷‍♂️";
+"interval_warning.alert" = "警告！間違った方向に行ってるよ！ ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "やった！緊急スヌースが少ない = コントロールが増える！ 💪";
+"panic_praise.mature" = "これは大人だね！いい決断！ ⭐";
+"panic_praise.yes" = "YES！そんなに安全スヌースは必要ないよ！ 🎉";
+"panic_praise.look_at_you" = "見てよ！めちゃくちゃ強い！ 🔥";
+"panic_praise.impressive" = "感心する自制心！続けて！ 👑";
+"panic_praise.trust" = "今は自分をもっと信じてるね！最高！ ✨";
+"panic_praise.right_decision" = "正しい決断！少なくてもやっていける！ 💎";
+"panic_praise.winner" = "勝者の考え方だよ！ 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "安全スヌースを増やす？不安なの？ 😬";
+"panic_warning.less_trust" = "緊急が多い = 自分への信頼が少ない... 🤔";
+"panic_warning.really_need" = "うーん...本当にもっと緊急スヌースが必要？ 😅";
+"panic_warning.lack_confidence" = "それは自信不足の匂いがする！ 👀";
+"panic_warning.wrong_direction" = "緊急スヌースをもっと？間違った方向だよ！ 🙈";
+"panic_warning.afraid" = "できないって怖がってる？自分を信じて！ 💪";
+"panic_warning.backup" = "バックアップが多い = 信頼が少ない。考えてみて！ 🤷‍♂️";
+"panic_warning.strength" = "警告！自分の強さを信じてない！ ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "数を増やす？それはズルだよ、相棒！ 😬";
+"panic_left.we_see" = "ダメだよ、そういうやり方じゃない！見てるよ！ 👀";
+"panic_left.creative" = "創造的だけど、やっぱりズル！ 😅";
+"panic_left.thought" = "気づかれないと思った？ 🤔";
+"panic_left.cheating" = "それは完全なズル！ 🙈";
+"panic_left.tsk" = "緊急スヌースでちょっとズル？チッチッ！ 😏";
+"panic_left.remember" = "セルフコントロール、覚えてる？ 🤷‍♂️";
+"panic_left.no_no" = "ダメダメダメ！こういうやり方じゃない！ ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "ちょっとズル？ 🤨";
+"alert.cheating_yes" = "はい、ズルしてます";
+"alert.cheating_no" = "いいえ、後悔してます";
+"alert.fantastic_title" = "素晴らしい！ 🎉";
+"alert.thanks" = "ありがとう！ 💪";
+"alert.wrong_way_title" = "間違った方向！ 😬";
+"alert.understand" = "わかった";
+"alert.good_job_title" = "よくやった！ 🌟";
+"alert.hmm_title" = "うーん... 🤔";
+"alert.ok_ok" = "わかった、わかった";
+"alert.cheater_title" = "ズル！ 👀";
+"alert.reset_day_title" = "今日の値をリセット？";
+"alert.cancel" = "キャンセル";
+"alert.reset" = "リセット";
+"alert.reset_day_message" = "今日を開始にリセットして「%@で一日を始めよう」モードに戻ります。";
+"alert.change_substance_title" = "物質を変更？";
+"alert.change" = "変更";
+"alert.change_substance_message" = "すべての設定をリセットして、スヌースとタバコの選択をもう一度できます。アプリは再起動します。";
+"alert.restart_app_title" = "アプリを再起動";
+"alert.restart_app_message" = "アプリをもう一度開いて新しい物質を選択してください。";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "次のスヌースの時間！";
+"notification.body" = "タイマーが終了しました。楽しんで！";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "完了アラート";
+"settings.timer_notification_subtitle" = "完了時に振動と音";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "タイマー表示";
+"settings.timer_format_subtitle" = "タイマーの表示方法";
+"settings.timer_format_hours" = "時間のみ";
+"settings.timer_format_hours_example" = "例 02";
+"settings.timer_format_hours_minutes" = "時間:分";
+"settings.timer_format_hours_minutes_example" = "例 02:30";
+"settings.timer_format_hours_minutes_seconds" = "時間:分:秒";
+"settings.timer_format_hours_minutes_seconds_example" = "例 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "ようこそ";
+"paywall.feature_balance_title" = "バランスを保つ";
+"paywall.feature_balance_desc" = "完全にやめることなく消費を調整する";
+"paywall.feature_progress_title" = "進捗を追跡";
+"paywall.feature_progress_desc" = "統計と進捗を時間とともに確認";
+"paywall.feature_panic_title" = "パニックモード";
+"paywall.feature_panic_desc" = "必要なときの柔軟性";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Dynamic Islandでタイマーが常に表示";
+"paywall.trial_period" = "7日間無料トライアル";
+"paywall.start_trial" = "無料トライアルを開始";
+"paywall.restore_purchases" = "購入を復元";
+"paywall.cancel_anytime" = "いつでもキャンセル可能。契約不要。";
+"paywall.error_title" = "エラーが発生しました";
+"paywall.error_message" = "購入を完了できませんでした。もう一度お試しください。";
+"paywall.error_verification" = "購入の確認に失敗しました。サポートに連絡してください。";
+"paywall.yearly" = "年間";
+"paywall.monthly" = "月間";
+"paywall.per_year" = "年";
+"paywall.per_month" = "月";
+"paywall.after_trial" = "トライアル後";
+
+/* Welcome Tagline */
+"welcome.tagline" = "欲求をコントロール";
+
+/* Statistics */
+"statistics.title" = "統計";
+"statistics.days_in_balance" = "バランスを保った日数";
+"statistics.days_since_start" = "開始からの日数";
+"statistics.average_per_day" = "1日の平均";
+"statistics.average" = "平均";
+"statistics.current_streak" = "現在の連続記録";
+"statistics.days_in_row" = "連続日数";
+"statistics.total_used" = "総使用量";
+"statistics.since_start" = "開始から";
+"statistics.keep_balance_title" = "バランスを保つ";
+"statistics.keep_balance_desc" = "統計は、計画したバランスを時間とともにどれだけうまく維持しているかを示します。";
+"statistics.reset_button" = "統計をリセット";
+"statistics.reset_alert_title" = "統計をリセットしますか？";
+"statistics.reset_alert_message" = "すべての統計が完全に削除されます。元に戻すことはできません。";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@の時間だ! 🎉";
+"celebration.enjoy_substance" = "%@を楽しもう! 🔥";
+"celebration.its_time" = "今が時間だ! ✨";
+"celebration.take_one_now" = "今吸おう! 💪";
+"celebration.ready" = "準備完了! 😊";
+"celebration.ready_to_enjoy" = "楽しむ準備完了! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "%@を節約";
+

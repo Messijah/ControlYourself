@@ -1,0 +1,224 @@
+/* Welcome & Setup */
+"welcome.title" = "Bienvenue !";
+"welcome.subtitle" = "Choisis ce que tu veux contrôler";
+"substance.snus" = "Snus";
+"substance.snus_singular" = "snus";
+"substance.cigarettes" = "Cigarettes";
+"substance.cigarettes_singular" = "cigarette";
+"setup.title" = "Paramètres pour";
+"setup.weekday_start" = "Heure de début en semaine";
+"setup.weekend_start" = "Heure de début le week-end";
+"setup.amount_per_day" = "Nombre de %@ par jour";
+"setup.interval_between" = "Intervalle entre les %@";
+"setup.hours" = "heures";
+"setup.panic_per_week" = "%@ de panique par semaine";
+"setup.save_continue" = "Enregistrer & Continuer";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Restant";
+"main.panic" = "Panique";
+"main.settings" = "Paramètres";
+"main.statistics" = "Statistiques";
+"main.take_one" = "Prendre un %@";
+"main.take_one_ready" = "Prends un %@ ! ✨";
+"main.start_day" = "Commence la journée avec un %@ !";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Tu peux le faire ! 💪";
+"encouragement.hold_on" = "Tiens bon, c'est bientôt fini !";
+"encouragement.good_job" = "Bien joué jusqu'ici !";
+"encouragement.keep_going" = "Continue comme ça !";
+"encouragement.you_are_strong" = "Tu es fort ! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Parfait timing ! 🎉";
+"celebration.well_done" = "Bien joué ! ⭐";
+"celebration.you_can_take_one" = "Tu peux en prendre un maintenant ! 🎊";
+"celebration.time_is_up" = "C'est l'heure ! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "C'est parti mon pote ! 💪";
+"morning.new_day" = "Un nouveau jour, une nouvelle chance ! 🌅";
+"morning.welcome_back" = "Content de te revoir ! 😊";
+"morning.ready" = "Prêt pour une nouvelle journée ? 🚀";
+"morning.here_we_go" = "C'est parti ! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Attends encore un peu !";
+"alert.take_anyway" = "Prendre quand même";
+"alert.ok_wait" = "OK, je vais attendre";
+"alert.time_remaining" = "Il te reste encore %@. Tu es sûr de vouloir en prendre un maintenant ?";
+
+/* Settings */
+"settings.title" = "Paramètres";
+"settings.weekday_start" = "Heure de début en semaine";
+"settings.weekend_start" = "Heure de début le week-end";
+"settings.interval" = "Intervalle entre les %@";
+"settings.panic_per_week" = "%@ de panique par semaine";
+"settings.amount_left_today" = "Nombre de %@ restants aujourd'hui";
+"settings.panic_left" = "%@ de panique restants";
+"settings.save" = "Enregistrer les paramètres";
+"settings.reset_day" = "Réinitialiser la journée";
+"settings.change_substance" = "Changer de substance";
+"settings.dynamic_island_title" = "Désactiver la Dynamic Island ?";
+"settings.dynamic_island_message" = "Balaye la notification du minuteur sur l'écran de verrouillage pour masquer l'affichage de la Dynamic Island/Live Activity.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Afficher le minuteur dans la Dynamic Island lorsque l'app est fermée";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Tu es sûr ? Si tu changes le nombre, tu acceptes aussi que tu n'as aucune discipline 😬";
+"cheat.we_see_you" = "Tu triches un peu là ? On te voit... 👀";
+"cheat.come_on" = "Allez, quoi. Tu vaux mieux que ça ! 💪";
+"cheat.little_cheater" = "Petit tricheur ! Bon, d'accord alors... 😏";
+"cheat.self_control" = "L'appli s'appelle 'Contrôle-Toi', tu te souviens ? 🤔";
+"cheat.you_know" = "Tu sais que c'est de la triche, hein ? 🙈";
+"cheat.nice_job" = "Bien joué ! ...a dit personne jamais 😅";
+"cheat.first_step" = "Le premier pas vers le changement, c'est... peut-être ne pas tricher ? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow ! Tu prends ça au sérieux ! Bien joué ! 💪";
+"interval_praise.discipline" = "Tu vois ça ? C'est ça qu'on appelle de la discipline ! ⭐";
+"interval_praise.fantastic" = "Fantastique ! Tu deviens plus fort à chaque heure ! 🔥";
+"interval_praise.way_forward" = "C'est ça ! C'est la bonne voie ! 🚀";
+"interval_praise.respect" = "Respect ! Tu fais preuve d'un vrai self-control ! 👑";
+"interval_praise.continue" = "OUI ! Continue comme ça et tu iras loin ! ✨";
+"interval_praise.attitude" = "Voilà la bonne attitude ! Impressionnant ! 💎";
+"interval_praise.strong" = "Fort comme un ours ! Continue ! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... Diminuer le temps ? C'est reculer ! 😬";
+"interval_warning.less_control" = "T'es sûr ? Moins de temps = moins de contrôle... 🤔";
+"interval_warning.wrong_way" = "Oups, on va dans le mauvais sens là ! Réfléchis encore ! 😅";
+"interval_warning.not_right" = "C'était pas vraiment la bonne direction... 👀";
+"interval_warning.more_snus" = "Moins d'attente = plus de snus. C'est vraiment ce que tu veux ? 🙈";
+"interval_warning.decrease" = "Hé, on essaie de RÉDUIRE le snus, pas d'augmenter ! 😬";
+"interval_warning.backwards_person" = "Tu recules ! Mais bon, c'est ton choix... 🤷‍♂️";
+"interval_warning.alert" = "Attention ! Tu vas dans le mauvais sens ! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Enfin ! Moins de snus de panique = plus de contrôle ! 💪";
+"panic_praise.mature" = "Ça, c'est mature ! Bonne décision ! ⭐";
+"panic_praise.yes" = "OUI ! T'as pas besoin d'autant de snus de sécurité ! 🎉";
+"panic_praise.look_at_you" = "Regarde-toi ! Fort comme tout ! 🔥";
+"panic_praise.impressive" = "Discipline impressionnante ! Continue ! 👑";
+"panic_praise.trust" = "Tu te fais plus confiance maintenant ! J'adore ! ✨";
+"panic_praise.right_decision" = "Bonne décision ! Tu peux gérer avec moins ! 💎";
+"panic_praise.winner" = "C'est comme ça que pensent les gagnants ! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Augmenter les snus de sécurité ? Tu te sens en danger ? 😬";
+"panic_warning.less_trust" = "Plus de panique = moins de confiance en toi... 🤔";
+"panic_warning.really_need" = "Hmm... T'as vraiment besoin de plus de snus de panique ? 😅";
+"panic_warning.lack_confidence" = "Ça sent le manque de confiance ! 👀";
+"panic_warning.wrong_direction" = "Plus de snus de panique ? On va dans le mauvais sens ! 🙈";
+"panic_warning.afraid" = "T'as peur de ne pas y arriver ? Crois en toi ! 💪";
+"panic_warning.backup" = "Plus de secours = moins de confiance. Réfléchis-y ! 🤷‍♂️";
+"panic_warning.strength" = "Attention ! Tu ne fais pas confiance à ta propre force ! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Augmenter le nombre ? C'est de la triche, mon pote ! 😬";
+"panic_left.we_see" = "Non, c'est pas comme ça que ça marche ! On te voit ! 👀";
+"panic_left.creative" = "Créatif, mais c'est quand même de la triche ! 😅";
+"panic_left.thought" = "Tu croyais qu'on remarquerait pas ? 🤔";
+"panic_left.cheating" = "Ça, c'est de la pure triche ! 🙈";
+"panic_left.tsk" = "Tu triches un peu avec les snus de panique ? Tss tss ! 😏";
+"panic_left.remember" = "Contrôle-toi, tu te souviens ? 🤷‍♂️";
+"panic_left.no_no" = "Non non non ! C'est pas comme ça qu'il faut faire ! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Tu triches un peu ? 🤨";
+"alert.cheating_yes" = "Oui, je triche";
+"alert.cheating_no" = "Non, je regrette";
+"alert.fantastic_title" = "Fantastique ! 🎉";
+"alert.thanks" = "Merci ! 💪";
+"alert.wrong_way_title" = "Mauvais sens ! 😬";
+"alert.understand" = "Je comprends";
+"alert.good_job_title" = "Bien joué ! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "OK, OK";
+"alert.cheater_title" = "Tricheur ! 👀";
+"alert.reset_day_title" = "Réinitialiser les valeurs d'aujourd'hui ?";
+"alert.cancel" = "Annuler";
+"alert.reset" = "Réinitialiser";
+"alert.reset_day_message" = "Cela réinitialise la journée au début et te ramène au mode 'Commence la journée avec un %@'.";
+"alert.change_substance_title" = "Changer de substance ?";
+"alert.change" = "Changer";
+"alert.change_substance_message" = "Cela réinitialise TOUS les paramètres et te permet de choisir à nouveau entre snus et cigarettes. L'appli va redémarrer.";
+"alert.restart_app_title" = "Redémarrer l'appli";
+"alert.restart_app_message" = "Ouvre l'appli à nouveau pour choisir une nouvelle substance.";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "C'est l'heure du prochain snus !";
+"notification.body" = "Ton minuteur a expiré. C'est l'heure d'en profiter !";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Alertes de fin";
+"settings.timer_notification_subtitle" = "Vibration et son à la fin";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Affichage du minuteur";
+"settings.timer_format_subtitle" = "Comment le minuteur est affiché";
+"settings.timer_format_hours" = "Heures seulement";
+"settings.timer_format_hours_example" = "ex. 02";
+"settings.timer_format_hours_minutes" = "Heures:Minutes";
+"settings.timer_format_hours_minutes_example" = "ex. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Heures:Minutes:Secondes";
+"settings.timer_format_hours_minutes_seconds_example" = "ex. 02:30:45";
+
+
+
+
+/* Paywall */
+"paywall.welcome_to" = "Bienvenue sur";
+"paywall.feature_balance_title" = "Gardez l'équilibre";
+"paywall.feature_balance_desc" = "Réglez votre consommation sans arrêter complètement";
+"paywall.feature_progress_title" = "Suivez vos progrès";
+"paywall.feature_progress_desc" = "Voyez vos statistiques et progrès au fil du temps";
+"paywall.feature_panic_title" = "Mode panique";
+"paywall.feature_panic_desc" = "Flexibilité quand vous en avez besoin";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Minuteur toujours visible dans Dynamic Island";
+"paywall.trial_period" = "7 jours d'essai gratuit";
+"paywall.start_trial" = "Commencer l'essai gratuit";
+"paywall.restore_purchases" = "Restaurer les achats";
+"paywall.cancel_anytime" = "Annulez à tout moment. Sans engagement.";
+"paywall.error_title" = "Quelque chose s'est mal passé";
+"paywall.error_message" = "L'achat n'a pas pu être finalisé. Réessayez.";
+"paywall.error_verification" = "Échec de la vérification d'achat. Veuillez contacter le support.";
+"paywall.yearly" = "Annuel";
+"paywall.monthly" = "Mensuel";
+"paywall.per_year" = "an";
+"paywall.per_month" = "mois";
+"paywall.after_trial" = "après l'essai";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Contrôlez votre envie";
+
+/* Statistics */
+"statistics.title" = "Statistiques";
+"statistics.days_in_balance" = "Jours en équilibre";
+"statistics.days_since_start" = "jours depuis le début";
+"statistics.average_per_day" = "Moyenne par jour";
+"statistics.average" = "moyenne";
+"statistics.current_streak" = "Série actuelle";
+"statistics.days_in_row" = "jours d'affilée";
+"statistics.total_used" = "Total utilisé";
+"statistics.since_start" = "depuis le début";
+"statistics.keep_balance_title" = "Gardez l'équilibre";
+"statistics.keep_balance_desc" = "Vos statistiques montrent à quel point vous maintenez votre équilibre prévu au fil du temps.";
+"statistics.reset_button" = "Réinitialiser les statistiques";
+"statistics.reset_alert_title" = "Réinitialiser les statistiques?";
+"statistics.reset_alert_message" = "Toutes les statistiques seront supprimées définitivement. Cela ne peut pas être annulé.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "C'est l'heure du %@! 🎉";
+"celebration.enjoy_substance" = "Profite d'un %@! 🔥";
+"celebration.its_time" = "C'est l'heure maintenant! ✨";
+"celebration.take_one_now" = "Prends-en un maintenant! 💪";
+"celebration.ready" = "Prêt! 😊";
+"celebration.ready_to_enjoy" = "Prêt à en profiter! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Économise %@";

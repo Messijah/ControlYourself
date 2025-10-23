@@ -1,0 +1,223 @@
+/* Welcome & Setup */
+"welcome.title" = "Välkommen!";
+"welcome.subtitle" = "Välj vad du vill kontrollera";
+"substance.snus" = "Snus";
+
+"substance.cigarettes" = "Cigaretter";
+"substance.cigarettes_singular" = "cigarett";
+"substance.snus_singular" = "snus";
+"substance.cigarettes_singular" = "cigarett";
+"setup.title" = "Inställningar för";
+"setup.weekday_start" = "Vardag starttid";
+"setup.weekend_start" = "Helg starttid";
+"setup.amount_per_day" = "Antal %@ per dag";
+"setup.interval_between" = "Intervall mellan %@";
+"setup.hours" = "timmar";
+"setup.panic_per_week" = "Panik%@ per vecka";
+"setup.save_continue" = "Spara & Fortsätt";
+"app.title" = "Urge";
+
+/* Main View */
+"main.remaining" = "Kvar";
+"main.panic" = "Panik";
+"main.settings" = "Inställningar";
+"main.statistics" = "Statistik";
+"main.take_one" = "Ta en %@";
+"main.take_one_ready" = "Ta en %@! ✨";
+"main.start_day" = "Starta dagen med en %@!";
+
+/* Encouragement Messages */
+"encouragement.you_can_do_it" = "Du klarar det! 💪";
+"encouragement.hold_on" = "Håll ut, snart dags!";
+"encouragement.good_job" = "Bra jobbat så här långt!";
+"encouragement.keep_going" = "Fortsätt så!";
+"encouragement.you_are_strong" = "Du är stark! 🌟";
+
+/* Celebration Messages */
+"celebration.perfect_timing" = "Perfekt timing! 🎉";
+"celebration.well_done" = "Bra jobbat! ⭐";
+"celebration.you_can_take_one" = "Du kan ta en nu! 🎊";
+"celebration.time_is_up" = "Tiden är inne! ✨";
+
+/* Morning Messages */
+"morning.lets_go" = "Nu kör vi kompis! 💪";
+"morning.new_day" = "En ny dag, en ny chans! 🌅";
+"morning.welcome_back" = "Välkommen tillbaka! 😊";
+"morning.ready" = "Redo för en ny dag? 🚀";
+"morning.here_we_go" = "Här kör vi! 🔥";
+
+/* Alerts */
+"alert.wait_title" = "Vänta lite till!";
+"alert.take_anyway" = "Ta ändå";
+"alert.ok_wait" = "Okej, jag väntar";
+"alert.time_remaining" = "Du har %@ kvar. Är du säker på att du vill ta en nu?";
+
+/* Settings */
+"settings.title" = "Inställningar";
+"settings.weekday_start" = "Vardag starttid";
+"settings.weekend_start" = "Helg starttid";
+"settings.interval" = "Intervall mellan %@";
+"settings.panic_per_week" = "Panik%@ per vecka";
+"settings.amount_left_today" = "Antal %@ kvar idag";
+"settings.panic_left" = "Panik%@ kvar";
+"settings.save" = "Spara inställningar";
+"settings.reset_day" = "Återställ dag";
+"settings.change_substance" = "Byt substans";
+"settings.dynamic_island_title" = "Stänga av Dynamic Island?";
+"settings.dynamic_island_message" = "Swipa bort timer-notisen vid låst skärm för att dölja Dynamic Island/Live Activity-visningen.";
+"settings.dynamic_island_toggle_title" = "Dynamic Island";
+"settings.dynamic_island_toggle_message" = "Visa timer i Dynamic Island när appen är stängd";
+
+/* Cheat Messages */
+"cheat.no_discipline" = "Är du säker? Om du ändrar antalet accepterar du också att du har noll disciplin 😬";
+"cheat.we_see_you" = "Fuskar vi lite nu? Vi ser dig... 👀";
+"cheat.come_on" = "Alltså, kom igen nu. Du är bättre än så här! 💪";
+"cheat.little_cheater" = "Din lilla fuskare! Men okej då... 😏";
+"cheat.self_control" = "Självkontroll var väl namnet på appen? 🤔";
+"cheat.you_know" = "Du vet att det här är fusk, eller hur? 🙈";
+"cheat.nice_job" = "Snyggt jobbat! ...sa ingen någonsin 😅";
+"cheat.first_step" = "Första steget mot förändring är... att inte fuska kanske? 🤷‍♂️";
+
+/* Interval Praise Messages */
+"interval_praise.serious" = "Wow! Du tar det här på allvar! Bra jobbat! 💪";
+"interval_praise.discipline" = "Ser du det där? Det är vad vi kallar disciplin! ⭐";
+"interval_praise.fantastic" = "Fantastiskt! Du blir starkare för varje timme! 🔥";
+"interval_praise.way_forward" = "Såja! Det här är vägen framåt! 🚀";
+"interval_praise.respect" = "Respekt! Du visar verklig självkontroll! 👑";
+"interval_praise.continue" = "YES! Fortsätt så här så kommer du långt! ✨";
+"interval_praise.attitude" = "Det där är rätt attityd! Imponerande! 💎";
+"interval_praise.strong" = "Stark som björn! Fortsätt så! 🐻";
+
+/* Interval Warning Messages */
+"interval_warning.backwards" = "Hmm... Minskar du tiden? Det är ju bakåt i kistan! 😬";
+"interval_warning.less_control" = "Är du säker? Mindre tid = mindre kontroll... 🤔";
+"interval_warning.wrong_way" = "Oj då, vi går åt fel håll här! Tänk om! 😅";
+"interval_warning.not_right" = "Det där var inte riktigt i rätt riktning... 👀";
+"interval_warning.more_snus" = "Mindre väntetid = mer snus. Är det verkligen det du vill? 🙈";
+"interval_warning.decrease" = "Nänä, vi försöker ju MINSKA snuset, inte öka! 😬";
+"interval_warning.backwards_person" = "Bakåtsträvare! Men okej, det är ditt val... 🤷‍♂️";
+"interval_warning.alert" = "Varning! Du rör dig åt fel håll! ⚠️";
+
+/* Panic Praise Messages */
+"panic_praise.finally" = "Äntligen! Färre paniksnusar = mer kontroll! 💪";
+"panic_praise.mature" = "Det här är moget! Bra beslut! ⭐";
+"panic_praise.yes" = "YES! Du behöver inte lika många säkerhetssnusar! 🎉";
+"panic_praise.look_at_you" = "Se på dig! Stark som fan! 🔥";
+"panic_praise.impressive" = "Imponerande disciplin! Fortsätt såhär! 👑";
+"panic_praise.trust" = "Du litar mer på dig själv nu! Älskar det! ✨";
+"panic_praise.right_decision" = "Rätt beslut! Du klarar dig på mindre! 💎";
+"panic_praise.winner" = "Det är såhär vinnare tänker! 🏆";
+
+/* Panic Warning Messages */
+"panic_warning.feeling_unsafe" = "Ökar du säkerhetssnusen? Känns det osäkert? 😬";
+"panic_warning.less_trust" = "Mer panik = mindre tillit till dig själv... 🤔";
+"panic_warning.really_need" = "Hmm... Behöver du verkligen fler paniksnusar? 😅";
+"panic_warning.lack_confidence" = "Det där luktar brist på självförtroende! 👀";
+"panic_warning.wrong_direction" = "Fler paniksnusar? Vi går ju åt fel håll! 🙈";
+"panic_warning.afraid" = "Är du rädd att inte klara dig? Tro på dig själv! 💪";
+"panic_warning.backup" = "Mer backup = mindre tillit. Tänk efter! 🤷‍♂️";
+"panic_warning.strength" = "Varning! Du litar inte på din egen styrka! ⚠️";
+
+/* Panic Left Warning Messages */
+"panic_left.increasing" = "Ökar du antalet? Det där är fusk, kompis! 😬";
+"panic_left.we_see" = "Nänä, så funkar det inte! Vi ser dig! 👀";
+"panic_left.creative" = "Kreativt, men fortfarande fusk! 😅";
+"panic_left.thought" = "Trodde du att vi inte skulle märka? 🤔";
+"panic_left.cheating" = "Det där är ju ren fiffel! 🙈";
+"panic_left.tsk" = "Fuskar vi lite med paniksnusen? Tsk tsk! 😏";
+"panic_left.remember" = "Självkontroll, remember? 🤷‍♂️";
+"panic_left.no_no" = "Nej nej nej! Såhär ska det inte gå till! ⚠️";
+
+/* Alert Titles */
+"alert.cheating_title" = "Fuskar vi lite? 🤨";
+"alert.cheating_yes" = "Ja, jag fuskar";
+"alert.cheating_no" = "Nej, jag ångrar mig";
+"alert.fantastic_title" = "Fantastiskt! 🎉";
+"alert.thanks" = "Tack! 💪";
+"alert.wrong_way_title" = "Åt fel håll! 😬";
+"alert.understand" = "Jag förstår";
+"alert.good_job_title" = "Bra jobbat! 🌟";
+"alert.hmm_title" = "Hmm... 🤔";
+"alert.ok_ok" = "Okej, okej";
+"alert.cheater_title" = "Fuskare! 👀";
+"alert.reset_day_title" = "Återställ dagens värden?";
+"alert.cancel" = "Avbryt";
+"alert.reset" = "Återställ";
+"alert.reset_day_message" = "Detta återställer dagen till start och tar dig tillbaka till 'Starta dagen med en %@'-läget.";
+"alert.change_substance_title" = "Byt substans?";
+"alert.change" = "Byt";
+"alert.change_substance_message" = "Detta återställer ALLA inställningar och låter dig välja om mellan snus och cigaretter. Appen kommer att startas om.";
+"alert.restart_app_title" = "Starta om appen";
+"alert.restart_app_message" = "Öppna appen igen för att välja ny substans.";
+"alert.ok" = "OK";
+
+/* Notifications */
+"notification.title" = "Dags för nästa snus!";
+"notification.body" = "Din timer har gått ut. Det är dags att njuta!";
+
+/* Timer Notifications Settings */
+"settings.timer_notification_title" = "Notiser vid timer klar";
+"settings.timer_notification_subtitle" = "Vibration och ljud när timern når noll";
+
+/* Timer Format Settings */
+"settings.timer_format_title" = "Timer-format";
+"settings.timer_format_subtitle" = "Hur timern ska visas";
+"settings.timer_format_hours" = "Timmar";
+"settings.timer_format_hours_example" = "t.ex. 02";
+"settings.timer_format_hours_minutes" = "Timmar:Minuter";
+"settings.timer_format_hours_minutes_example" = "t.ex. 02:30";
+"settings.timer_format_hours_minutes_seconds" = "Timmar:Minuter:Sekunder";
+"settings.timer_format_hours_minutes_seconds_example" = "t.ex. 02:30:45";
+
+/* Paywall */
+"paywall.welcome_to" = "Välkommen till";
+"paywall.feature_balance_title" = "Håll balansen";
+"paywall.feature_balance_desc" = "Reglera ditt intag utan att sluta helt";
+"paywall.feature_progress_title" = "Följ din framgång";
+"paywall.feature_progress_desc" = "Se din statistik och progress över tid";
+"paywall.feature_panic_title" = "Panikläge";
+"paywall.feature_panic_desc" = "Flexibilitet när du behöver det";
+"paywall.feature_island_title" = "Dynamic Island";
+"paywall.feature_island_desc" = "Timer alltid synlig i Dynamic Island";
+"paywall.trial_period" = "7 dagars gratis provperiod";
+"paywall.start_trial" = "Starta gratis provperiod";
+"paywall.restore_purchases" = "Återställ köp";
+"paywall.cancel_anytime" = "Avbryt när som helst. Ingen bindningstid.";
+"paywall.error_title" = "Något gick fel";
+"paywall.error_message" = "Köpet kunde inte genomföras. Försök igen.";
+"paywall.error_verification" = "Köpverifiering misslyckades. Kontakta support.";
+"paywall.yearly" = "Helår";
+"paywall.monthly" = "Månad";
+"paywall.per_year" = "år";
+"paywall.per_month" = "mån";
+"paywall.after_trial" = "efter provperiod";
+
+/* Welcome Tagline */
+"welcome.tagline" = "Kontrollera din längtan";
+
+/* Statistics */
+"statistics.title" = "Statistik";
+"statistics.days_in_balance" = "Dagar i balans";
+"statistics.days_since_start" = "dagar sedan start";
+"statistics.average_per_day" = "Snitt per dag";
+"statistics.average" = "genomsnitt";
+"statistics.current_streak" = "Nuvarande rad";
+"statistics.days_in_row" = "dagar i rad";
+"statistics.total_used" = "Totalt använt";
+"statistics.since_start" = "sedan start";
+"statistics.keep_balance_title" = "Håll balansen";
+"statistics.keep_balance_desc" = "Din statistik visar hur bra du håller din planerade balans över tid.";
+"statistics.reset_button" = "Återställ statistik";
+"statistics.reset_alert_title" = "Återställ statistik?";
+"statistics.reset_alert_message" = "All statistik kommer att raderas permanent. Detta kan inte ångras.";
+
+/* New Celebration Messages */
+"celebration.substance_time" = "%@dags! 🎉";
+"celebration.enjoy_substance" = "Njut av en %@! 🔥";
+"celebration.its_time" = "Nu är det dags! ✨";
+"celebration.take_one_now" = "Ta en nu! 💪";
+"celebration.ready" = "Färdig! 😊";
+"celebration.ready_to_enjoy" = "Redo att njuta! 🎊";
+
+/* Subscription */
+"subscription.save_amount" = "Spara %@";
