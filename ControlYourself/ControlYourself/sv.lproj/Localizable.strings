@@ -201,8 +201,8 @@
 "statistics.days_since_start" = "dagar sedan start";
 "statistics.average_per_day" = "Snitt per dag";
 "statistics.average" = "genomsnitt";
-"statistics.current_streak" = "Nuvarande rad";
-"statistics.days_in_row" = "dagar i rad";
+"statistics.current_streak" = "Nuvarande streak";
+"statistics.days_in_row" = "dagar i streak";
 "statistics.total_used" = "Totalt använt";
 "statistics.since_start" = "sedan start";
 "statistics.keep_balance_title" = "Håll balansen";
