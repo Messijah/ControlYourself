@@ -1,0 +1,56 @@
+Urge helps you take control of your habits by creating healthy intervals between usage. Whether you're managing nicotine pouches, cigarettes, or other habits, Urge provides the structure and motivation you need to find balance.
+
+KEY FEATURES
+
+Smart Timer System
+Set customizable intervals between each usage. The app tracks your timing and helps you maintain consistent patterns throughout the day.
+
+Detailed Statistics
+Monitor your progress with comprehensive tracking. See your daily patterns, streaks, and improvements over time.
+
+Daily Streak Goals
+Build momentum by maintaining your streak. The app celebrates your consistency and motivates you to keep going.
+
+Panic Mode
+Sometimes life happens. When you need flexibility, panic mode allows occasional breaks from your routine while keeping your long-term progress intact.
+
+Dynamic Island Integration
+See your timer at a glance with Dynamic Island support on iPhone 14 Pro and later.
+
+Widgets & Live Activities
+Stay on track with home screen widgets and Live Activities that keep your progress visible throughout the day.
+
+Encouraging Feedback
+Get motivational messages that adapt to your progress, celebrating successes and providing support when you need it.
+
+WHY URGE?
+
+Urge isn't about restriction – it's about finding balance. Instead of trying to quit cold turkey, you create sustainable habits by gradually adjusting your patterns. The app helps you:
+
+- Increase time between usage naturally
+- Build awareness of your habits
+- Track your progress visually
+- Stay motivated with daily goals
+- Maintain flexibility when needed
+
+SUBSCRIPTION DETAILS
+
+Urge Plus unlocks full access to detailed statistics, unlimited panic usage, and priority support.
+
+- Free 7-day trial
+- Monthly and yearly plans available
+- Save up to 35% with yearly subscription
+
+Your subscription automatically renews unless cancelled at least 24 hours before the end of the current period. Manage subscriptions in your App Store account settings.
+
+PRIVACY FIRST
+
+All your data stays on your device. We don't collect, share, or sell your personal information.
+
+---
+
+LEGAL
+
+Privacy Policy: https://messijah.github.io/ControlYourself/privacy-policy.html
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Support: https://github.com/Messijah/ControlYourself/issues

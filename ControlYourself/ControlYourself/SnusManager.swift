@@ -428,7 +428,7 @@ class SnusManager: ObservableObject {
                     // Timer reached zero - update Live Activity with final state
                     self.countdownTime = 0
                     self.updateLiveActivity()
-                    self.scheduleNotification()
+                    self.scheduleNotification(playSound: true) // Play sound when timer actively reaches zero in foreground
 
                     // Save countdownTime = 0 to UserDefaults
                     SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
@@ -447,7 +447,7 @@ class SnusManager: ObservableObject {
         }
     }
 
-    private func scheduleNotification() {
+    private func scheduleNotification(playSound: Bool = false) {
         // Check if user has enabled timer completion notifications
         let defaults = SnusManager.sharedDefaults
         let isNotificationEnabled = defaults.object(forKey: UserDefaultsKeys.isTimerNotificationEnabled) as? Bool ?? true
@@ -459,17 +459,19 @@ class SnusManager: ObservableObject {
 
         print("⏰ Timer reached 0 - triggering notifications and haptics")
 
-        // Trigger haptic feedback AND sound (works when app is open)
-        DispatchQueue.main.async {
-            print("📳 Triggering haptic feedback and sound")
+        // Only trigger haptic and sound if explicitly requested (when timer actively reaches zero in foreground)
+        if playSound {
+            DispatchQueue.main.async {
+                print("📳 Triggering haptic feedback and sound")
 
-            // Play system sound (this works even when app is in foreground)
-            AudioServicesPlaySystemSound(SystemSoundID(1315)) // Anticipate.caf - nice completion sound
+                // Play system sound (this works even when app is in foreground)
+                AudioServicesPlaySystemSound(SystemSoundID(1315)) // Anticipate.caf - nice completion sound
 
-            // Also trigger haptic
-            let generator = UINotificationFeedbackGenerator()
-            generator.prepare()
-            generator.notificationOccurred(.success)
+                // Also trigger haptic
+                let generator = UINotificationFeedbackGenerator()
+                generator.prepare()
+                generator.notificationOccurred(.success)
+            }
         }
 
         let content = UNMutableNotificationContent()
