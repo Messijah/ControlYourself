@@ -1134,25 +1134,25 @@ struct MeshGradientBackground: View {
         let theme = themeManager.currentTheme
 
         ZStack {
-            // Enhanced base gradient with DARK background like original
+            // Base gradient using THEME COLORS (dark versions)
             LinearGradient(
                 colors: [
-                    Color(red: 0.12, green: 0.08, blue: 0.32),
-                    Color(red: 0.20, green: 0.12, blue: 0.42),
-                    Color(red: 0.16, green: 0.10, blue: 0.38),
-                    Color(red: 0.10, green: 0.06, blue: 0.30)
+                    theme.secondaryColors[0].opacity(0.25),
+                    theme.secondaryColors[1].opacity(0.20),
+                    theme.primaryColors[0].opacity(0.22),
+                    theme.primaryColors[1].opacity(0.18)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
 
-            // Animated mesh-like gradient overlay with SUBTLE theme colors
+            // Animated mesh-like gradient overlay with THEME colors
             ZStack {
-                // Top left glow
+                // Top left glow - primary color
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[0].opacity(0.12), theme.primaryColors[1].opacity(0.08), Color.clear],
+                            colors: [theme.primaryColors[0].opacity(0.35), theme.primaryColors[1].opacity(0.20), Color.clear],
                             center: .topLeading,
                             startRadius: 0,
                             endRadius: 450
@@ -1162,11 +1162,11 @@ struct MeshGradientBackground: View {
                     .blur(radius: 70)
                     .offset(y: phase * 25)
 
-                // Top right glow
+                // Top right glow - secondary color
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.secondaryColors[0].opacity(0.10), theme.secondaryColors[1].opacity(0.06), Color.clear],
+                            colors: [theme.secondaryColors[0].opacity(0.30), theme.secondaryColors[1].opacity(0.18), Color.clear],
                             center: .topTrailing,
                             startRadius: 0,
                             endRadius: 400
@@ -1176,11 +1176,11 @@ struct MeshGradientBackground: View {
                     .blur(radius: 80)
                     .offset(y: -phase * 18)
 
-                // Bottom glow
+                // Bottom glow - accent color
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.accentGradient[0].opacity(0.08), theme.accentGradient[1].opacity(0.05), Color.clear],
+                            colors: [theme.accentGradient[0].opacity(0.28), theme.accentGradient[1].opacity(0.15), Color.clear],
                             center: .bottomTrailing,
                             startRadius: 0,
                             endRadius: 350
@@ -1190,11 +1190,11 @@ struct MeshGradientBackground: View {
                     .blur(radius: 60)
                     .offset(y: phase * 15)
 
-                // Center accent glow
+                // Center accent glow - complement
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[1].opacity(0.08), Color.clear],
+                            colors: [theme.primaryColors[1].opacity(0.25), Color.clear],
                             center: .center,
                             startRadius: 0,
                             endRadius: 300
