@@ -159,6 +159,17 @@
 "settings.timer_notification_title" = "Notiser vid timer klar";
 "settings.timer_notification_subtitle" = "Vibration och ljud när timern når noll";
 
+/* Timer Sound Settings */
+"settings.timer_sound_title" = "Ljudsignal";
+"sound.anticipate" = "Förväntan";
+"sound.bell" = "Klocka";
+"sound.chime" = "Klocklåt";
+"sound.ding" = "Ding";
+"sound.fanfare" = "Fanfar";
+"sound.jingle" = "Jingel";
+"sound.ping" = "Ping";
+"sound.tritone" = "Tritone";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer-format";
 "settings.timer_format_subtitle" = "Hur timern ska visas";

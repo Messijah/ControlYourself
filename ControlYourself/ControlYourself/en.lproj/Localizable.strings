@@ -157,6 +157,17 @@
 "settings.timer_notification_title" = "Completion alerts";
 "settings.timer_notification_subtitle" = "Vibrate and sound when done";
 
+/* Timer Sound Settings */
+"settings.timer_sound_title" = "Alert sound";
+"sound.anticipate" = "Anticipate";
+"sound.bell" = "Bell";
+"sound.chime" = "Chime";
+"sound.ding" = "Ding";
+"sound.fanfare" = "Fanfare";
+"sound.jingle" = "Jingle";
+"sound.ping" = "Ping";
+"sound.tritone" = "Tri-tone";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer display";
 "settings.timer_format_subtitle" = "How timer is shown";

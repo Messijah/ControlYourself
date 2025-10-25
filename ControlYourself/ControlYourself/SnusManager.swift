@@ -464,9 +464,13 @@ class SnusManager: ObservableObject {
             DispatchQueue.main.async { [weak self] in
                 print("📳 Triggering haptic feedback and sound")
 
+                // Get selected sound from UserDefaults (default to 1315 - Anticipate)
+                let defaults = SnusManager.sharedDefaults
+                let soundID = defaults.object(forKey: "timerCompletionSoundID") as? UInt32 ?? 1315
+
                 // Use system sound with vibration - respects silent mode
-                // System sound 1315 (Anticipate.caf) plays sound when ringer is on, vibrates when silent
-                AudioServicesPlaySystemSound(SystemSoundID(1315))
+                // Plays sound when ringer is on, vibrates when silent
+                AudioServicesPlaySystemSound(SystemSoundID(soundID))
 
                 // Also trigger haptic feedback for extra emphasis
                 let generator = UINotificationFeedbackGenerator()

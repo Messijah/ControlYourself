@@ -7,17 +7,41 @@
 
 
 import SwiftUI
+import AudioToolbox
 
 // MARK: - iPad Layout Helper
 fileprivate var isIPad: Bool {
     UIDevice.current.userInterfaceIdiom == .pad
 }
 
+// MARK: - Timer Completion Sounds
+struct TimerSound: Identifiable, Hashable {
+    let id: UInt32
+    let name: String
+    let localizedKey: String
+
+    var localizedName: String {
+        NSLocalizedString(localizedKey, comment: "")
+    }
+}
+
+private let availableTimerSounds: [TimerSound] = [
+    TimerSound(id: 1315, name: "Anticipate", localizedKey: "sound.anticipate"),
+    TimerSound(id: 1013, name: "Bell", localizedKey: "sound.bell"),
+    TimerSound(id: 1005, name: "Chime", localizedKey: "sound.chime"),
+    TimerSound(id: 1057, name: "Ding", localizedKey: "sound.ding"),
+    TimerSound(id: 1052, name: "Fanfare", localizedKey: "sound.fanfare"),
+    TimerSound(id: 1328, name: "Jingle", localizedKey: "sound.jingle"),
+    TimerSound(id: 1016, name: "Ping", localizedKey: "sound.ping"),
+    TimerSound(id: 1000, name: "Tri-tone", localizedKey: "sound.tritone")
+]
+
 // MARK: - UserDefaults Keys
 private enum UserDefaultsKeys {
     static let timerDisplayFormat = "timerDisplayFormat"
     static let isDynamicIslandEnabled = "isDynamicIslandEnabled"
     static let isTimerNotificationEnabled = "isTimerNotificationEnabled"
+    static let timerCompletionSoundID = "timerCompletionSoundID"
 }
 
 struct LandingPageView: View {
@@ -954,6 +978,8 @@ struct SettingsView: View {
     @State private var isDynamicIslandEnabled: Bool
     @State private var isTimerNotificationEnabled: Bool
     @State private var timerDisplayFormat: String
+    @State private var selectedSoundID: UInt32
+    @State private var showSoundPicker = false
 
     private let cheatMessages = [
         NSLocalizedString("cheat.no_discipline", comment: ""),
@@ -1046,6 +1072,10 @@ struct SettingsView: View {
         // Load Timer Display Format setting (default to "HH:MM" if not set)
         let savedFormat = defaults.string(forKey: UserDefaultsKeys.timerDisplayFormat) ?? "HH:MM"
         _timerDisplayFormat = State(initialValue: savedFormat)
+
+        // Load Timer Completion Sound setting (default to 1315 - Anticipate)
+        let savedSoundID = defaults.object(forKey: UserDefaultsKeys.timerCompletionSoundID) as? UInt32 ?? 1315
+        _selectedSoundID = State(initialValue: savedSoundID)
     }
 
     var body: some View {
@@ -1450,6 +1480,100 @@ struct SettingsView: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 12)
+
+                    // Timer Completion Sound Picker (only show when notifications are enabled)
+                    if isTimerNotificationEnabled {
+                        GlassCard {
+                            VStack(alignment: .leading, spacing: 12) {
+                                Button {
+                                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                        showSoundPicker.toggle()
+                                    }
+                                } label: {
+                                    HStack(spacing: 14) {
+                                        Image(systemName: "speaker.wave.2.fill")
+                                            .font(.system(size: 22, weight: .semibold))
+                                            .foregroundStyle(
+                                                LinearGradient(
+                                                    colors: [.orange, .pink],
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                )
+                                            )
+
+                                        VStack(alignment: .leading, spacing: 4) {
+                                            Text(NSLocalizedString("settings.timer_sound_title", comment: ""))
+                                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+
+                                            if let selectedSound = availableTimerSounds.first(where: { $0.id == selectedSoundID }) {
+                                                Text(selectedSound.localizedName)
+                                                    .font(.system(size: 13, weight: .medium, design: .rounded))
+                                                    .foregroundColor(.white.opacity(0.75))
+                                            }
+                                        }
+
+                                        Spacer()
+
+                                        Image(systemName: showSoundPicker ? "chevron.up" : "chevron.down")
+                                            .font(.system(size: 14, weight: .semibold))
+                                            .foregroundColor(.white.opacity(0.6))
+                                    }
+                                }
+                                .buttonStyle(PlainButtonStyle())
+
+                                if showSoundPicker {
+                                    Divider()
+                                        .background(Color.white.opacity(0.2))
+                                        .padding(.vertical, 4)
+
+                                    VStack(spacing: 8) {
+                                        ForEach(availableTimerSounds) { sound in
+                                            Button {
+                                                let generator = UIImpactFeedbackGenerator(style: .light)
+                                                generator.impactOccurred()
+
+                                                // Play preview of the sound
+                                                AudioServicesPlaySystemSound(SystemSoundID(sound.id))
+
+                                                // Save selection
+                                                selectedSoundID = sound.id
+                                                let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
+                                                defaults.set(sound.id, forKey: UserDefaultsKeys.timerCompletionSoundID)
+                                            } label: {
+                                                HStack {
+                                                    Text(sound.localizedName)
+                                                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                                                        .foregroundColor(.white.opacity(0.9))
+
+                                                    Spacer()
+
+                                                    if selectedSoundID == sound.id {
+                                                        Image(systemName: "checkmark.circle.fill")
+                                                            .font(.system(size: 18))
+                                                            .foregroundColor(.green)
+                                                    } else {
+                                                        Image(systemName: "circle")
+                                                            .font(.system(size: 18))
+                                                            .foregroundColor(.white.opacity(0.3))
+                                                    }
+                                                }
+                                                .padding(.vertical, 8)
+                                                .padding(.horizontal, 12)
+                                                .background(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .fill(selectedSoundID == sound.id ? Color.white.opacity(0.15) : Color.clear)
+                                                )
+                                            }
+                                            .buttonStyle(PlainButtonStyle())
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 12)
+                    }
 
                     // Timer Display Format
                     GlassCard {
