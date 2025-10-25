@@ -14,8 +14,8 @@ fileprivate var isIPad: Bool {
     UIDevice.current.userInterfaceIdiom == .pad
 }
 
-// MARK: - App Theme
-enum AppTheme: String, CaseIterable, Identifiable {
+// MARK: - App Color Theme
+enum AppColorTheme: String, CaseIterable, Identifiable {
     case purpleDream = "purple_dream"
     case oceanBlue = "ocean_blue"
     case sunsetOrange = "sunset_orange"
@@ -213,15 +213,15 @@ enum AppTheme: String, CaseIterable, Identifiable {
 class ThemeManager: ObservableObject {
     static let shared = ThemeManager()
 
-    @Published var currentTheme: AppTheme {
+    @Published var currentTheme: AppColorTheme {
         didSet {
             UserDefaults.standard.set(currentTheme.rawValue, forKey: "selectedTheme")
         }
     }
 
     init() {
-        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppTheme.purpleDream.rawValue
-        self.currentTheme = AppTheme(rawValue: savedTheme) ?? .purpleDream
+        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppColorTheme.purpleDream.rawValue
+        self.currentTheme = AppColorTheme(rawValue: savedTheme) ?? .purpleDream
     }
 }
 
@@ -1228,7 +1228,7 @@ struct SettingsView: View {
     @State private var timerDisplayFormat: String
     @State private var selectedSoundID: UInt32
     @State private var showSoundPicker = false
-    @State private var selectedTheme: AppTheme
+    @State private var selectedTheme: AppColorTheme
     @State private var showThemePicker = false
 
     private let cheatMessages = [
@@ -1328,8 +1328,8 @@ struct SettingsView: View {
         _selectedSoundID = State(initialValue: savedSoundID)
 
         // Load Theme setting (default to purpleDream)
-        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppTheme.purpleDream.rawValue
-        _selectedTheme = State(initialValue: AppTheme(rawValue: savedTheme) ?? .purpleDream)
+        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppColorTheme.purpleDream.rawValue
+        _selectedTheme = State(initialValue: AppColorTheme(rawValue: savedTheme) ?? .purpleDream)
     }
 
     var body: some View {
@@ -1883,7 +1883,7 @@ struct SettingsView: View {
                                     .padding(.vertical, 4)
 
                                 VStack(spacing: 8) {
-                                    ForEach(AppTheme.allCases) { theme in
+                                    ForEach(AppColorTheme.allCases) { theme in
                                         Button {
                                             let generator = UIImpactFeedbackGenerator(style: .light)
                                             generator.impactOccurred()
