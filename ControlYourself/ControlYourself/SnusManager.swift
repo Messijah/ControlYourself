@@ -6,7 +6,6 @@ import UIKit
 import ActivityKit
 import WatchConnectivity
 import AVFoundation
-import AudioToolbox
 
 // MARK: - Notification Names
 extension Notification.Name {
@@ -52,6 +51,7 @@ class SnusManager: ObservableObject {
     private var currentActivity: Activity<SnusTimerAttributes>?
     private var timerEndDate: Date? // Track the actual end date to avoid time drift
     private var dailyCheckTimer: Timer? // Timer to check for daily reset
+    private var audioPlayer: AVAudioPlayer? // Audio player for completion sound
 
     // Computed property for localized substance name (plural/title form)
     var localizedSubstanceName: String {
@@ -461,13 +461,29 @@ class SnusManager: ObservableObject {
 
         // Only trigger haptic and sound if explicitly requested (when timer actively reaches zero in foreground)
         if playSound {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 print("📳 Triggering haptic feedback and sound")
 
-                // Play system sound (this works even when app is in foreground)
-                AudioServicesPlaySystemSound(SystemSoundID(1315)) // Anticipate.caf - nice completion sound
+                // Configure audio session to play sound even when device is in silent mode
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+                    try AVAudioSession.sharedInstance().setActive(true)
 
-                // Also trigger haptic
+                    // Play completion sound using system sound file
+                    // System sound 1315 is Anticipate.caf
+                    if let soundURL = URL(string: "/System/Library/Audio/UISounds/nano/TimerWheelHoursHours_Haptic.caf") {
+                        self?.audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                        self?.audioPlayer?.prepareToPlay()
+                        self?.audioPlayer?.play()
+                        print("🔊 Playing timer completion sound")
+                    }
+                } catch {
+                    print("❌ Error playing audio: \(error.localizedDescription)")
+                    // Fallback to system sound if AVAudioPlayer fails
+                    AudioServicesPlaySystemSound(SystemSoundID(1315))
+                }
+
+                // Trigger haptic feedback
                 let generator = UINotificationFeedbackGenerator()
                 generator.prepare()
                 generator.notificationOccurred(.success)
