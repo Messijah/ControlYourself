@@ -27,39 +27,39 @@ enum AppColorTheme: String, CaseIterable, Identifiable {
         NSLocalizedString("theme.\(rawValue)", comment: "")
     }
 
-    // Primary gradient colors - MODERN 2025 DESIGN: Sophisticated, harmonious
+    // Primary gradient colors - COMPLEMENTARY PALETTES (not monochrome!)
     var primaryColors: [Color] {
         switch self {
         case .purpleDream:
-            // Soft lavender to mint - dreamy, calming
-            return [Color(red: 0.68, green: 0.76, blue: 0.92), Color(red: 0.70, green: 0.92, blue: 0.84)]
+            // Soft lavender + mint (purple's complement is yellow-green)
+            return [Color(red: 0.76, green: 0.70, blue: 0.92), Color(red: 0.65, green: 0.92, blue: 0.76)]
         case .oceanBlue:
-            // Deep ocean to aqua - serene, professional
-            return [Color(red: 0.52, green: 0.73, blue: 0.89), Color(red: 0.56, green: 0.88, blue: 0.92)]
+            // Deep navy + warm coral (blue's complement is orange)
+            return [Color(red: 0.40, green: 0.62, blue: 0.85), Color(red: 0.98, green: 0.74, blue: 0.63)]
         case .sunsetOrange:
-            // Warm peach to rose - inviting, gentle
-            return [Color(red: 0.98, green: 0.82, blue: 0.71), Color(red: 0.97, green: 0.76, blue: 0.82)]
+            // Warm peach + soft periwinkle (orange's complement is blue)
+            return [Color(red: 0.98, green: 0.77, blue: 0.62), Color(red: 0.71, green: 0.75, blue: 0.92)]
         case .forestGreen:
-            // Sage to mint - fresh, natural
-            return [Color(red: 0.67, green: 0.88, blue: 0.78), Color(red: 0.71, green: 0.94, blue: 0.82)]
+            // Sage green + dusty rose (green's complement is red)
+            return [Color(red: 0.62, green: 0.85, blue: 0.71), Color(red: 0.92, green: 0.73, blue: 0.76)]
         }
     }
 
-    // Secondary gradient colors - SUBTLE DEPTH
+    // Secondary gradient colors - ANALOGOUS HARMONIES
     var secondaryColors: [Color] {
         switch self {
         case .purpleDream:
-            // Soft periwinkle - gentle contrast
-            return [Color(red: 0.64, green: 0.71, blue: 0.87), Color(red: 0.59, green: 0.77, blue: 0.88)]
+            // Blue-purple + pink-purple (analogous to main purple)
+            return [Color(red: 0.67, green: 0.72, blue: 0.88), Color(red: 0.88, green: 0.71, blue: 0.87)]
         case .oceanBlue:
-            // Muted teal - calm depth
-            return [Color(red: 0.48, green: 0.69, blue: 0.81), Color(red: 0.52, green: 0.79, blue: 0.85)]
+            // Teal + gold (analogous warm tones with blue)
+            return [Color(red: 0.45, green: 0.75, blue: 0.78), Color(red: 0.94, green: 0.85, blue: 0.62)]
         case .sunsetOrange:
-            // Soft coral - warm glow
-            return [Color(red: 0.94, green: 0.73, blue: 0.65), Color(red: 0.95, green: 0.69, blue: 0.74)]
+            // Soft pink + golden yellow (analogous to orange)
+            return [Color(red: 0.96, green: 0.73, blue: 0.77), Color(red: 0.96, green: 0.89, blue: 0.67)]
         case .forestGreen:
-            // Muted jade - earthy tone
-            return [Color(red: 0.59, green: 0.82, blue: 0.71), Color(red: 0.63, green: 0.87, blue: 0.76)]
+            // Mint + warm terracotta (analogous earth tones)
+            return [Color(red: 0.67, green: 0.88, blue: 0.82), Color(red: 0.88, green: 0.67, blue: 0.60)]
         }
     }
 
@@ -77,17 +77,21 @@ enum AppColorTheme: String, CaseIterable, Identifiable {
         }
     }
 
-    // Icon/accent gradient colors (used for buttons and icons)
+    // Icon/accent gradient colors - TRIADIC HARMONIES for visual interest
     var accentGradient: [Color] {
         switch self {
         case .purpleDream:
-            return [.purple, .blue]
+            // Purple + yellow-green (triadic with mint accent)
+            return [Color(red: 0.74, green: 0.64, blue: 0.88), Color(red: 0.85, green: 0.90, blue: 0.65)]
         case .oceanBlue:
-            return [.blue, .cyan]
+            // Blue + coral (warm contrast for accents)
+            return [Color(red: 0.42, green: 0.67, blue: 0.87), Color(red: 0.98, green: 0.68, blue: 0.58)]
         case .sunsetOrange:
-            return [.orange, .pink]
+            // Peach + lavender (soft complementary accents)
+            return [Color(red: 0.98, green: 0.72, blue: 0.58), Color(red: 0.78, green: 0.72, blue: 0.92)]
         case .forestGreen:
-            return [.green, .mint]
+            // Green + rose-gold (elegant earth tones)
+            return [Color(red: 0.58, green: 0.83, blue: 0.68), Color(red: 0.92, green: 0.75, blue: 0.70)]
         }
     }
 
