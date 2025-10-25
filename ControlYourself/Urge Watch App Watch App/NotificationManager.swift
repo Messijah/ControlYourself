@@ -7,7 +7,6 @@
 
 import Foundation
 import UserNotifications
-import WatchKit
 
 class NotificationManager {
     static let shared = NotificationManager()

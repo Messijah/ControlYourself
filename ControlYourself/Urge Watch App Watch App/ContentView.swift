@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Combine
-import WatchKit
 import UserNotifications
 
 struct ContentView: View {
@@ -15,6 +14,8 @@ struct ContentView: View {
     @State private var currentTime = Date()
     @State private var wasTimerRunning = false
     @State private var showEarlyWarning = false
+    @State private var successTrigger = 0
+    @State private var notificationTrigger = 0
 
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -93,7 +94,7 @@ struct ContentView: View {
                     Button {
                         if connectivity.countdownTime <= 0 {
                             // Haptic feedback for success
-                            WKInterfaceDevice.current().play(.success)
+                            successTrigger += 1
                             connectivity.takeSnus()
                         } else {
                             // Show warning if trying to take too early (same as iPhone)
@@ -114,7 +115,7 @@ struct ContentView: View {
                     if connectivity.paniksnusLeft > 0 {
                         Button {
                             // Haptic feedback for warning/panic action
-                            WKInterfaceDevice.current().play(.notification)
+                            notificationTrigger += 1
                             connectivity.usePanic()
                         } label: {
                             Label("Use Panic", systemImage: "bolt.fill")
@@ -143,7 +144,7 @@ struct ContentView: View {
 
                     // Play haptic feedback when timer completes (only once)
                     if wasTimerRunning {
-                        WKInterfaceDevice.current().play(.success)
+                        successTrigger += 1
                         wasTimerRunning = false
                     }
                 }
@@ -155,13 +156,15 @@ struct ContentView: View {
         }
         .alert("Wait a bit longer!", isPresented: $showEarlyWarning) {
             Button("Take anyway", role: .destructive) {
-                WKInterfaceDevice.current().play(.notification)
+                notificationTrigger += 1
                 connectivity.takeSnus()
             }
             Button("Okay, I'll wait", role: .cancel) {}
         } message: {
             Text("You have \(timeString(from: connectivity.countdownTime)) left. Are you sure you want to take one now?")
         }
+        .sensoryFeedback(.success, trigger: successTrigger)
+        .sensoryFeedback(.warning, trigger: notificationTrigger)
     }
 
     private func timeString(from seconds: TimeInterval) -> String {
