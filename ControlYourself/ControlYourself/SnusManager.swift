@@ -461,7 +461,7 @@ class SnusManager: ObservableObject {
 
         // Only trigger haptic and sound if explicitly requested (when timer actively reaches zero in foreground)
         if playSound {
-            DispatchQueue.main.async { [weak self] in
+            DispatchQueue.main.async {
                 print("📳 Triggering haptic feedback and sound")
 
                 // Get selected sound from UserDefaults (default to 1315 - Anticipate)

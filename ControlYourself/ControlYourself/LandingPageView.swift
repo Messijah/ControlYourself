@@ -402,7 +402,7 @@ struct LandingPageView: View {
                     Circle()
                         .stroke(
                             LinearGradient(
-                                colors: themeManager.currentTheme.cardBackgroundGradient(isReady: isReady),
+                                colors: themeManager.currentTheme.cardBackgroundGradient(isReady),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             ),
@@ -655,7 +655,7 @@ struct LandingPageView: View {
                                 RoundedRectangle(cornerRadius: 22)
                                     .fill(
                                         LinearGradient(
-                                            colors: themeManager.currentTheme.buttonGradient(isReady: isReady || isFirstOfDay),
+                                            colors: themeManager.currentTheme.buttonGradient(isReady || isFirstOfDay),
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         )
@@ -694,7 +694,7 @@ struct LandingPageView: View {
                             }
                         )
                         .shadow(
-                            color: themeManager.currentTheme.buttonShadowColor(isReady: isReady || isFirstOfDay).opacity(0.5),
+                            color: themeManager.currentTheme.buttonShadowColor(isReady || isFirstOfDay).opacity(0.5),
                             radius: 20,
                             x: 0,
                             y: 10
