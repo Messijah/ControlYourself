@@ -170,6 +170,13 @@
 "sound.ping" = "Ping";
 "sound.tritone" = "Tritone";
 
+/* Theme Settings */
+"settings.theme_title" = "Tema";
+"theme.purple_dream" = "Lila dröm";
+"theme.ocean_blue" = "Havsblå";
+"theme.sunset_orange" = "Solnedgång";
+"theme.forest_green" = "Skogsgrönt";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer-format";
 "settings.timer_format_subtitle" = "Hur timern ska visas";

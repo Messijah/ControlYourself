@@ -168,6 +168,13 @@
 "sound.ping" = "Ping";
 "sound.tritone" = "Tri-tone";
 
+/* Theme Settings */
+"settings.theme_title" = "Theme";
+"theme.purple_dream" = "Purple Dream";
+"theme.ocean_blue" = "Ocean Blue";
+"theme.sunset_orange" = "Sunset Orange";
+"theme.forest_green" = "Forest Green";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer display";
 "settings.timer_format_subtitle" = "How timer is shown";

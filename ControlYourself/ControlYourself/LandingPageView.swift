@@ -14,6 +14,217 @@ fileprivate var isIPad: Bool {
     UIDevice.current.userInterfaceIdiom == .pad
 }
 
+// MARK: - App Theme
+enum AppTheme: String, CaseIterable, Identifiable {
+    case purpleDream = "purple_dream"
+    case oceanBlue = "ocean_blue"
+    case sunsetOrange = "sunset_orange"
+    case forestGreen = "forest_green"
+
+    var id: String { rawValue }
+
+    var localizedName: String {
+        NSLocalizedString("theme.\(rawValue)", comment: "")
+    }
+
+    // Primary gradient colors (used for timer circle when ready)
+    var primaryColors: [Color] {
+        switch self {
+        case .purpleDream:
+            return [Color(red: 0.6, green: 0.4, blue: 1.0), Color(red: 0.4, green: 0.6, blue: 1.0)]
+        case .oceanBlue:
+            return [Color(red: 0.2, green: 0.6, blue: 1.0), Color(red: 0.0, green: 0.8, blue: 1.0)]
+        case .sunsetOrange:
+            return [Color(red: 1.0, green: 0.6, blue: 0.2), Color(red: 1.0, green: 0.3, blue: 0.5)]
+        case .forestGreen:
+            return [Color(red: 0.2, green: 0.8, blue: 0.5), Color(red: 0.3, green: 0.9, blue: 0.4)]
+        }
+    }
+
+    // Secondary gradient colors (used for timer circle when counting down)
+    var secondaryColors: [Color] {
+        switch self {
+        case .purpleDream:
+            return [Color(red: 0.5, green: 0.3, blue: 0.8), Color(red: 0.3, green: 0.5, blue: 0.9)]
+        case .oceanBlue:
+            return [Color(red: 0.1, green: 0.4, blue: 0.7), Color(red: 0.0, green: 0.6, blue: 0.8)]
+        case .sunsetOrange:
+            return [Color(red: 0.8, green: 0.4, blue: 0.1), Color(red: 0.9, green: 0.2, blue: 0.4)]
+        case .forestGreen:
+            return [Color(red: 0.1, green: 0.6, blue: 0.3), Color(red: 0.2, green: 0.7, blue: 0.3)]
+        }
+    }
+
+    // Progress bar gradient colors
+    var progressGradient: [Color] {
+        switch self {
+        case .purpleDream:
+            return [Color(red: 0.7, green: 0.5, blue: 1.0), Color(red: 0.5, green: 0.7, blue: 1.0)]
+        case .oceanBlue:
+            return [Color(red: 0.3, green: 0.7, blue: 1.0), Color(red: 0.1, green: 0.9, blue: 1.0)]
+        case .sunsetOrange:
+            return [Color(red: 1.0, green: 0.7, blue: 0.3), Color(red: 1.0, green: 0.4, blue: 0.6)]
+        case .forestGreen:
+            return [Color(red: 0.3, green: 0.9, blue: 0.6), Color(red: 0.4, green: 1.0, blue: 0.5)]
+        }
+    }
+
+    // Icon/accent gradient colors (used for buttons and icons)
+    var accentGradient: [Color] {
+        switch self {
+        case .purpleDream:
+            return [.purple, .blue]
+        case .oceanBlue:
+            return [.blue, .cyan]
+        case .sunsetOrange:
+            return [.orange, .pink]
+        case .forestGreen:
+            return [.green, .mint]
+        }
+    }
+
+    // Shadow color for ready state
+    var readyShadowColor: Color {
+        switch self {
+        case .purpleDream:
+            return .green
+        case .oceanBlue:
+            return .cyan
+        case .sunsetOrange:
+            return .orange
+        case .forestGreen:
+            return .mint
+        }
+    }
+
+    // Shadow color for countdown state
+    var countdownShadowColor: Color {
+        switch self {
+        case .purpleDream:
+            return .purple
+        case .oceanBlue:
+            return .blue
+        case .sunsetOrange:
+            return .orange
+        case .forestGreen:
+            return .green
+        }
+    }
+
+    // Secondary shadow color for ready state
+    var readySecondaryShadowColor: Color {
+        switch self {
+        case .purpleDream:
+            return .mint
+        case .oceanBlue:
+            return Color(red: 0.0, green: 0.9, blue: 1.0)
+        case .sunsetOrange:
+            return .pink
+        case .forestGreen:
+            return .green
+        }
+    }
+
+    // Secondary shadow color for countdown state
+    var countdownSecondaryShadowColor: Color {
+        switch self {
+        case .purpleDream:
+            return .blue
+        case .oceanBlue:
+            return .cyan
+        case .sunsetOrange:
+            return .red
+        case .forestGreen:
+            return .mint
+        }
+    }
+
+    // Background gradient for cards
+    var cardBackgroundGradient: (isReady: Bool) -> [Color] {
+        return { isReady in
+            if isReady {
+                switch self {
+                case .purpleDream:
+                    return [Color.green.opacity(0.15), Color.mint.opacity(0.1)]
+                case .oceanBlue:
+                    return [Color.cyan.opacity(0.15), Color.blue.opacity(0.1)]
+                case .sunsetOrange:
+                    return [Color.orange.opacity(0.15), Color.pink.opacity(0.1)]
+                case .forestGreen:
+                    return [Color.mint.opacity(0.15), Color.green.opacity(0.1)]
+                }
+            } else {
+                switch self {
+                case .purpleDream:
+                    return [Color.purple.opacity(0.15), Color.blue.opacity(0.1)]
+                case .oceanBlue:
+                    return [Color.blue.opacity(0.15), Color.cyan.opacity(0.1)]
+                case .sunsetOrange:
+                    return [Color.orange.opacity(0.15), Color.red.opacity(0.1)]
+                case .forestGreen:
+                    return [Color.green.opacity(0.15), Color.mint.opacity(0.1)]
+                }
+            }
+        }
+    }
+
+    // Button gradient for main action button
+    var buttonGradient: (isReady: Bool) -> [Color] {
+        return { isReady in
+            if isReady {
+                switch self {
+                case .purpleDream:
+                    return [Color.green, Color.mint]
+                case .oceanBlue:
+                    return [Color.cyan, Color.blue]
+                case .sunsetOrange:
+                    return [Color.orange, Color.pink]
+                case .forestGreen:
+                    return [Color.mint, Color.green]
+                }
+            } else {
+                switch self {
+                case .purpleDream:
+                    return [Color.purple.opacity(0.6), Color.blue.opacity(0.6)]
+                case .oceanBlue:
+                    return [Color.blue.opacity(0.6), Color.cyan.opacity(0.6)]
+                case .sunsetOrange:
+                    return [Color.orange.opacity(0.6), Color.red.opacity(0.6)]
+                case .forestGreen:
+                    return [Color.green.opacity(0.6), Color.mint.opacity(0.6)]
+                }
+            }
+        }
+    }
+
+    // Get the button shadow color
+    var buttonShadowColor: (isReady: Bool) -> Color {
+        return { isReady in
+            if isReady {
+                return self.readyShadowColor
+            } else {
+                return self.countdownShadowColor
+            }
+        }
+    }
+}
+
+// MARK: - Theme Manager
+class ThemeManager: ObservableObject {
+    static let shared = ThemeManager()
+
+    @Published var currentTheme: AppTheme {
+        didSet {
+            UserDefaults.standard.set(currentTheme.rawValue, forKey: "selectedTheme")
+        }
+    }
+
+    init() {
+        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppTheme.purpleDream.rawValue
+        self.currentTheme = AppTheme(rawValue: savedTheme) ?? .purpleDream
+    }
+}
+
 // MARK: - Timer Completion Sounds
 struct TimerSound: Identifiable, Hashable {
     let id: UInt32
@@ -47,6 +258,7 @@ private enum UserDefaultsKeys {
 struct LandingPageView: View {
     @ObservedObject var snusManager: SnusManager
     @ObservedObject var statisticsManager: StatisticsManager
+    @StateObject private var themeManager = ThemeManager.shared
     var onRestartApp: () -> Void
     @State private var showingSettings = false
     @State private var showingStatistics = false
@@ -104,11 +316,13 @@ struct LandingPageView: View {
     }
 
     // Dynamic gradient that changes smoothly based on progress
-    // Red (start) -> Yellow (50%) -> Green (100%)
+    // Uses theme colors when ready, otherwise shows progress from secondary to primary
     func progressGradient(for progress: Double, isReady: Bool) -> LinearGradient {
+        let theme = themeManager.currentTheme
+
         if isReady {
             return LinearGradient(
-                colors: [.green, .mint],
+                colors: theme.primaryColors,
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
@@ -125,7 +339,7 @@ struct LandingPageView: View {
                 endPoint: .bottomTrailing
             )
         } else {
-            // Yellow to Green gradient (50% - 100%)
+            // Yellow to theme's ready color gradient (50% - 100%)
             let localProgress = (progress - 0.5) / 0.5
             let startRed = 1.0 - (localProgress * 0.5)
             let endRed = 1.0 - localProgress
@@ -188,7 +402,7 @@ struct LandingPageView: View {
                     Circle()
                         .stroke(
                             LinearGradient(
-                                colors: isReady ? [Color.green.opacity(0.15), Color.mint.opacity(0.1)] : [Color.purple.opacity(0.15), Color.blue.opacity(0.1)],
+                                colors: themeManager.currentTheme.cardBackgroundGradient(isReady: isReady),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             ),
@@ -200,7 +414,14 @@ struct LandingPageView: View {
                     // Celebration ring when ready
                     if isReady {
                         Circle()
-                            .stroke(AppTheme.successGradient, lineWidth: 20)
+                            .stroke(
+                                LinearGradient(
+                                    colors: themeManager.currentTheme.primaryColors,
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                ),
+                                lineWidth: 20
+                            )
                             .frame(width: 320, height: 320)
                             .scaleEffect(celebrationScale)
                             .opacity(2.0 - celebrationScale)
@@ -226,8 +447,18 @@ struct LandingPageView: View {
                             .stroke(Color.black.opacity(0.15), lineWidth: 1)
                             .frame(width: 283, height: 283)
                     }
-                    .shadow(color: isReady ? Color.green.opacity(0.5) : Color.purple.opacity(0.5), radius: isReady ? 45 : 30, x: 0, y: 15)
-                    .shadow(color: isReady ? Color.mint.opacity(0.4) : Color.blue.opacity(0.4), radius: 20, x: 0, y: 10)
+                    .shadow(
+                        color: (isReady ? themeManager.currentTheme.readyShadowColor : themeManager.currentTheme.countdownShadowColor).opacity(0.5),
+                        radius: isReady ? 45 : 30,
+                        x: 0,
+                        y: 15
+                    )
+                    .shadow(
+                        color: (isReady ? themeManager.currentTheme.readySecondaryShadowColor : themeManager.currentTheme.countdownSecondaryShadowColor).opacity(0.4),
+                        radius: 20,
+                        x: 0,
+                        y: 10
+                    )
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
 
                     // Content inside ring
@@ -236,7 +467,13 @@ struct LandingPageView: View {
                             // Celebration icon with gradient
                             ZStack {
                                 Circle()
-                                    .fill(AppTheme.successGradient)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: themeManager.currentTheme.primaryColors,
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
                                     .frame(width: 70, height: 70)
                                     .blur(radius: 20)
                                     .scaleEffect(isCelebrating ? 1.3 : 1.0)
@@ -416,7 +653,13 @@ struct LandingPageView: View {
                             ZStack {
                                 // Gradient background
                                 RoundedRectangle(cornerRadius: 22)
-                                    .fill((isReady || isFirstOfDay) ? AppTheme.successGradient : (snusManager.snusLeft > 0 ? AppTheme.accentGradient : AppTheme.dangerGradient))
+                                    .fill(
+                                        LinearGradient(
+                                            colors: themeManager.currentTheme.buttonGradient(isReady: isReady || isFirstOfDay),
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
 
                                 // Shimmer effect
                                 RoundedRectangle(cornerRadius: 22)
@@ -450,7 +693,12 @@ struct LandingPageView: View {
                                     )
                             }
                         )
-                        .shadow(color: ((isReady || isFirstOfDay) ? Color.green : Color.purple).opacity(0.5), radius: 20, x: 0, y: 10)
+                        .shadow(
+                            color: themeManager.currentTheme.buttonShadowColor(isReady: isReady || isFirstOfDay).opacity(0.5),
+                            radius: 20,
+                            x: 0,
+                            y: 10
+                        )
                         .shadow(color: .black.opacity(0.25), radius: 10, x: 0, y: 5)
                     }
                     .disabled(snusManager.snusLeft == 0)
@@ -980,6 +1228,8 @@ struct SettingsView: View {
     @State private var timerDisplayFormat: String
     @State private var selectedSoundID: UInt32
     @State private var showSoundPicker = false
+    @State private var selectedTheme: AppTheme
+    @State private var showThemePicker = false
 
     private let cheatMessages = [
         NSLocalizedString("cheat.no_discipline", comment: ""),
@@ -1076,12 +1326,20 @@ struct SettingsView: View {
         // Load Timer Completion Sound setting (default to 1315 - Anticipate)
         let savedSoundID = defaults.object(forKey: UserDefaultsKeys.timerCompletionSoundID) as? UInt32 ?? 1315
         _selectedSoundID = State(initialValue: savedSoundID)
+
+        // Load Theme setting (default to purpleDream)
+        let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppTheme.purpleDream.rawValue
+        _selectedTheme = State(initialValue: AppTheme(rawValue: savedTheme) ?? .purpleDream)
     }
 
     var body: some View {
         ZStack {
-            AppTheme.primaryGradient
-                .ignoresSafeArea()
+            LinearGradient(
+                colors: selectedTheme.primaryColors,
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
 
             ScrollView {
                 VStack(spacing: 24) {
@@ -1112,7 +1370,13 @@ struct SettingsView: View {
                                 VStack(spacing: 8) {
                                     HStack {
                                         Image(systemName: "clock.fill")
-                                            .foregroundStyle(AppTheme.accentGradient)
+                                            .foregroundStyle(
+                                                LinearGradient(
+                                                    colors: selectedTheme.accentGradient,
+                                                    startPoint: .topLeading,
+                                                    endPoint: .bottomTrailing
+                                                )
+                                            )
                                         Text(String(format: NSLocalizedString("settings.interval", comment: ""), snusManager.localizedSubstanceName))
                                             .font(.system(size: 16, weight: .medium, design: .rounded))
                                         Spacer()
@@ -1143,7 +1407,7 @@ struct SettingsView: View {
                                             applySettings()
                                         }
                                     })
-                                    .tint(AppTheme.accent)
+                                    .tint(selectedTheme.accentGradient[0])
                                 }
 
                                 Divider()
@@ -1575,6 +1839,102 @@ struct SettingsView: View {
                         .padding(.top, 12)
                     }
 
+                    // Theme Picker
+                    GlassCard {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button {
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                    showThemePicker.toggle()
+                                }
+                            } label: {
+                                HStack(spacing: 14) {
+                                    Image(systemName: "paintpalette.fill")
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: selectedTheme.accentGradient,
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(NSLocalizedString("settings.theme_title", comment: ""))
+                                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                                            .foregroundColor(.white)
+
+                                        Text(selectedTheme.localizedName)
+                                            .font(.system(size: 13, weight: .medium, design: .rounded))
+                                            .foregroundColor(.white.opacity(0.75))
+                                    }
+
+                                    Spacer()
+
+                                    Image(systemName: showThemePicker ? "chevron.up" : "chevron.down")
+                                        .font(.system(size: 14, weight: .semibold))
+                                        .foregroundColor(.white.opacity(0.6))
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+
+                            if showThemePicker {
+                                Divider()
+                                    .background(Color.white.opacity(0.2))
+                                    .padding(.vertical, 4)
+
+                                VStack(spacing: 8) {
+                                    ForEach(AppTheme.allCases) { theme in
+                                        Button {
+                                            let generator = UIImpactFeedbackGenerator(style: .light)
+                                            generator.impactOccurred()
+
+                                            // Save selection
+                                            selectedTheme = theme
+                                            UserDefaults.standard.set(theme.rawValue, forKey: "selectedTheme")
+                                            ThemeManager.shared.currentTheme = theme
+                                        } label: {
+                                            HStack {
+                                                // Theme color preview
+                                                HStack(spacing: 4) {
+                                                    ForEach(0..<theme.primaryColors.count, id: \.self) { index in
+                                                        RoundedRectangle(cornerRadius: 4)
+                                                            .fill(theme.primaryColors[index])
+                                                            .frame(width: 24, height: 24)
+                                                    }
+                                                }
+
+                                                Text(theme.localizedName)
+                                                    .font(.system(size: 14, weight: .medium, design: .rounded))
+                                                    .foregroundColor(.white.opacity(0.9))
+
+                                                Spacer()
+
+                                                if selectedTheme == theme {
+                                                    Image(systemName: "checkmark.circle.fill")
+                                                        .font(.system(size: 18))
+                                                        .foregroundColor(.green)
+                                                } else {
+                                                    Image(systemName: "circle")
+                                                        .font(.system(size: 18))
+                                                        .foregroundColor(.white.opacity(0.3))
+                                                }
+                                            }
+                                            .padding(.vertical, 8)
+                                            .padding(.horizontal, 12)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(selectedTheme == theme ? Color.white.opacity(0.15) : Color.clear)
+                                            )
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+
                     // Timer Display Format
                     GlassCard {
                         VStack(alignment: .leading, spacing: 16) {
@@ -1854,6 +2214,7 @@ struct SettingRow<Content: View>: View {
     let icon: String
     let title: String
     let content: Content
+    @StateObject private var themeManager = ThemeManager.shared
 
     init(icon: String, title: String, @ViewBuilder content: () -> Content) {
         self.icon = icon
@@ -1864,7 +2225,13 @@ struct SettingRow<Content: View>: View {
     var body: some View {
         HStack {
             Image(systemName: icon)
-                .foregroundStyle(AppTheme.accentGradient)
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: themeManager.currentTheme.accentGradient,
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
             Text(title)
                 .font(.system(size: 16, weight: .medium, design: .rounded))
             Spacer()
