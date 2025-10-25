@@ -140,7 +140,7 @@ enum AppTheme: String, CaseIterable, Identifiable {
     }
 
     // Background gradient for cards
-    var cardBackgroundGradient: (isReady: Bool) -> [Color] {
+    var cardBackgroundGradient: (Bool) -> [Color] {
         return { isReady in
             if isReady {
                 switch self {
@@ -169,7 +169,7 @@ enum AppTheme: String, CaseIterable, Identifiable {
     }
 
     // Button gradient for main action button
-    var buttonGradient: (isReady: Bool) -> [Color] {
+    var buttonGradient: (Bool) -> [Color] {
         return { isReady in
             if isReady {
                 switch self {
@@ -198,7 +198,7 @@ enum AppTheme: String, CaseIterable, Identifiable {
     }
 
     // Get the button shadow color
-    var buttonShadowColor: (isReady: Bool) -> Color {
+    var buttonShadowColor: (Bool) -> Color {
         return { isReady in
             if isReady {
                 return self.readyShadowColor
