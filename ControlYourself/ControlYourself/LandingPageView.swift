@@ -548,7 +548,7 @@ struct LandingPageView: View {
                                     )
                                     .monospacedDigit()
                                     .scaleEffect(isCelebrating ? 1.08 : 1.0)
-                                    .shadow(color: Color.green.opacity(0.3), radius: 12, x: 0, y: 6)
+                                    .shadow(color: themeManager.currentTheme.primaryColors[0].opacity(0.3), radius: 12, x: 0, y: 6)
                                     .shadow(color: .black.opacity(0.15), radius: 4, x: 0, y: 2)
                             }
                         }
@@ -803,8 +803,8 @@ struct LandingPageView: View {
                                         .fill(
                                             LinearGradient(
                                                 colors: [
-                                                    Color.cyan.opacity(0.15),
-                                                    Color.blue.opacity(0.10)
+                                                    themeManager.currentTheme.secondaryColors[0].opacity(0.15),
+                                                    themeManager.currentTheme.secondaryColors[1].opacity(0.10)
                                                 ],
                                                 startPoint: .topLeading,
                                                 endPoint: .bottomTrailing
@@ -827,7 +827,7 @@ struct LandingPageView: View {
                                     RoundedRectangle(cornerRadius: 18)
                                         .stroke(
                                             LinearGradient(
-                                                colors: [.cyan.opacity(0.4), .blue.opacity(0.2)],
+                                                colors: [themeManager.currentTheme.secondaryColors[0].opacity(0.4), themeManager.currentTheme.secondaryColors[1].opacity(0.2)],
                                                 startPoint: .topLeading,
                                                 endPoint: .bottomTrailing
                                             ),
@@ -835,11 +835,11 @@ struct LandingPageView: View {
                                         )
                                 }
                             )
-                            .shadow(color: .cyan.opacity(0.2), radius: 8, x: 0, y: 4)
+                            .shadow(color: themeManager.currentTheme.secondaryColors[0].opacity(0.2), radius: 8, x: 0, y: 4)
                             .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 5)
                         }
 
-                        // Settings Button - Redesigned with subtle purple gradient
+                        // Settings Button
                         Button {
                             showingSettings = true
                         } label: {
@@ -848,7 +848,7 @@ struct LandingPageView: View {
                                     .font(.system(size: 20, weight: .bold))
                                     .foregroundStyle(
                                         LinearGradient(
-                                            colors: [.purple, .indigo],
+                                            colors: themeManager.currentTheme.primaryColors,
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         )
@@ -866,8 +866,8 @@ struct LandingPageView: View {
                                         .fill(
                                             LinearGradient(
                                                 colors: [
-                                                    Color.purple.opacity(0.15),
-                                                    Color.indigo.opacity(0.10)
+                                                    themeManager.currentTheme.primaryColors[0].opacity(0.15),
+                                                    themeManager.currentTheme.primaryColors[1].opacity(0.10)
                                                 ],
                                                 startPoint: .topLeading,
                                                 endPoint: .bottomTrailing
@@ -890,7 +890,7 @@ struct LandingPageView: View {
                                     RoundedRectangle(cornerRadius: 18)
                                         .stroke(
                                             LinearGradient(
-                                                colors: [.purple.opacity(0.4), .indigo.opacity(0.2)],
+                                                colors: [themeManager.currentTheme.primaryColors[0].opacity(0.4), themeManager.currentTheme.primaryColors[1].opacity(0.2)],
                                                 startPoint: .topLeading,
                                                 endPoint: .bottomTrailing
                                             ),
@@ -898,7 +898,7 @@ struct LandingPageView: View {
                                         )
                                 }
                             )
-                            .shadow(color: .purple.opacity(0.2), radius: 8, x: 0, y: 4)
+                            .shadow(color: themeManager.currentTheme.primaryColors[0].opacity(0.2), radius: 8, x: 0, y: 4)
                             .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 5)
                         }
                     }
@@ -1116,28 +1116,31 @@ struct ModernStatCard: View {
 // MARK: - Mesh Gradient Background
 struct MeshGradientBackground: View {
     @State private var phase: CGFloat = 0
+    @StateObject private var themeManager = ThemeManager.shared
 
     var body: some View {
+        let theme = themeManager.currentTheme
+
         ZStack {
-            // Enhanced base gradient with richer colors
+            // Enhanced base gradient with theme colors
             LinearGradient(
                 colors: [
-                    Color(red: 0.12, green: 0.08, blue: 0.32),
-                    Color(red: 0.20, green: 0.12, blue: 0.42),
-                    Color(red: 0.16, green: 0.10, blue: 0.38),
-                    Color(red: 0.10, green: 0.06, blue: 0.30)
+                    theme.primaryColors[0].opacity(0.15),
+                    theme.primaryColors[1].opacity(0.20),
+                    theme.secondaryColors[0].opacity(0.18),
+                    theme.secondaryColors[1].opacity(0.12)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
 
-            // Animated mesh-like gradient overlay with more layers
+            // Animated mesh-like gradient overlay with theme colors
             ZStack {
-                // Top left purple glow
+                // Top left glow
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [Color.purple.opacity(0.35), Color.indigo.opacity(0.15), Color.clear],
+                            colors: [theme.primaryColors[0].opacity(0.35), theme.primaryColors[1].opacity(0.15), Color.clear],
                             center: .topLeading,
                             startRadius: 0,
                             endRadius: 450
@@ -1147,11 +1150,11 @@ struct MeshGradientBackground: View {
                     .blur(radius: 70)
                     .offset(y: phase * 25)
 
-                // Top right blue glow
+                // Top right glow
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [Color.blue.opacity(0.30), Color.cyan.opacity(0.12), Color.clear],
+                            colors: [theme.secondaryColors[0].opacity(0.30), theme.secondaryColors[1].opacity(0.12), Color.clear],
                             center: .topTrailing,
                             startRadius: 0,
                             endRadius: 400
@@ -1161,11 +1164,11 @@ struct MeshGradientBackground: View {
                     .blur(radius: 80)
                     .offset(y: -phase * 18)
 
-                // Bottom pink/magenta glow
+                // Bottom glow
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [Color.pink.opacity(0.25), Color.purple.opacity(0.10), Color.clear],
+                            colors: [theme.accentGradient[0].opacity(0.25), theme.accentGradient[1].opacity(0.10), Color.clear],
                             center: .bottomTrailing,
                             startRadius: 0,
                             endRadius: 350
@@ -1179,7 +1182,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [Color.indigo.opacity(0.20), Color.clear],
+                            colors: [theme.primaryColors[1].opacity(0.20), Color.clear],
                             center: .center,
                             startRadius: 0,
                             endRadius: 300
@@ -1637,7 +1640,7 @@ struct SettingsView: View {
                                     )
                             }
                         )
-                        .shadow(color: Color.purple.opacity(0.4), radius: 12, x: 0, y: 6)
+                        .shadow(color: themeManager.currentTheme.primaryColors[0].opacity(0.4), radius: 12, x: 0, y: 6)
                         .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 3)
                     }
                     .padding(.horizontal, 20)
@@ -1992,7 +1995,7 @@ struct SettingsView: View {
                                     )
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
-                                            .stroke(timerDisplayFormat == "HH" ? Color.green.opacity(0.5) : Color.clear, lineWidth: 2)
+                                            .stroke(timerDisplayFormat == "HH" ? themeManager.currentTheme.primaryColors[0].opacity(0.5) : Color.clear, lineWidth: 2)
                                     )
                                 }
 
@@ -2027,7 +2030,7 @@ struct SettingsView: View {
                                     )
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
-                                            .stroke(timerDisplayFormat == "HH:MM" ? Color.green.opacity(0.5) : Color.clear, lineWidth: 2)
+                                            .stroke(timerDisplayFormat == "HH:MM" ? themeManager.currentTheme.primaryColors[0].opacity(0.5) : Color.clear, lineWidth: 2)
                                     )
                                 }
 
@@ -2062,7 +2065,7 @@ struct SettingsView: View {
                                     )
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 14)
-                                            .stroke(timerDisplayFormat == "HH:MM:SS" ? Color.green.opacity(0.5) : Color.clear, lineWidth: 2)
+                                            .stroke(timerDisplayFormat == "HH:MM:SS" ? themeManager.currentTheme.primaryColors[0].opacity(0.5) : Color.clear, lineWidth: 2)
                                     )
                                 }
                             }
