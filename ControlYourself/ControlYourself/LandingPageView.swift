@@ -27,31 +27,31 @@ enum AppColorTheme: String, CaseIterable, Identifiable {
         NSLocalizedString("theme.\(rawValue)", comment: "")
     }
 
-    // Primary gradient colors (used for timer circle when ready)
+    // Primary gradient colors (used for timer circle when ready) - SOFTER, PASTEL
     var primaryColors: [Color] {
         switch self {
         case .purpleDream:
-            return [Color(red: 0.6, green: 0.4, blue: 1.0), Color(red: 0.4, green: 0.6, blue: 1.0)]
+            return [Color(red: 0.55, green: 0.75, blue: 0.85), Color(red: 0.65, green: 0.85, blue: 0.75)]
         case .oceanBlue:
-            return [Color(red: 0.2, green: 0.6, blue: 1.0), Color(red: 0.0, green: 0.8, blue: 1.0)]
+            return [Color(red: 0.50, green: 0.75, blue: 0.85), Color(red: 0.55, green: 0.85, blue: 0.90)]
         case .sunsetOrange:
-            return [Color(red: 1.0, green: 0.6, blue: 0.2), Color(red: 1.0, green: 0.3, blue: 0.5)]
+            return [Color(red: 0.95, green: 0.75, blue: 0.65), Color(red: 0.95, green: 0.70, blue: 0.75)]
         case .forestGreen:
-            return [Color(red: 0.2, green: 0.8, blue: 0.5), Color(red: 0.3, green: 0.9, blue: 0.4)]
+            return [Color(red: 0.60, green: 0.85, blue: 0.70), Color(red: 0.65, green: 0.90, blue: 0.75)]
         }
     }
 
-    // Secondary gradient colors (used for timer circle when counting down)
+    // Secondary gradient colors (used for timer circle when counting down) - SOFTER
     var secondaryColors: [Color] {
         switch self {
         case .purpleDream:
-            return [Color(red: 0.5, green: 0.3, blue: 0.8), Color(red: 0.3, green: 0.5, blue: 0.9)]
+            return [Color(red: 0.60, green: 0.65, blue: 0.80), Color(red: 0.55, green: 0.70, blue: 0.85)]
         case .oceanBlue:
-            return [Color(red: 0.1, green: 0.4, blue: 0.7), Color(red: 0.0, green: 0.6, blue: 0.8)]
+            return [Color(red: 0.45, green: 0.65, blue: 0.75), Color(red: 0.50, green: 0.75, blue: 0.80)]
         case .sunsetOrange:
-            return [Color(red: 0.8, green: 0.4, blue: 0.1), Color(red: 0.9, green: 0.2, blue: 0.4)]
+            return [Color(red: 0.85, green: 0.65, blue: 0.55), Color(red: 0.90, green: 0.60, blue: 0.65)]
         case .forestGreen:
-            return [Color(red: 0.1, green: 0.6, blue: 0.3), Color(red: 0.2, green: 0.7, blue: 0.3)]
+            return [Color(red: 0.50, green: 0.75, blue: 0.60), Color(red: 0.55, green: 0.80, blue: 0.65)]
         }
     }
 
@@ -1122,25 +1122,25 @@ struct MeshGradientBackground: View {
         let theme = themeManager.currentTheme
 
         ZStack {
-            // Enhanced base gradient with theme colors
+            // Enhanced base gradient with DARK background like original
             LinearGradient(
                 colors: [
-                    theme.primaryColors[0].opacity(0.15),
-                    theme.primaryColors[1].opacity(0.20),
-                    theme.secondaryColors[0].opacity(0.18),
-                    theme.secondaryColors[1].opacity(0.12)
+                    Color(red: 0.12, green: 0.08, blue: 0.32),
+                    Color(red: 0.20, green: 0.12, blue: 0.42),
+                    Color(red: 0.16, green: 0.10, blue: 0.38),
+                    Color(red: 0.10, green: 0.06, blue: 0.30)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
 
-            // Animated mesh-like gradient overlay with theme colors
+            // Animated mesh-like gradient overlay with SUBTLE theme colors
             ZStack {
                 // Top left glow
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[0].opacity(0.35), theme.primaryColors[1].opacity(0.15), Color.clear],
+                            colors: [theme.primaryColors[0].opacity(0.12), theme.primaryColors[1].opacity(0.08), Color.clear],
                             center: .topLeading,
                             startRadius: 0,
                             endRadius: 450
@@ -1154,7 +1154,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.secondaryColors[0].opacity(0.30), theme.secondaryColors[1].opacity(0.12), Color.clear],
+                            colors: [theme.secondaryColors[0].opacity(0.10), theme.secondaryColors[1].opacity(0.06), Color.clear],
                             center: .topTrailing,
                             startRadius: 0,
                             endRadius: 400
@@ -1168,7 +1168,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.accentGradient[0].opacity(0.25), theme.accentGradient[1].opacity(0.10), Color.clear],
+                            colors: [theme.accentGradient[0].opacity(0.08), theme.accentGradient[1].opacity(0.05), Color.clear],
                             center: .bottomTrailing,
                             startRadius: 0,
                             endRadius: 350
@@ -1182,7 +1182,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[1].opacity(0.20), Color.clear],
+                            colors: [theme.primaryColors[1].opacity(0.08), Color.clear],
                             center: .center,
                             startRadius: 0,
                             endRadius: 300
