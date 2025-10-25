@@ -27,31 +27,39 @@ enum AppColorTheme: String, CaseIterable, Identifiable {
         NSLocalizedString("theme.\(rawValue)", comment: "")
     }
 
-    // Primary gradient colors (used for timer circle when ready) - SOFTER, PASTEL
+    // Primary gradient colors - MODERN 2025 DESIGN: Sophisticated, harmonious
     var primaryColors: [Color] {
         switch self {
         case .purpleDream:
-            return [Color(red: 0.55, green: 0.75, blue: 0.85), Color(red: 0.65, green: 0.85, blue: 0.75)]
+            // Soft lavender to mint - dreamy, calming
+            return [Color(red: 0.68, green: 0.76, blue: 0.92), Color(red: 0.70, green: 0.92, blue: 0.84)]
         case .oceanBlue:
-            return [Color(red: 0.50, green: 0.75, blue: 0.85), Color(red: 0.55, green: 0.85, blue: 0.90)]
+            // Deep ocean to aqua - serene, professional
+            return [Color(red: 0.52, green: 0.73, blue: 0.89), Color(red: 0.56, green: 0.88, blue: 0.92)]
         case .sunsetOrange:
-            return [Color(red: 0.95, green: 0.75, blue: 0.65), Color(red: 0.95, green: 0.70, blue: 0.75)]
+            // Warm peach to rose - inviting, gentle
+            return [Color(red: 0.98, green: 0.82, blue: 0.71), Color(red: 0.97, green: 0.76, blue: 0.82)]
         case .forestGreen:
-            return [Color(red: 0.60, green: 0.85, blue: 0.70), Color(red: 0.65, green: 0.90, blue: 0.75)]
+            // Sage to mint - fresh, natural
+            return [Color(red: 0.67, green: 0.88, blue: 0.78), Color(red: 0.71, green: 0.94, blue: 0.82)]
         }
     }
 
-    // Secondary gradient colors (used for timer circle when counting down) - SOFTER
+    // Secondary gradient colors - SUBTLE DEPTH
     var secondaryColors: [Color] {
         switch self {
         case .purpleDream:
-            return [Color(red: 0.60, green: 0.65, blue: 0.80), Color(red: 0.55, green: 0.70, blue: 0.85)]
+            // Soft periwinkle - gentle contrast
+            return [Color(red: 0.64, green: 0.71, blue: 0.87), Color(red: 0.59, green: 0.77, blue: 0.88)]
         case .oceanBlue:
-            return [Color(red: 0.45, green: 0.65, blue: 0.75), Color(red: 0.50, green: 0.75, blue: 0.80)]
+            // Muted teal - calm depth
+            return [Color(red: 0.48, green: 0.69, blue: 0.81), Color(red: 0.52, green: 0.79, blue: 0.85)]
         case .sunsetOrange:
-            return [Color(red: 0.85, green: 0.65, blue: 0.55), Color(red: 0.90, green: 0.60, blue: 0.65)]
+            // Soft coral - warm glow
+            return [Color(red: 0.94, green: 0.73, blue: 0.65), Color(red: 0.95, green: 0.69, blue: 0.74)]
         case .forestGreen:
-            return [Color(red: 0.50, green: 0.75, blue: 0.60), Color(red: 0.55, green: 0.80, blue: 0.65)]
+            // Muted jade - earthy tone
+            return [Color(red: 0.59, green: 0.82, blue: 0.71), Color(red: 0.63, green: 0.87, blue: 0.76)]
         }
     }
 
@@ -1116,7 +1124,7 @@ struct ModernStatCard: View {
 // MARK: - Mesh Gradient Background
 struct MeshGradientBackground: View {
     @State private var phase: CGFloat = 0
-    @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject var themeManager = ThemeManager.shared
 
     var body: some View {
         let theme = themeManager.currentTheme
@@ -1209,7 +1217,7 @@ struct SettingsView: View {
     @ObservedObject var snusManager: SnusManager
     var onRestartApp: () -> Void
     @Environment(\.presentationMode) var presentationMode
-    @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject var themeManager = ThemeManager.shared
     @State private var snusInterval: Int
     @State private var paniksnus: Int
     @State private var showCheatAlert = false
@@ -1338,12 +1346,9 @@ struct SettingsView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: selectedTheme.primaryColors,
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
+            // Use same DARK background as main view
+            MeshGradientBackground()
+                .ignoresSafeArea()
 
             ScrollView {
                 VStack(spacing: 24) {
@@ -2218,7 +2223,7 @@ struct SettingRow<Content: View>: View {
     let icon: String
     let title: String
     let content: Content
-    @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject var themeManager = ThemeManager.shared
 
     init(icon: String, title: String, @ViewBuilder content: () -> Content) {
         self.icon = icon
