@@ -1134,13 +1134,32 @@ struct MeshGradientBackground: View {
         let theme = themeManager.currentTheme
 
         ZStack {
-            // Base gradient using THEME COLORS (dark versions)
+            // Base gradient - DARK background for ALL themes
             LinearGradient(
-                colors: [
-                    theme.secondaryColors[0].opacity(0.25),
-                    theme.secondaryColors[1].opacity(0.20),
-                    theme.primaryColors[0].opacity(0.22),
-                    theme.primaryColors[1].opacity(0.18)
+                colors: theme == .purpleDream ? [
+                    // Purple Dream: ORIGINAL dark purple/indigo
+                    Color(red: 0.12, green: 0.08, blue: 0.32),
+                    Color(red: 0.20, green: 0.12, blue: 0.42),
+                    Color(red: 0.16, green: 0.10, blue: 0.38),
+                    Color(red: 0.10, green: 0.06, blue: 0.30)
+                ] : theme == .oceanBlue ? [
+                    // Ocean Blue: Deep navy/midnight
+                    Color(red: 0.08, green: 0.12, blue: 0.28),
+                    Color(red: 0.12, green: 0.18, blue: 0.35),
+                    Color(red: 0.10, green: 0.15, blue: 0.32),
+                    Color(red: 0.06, green: 0.10, blue: 0.25)
+                ] : theme == .sunsetOrange ? [
+                    // Sunset Orange: Deep plum/burgundy
+                    Color(red: 0.22, green: 0.10, blue: 0.18),
+                    Color(red: 0.28, green: 0.12, blue: 0.22),
+                    Color(red: 0.25, green: 0.11, blue: 0.20),
+                    Color(red: 0.18, green: 0.08, blue: 0.15)
+                ] : [
+                    // Forest Green: Deep forest/charcoal
+                    Color(red: 0.08, green: 0.18, blue: 0.15),
+                    Color(red: 0.12, green: 0.24, blue: 0.20),
+                    Color(red: 0.10, green: 0.21, blue: 0.18),
+                    Color(red: 0.06, green: 0.15, blue: 0.12)
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -1148,11 +1167,13 @@ struct MeshGradientBackground: View {
 
             // Animated mesh-like gradient overlay with THEME colors
             ZStack {
+                let glowOpacity = theme == .purpleDream ? 0.12 : 0.35
+
                 // Top left glow - primary color
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[0].opacity(0.35), theme.primaryColors[1].opacity(0.20), Color.clear],
+                            colors: [theme.primaryColors[0].opacity(glowOpacity), theme.primaryColors[1].opacity(glowOpacity * 0.6), Color.clear],
                             center: .topLeading,
                             startRadius: 0,
                             endRadius: 450
@@ -1166,7 +1187,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.secondaryColors[0].opacity(0.30), theme.secondaryColors[1].opacity(0.18), Color.clear],
+                            colors: [theme.secondaryColors[0].opacity(glowOpacity * 0.85), theme.secondaryColors[1].opacity(glowOpacity * 0.5), Color.clear],
                             center: .topTrailing,
                             startRadius: 0,
                             endRadius: 400
@@ -1180,7 +1201,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.accentGradient[0].opacity(0.28), theme.accentGradient[1].opacity(0.15), Color.clear],
+                            colors: [theme.accentGradient[0].opacity(glowOpacity * 0.8), theme.accentGradient[1].opacity(glowOpacity * 0.45), Color.clear],
                             center: .bottomTrailing,
                             startRadius: 0,
                             endRadius: 350
@@ -1194,7 +1215,7 @@ struct MeshGradientBackground: View {
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [theme.primaryColors[1].opacity(0.25), Color.clear],
+                            colors: [theme.primaryColors[1].opacity(glowOpacity * 0.7), Color.clear],
                             center: .center,
                             startRadius: 0,
                             endRadius: 300
