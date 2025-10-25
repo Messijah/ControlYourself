@@ -115,7 +115,7 @@ class SubscriptionManager: ObservableObject {
                     activeSubscription = subscription
 
                     // Check if in trial period
-                    if let expirationDate = transaction.expirationDate {
+                    if transaction.expirationDate != nil {
                         let purchaseDate = transaction.purchaseDate
                         let trialDuration: TimeInterval = 7 * 24 * 60 * 60 // 7 days
                         if Date().timeIntervalSince(purchaseDate) < trialDuration {
