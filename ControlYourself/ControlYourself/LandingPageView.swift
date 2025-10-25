@@ -1209,6 +1209,7 @@ struct SettingsView: View {
     @ObservedObject var snusManager: SnusManager
     var onRestartApp: () -> Void
     @Environment(\.presentationMode) var presentationMode
+    @StateObject private var themeManager = ThemeManager.shared
     @State private var snusInterval: Int
     @State private var paniksnus: Int
     @State private var showCheatAlert = false
