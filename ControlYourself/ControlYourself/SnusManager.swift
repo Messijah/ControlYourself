@@ -158,6 +158,8 @@ class SnusManager: ObservableObject {
             if remainingTime > 0 {
                 self.countdownTime = remainingTime
                 self.timerEndDate = timerStartTime.addingTimeInterval(self.snusInterval)
+                // Re-schedule notification for timer end (in case app was killed/restarted)
+                scheduleTimerEndNotification(at: self.timerEndDate!)
             } else {
                 // Timer completed - update all settings to maintain consistency
                 self.countdownTime = 0
@@ -447,6 +449,47 @@ class SnusManager: ObservableObject {
         }
     }
 
+    // Schedule notification to fire at exact timer end date (for background/killed app)
+    private func scheduleTimerEndNotification(at endDate: Date) {
+        // Check if user has enabled timer completion notifications
+        let defaults = SnusManager.sharedDefaults
+        let isNotificationEnabled = defaults.object(forKey: UserDefaultsKeys.isTimerNotificationEnabled) as? Bool ?? true
+
+        guard isNotificationEnabled else {
+            print("⏰ Timer completion notifications are disabled by user")
+            return
+        }
+
+        // Cancel any existing timer notification
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timer_completion"])
+
+        let timeInterval = endDate.timeIntervalSinceNow
+        guard timeInterval > 0 else {
+            print("⚠️ Timer end date is in the past, not scheduling notification")
+            return
+        }
+
+        let content = UNMutableNotificationContent()
+        let celebrationMessage = celebrationMessages().randomElement() ?? NSLocalizedString("celebration.its_time", comment: "")
+        content.title = celebrationMessage
+        content.body = NSLocalizedString("notification.body", comment: "")
+        content.sound = .defaultCritical // Critical sound plays even when app is killed
+        content.interruptionLevel = .timeSensitive
+
+        print("🔔 Scheduling notification for \(endDate) (\(timeInterval) seconds from now)")
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+        let request = UNNotificationRequest(identifier: "timer_completion", content: content, trigger: trigger)
+
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("❌ Error scheduling notification: \(error.localizedDescription)")
+            } else {
+                print("✅ Notification scheduled successfully for timer end!")
+            }
+        }
+    }
+
     private func scheduleNotification() {
         // Check if user has enabled timer completion notifications
         let defaults = SnusManager.sharedDefaults
@@ -682,6 +725,9 @@ class SnusManager: ObservableObject {
 
         // Calculate and store end date
         timerEndDate = Date().addingTimeInterval(snusInterval)
+
+        // Schedule notification to fire at exact timer end time
+        scheduleTimerEndNotification(at: timerEndDate!)
 
         // Save start time for background persistence
         SnusManager.sharedDefaults.set(Date(), forKey: UserDefaultsKeys.timerStartTime)
