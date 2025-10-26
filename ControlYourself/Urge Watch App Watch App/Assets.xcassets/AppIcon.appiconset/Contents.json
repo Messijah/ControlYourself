@@ -87,6 +87,14 @@
       "subtype" : "42mm"
     },
     {
+      "filename" : "app-icon-216.png",
+      "idiom" : "watch",
+      "role" : "quickLook",
+      "scale" : "2x",
+      "size" : "108x108",
+      "subtype" : "44mm"
+    },
+    {
       "filename" : "app-icon-1024.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
