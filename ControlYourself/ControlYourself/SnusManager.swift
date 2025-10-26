@@ -428,7 +428,7 @@ class SnusManager: ObservableObject {
                     // Timer reached zero - update Live Activity with final state
                     self.countdownTime = 0
                     self.updateLiveActivity()
-                    self.scheduleNotification(playSound: true) // Play sound when timer actively reaches zero in foreground
+                    self.scheduleNotification() // Play sound when timer reaches zero
 
                     // Save countdownTime = 0 to UserDefaults
                     SnusManager.sharedDefaults.set(0, forKey: UserDefaultsKeys.countdownTime)
@@ -447,7 +447,7 @@ class SnusManager: ObservableObject {
         }
     }
 
-    private func scheduleNotification(playSound: Bool = false) {
+    private func scheduleNotification() {
         // Check if user has enabled timer completion notifications
         let defaults = SnusManager.sharedDefaults
         let isNotificationEnabled = defaults.object(forKey: UserDefaultsKeys.isTimerNotificationEnabled) as? Bool ?? true
@@ -459,24 +459,22 @@ class SnusManager: ObservableObject {
 
         print("⏰ Timer reached 0 - triggering notifications and haptics")
 
-        // Only trigger haptic and sound if explicitly requested (when timer actively reaches zero in foreground)
-        if playSound {
-            DispatchQueue.main.async {
-                print("📳 Triggering haptic feedback and sound")
+        // ALWAYS trigger haptic and sound when timer reaches zero (foreground)
+        DispatchQueue.main.async {
+            print("📳 Triggering haptic feedback and sound")
 
-                // Get selected sound from UserDefaults (default to 1315 - Anticipate)
-                let defaults = SnusManager.sharedDefaults
-                let soundID = defaults.object(forKey: "timerCompletionSoundID") as? UInt32 ?? 1315
+            // Get selected sound from UserDefaults (default to 1315 - Anticipate)
+            let defaults = SnusManager.sharedDefaults
+            let soundID = defaults.object(forKey: "timerCompletionSoundID") as? UInt32 ?? 1315
 
-                // Use system sound with vibration - respects silent mode
-                // Plays sound when ringer is on, vibrates when silent
-                AudioServicesPlaySystemSound(SystemSoundID(soundID))
+            // Use system sound with vibration - respects silent mode
+            // Plays sound when ringer is on, vibrates when silent
+            AudioServicesPlaySystemSound(SystemSoundID(soundID))
 
-                // Also trigger haptic feedback for extra emphasis
-                let generator = UINotificationFeedbackGenerator()
-                generator.prepare()
-                generator.notificationOccurred(.success)
-            }
+            // Also trigger haptic feedback for extra emphasis
+            let generator = UINotificationFeedbackGenerator()
+            generator.prepare()
+            generator.notificationOccurred(.success)
         }
 
         let content = UNMutableNotificationContent()
@@ -484,7 +482,8 @@ class SnusManager: ObservableObject {
         let celebrationMessage = celebrationMessages().randomElement() ?? NSLocalizedString("celebration.its_time", comment: "")
         content.title = celebrationMessage
         content.body = NSLocalizedString("notification.body", comment: "")
-        content.sound = .default
+        // Use critical sound to ensure it plays even when app is killed/background
+        content.sound = .defaultCritical
         content.interruptionLevel = .timeSensitive // Makes sure notification shows up
 
         print("🔔 Scheduling notification with title: '\(celebrationMessage)'")
