@@ -772,6 +772,7 @@ class SnusManager: ObservableObject {
         defaults.set(countdownTime, forKey: UserDefaultsKeys.countdownTime)
         defaults.set(substanceName, forKey: UserDefaultsKeys.selectedSubstance)  // Save substance name
         defaults.set(true, forKey: UserDefaultsKeys.hasConfiguredSettings)
+        defaults.set(true, forKey: UserDefaultsKeys.hasBeenInitialized)  // CRITICAL: Always set this to ensure init() reads from UserDefaults
     }
 
     func resetCountdown() {
