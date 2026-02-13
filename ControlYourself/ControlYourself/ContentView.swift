@@ -202,6 +202,7 @@ struct ContentView: View {
     @State private var navigateToLandingPage = false
     @State private var restartApp = false
     @State private var showPaywall = false
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var hasConfiguredSettings: Bool {
         // Check if app has been installed before using standard UserDefaults
@@ -229,29 +230,6 @@ struct ContentView: View {
         return sharedDefaults.bool(forKey: "hasConfiguredSettings")
     }
 
-    var shouldShowPaywall: Bool {
-        // Never show if already subscribed
-        guard !subscriptionManager.isSubscribed else { return false }
-
-        // Check if user has seen paywall before
-        let hasSeenPaywall = UserDefaults.standard.bool(forKey: "hasSeenPaywall")
-
-        // FIRST TIME: Always show paywall once (can be dismissed)
-        if !hasSeenPaywall {
-            return true
-        }
-
-        // AFTER FIRST TIME: Show again after 2 days to remind
-        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
-            return false
-        }
-
-        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
-
-        // Show again after 2 days (more persistent reminder)
-        return daysSinceInstall >= 2
-    }
-
     var body: some View {
         NavigationStack {
             if showWelcome {
@@ -263,7 +241,7 @@ struct ContentView: View {
                             if hasConfiguredSettings {
                                 navigateToLandingPage = true
                             }
-                            // Note: Paywall logic moved to LandingPageView.onAppear
+                            // Paywall is handled by .onChange(of: hasLoadedEntitlements)
                         }
                     }
             } else if navigateToLandingPage {
@@ -279,13 +257,14 @@ struct ContentView: View {
                     }
                 )
                 .onAppear {
-                    // Check if we should show paywall after landing page appears
-                    if shouldShowPaywall {
-                        // Delay 1 second so user sees main screen first
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            showPaywall = true
-                        }
+                    // Mark onboarding complete once user reaches the main screen
+                    if !hasCompletedOnboarding {
+                        hasCompletedOnboarding = true
+                        // First time reaching landing page — let user explore before paywall
+                        return
                     }
+                    // Returning user: wait for entitlement check, then show paywall if needed
+                    // (don't show while still loading to avoid false-positive flash)
                 }
             } else if let selectedNjutning = selectedNjutning {
                 NjutningsInställningarView(
@@ -301,10 +280,18 @@ struct ContentView: View {
         }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
-                .onAppear {
-                    // Mark that user has seen the paywall
-                    UserDefaults.standard.set(true, forKey: "hasSeenPaywall")
-                }
+        }
+        .onChange(of: subscriptionManager.hasLoadedEntitlements) { _, loaded in
+            // Once entitlements are loaded, show paywall for returning non-subscribed users
+            if loaded && hasCompletedOnboarding && !subscriptionManager.isSubscribed {
+                showPaywall = true
+            }
+        }
+        .onChange(of: subscriptionManager.isSubscribed) { _, isSubscribed in
+            // Dismiss paywall automatically when user subscribes
+            if isSubscribed {
+                showPaywall = false
+            }
         }
         .onChange(of: restartApp) { _, newValue in
             if newValue {

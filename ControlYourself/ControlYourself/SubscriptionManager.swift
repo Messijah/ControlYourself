@@ -13,6 +13,7 @@ class SubscriptionManager: ObservableObject {
     @Published private(set) var subscriptions: [Product] = []
     @Published private(set) var purchasedSubscriptions: [Product] = []
     @Published private(set) var subscriptionStatus: SubscriptionStatus = .notSubscribed
+    @Published private(set) var hasLoadedEntitlements = false
 
     private var updateListenerTask: Task<Void, Error>?
 
@@ -36,6 +37,7 @@ class SubscriptionManager: ObservableObject {
         Task {
             await loadProducts()
             await updateSubscriptionStatus()
+            self.hasLoadedEntitlements = true
         }
     }
 
