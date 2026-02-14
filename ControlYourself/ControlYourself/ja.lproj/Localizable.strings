@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "1日あたりの%@の数";
 "setup.interval_between" = "%@の間隔";
 "setup.hours" = "時間";
+"setup.hours_short" = "時間";
+"setup.minutes_short" = "分";
 "setup.panic_per_week" = "週あたりの緊急%@";
 "setup.save_continue" = "保存して続行";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "%@を吸う";
 "main.take_one_ready" = "%@を吸おう！ ✨";
 "main.start_day" = "%@で一日を始めよう！";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "君ならできる！ 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "例 02:30";
 "settings.timer_format_hours_minutes_seconds" = "時間:分:秒";
 "settings.timer_format_hours_minutes_seconds_example" = "例 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

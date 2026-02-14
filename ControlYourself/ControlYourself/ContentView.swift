@@ -511,7 +511,7 @@ struct NjutningsInställningarView: View {
 
     // Local state - starts with default values, NOT what's in snusManager
     @State private var antalPerDag: Int = 10  // Default: 10 per day
-    @State private var snusInterval: Int = 2  // Default: 2 hours
+    @State private var snusIntervalMinutes: Int = 120  // Default: 120 minutes (2 hours)
     @State private var paniksnus: Int = 5     // Default: 5 panic per week
 
     // Localized substance name for display (plural/title form)
@@ -520,6 +520,19 @@ struct NjutningsInställningarView: View {
             return NSLocalizedString("substance.cigarettes", comment: "")
         } else {
             return NSLocalizedString("substance.snus", comment: "")
+        }
+    }
+
+    // Format minutes as "Xh Ymin" or "Ymin"
+    private func formatMinutesDisplay(_ totalMinutes: Int) -> String {
+        let hours = totalMinutes / 60
+        let minutes = totalMinutes % 60
+        if hours > 0 && minutes > 0 {
+            return "\(hours)" + NSLocalizedString("setup.hours_short", comment: "h") + " \(minutes)" + NSLocalizedString("setup.minutes_short", comment: "min")
+        } else if hours > 0 {
+            return "\(hours) " + NSLocalizedString("setup.hours", comment: "hours")
+        } else {
+            return "\(minutes) " + NSLocalizedString("setup.minutes_short", comment: "min")
         }
     }
 
@@ -591,15 +604,15 @@ struct NjutningsInställningarView: View {
                                         Spacer()
                                     }
                                     HStack {
-                                        Text("\(snusInterval) " + NSLocalizedString("setup.hours", comment: "hours"))
+                                        Text(formatMinutesDisplay(snusIntervalMinutes))
                                             .font(.system(size: 24, weight: .bold, design: .rounded))
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
                                     Slider(value: Binding(
-                                        get: { Double(snusInterval) },
-                                        set: { snusInterval = Int($0) }
-                                    ), in: 1...8, step: 1)
+                                        get: { Double(snusIntervalMinutes) },
+                                        set: { snusIntervalMinutes = Int($0) }
+                                    ), in: 15...480, step: 15)
                                         .tint(AppTheme.accent)
                                 }
 
@@ -641,7 +654,7 @@ struct NjutningsInställningarView: View {
                         // Update SnusManager with local state values
                         snusManager.substanceName = selectedNjutning.rawValue.lowercased()
                         snusManager.snusLeft = antalPerDag              // Set antal per dag
-                        snusManager.snusInterval = TimeInterval(snusInterval * 3600)  // Convert hours to seconds
+                        snusManager.snusInterval = TimeInterval(snusIntervalMinutes * 60)  // Convert minutes to seconds
                         snusManager.paniksnus = paniksnus                // Set max panic per week
                         snusManager.paniksnusLeft = paniksnus            // Set current panic left to max
 

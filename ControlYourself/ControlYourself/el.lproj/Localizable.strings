@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "Αριθμός %@ ημερησίως";
 "setup.interval_between" = "Διάστημα μεταξύ %@";
 "setup.hours" = "ώρες";
+"setup.hours_short" = "ω";
+"setup.minutes_short" = "λ";
 "setup.panic_per_week" = "Έκτακτα %@ εβδομαδιαίως";
 "setup.save_continue" = "Αποθήκευση και συνέχεια";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "Πάρε ένα %@";
 "main.take_one_ready" = "Πάρε ένα %@! ✨";
 "main.start_day" = "Ξεκίνα τη μέρα με %@!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Μπορείς! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "π.χ. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Ώρες:Λεπτά:Δευτερόλεπτα";
 "settings.timer_format_hours_minutes_seconds_example" = "π.χ. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

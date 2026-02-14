@@ -144,6 +144,9 @@ class SubscriptionManager: ObservableObject {
             subscriptionStatus = .notSubscribed
             purchasedSubscriptions = []
         }
+
+        // Cache subscription state for offline fallback
+        UserDefaults.standard.set(subscriptionStatus == .subscribed || subscriptionStatus == .inTrial, forKey: "cachedIsSubscribed")
     }
 
     // MARK: - Transaction Listener
@@ -181,7 +184,11 @@ class SubscriptionManager: ObservableObject {
     // MARK: - Subscription Info
 
     var isSubscribed: Bool {
-        subscriptionStatus == .subscribed || subscriptionStatus == .inTrial
+        if hasLoadedEntitlements {
+            return subscriptionStatus == .subscribed || subscriptionStatus == .inTrial
+        }
+        // Fallback to cached value when entitlements haven't loaded (e.g. offline)
+        return UserDefaults.standard.bool(forKey: "cachedIsSubscribed")
     }
 
     var isInTrialPeriod: Bool {

@@ -17,13 +17,17 @@ struct SnusTimerAttributes: ActivityAttributes {
         var progress: Double
         var celebrationMessage: String?
         var substanceName: String // e.g., "snus" or "cigaretter"
+        var waitingMessage: String?
+        var leftLabel: String
 
-        init(endDate: Date, isReady: Bool, snusLeft: Int, totalTime: TimeInterval, celebrationMessage: String? = nil, substanceName: String = "snus") {
+        init(endDate: Date, isReady: Bool, snusLeft: Int, totalTime: TimeInterval, celebrationMessage: String? = nil, substanceName: String = "snus", waitingMessage: String? = nil, leftLabel: String = "left") {
             self.endDate = endDate
             self.isReady = isReady
             self.snusLeft = snusLeft
             self.celebrationMessage = celebrationMessage
             self.substanceName = substanceName
+            self.waitingMessage = waitingMessage
+            self.leftLabel = leftLabel
             // Calculate progress (0.0 to 1.0) based on time remaining
             let timeRemaining = max(0, endDate.timeIntervalSinceNow)
             if totalTime > 0 {

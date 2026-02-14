@@ -35,6 +35,12 @@ private enum UserDefaultsKeys {
     static let lastWeekResetDate = "lastWeekResetDate"
     static let isDynamicIslandEnabled = "isDynamicIslandEnabled"
     static let isTimerNotificationEnabled = "isTimerNotificationEnabled"
+    // Auto-progression (nedtrappning)
+    static let isProgressionEnabled = "isProgressionEnabled"
+    static let progressionStartInterval = "progressionStartInterval"     // seconds
+    static let progressionTargetInterval = "progressionTargetInterval"   // seconds
+    static let progressionWeeks = "progressionWeeks"                     // total weeks
+    static let progressionStartDate = "progressionStartDate"            // Date when started
 }
 
 class SnusManager: ObservableObject {
@@ -47,6 +53,7 @@ class SnusManager: ObservableObject {
     @Published var paniksnus: Int
     @Published var substanceName: String = "snus" // Lowercase substance name for dynamic text (internal identifier)
     @Published var snusInterval: TimeInterval // Tid mellan snusar i sekunder.
+    @Published var isProgressionEnabled: Bool = false
     private var timer: Timer?
     private var isTimerRunning: Bool = false
     private var currentActivity: Activity<SnusTimerAttributes>?
@@ -93,6 +100,17 @@ class SnusManager: ObservableObject {
         ]
     }
 
+    // Encouragement messages for waiting state (used in Live Activity)
+    private func encouragementMessages() -> [String] {
+        return [
+            NSLocalizedString("encouragement.you_can_do_it", comment: ""),
+            NSLocalizedString("encouragement.hold_on", comment: ""),
+            NSLocalizedString("encouragement.good_job", comment: ""),
+            NSLocalizedString("encouragement.keep_going", comment: ""),
+            NSLocalizedString("encouragement.you_are_strong", comment: "")
+        ]
+    }
+
     init() {
         let defaults = SnusManager.sharedDefaults
 
@@ -104,7 +122,7 @@ class SnusManager: ObservableObject {
             self.paniksnus = max(1, defaults.integer(forKey: UserDefaultsKeys.paniksnus))
             self.snusLeft = defaults.integer(forKey: UserDefaultsKeys.snusLeft)  // 0 is valid here
             self.paniksnusLeft = defaults.integer(forKey: UserDefaultsKeys.paniksnusLeft)  // 0 is valid here
-            self.snusInterval = max(3600, defaults.double(forKey: UserDefaultsKeys.snusInterval))
+            self.snusInterval = max(900, defaults.double(forKey: UserDefaultsKeys.snusInterval))  // Minimum 15 minutes (900 seconds)
 
             // DON'T load countdownTime from UserDefaults yet - will be calculated later
             // based on whether timer is active or if we've started today
@@ -120,6 +138,9 @@ class SnusManager: ObservableObject {
             // Mark as initialized
             defaults.set(true, forKey: UserDefaultsKeys.hasBeenInitialized)
         }
+
+        // Load auto-progression state
+        self.isProgressionEnabled = defaults.bool(forKey: UserDefaultsKeys.isProgressionEnabled)
 
         // Load selected substance name
         if let savedSubstance = defaults.string(forKey: UserDefaultsKeys.selectedSubstance) {
@@ -610,7 +631,9 @@ class SnusManager: ObservableObject {
             snusLeft: currentSnusLeft,
             totalTime: currentSnusInterval,
             celebrationMessage: message,
-            substanceName: currentSubstanceName
+            substanceName: currentSubstanceName,
+            waitingMessage: encouragementMessages().randomElement(),
+            leftLabel: NSLocalizedString("main.remaining", comment: "")
         )
 
         do {
@@ -656,7 +679,9 @@ class SnusManager: ObservableObject {
             snusLeft: snusLeft,
             totalTime: snusInterval,
             celebrationMessage: message,
-            substanceName: localizedSubstanceName
+            substanceName: localizedSubstanceName,
+            waitingMessage: encouragementMessages().randomElement(),
+            leftLabel: NSLocalizedString("main.remaining", comment: "")
         )
 
         Task {
@@ -678,7 +703,9 @@ class SnusManager: ObservableObject {
             snusLeft: snusLeft,
             totalTime: snusInterval,
             celebrationMessage: celebrationMessages().randomElement(),
-            substanceName: localizedSubstanceName
+            substanceName: localizedSubstanceName,
+            waitingMessage: nil,
+            leftLabel: NSLocalizedString("main.remaining", comment: "")
         )
 
         await activity.end(
@@ -894,55 +921,124 @@ class SnusManager: ObservableObject {
         print("✅ Daily reset complete - snusLeft: \(snusLeft), countdownTime: \(countdownTime)")
     }
 
-    private func resetWeeklyValues() {
-        let calendar = Calendar.current
-        let now = Date()
-        let weekday = calendar.component(.weekday, from: now)
-        let weekdayName = ["", "Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"][weekday]
+    // MARK: - Auto-Progression
 
+    /// Returns the current week number in the progression (1-based), or nil if not active
+    var progressionCurrentWeek: Int? {
+        let defaults = SnusManager.sharedDefaults
+        guard isProgressionEnabled,
+              let startDate = defaults.object(forKey: UserDefaultsKeys.progressionStartDate) as? Date else {
+            return nil
+        }
+        let totalWeeks = max(1, defaults.integer(forKey: UserDefaultsKeys.progressionWeeks))
+        let weeksPassed = Calendar.current.dateComponents([.weekOfYear], from: startDate, to: Date()).weekOfYear ?? 0
+        return min(weeksPassed + 1, totalWeeks)
+    }
+
+    /// Returns the configured target interval in seconds
+    var progressionTargetIntervalValue: TimeInterval {
+        return SnusManager.sharedDefaults.double(forKey: UserDefaultsKeys.progressionTargetInterval)
+    }
+
+    /// Returns the total number of progression weeks
+    var progressionTotalWeeks: Int {
+        return max(1, SnusManager.sharedDefaults.integer(forKey: UserDefaultsKeys.progressionWeeks))
+    }
+
+    /// Returns the target interval for the current progression week
+    var progressionCurrentTargetInterval: TimeInterval? {
+        let defaults = SnusManager.sharedDefaults
+        guard isProgressionEnabled,
+              let startDate = defaults.object(forKey: UserDefaultsKeys.progressionStartDate) as? Date else {
+            return nil
+        }
+        let startInterval = defaults.double(forKey: UserDefaultsKeys.progressionStartInterval)
+        let targetInterval = defaults.double(forKey: UserDefaultsKeys.progressionTargetInterval)
+        let totalWeeks = max(1, defaults.integer(forKey: UserDefaultsKeys.progressionWeeks))
+
+        guard startInterval > 0, targetInterval > startInterval, totalWeeks > 0 else { return nil }
+
+        let weeksPassed = Calendar.current.dateComponents([.weekOfYear], from: startDate, to: Date()).weekOfYear ?? 0
+        let currentWeek = min(weeksPassed, totalWeeks - 1)  // 0-based, clamped
+
+        // Linear interpolation between start and target
+        let stepPerWeek = (targetInterval - startInterval) / Double(totalWeeks - 1 > 0 ? totalWeeks - 1 : 1)
+        let calculatedInterval = startInterval + (stepPerWeek * Double(currentWeek))
+
+        // Round to nearest 15 minutes (900 seconds)
+        return (calculatedInterval / 900).rounded() * 900
+    }
+
+    /// Start a new progression plan
+    func startProgression(startInterval: TimeInterval, targetInterval: TimeInterval, weeks: Int) {
+        let defaults = SnusManager.sharedDefaults
+        defaults.set(true, forKey: UserDefaultsKeys.isProgressionEnabled)
+        defaults.set(startInterval, forKey: UserDefaultsKeys.progressionStartInterval)
+        defaults.set(targetInterval, forKey: UserDefaultsKeys.progressionTargetInterval)
+        defaults.set(weeks, forKey: UserDefaultsKeys.progressionWeeks)
+        defaults.set(Date(), forKey: UserDefaultsKeys.progressionStartDate)
+        isProgressionEnabled = true
+
+        // Set the starting interval
+        snusInterval = startInterval
+        saveSettings()
+    }
+
+    /// Stop the progression plan
+    func stopProgression() {
+        let defaults = SnusManager.sharedDefaults
+        defaults.set(false, forKey: UserDefaultsKeys.isProgressionEnabled)
+        isProgressionEnabled = false
+    }
+
+    /// Apply progression interval for the current week (called during weekly reset)
+    private func applyProgressionIfNeeded() {
+        guard isProgressionEnabled, let targetInterval = progressionCurrentTargetInterval else { return }
+
+        let oldInterval = snusInterval
+        snusInterval = targetInterval
+        saveSettings()
+
+        print("📈 Auto-progression: interval changed from \(Int(oldInterval/60))min to \(Int(targetInterval/60))min")
+
+        // Check if progression is complete
+        if let currentWeek = progressionCurrentWeek, currentWeek >= progressionTotalWeeks {
+            print("🎉 Auto-progression complete! Target reached.")
+            // Keep the final interval but disable further progression
+            stopProgression()
+        }
+    }
+
+    private func resetWeeklyValues() {
         print("📅 Resetting weekly values - New week detected!")
-        print("   Current day: \(weekdayName) (weekday: \(weekday))")
-        print("   Date: \(now)")
 
         // Reset panic snus for the new week
         paniksnusLeft = paniksnus > 0 ? paniksnus : 5
+
+        // Apply auto-progression interval increase
+        applyProgressionIfNeeded()
 
         saveSettings()
 
         print("✅ Weekly reset complete - paniksnusLeft: \(paniksnusLeft)")
     }
 }
-//
-//  WatchConnectivityManager.swift
-//  ControlYourself
-//
-//  Manages communication between iPhone and Apple Watch
-//
 
-import Foundation
-import WatchConnectivity
+// MARK: - Watch Connectivity Manager
 
 class WatchConnectivityManager: NSObject, ObservableObject {
     static let shared = WatchConnectivityManager()
 
     private override init() {
         super.init()
-
         if WCSession.isSupported() {
             WCSession.default.delegate = self
             WCSession.default.activate()
         }
     }
 
-    // MARK: - Send Data to Watch
-
-    /// Send timer data to Watch
     func sendTimerUpdate(countdownTime: TimeInterval, snusLeft: Int, paniksnusLeft: Int, isReady: Bool, substanceName: String) {
-        guard WCSession.default.isReachable else {
-            print("❌ Watch not reachable")
-            return
-        }
-
+        guard WCSession.default.isReachable else { return }
         let message: [String: Any] = [
             "countdownTime": countdownTime,
             "snusLeft": snusLeft,
@@ -951,15 +1047,11 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             "substanceName": substanceName,
             "timestamp": Date().timeIntervalSince1970
         ]
-
         WCSession.default.sendMessage(message, replyHandler: nil) { error in
             print("❌ Failed to send message: \(error.localizedDescription)")
         }
-
-        print("✅ Sent timer update to Watch: countdown=\(countdownTime)s, left=\(snusLeft)")
     }
 
-    /// Update Watch with application context (persistent data)
     func updateContext(countdownTime: TimeInterval, snusLeft: Int, paniksnusLeft: Int, timerEndDate: Date?, substanceName: String) {
         do {
             let context: [String: Any] = [
@@ -969,9 +1061,7 @@ class WatchConnectivityManager: NSObject, ObservableObject {
                 "timerEndDate": timerEndDate?.timeIntervalSince1970 ?? 0,
                 "substanceName": substanceName
             ]
-
             try WCSession.default.updateApplicationContext(context)
-            print("✅ Updated Watch context")
         } catch {
             print("❌ Failed to update context: \(error.localizedDescription)")
         }
@@ -984,47 +1074,29 @@ extension WatchConnectivityManager: WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         if let error = error {
             print("❌ WCSession activation failed: \(error.localizedDescription)")
-        } else {
-            print("✅ WCSession activated with state: \(activationState.rawValue)")
         }
     }
 
     #if os(iOS)
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        print("⚠️ WCSession became inactive")
-    }
-
+    func sessionDidBecomeInactive(_ session: WCSession) {}
     func sessionDidDeactivate(_ session: WCSession) {
-        print("⚠️ WCSession deactivated")
         WCSession.default.activate()
     }
     #endif
 
-    // MARK: - Receive Messages from Watch
-
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         DispatchQueue.main.async {
             if let action = message["action"] as? String {
-                print("📩 Received action from Watch: \(action)")
-
                 switch action {
                 case "takeSnus":
-                    // Watch wants to trigger "take snus"
-                    // Post notification that iPhone app can listen to
                     NotificationCenter.default.post(name: .takeSnusFromWatch, object: nil)
                     replyHandler(["status": "success"])
-
                 case "usePanic":
-                    // Watch wants to use panic snus
                     NotificationCenter.default.post(name: .usePanicFromWatch, object: nil)
                     replyHandler(["status": "success"])
-
                 case "requestUpdate":
-                    // Watch requests current state
-                    // Reply will be handled by SnusManager
                     NotificationCenter.default.post(name: .watchRequestsUpdate, object: nil)
                     replyHandler(["status": "updating"])
-
                 default:
                     replyHandler(["status": "unknown_action"])
                 }
@@ -1032,8 +1104,5 @@ extension WatchConnectivityManager: WCSessionDelegate {
         }
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("📩 Received application context from Watch")
-        // Handle context updates if needed
-    }
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {}
 }

@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "Anzahl %@ pro Tag";
 "setup.interval_between" = "Intervall zwischen %@";
 "setup.hours" = "Stunden";
+"setup.hours_short" = "h";
+"setup.minutes_short" = "min";
 "setup.panic_per_week" = "Notfall-%@ pro Woche";
 "setup.save_continue" = "Speichern & Fortfahren";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "Nimm ein %@";
 "main.take_one_ready" = "Nimm ein %@! ✨";
 "main.start_day" = "Starte den Tag mit einem %@!";
+"main.all_used_today" = "Fertig für heute! Komm morgen wieder 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Du schaffst das! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "z.B. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Stunden:Minuten:Sekunden";
 "settings.timer_format_hours_minutes_seconds_example" = "z.B. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-Progression";
+"settings.progression_subtitle" = "Intervall automatisch Woche für Woche erhöhen";
+"settings.progression_current" = "Aktuell";
+"settings.progression_target" = "Ziel";
+"settings.progression_stop" = "Progression stoppen";
+"settings.progression_setup" = "Progression einrichten";
+"settings.progression_target_label" = "Zielintervall";
+"settings.progression_weeks_label" = "Dauer";
+"settings.progression_weeks_value" = "%d Wochen";
+"settings.progression_start" = "Progression starten";
 
 
 

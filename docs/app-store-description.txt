@@ -3,7 +3,10 @@ Urge helps you take control of your habits by creating healthy intervals between
 KEY FEATURES
 
 Smart Timer System
-Set customizable intervals between each usage. The app tracks your timing and helps you maintain consistent patterns throughout the day.
+Set precise intervals between each usage — from 15 minutes up to 8 hours, in 15-minute steps. The app tracks your timing and helps you maintain consistent patterns throughout the day.
+
+Auto-Progression
+Let Urge gradually increase your intervals week by week. Set a target interval and a timeframe, and the app automatically adjusts your schedule so you improve without even thinking about it.
 
 Detailed Statistics
 Monitor your progress with comprehensive tracking. See your daily patterns, streaks, and improvements over time.
@@ -15,19 +18,20 @@ Panic Mode
 Sometimes life happens. When you need flexibility, panic mode allows occasional breaks from your routine while keeping your long-term progress intact.
 
 Dynamic Island Integration
-See your timer at a glance with Dynamic Island support on iPhone 14 Pro and later.
+See your timer at a glance with Dynamic Island support on iPhone 14 Pro and later. Fully localized in 26 languages.
 
 Widgets & Live Activities
-Stay on track with home screen widgets and Live Activities that keep your progress visible throughout the day.
+Stay on track with Live Activities that keep your progress visible on the lock screen throughout the day.
 
 Encouraging Feedback
 Get motivational messages that adapt to your progress, celebrating successes and providing support when you need it.
 
 WHY URGE?
 
-Urge isn't about restriction – it's about finding balance. Instead of trying to quit cold turkey, you create sustainable habits by gradually adjusting your patterns. The app helps you:
+Urge isn't about restriction -- it's about finding balance. Instead of trying to quit cold turkey, you create sustainable habits by gradually adjusting your patterns. The app helps you:
 
 - Increase time between usage naturally
+- Set up automatic weekly progression toward your goal
 - Build awareness of your habits
 - Track your progress visually
 - Stay motivated with daily goals

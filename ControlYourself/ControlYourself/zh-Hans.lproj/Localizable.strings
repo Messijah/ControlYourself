@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "每天%@数量";
 "setup.interval_between" = "%@间隔";
 "setup.hours" = "小时";
+"setup.hours_short" = "小时";
+"setup.minutes_short" = "分钟";
 "setup.panic_per_week" = "每周紧急%@";
 "setup.save_continue" = "保存并继续";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "来一个%@";
 "main.take_one_ready" = "来一个%@！ ✨";
 "main.start_day" = "用%@开始新的一天！";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "你能行！ 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "例如 02:30";
 "settings.timer_format_hours_minutes_seconds" = "小时:分钟:秒";
 "settings.timer_format_hours_minutes_seconds_example" = "例如 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

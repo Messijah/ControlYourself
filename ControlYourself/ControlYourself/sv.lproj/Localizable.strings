@@ -13,6 +13,8 @@
 "setup.amount_per_day" = "Antal %@ per dag";
 "setup.interval_between" = "Intervall mellan %@";
 "setup.hours" = "timmar";
+"setup.hours_short" = "h";
+"setup.minutes_short" = "min";
 "setup.panic_per_week" = "Panik%@ per vecka";
 "setup.save_continue" = "Spara & Fortsätt";
 "app.title" = "Urge";
@@ -25,6 +27,7 @@
 "main.take_one" = "Ta en %@";
 "main.take_one_ready" = "Ta en %@! ✨";
 "main.start_day" = "Starta dagen med en %@!";
+"main.all_used_today" = "Klart för idag! Kom tillbaka imorgon 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Du klarar det! 💪";
@@ -186,6 +189,18 @@
 "settings.timer_format_hours_minutes_example" = "t.ex. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Timmar:Minuter:Sekunder";
 "settings.timer_format_hours_minutes_seconds_example" = "t.ex. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Öka intervallet automatiskt vecka för vecka";
+"settings.progression_current" = "Nu";
+"settings.progression_target" = "Mål";
+"settings.progression_stop" = "Stoppa progression";
+"settings.progression_setup" = "Ställ in progression";
+"settings.progression_target_label" = "Målintervall";
+"settings.progression_weeks_label" = "Varaktighet";
+"settings.progression_weeks_value" = "%d veckor";
+"settings.progression_start" = "Starta progression";
 
 /* Paywall */
 "paywall.welcome_to" = "Välkommen till";

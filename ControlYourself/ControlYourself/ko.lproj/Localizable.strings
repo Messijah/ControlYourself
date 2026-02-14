@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "하루 %@ 개수";
 "setup.interval_between" = "%@ 간격";
 "setup.hours" = "시간";
+"setup.hours_short" = "시간";
+"setup.minutes_short" = "분";
 "setup.panic_per_week" = "주당 긴급 %@";
 "setup.save_continue" = "저장 후 계속";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "%@ 하나";
 "main.take_one_ready" = "%@ 하나! ✨";
 "main.start_day" = "%@로 하루를 시작하세요!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "할 수 있어요! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "예: 02:30";
 "settings.timer_format_hours_minutes_seconds" = "시간:분:초";
 "settings.timer_format_hours_minutes_seconds_example" = "예: 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

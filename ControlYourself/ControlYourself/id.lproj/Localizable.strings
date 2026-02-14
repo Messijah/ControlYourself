@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "Jumlah %@ per hari";
 "setup.interval_between" = "Interval antara %@";
 "setup.hours" = "jam";
+"setup.hours_short" = "j";
+"setup.minutes_short" = "mnt";
 "setup.panic_per_week" = "%@ darurat per minggu";
 "setup.save_continue" = "Simpan dan lanjutkan";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "Ambil %@";
 "main.take_one_ready" = "Ambil %@! ✨";
 "main.start_day" = "Mulai hari dengan %@!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Kamu bisa! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "mis. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Jam:Menit:Detik";
 "settings.timer_format_hours_minutes_seconds_example" = "mis. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "จำนวน%@ต่อวัน";
 "setup.interval_between" = "ช่วงเวลาระหว่าง%@";
 "setup.hours" = "ชั่วโมง";
+"setup.hours_short" = "ชม.";
+"setup.minutes_short" = "นาที";
 "setup.panic_per_week" = "%@ฉุกเฉินต่อสัปดาห์";
 "setup.save_continue" = "บันทึกและดำเนินการต่อ";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "ใช้%@";
 "main.take_one_ready" = "ใช้%@! ✨";
 "main.start_day" = "เริ่มวันด้วย%@!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "คุณทำได้! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "เช่น 02:30";
 "settings.timer_format_hours_minutes_seconds" = "ชั่วโมง:นาที:วินาที";
 "settings.timer_format_hours_minutes_seconds_example" = "เช่น 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

@@ -559,7 +559,7 @@ Du behöver screenshots för:
 ### Steg 8: Promotional Text (valfritt)
 
 ```
-Hantera dina impulser. Ta kontroll över dina vanor med Urge.
+Hantera dina impulser med precision. Sätt intervaller i 15-minuterssteg och låt appen trappa ned åt dig automatiskt vecka för vecka.
 ```
 
 ### Steg 9: Description
@@ -571,9 +571,14 @@ Urge hjälper dig att ta kontroll över dina vanor på ett hållbart sätt. Ist�
 HUVUDFUNKTIONER:
 
 ⏱️ SMART TIMER
-• Anpassningsbara intervaller
+• Precisa intervaller i 15-minuterssteg (15 min till 8 timmar)
 • Visual countdown med beautiful design
-• Uppmuntrade meddelanden under tiden
+• Uppmuntrande meddelanden under tiden
+
+📈 AUTO-PROGRESSION
+• Låt appen öka intervallet automatiskt vecka för vecka
+• Ställ in mål och tidsram — appen sköter resten
+• Nå ditt mål utan att tänka på det
 
 📊 STATISTIK & FRAMSTEG
 • Följ dina framsteg över tid
@@ -587,7 +592,7 @@ HUVUDFUNKTIONER:
 
 🌙 DYNAMIC ISLAND
 • Timer alltid synlig i Dynamic Island (iPhone 14 Pro+)
-• Live Activities på låsskärmen
+• Live Activities på låsskärmen — lokaliserat på 26 språk
 • Smidig upplevelse oavsett var du är
 
 💎 URGE PLUS
@@ -607,9 +612,14 @@ Urge helps you take control of your habits in a sustainable way. Instead of quit
 KEY FEATURES:
 
 ⏱️ SMART TIMER
-• Customizable intervals
+• Precise intervals in 15-minute steps (15 min to 8 hours)
 • Visual countdown with beautiful design
 • Encouraging messages throughout
+
+📈 AUTO-PROGRESSION
+• Let the app increase your interval automatically week by week
+• Set a target and timeframe — the app handles the rest
+• Reach your goal without even thinking about it
 
 📊 STATISTICS & PROGRESS
 • Track your progress over time
@@ -623,7 +633,7 @@ KEY FEATURES:
 
 🌙 DYNAMIC ISLAND
 • Timer always visible in Dynamic Island (iPhone 14 Pro+)
-• Live Activities on lock screen
+• Live Activities on lock screen — localized in 26 languages
 • Smooth experience wherever you are
 
 💎 URGE PLUS
@@ -685,12 +695,13 @@ För att testa prenumerationer:
 
 Huvudfunktioner att testa:
 1. Välj substans (snus eller cigaretter)
-2. Konfigurera inställningar
+2. Konfigurera inställningar (timer i 15-minuterssteg)
 3. Starta timer
 4. Använd "Panik"-knappen
 5. Kontrollera Dynamic Island (iPhone 14 Pro+)
 6. Besök Statistik-sidan
 7. Testa Paywall (första gången appen startas)
+8. Aktivera Auto-progression i inställningar (välj mål-intervall och antal veckor)
 
 Appen använder ingen tracking och sparar all data lokalt.
 ```
@@ -961,7 +972,7 @@ Lägg upp denna på en server och använd URL:en i App Store Connect.
 
 **Subtitle (Optional):**
 ```
-"Balance your urges, track your progress"
+"Balance your urges, progress week by week"
 ```
 
 **Keywords Research:**
@@ -1073,5 +1084,5 @@ Om du kör fast, gå tillbaka till [Vanliga Problem](#11-vanliga-problem--lösni
 ---
 
 *Skapad med ❤️ av Claude Code*
-*För Urge - Control Your Habits v1.0*
-*Senast uppdaterad: 2025-10-19*
+*För Urge - Control Your Habits v1.1*
+*Senast uppdaterad: 2026-02-14*

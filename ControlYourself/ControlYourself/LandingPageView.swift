@@ -695,6 +695,19 @@ struct LandingPageView: View {
                     }
                     .disabled(snusManager.snusLeft == 0)
                     .opacity(snusManager.snusLeft == 0 ? 0.5 : 1.0)
+
+                    // Empty state message when all uses are spent
+                    if snusManager.snusLeft == 0 && !isFirstOfDay {
+                        Text(NSLocalizedString("main.all_used_today", comment: ""))
+                            .font(.system(size: 13, weight: .medium, design: .rounded))
+                            .foregroundStyle(.white.opacity(0.7))
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    }
+
+                    // Early warning alert (hidden trigger)
+                    Color.clear
+                        .frame(width: 0, height: 0)
                     .alert(NSLocalizedString("alert.wait_title", comment: ""), isPresented: $showEarlyWarning) {
                         Button(NSLocalizedString("alert.take_anyway", comment: ""), role: .destructive) {
                             let generator = UIImpactFeedbackGenerator(style: .heavy)
@@ -1224,7 +1237,7 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var themeManager = ThemeManager.shared
     @StateObject private var subscriptionManager = SubscriptionManager.shared
-    @State private var snusInterval: Int
+    @State private var snusIntervalMinutes: Int
     @State private var paniksnus: Int
     @State private var showCheatAlert = false
     @State private var showResetConfirmation = false
@@ -1234,9 +1247,9 @@ struct SettingsView: View {
     @State private var showPaniksnusWarning = false
     @State private var showPaniksnusPraise = false
     @State private var showPaniksnusLeftWarning = false
-    @State private var initialSnusInterval: Int
+    @State private var initialSnusIntervalMinutes: Int
     @State private var initialPaniksnus: Int
-    @State private var snusIntervalBeforeDrag: Int = 0
+    @State private var snusIntervalMinutesBeforeDrag: Int = 0
     @State private var paniksnusBeforeDrag: Int = 0
     @State private var paniksnusLeftBeforeDrag: Int = 0
     @State private var snusLeftBeforeDrag: Int = 0
@@ -1249,6 +1262,10 @@ struct SettingsView: View {
     @State private var selectedTheme: AppColorTheme
     @State private var showThemePicker = false
     @State private var showPaywall = false
+    // Auto-progression state
+    @State private var showProgressionSetup = false
+    @State private var progressionTargetMinutes: Int = 240   // Default target: 4 hours
+    @State private var progressionWeeks: Int = 8             // Default: 8 weeks
 
     private let cheatMessages = [
         NSLocalizedString("cheat.no_discipline", comment: ""),
@@ -1319,10 +1336,10 @@ struct SettingsView: View {
     init(snusManager: SnusManager, onRestartApp: @escaping () -> Void) {
         _snusManager = ObservedObject(wrappedValue: snusManager)
         self.onRestartApp = onRestartApp
-        _snusInterval = State(initialValue: Int(snusManager.snusInterval / 3600))
+        _snusIntervalMinutes = State(initialValue: Int(snusManager.snusInterval / 60))
         _paniksnus = State(initialValue: snusManager.paniksnus)
         _initialSnusLeft = State(initialValue: snusManager.snusLeft)
-        _initialSnusInterval = State(initialValue: Int(snusManager.snusInterval / 3600))
+        _initialSnusIntervalMinutes = State(initialValue: Int(snusManager.snusInterval / 60))
         _initialPaniksnus = State(initialValue: snusManager.paniksnus)
 
         // Load Dynamic Island setting (default to true if not set)
@@ -1398,25 +1415,25 @@ struct SettingsView: View {
                                         Spacer()
                                     }
                                     HStack {
-                                        Text("\(snusInterval) " + NSLocalizedString("setup.hours", comment: ""))
+                                        Text(formatMinutesDisplay(snusIntervalMinutes))
                                             .font(.system(size: 24, weight: .bold, design: .rounded))
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
                                     Slider(value: Binding(
-                                        get: { Double(snusInterval) },
+                                        get: { Double(snusIntervalMinutes) },
                                         set: { newValue in
-                                            snusInterval = Int(newValue)
+                                            snusIntervalMinutes = Int(newValue)
                                         }
-                                    ), in: 1...8, step: 1, onEditingChanged: { isEditing in
+                                    ), in: 15...480, step: 15, onEditingChanged: { isEditing in
                                         if isEditing {
                                             // User started dragging - save the current value
-                                            snusIntervalBeforeDrag = snusInterval
+                                            snusIntervalMinutesBeforeDrag = snusIntervalMinutes
                                         } else {
                                             // User released - compare, show alert, and auto-save
-                                            if snusInterval > snusIntervalBeforeDrag {
+                                            if snusIntervalMinutes > snusIntervalMinutesBeforeDrag {
                                                 showIntervalPraise = true
-                                            } else if snusInterval < snusIntervalBeforeDrag {
+                                            } else if snusIntervalMinutes < snusIntervalMinutesBeforeDrag {
                                                 showIntervalWarning = true
                                             }
                                             // Auto-save settings
@@ -1464,6 +1481,198 @@ struct SettingsView: View {
                                         }
                                     })
                                     .tint(.red)
+                                }
+                            }
+                        }
+
+                        // MARK: - Auto-Progression Card
+                        GlassCard {
+                            VStack(alignment: .leading, spacing: 12) {
+                                HStack(spacing: 14) {
+                                    Image(systemName: "chart.line.uptrend.xyaxis")
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: snusManager.isProgressionEnabled ? [.green, .mint] : [.gray, .gray.opacity(0.5)],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(NSLocalizedString("settings.progression_title", comment: ""))
+                                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                                            .foregroundColor(.white)
+
+                                        Text(NSLocalizedString("settings.progression_subtitle", comment: ""))
+                                            .font(.system(size: 13, weight: .medium, design: .rounded))
+                                            .foregroundColor(.white.opacity(0.75))
+                                            .fixedSize(horizontal: false, vertical: true)
+                                    }
+
+                                    Spacer(minLength: 0)
+
+                                    if snusManager.isProgressionEnabled {
+                                        // Show current progress badge
+                                        if let currentWeek = snusManager.progressionCurrentWeek {
+                                            Text("\(currentWeek)/\(snusManager.progressionTotalWeeks)")
+                                                .font(.system(size: 14, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+                                                .padding(.horizontal, 10)
+                                                .padding(.vertical, 4)
+                                                .background(
+                                                    Capsule().fill(
+                                                        LinearGradient(colors: [.green, .mint], startPoint: .leading, endPoint: .trailing)
+                                                    )
+                                                )
+                                        }
+                                    }
+                                }
+
+                                if snusManager.isProgressionEnabled {
+                                    // Active progression info
+                                    VStack(spacing: 8) {
+                                        Divider().background(Color.white.opacity(0.2))
+
+                                        HStack {
+                                            VStack(alignment: .leading, spacing: 2) {
+                                                Text(NSLocalizedString("settings.progression_current", comment: ""))
+                                                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                                                    .foregroundColor(.white.opacity(0.6))
+                                                Text(formatMinutesDisplay(Int(snusManager.snusInterval / 60)))
+                                                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                                                    .foregroundColor(.white)
+                                            }
+
+                                            Spacer()
+
+                                            Image(systemName: "arrow.right")
+                                                .foregroundColor(.white.opacity(0.5))
+
+                                            Spacer()
+
+                                            VStack(alignment: .trailing, spacing: 2) {
+                                                Text(NSLocalizedString("settings.progression_target", comment: ""))
+                                                    .font(.system(size: 12, weight: .medium, design: .rounded))
+                                                    .foregroundColor(.white.opacity(0.6))
+                                                let targetInterval = snusManager.progressionTargetIntervalValue
+                                                Text(formatMinutesDisplay(Int(targetInterval / 60)))
+                                                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                                                    .foregroundColor(.green)
+                                            }
+                                        }
+                                        .padding(.vertical, 4)
+
+                                        // Stop button
+                                        Button {
+                                            let generator = UIImpactFeedbackGenerator(style: .medium)
+                                            generator.impactOccurred()
+                                            snusManager.stopProgression()
+                                        } label: {
+                                            Text(NSLocalizedString("settings.progression_stop", comment: ""))
+                                                .font(.system(size: 14, weight: .bold, design: .rounded))
+                                                .foregroundColor(.red)
+                                                .frame(maxWidth: .infinity)
+                                                .padding(.vertical, 10)
+                                                .background(
+                                                    RoundedRectangle(cornerRadius: 12)
+                                                        .fill(Color.red.opacity(0.15))
+                                                        .overlay(
+                                                            RoundedRectangle(cornerRadius: 12)
+                                                                .stroke(Color.red.opacity(0.3), lineWidth: 1)
+                                                        )
+                                                )
+                                        }
+                                    }
+                                } else {
+                                    // Setup progression
+                                    Button {
+                                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                            showProgressionSetup.toggle()
+                                        }
+                                    } label: {
+                                        HStack {
+                                            Text(NSLocalizedString("settings.progression_setup", comment: ""))
+                                                .font(.system(size: 14, weight: .bold, design: .rounded))
+                                                .foregroundColor(.green)
+                                            Spacer()
+                                            Image(systemName: showProgressionSetup ? "chevron.up" : "chevron.down")
+                                                .font(.system(size: 12, weight: .semibold))
+                                                .foregroundColor(.white.opacity(0.5))
+                                        }
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
+
+                                    if showProgressionSetup {
+                                        VStack(spacing: 12) {
+                                            Divider().background(Color.white.opacity(0.2))
+
+                                            // Target interval
+                                            VStack(spacing: 6) {
+                                                HStack {
+                                                    Text(NSLocalizedString("settings.progression_target_label", comment: ""))
+                                                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                                                        .foregroundColor(.white.opacity(0.8))
+                                                    Spacer()
+                                                    Text(formatMinutesDisplay(progressionTargetMinutes))
+                                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                                        .foregroundColor(.green)
+                                                }
+                                                Slider(value: Binding(
+                                                    get: { Double(progressionTargetMinutes) },
+                                                    set: { progressionTargetMinutes = Int($0) }
+                                                ), in: Double(snusIntervalMinutes + 15)...480, step: 15)
+                                                    .tint(.green)
+                                            }
+
+                                            // Duration in weeks
+                                            VStack(spacing: 6) {
+                                                HStack {
+                                                    Text(NSLocalizedString("settings.progression_weeks_label", comment: ""))
+                                                        .font(.system(size: 14, weight: .medium, design: .rounded))
+                                                        .foregroundColor(.white.opacity(0.8))
+                                                    Spacer()
+                                                    Text(String(format: NSLocalizedString("settings.progression_weeks_value", comment: ""), progressionWeeks))
+                                                        .font(.system(size: 16, weight: .bold, design: .rounded))
+                                                        .foregroundColor(.white)
+                                                }
+                                                Slider(value: Binding(
+                                                    get: { Double(progressionWeeks) },
+                                                    set: { progressionWeeks = Int($0) }
+                                                ), in: 2...24, step: 1)
+                                                    .tint(.blue)
+                                            }
+
+                                            // Start button
+                                            Button {
+                                                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                                                generator.impactOccurred()
+                                                let startInterval = TimeInterval(snusIntervalMinutes * 60)
+                                                let targetInterval = TimeInterval(progressionTargetMinutes * 60)
+                                                snusManager.startProgression(startInterval: startInterval, targetInterval: targetInterval, weeks: progressionWeeks)
+                                                showProgressionSetup = false
+                                            } label: {
+                                                HStack(spacing: 8) {
+                                                    Image(systemName: "play.fill")
+                                                        .font(.system(size: 14, weight: .bold))
+                                                    Text(NSLocalizedString("settings.progression_start", comment: ""))
+                                                        .font(.system(size: 15, weight: .bold, design: .rounded))
+                                                }
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity)
+                                                .padding(.vertical, 14)
+                                                .background(
+                                                    ZStack {
+                                                        RoundedRectangle(cornerRadius: 14)
+                                                            .fill(LinearGradient(colors: [.green, .mint], startPoint: .leading, endPoint: .trailing))
+                                                        RoundedRectangle(cornerRadius: 14)
+                                                            .fill(LinearGradient(colors: [.white.opacity(0.2), .clear], startPoint: .top, endPoint: .center))
+                                                    }
+                                                )
+                                                .shadow(color: .green.opacity(0.4), radius: 10, x: 0, y: 5)
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2207,12 +2416,25 @@ struct SettingsView: View {
         }
     }
 
+    // Format minutes as "Xh Ymin" or "Ymin"
+    private func formatMinutesDisplay(_ totalMinutes: Int) -> String {
+        let hours = totalMinutes / 60
+        let minutes = totalMinutes % 60
+        if hours > 0 && minutes > 0 {
+            return "\(hours)" + NSLocalizedString("setup.hours_short", comment: "h") + " \(minutes)" + NSLocalizedString("setup.minutes_short", comment: "min")
+        } else if hours > 0 {
+            return "\(hours) " + NSLocalizedString("setup.hours", comment: "hours")
+        } else {
+            return "\(minutes) " + NSLocalizedString("setup.minutes_short", comment: "min")
+        }
+    }
+
     func applySettings() {
         // Check if timer is active and interval changed
         let defaults = UserDefaults(suiteName: "group.com.JensEH.ControlYourself") ?? UserDefaults.standard
         let isTimerActive = defaults.bool(forKey: "isTimerActive")
         let oldInterval = snusManager.snusInterval
-        let newInterval = TimeInterval(snusInterval * 3600)
+        let newInterval = TimeInterval(snusIntervalMinutes * 60)
         let intervalChanged = oldInterval != newInterval && oldInterval > 0
 
         // If timer is active and interval changed, adjust countdown proportionally

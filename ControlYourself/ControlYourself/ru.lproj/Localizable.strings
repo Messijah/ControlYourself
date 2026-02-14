@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "Количество %@ в день";
 "setup.interval_between" = "Интервал между %@";
 "setup.hours" = "часов";
+"setup.hours_short" = "ч";
+"setup.minutes_short" = "мин";
 "setup.panic_per_week" = "Экстренный %@ в неделю";
 "setup.save_continue" = "Сохранить и продолжить";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "Взять %@";
 "main.take_one_ready" = "Взять %@! ✨";
 "main.start_day" = "Начать день с %@!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Ты справишься! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "напр. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Часы:Минуты:Секунды";
 "settings.timer_format_hours_minutes_seconds_example" = "напр. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

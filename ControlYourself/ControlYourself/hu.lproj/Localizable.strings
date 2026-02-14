@@ -11,6 +11,8 @@
 "setup.amount_per_day" = "Napi %@ mennyiség";
 "setup.interval_between" = "%@ közötti intervallum";
 "setup.hours" = "óra";
+"setup.hours_short" = "ó";
+"setup.minutes_short" = "p";
 "setup.panic_per_week" = "Heti vészhelyzeti %@";
 "setup.save_continue" = "Mentés és folytatás";
 "app.title" = "Urge";
@@ -23,6 +25,7 @@
 "main.take_one" = "Végy egy %@";
 "main.take_one_ready" = "Végy egy %@! ✨";
 "main.start_day" = "Kezdd a napot %@!";
+"main.all_used_today" = "All done for today! Come back tomorrow 🌙";
 
 /* Encouragement Messages */
 "encouragement.you_can_do_it" = "Meg tudod csinálni! 💪";
@@ -166,6 +169,18 @@
 "settings.timer_format_hours_minutes_example" = "pl. 02:30";
 "settings.timer_format_hours_minutes_seconds" = "Órák:Percek:Másodpercek";
 "settings.timer_format_hours_minutes_seconds_example" = "pl. 02:30:45";
+
+/* Auto-Progression */
+"settings.progression_title" = "Auto-progression";
+"settings.progression_subtitle" = "Automatically increase interval week by week";
+"settings.progression_current" = "Current";
+"settings.progression_target" = "Target";
+"settings.progression_stop" = "Stop progression";
+"settings.progression_setup" = "Set up progression";
+"settings.progression_target_label" = "Target interval";
+"settings.progression_weeks_label" = "Duration";
+"settings.progression_weeks_value" = "%d weeks";
+"settings.progression_start" = "Start progression";
 
 
 

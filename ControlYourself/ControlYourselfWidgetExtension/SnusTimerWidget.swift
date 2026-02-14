@@ -99,7 +99,7 @@ struct SnusTimerWidget: Widget {
 
                         if context.state.isReady {
                             // Timer is complete - show celebration message
-                            Text(context.state.celebrationMessage ?? "Dags! 🎉")
+                            Text(context.state.celebrationMessage ?? "Ready! 🎉")
                                 .font(.system(size: 11, weight: .semibold))
                                 .foregroundColor(.green)
                         } else {
@@ -108,7 +108,7 @@ struct SnusTimerWidget: Widget {
 
                             if timeRemaining <= 1 {
                                 // Last second or already passed - show static celebration
-                                Text(context.state.celebrationMessage ?? "Dags! 🎉")
+                                Text(context.state.celebrationMessage ?? "Ready! 🎉")
                                     .font(.system(size: 11, weight: .semibold))
                                     .foregroundColor(.green)
                             } else {
@@ -132,7 +132,7 @@ struct SnusTimerWidget: Widget {
                 // Compact trailing - timer or short message
                 if context.state.isReady {
                     // Timer is complete - show celebration message
-                    Text(context.state.celebrationMessage ?? "Dags! 🎉")
+                    Text(context.state.celebrationMessage ?? "Ready! 🎉")
                         .font(.system(size: 11, weight: .bold, design: .rounded))
                         .foregroundColor(.green)
                 } else {
@@ -141,7 +141,7 @@ struct SnusTimerWidget: Widget {
 
                     if timeRemaining <= 1 {
                         // Last second or already passed - show static celebration
-                        Text(context.state.celebrationMessage ?? "Dags! 🎉")
+                        Text(context.state.celebrationMessage ?? "Ready! 🎉")
                             .font(.system(size: 11, weight: .bold, design: .rounded))
                             .foregroundColor(.green)
                     } else {
@@ -162,40 +162,6 @@ struct SnusTimerWidget: Widget {
         }
     }
 
-    private func timeStatus(for progress: Double) -> String {
-        if progress < 0.4 {
-            return "Väntar"
-        } else if progress < 0.75 {
-            return "Snart!"
-        } else {
-            return "Nästan!"
-        }
-    }
-
-    private func motivationalMessage(for progress: Double) -> String {
-        let messages = [
-            "Dags! 🎉",
-            "Nu! ✨",
-            "Ta en! 💪",
-            "Redo! 🔥",
-            "Njut! 😊"
-        ]
-        // Use progress as seed to rotate messages
-        let index = Int(progress * 100) % messages.count
-        return messages[index]
-    }
-
-    private func shortMessage() -> String {
-        let messages = [
-            "Dags!",
-            "Nu!",
-            "Redo!",
-            "Kör!"
-        ]
-        // Random short message
-        return messages[Int.random(in: 0..<messages.count)]
-    }
-
     private func timeString(from timeInterval: TimeInterval) -> String {
         let hours = Int(timeInterval) / 3600
         let minutes = Int(timeInterval) / 60 % 60
@@ -205,19 +171,6 @@ struct SnusTimerWidget: Widget {
             return String(format: "%d:%02d:%02d", hours, minutes, seconds)
         } else {
             return String(format: "%02d:%02d", minutes, seconds)
-        }
-    }
-
-    private func compactTimeString(from timeInterval: TimeInterval) -> String {
-        let hours = Int(timeInterval) / 3600
-        let minutes = Int(timeInterval) / 60 % 60
-
-        if hours > 0 {
-            return String(format: "%dh%dm", hours, minutes)
-        } else if minutes > 0 {
-            return String(format: "%dm", minutes)
-        } else {
-            return "0m"
         }
     }
 }
@@ -311,12 +264,12 @@ struct LockScreenLiveActivityView: View {
             VStack(alignment: .leading, spacing: 4) {
                 if context.state.isReady {
                     // Timer is complete - show celebration
-                    Text(context.state.celebrationMessage ?? "Dags för en \(displaySubstanceName())! ✨")
+                    Text(context.state.celebrationMessage ?? "Ready! ✨")
                         .font(.system(size: 14, weight: .semibold, design: .rounded))
                         .foregroundColor(.white)
                 } else if context.state.endDate.timeIntervalSinceNow <= 0 {
                     // Timer has reached 0
-                    Text(context.state.celebrationMessage ?? "Dags för en \(displaySubstanceName())! ✨")
+                    Text(context.state.celebrationMessage ?? "Ready! ✨")
                         .font(.system(size: 14, weight: .semibold, design: .rounded))
                         .foregroundColor(.white)
                 } else {
@@ -350,7 +303,7 @@ struct LockScreenLiveActivityView: View {
                 Text("\(context.state.snusLeft)")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .foregroundColor(.white)
-                Text("kvar")
+                Text(context.state.leftLabel)
                     .font(.system(size: 10, weight: .medium, design: .rounded))
                     .foregroundColor(.white.opacity(0.7))
             }
@@ -366,22 +319,9 @@ struct LockScreenLiveActivityView: View {
         .activitySystemActionForegroundColor(.white)
     }
 
-    // Get rotating waiting message based on progress
+    // Get waiting message from localized ContentState, with English fallback
     private func waitingMessage() -> String {
-        let progress = calculateProgress()
-        let messages = [
-            "Håll ut! 💪",
-            "Snart där! ✨",
-            "Du klarar det! 🌟",
-            "Fortsätt så! 🔥",
-            "Stark! 💎",
-            "Nästan! 🚀",
-            "Bra jobbat! ⭐",
-            "Håll i! 🐻"
-        ]
-        // Use progress as seed to rotate messages deterministically
-        let index = Int(progress * 100) % messages.count
-        return messages[index]
+        return context.state.waitingMessage ?? "Keep going! 💪"
     }
 
     private func timeString(from timeInterval: TimeInterval) -> String {
