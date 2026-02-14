@@ -237,3 +237,12 @@
 
 /* Subscription */
 "subscription.save_amount" = "Save %@";
+
+/* Subscription Button */
+"subscription.button_title" = "Subscribe to Urge";
+"subscription.button_subtitle" = "7-day free trial • Cancel anytime";
+
+/* Trial Welcome */
+"trial_welcome.title" = "Welcome to Urge!";
+"trial_welcome.body" = "You have 7 days to explore everything the app has to offer — completely free.\n\nAfter that, you can choose to subscribe and keep going.";
+"trial_welcome.button" = "Let's go!";

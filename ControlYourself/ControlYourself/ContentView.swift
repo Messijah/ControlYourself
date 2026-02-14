@@ -202,6 +202,26 @@ struct ContentView: View {
     @State private var navigateToLandingPage = false
     @State private var restartApp = false
     @State private var showPaywall = false
+    @State private var showTrialWelcome = false
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+
+    /// Returns true if the 7-day free trial has expired
+    var isTrialExpired: Bool {
+        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
+            return false // No install date yet — still in onboarding
+        }
+        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
+        return daysSinceInstall >= 7
+    }
+
+    /// Days remaining in the free trial (0 if expired)
+    var trialDaysRemaining: Int {
+        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
+            return 7
+        }
+        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
+        return max(0, 7 - daysSinceInstall)
+    }
 
     var hasConfiguredSettings: Bool {
         // Check if app has been installed before using standard UserDefaults
@@ -229,29 +249,6 @@ struct ContentView: View {
         return sharedDefaults.bool(forKey: "hasConfiguredSettings")
     }
 
-    var shouldShowPaywall: Bool {
-        // Never show if already subscribed
-        guard !subscriptionManager.isSubscribed else { return false }
-
-        // Check if user has seen paywall before
-        let hasSeenPaywall = UserDefaults.standard.bool(forKey: "hasSeenPaywall")
-
-        // FIRST TIME: Always show paywall once (can be dismissed)
-        if !hasSeenPaywall {
-            return true
-        }
-
-        // AFTER FIRST TIME: Show again after 2 days to remind
-        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
-            return false
-        }
-
-        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
-
-        // Show again after 2 days (more persistent reminder)
-        return daysSinceInstall >= 2
-    }
-
     var body: some View {
         NavigationStack {
             if showWelcome {
@@ -263,7 +260,7 @@ struct ContentView: View {
                             if hasConfiguredSettings {
                                 navigateToLandingPage = true
                             }
-                            // Note: Paywall logic moved to LandingPageView.onAppear
+                            // Paywall is handled by .onChange(of: hasLoadedEntitlements)
                         }
                     }
             } else if navigateToLandingPage {
@@ -279,12 +276,13 @@ struct ContentView: View {
                     }
                 )
                 .onAppear {
-                    // Check if we should show paywall after landing page appears
-                    if shouldShowPaywall {
-                        // Delay 1 second so user sees main screen first
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            showPaywall = true
-                        }
+                    if !hasCompletedOnboarding {
+                        // First time reaching landing page — show trial welcome
+                        hasCompletedOnboarding = true
+                        showTrialWelcome = true
+                    } else if isTrialExpired && !subscriptionManager.isSubscribed {
+                        // Returning user with expired trial — show paywall
+                        showPaywall = true
                     }
                 }
             } else if let selectedNjutning = selectedNjutning {
@@ -299,12 +297,24 @@ struct ContentView: View {
                 NjutningsValView(selection: $selectedNjutning)
             }
         }
+        .sheet(isPresented: $showTrialWelcome) {
+            TrialWelcomeView()
+        }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
-                .onAppear {
-                    // Mark that user has seen the paywall
-                    UserDefaults.standard.set(true, forKey: "hasSeenPaywall")
-                }
+                .interactiveDismissDisabled(isTrialExpired && !subscriptionManager.isSubscribed)
+        }
+        .onChange(of: subscriptionManager.hasLoadedEntitlements) { _, loaded in
+            // Once entitlements are loaded, show paywall if trial expired
+            if loaded && hasCompletedOnboarding && isTrialExpired && !subscriptionManager.isSubscribed {
+                showPaywall = true
+            }
+        }
+        .onChange(of: subscriptionManager.isSubscribed) { _, isSubscribed in
+            // Dismiss paywall automatically when user subscribes
+            if isSubscribed {
+                showPaywall = false
+            }
         }
         .onChange(of: restartApp) { _, newValue in
             if newValue {
@@ -893,6 +903,79 @@ struct CustomLogoView: View {
                         .rotationEffect(.degrees(Double(index) * 72)) // 360/5 = 72 degrees
                         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
                 }
+            }
+        }
+    }
+}
+
+// MARK: - Trial Welcome View
+struct TrialWelcomeView: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        ZStack {
+            // Same mesh gradient background as PaywallView
+            MeshGradientBackground()
+                .ignoresSafeArea()
+
+            VStack(spacing: 32) {
+                Spacer()
+
+                // App icon
+                CustomLogoView()
+                    .frame(width: 140, height: 140)
+
+                // Title
+                Text(NSLocalizedString("trial_welcome.title", comment: ""))
+                    .font(.system(size: 34, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+
+                // Body text
+                Text(NSLocalizedString("trial_welcome.body", comment: ""))
+                    .font(.system(size: 17, weight: .medium, design: .rounded))
+                    .foregroundColor(.white.opacity(0.85))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                Spacer()
+
+                // CTA button
+                Button {
+                    dismiss()
+                } label: {
+                    Text(NSLocalizedString("trial_welcome.button", comment: ""))
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 20)
+                        .background(
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 22)
+                                    .fill(AppTheme.successGradient)
+                                RoundedRectangle(cornerRadius: 22)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [.white.opacity(0.25), .clear],
+                                            startPoint: .top,
+                                            endPoint: .center
+                                        )
+                                    )
+                                RoundedRectangle(cornerRadius: 22)
+                                    .stroke(
+                                        LinearGradient(
+                                            colors: [.white.opacity(0.4), .white.opacity(0.1)],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        ),
+                                        lineWidth: 1.5
+                                    )
+                            }
+                        )
+                        .shadow(color: Color.green.opacity(0.5), radius: 20, x: 0, y: 10)
+                }
+                .padding(.horizontal, 24)
+                .padding(.bottom, 50)
             }
         }
     }

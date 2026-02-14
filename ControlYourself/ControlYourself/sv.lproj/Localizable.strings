@@ -239,3 +239,12 @@
 
 /* Subscription */
 "subscription.save_amount" = "Spara %@";
+
+/* Subscription Button */
+"subscription.button_title" = "Prenumerera på Urge";
+"subscription.button_subtitle" = "7 dagars gratis provperiod • Avbryt när som helst";
+
+/* Trial Welcome */
+"trial_welcome.title" = "Välkommen till Urge!";
+"trial_welcome.body" = "Du har 7 dagar att utforska allt appen har att erbjuda — helt gratis.\n\nEfter det kan du välja att prenumerera och fortsätta.";
+"trial_welcome.button" = "Kör!";
