@@ -420,7 +420,7 @@ struct LandingPageView: View {
                             ),
                             lineWidth: 32
                         )
-                        .frame(width: 330, height: 330)
+                        .frame(width: 280, height: 280)
                         .blur(radius: 25)
 
                     // Celebration ring when ready
@@ -434,7 +434,7 @@ struct LandingPageView: View {
                                 ),
                                 lineWidth: 20
                             )
-                            .frame(width: 320, height: 320)
+                            .frame(width: 270, height: 270)
                             .scaleEffect(celebrationScale)
                             .opacity(2.0 - celebrationScale)
                             .blur(radius: 8)
@@ -444,20 +444,20 @@ struct LandingPageView: View {
                     ZStack {
                         // Background ring
                         Circle()
-                            .stroke(Color.white.opacity(0.05), lineWidth: 18)
-                            .frame(width: 300, height: 300)
+                            .stroke(Color.white.opacity(0.05), lineWidth: 16)
+                            .frame(width: 250, height: 250)
 
                         CircularProgressView(
                             progress: progress,
-                            lineWidth: 18,
+                            lineWidth: 16,
                             gradient: currentGradient
                         )
-                        .frame(width: 300, height: 300)
+                        .frame(width: 250, height: 250)
 
                         // Inner shadow for depth
                         Circle()
                             .stroke(Color.black.opacity(0.15), lineWidth: 1)
-                            .frame(width: 283, height: 283)
+                            .frame(width: 235, height: 235)
                     }
                     .shadow(
                         color: (isReady ? themeManager.currentTheme.readyShadowColor : themeManager.currentTheme.countdownShadowColor).opacity(0.5),
@@ -474,7 +474,7 @@ struct LandingPageView: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 5)
 
                     // Content inside ring
-                    VStack(spacing: 16) {
+                    VStack(spacing: 10) {
                         if isReady && !isFirstOfDay {
                             // Celebration icon with gradient
                             ZStack {
@@ -486,12 +486,12 @@ struct LandingPageView: View {
                                             endPoint: .bottomTrailing
                                         )
                                     )
-                                    .frame(width: 70, height: 70)
-                                    .blur(radius: 20)
+                                    .frame(width: 55, height: 55)
+                                    .blur(radius: 18)
                                     .scaleEffect(isCelebrating ? 1.3 : 1.0)
 
                                 Image(systemName: "checkmark.seal.fill")
-                                    .font(.system(size: 54, weight: .bold))
+                                    .font(.system(size: 44, weight: .bold))
                                     .foregroundStyle(
                                         LinearGradient(
                                             colors: [.white, .mint.opacity(0.8)],
@@ -514,11 +514,11 @@ struct LandingPageView: View {
                                             endPoint: .bottomTrailing
                                         )
                                     )
-                                    .frame(width: 70, height: 70)
-                                    .blur(radius: 20)
+                                    .frame(width: 55, height: 55)
+                                    .blur(radius: 18)
 
                                 Image(systemName: "sun.horizon.fill")
-                                    .font(.system(size: 54, weight: .bold))
+                                    .font(.system(size: 44, weight: .bold))
                                     .foregroundStyle(
                                         LinearGradient(
                                             colors: [.white, .orange.opacity(0.9)],
@@ -536,7 +536,7 @@ struct LandingPageView: View {
                             if !isReady && !isFirstOfDay {
                                 // Timer is active - show HH:MM format without seconds
                                 Text(timeString(from: snusManager.countdownTime))
-                                    .font(.system(size: 52, weight: .heavy, design: .rounded))
+                                    .font(.system(size: 46, weight: .heavy, design: .rounded))
                                     .foregroundStyle(
                                         LinearGradient(
                                             colors: [.white, .white.opacity(0.95)],
@@ -550,7 +550,7 @@ struct LandingPageView: View {
                             } else {
                                 // Timer is done or first of day - use static text
                                 Text(timeString(from: snusManager.countdownTime))
-                                    .font(.system(size: 56, weight: .heavy, design: .rounded))
+                                    .font(.system(size: 46, weight: .heavy, design: .rounded))
                                     .foregroundStyle(
                                         LinearGradient(
                                             colors: [.white, .mint, .green.opacity(0.8)],
@@ -576,35 +576,15 @@ struct LandingPageView: View {
                                 )
                             )
                             .multilineTextAlignment(.center)
-                            .padding(.horizontal, 18)
-                            .padding(.vertical, 8)
-                            .background(
-                                ZStack {
-                                    Capsule()
-                                        .fill(Color.white.opacity(0.06))
-                                        .blur(radius: 2)
-
-                                    Capsule()
-                                        .stroke(
-                                            LinearGradient(
-                                                colors: [.white.opacity(0.15), .white.opacity(0.05)],
-                                                startPoint: .topLeading,
-                                                endPoint: .bottomTrailing
-                                            ),
-                                            lineWidth: 0.5
-                                        )
-                                }
-                            )
-                            .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
                             .padding(.horizontal, 30)
                     }
                 }
-                .padding(.vertical, 40)
+                .padding(.vertical, 24)
 
                 Spacer()
 
                 // Modern Action Buttons
-                VStack(spacing: 14) {
+                VStack(spacing: 12) {
                     // Main Action Button
                     Button {
                         if isFirstOfDay {
@@ -660,7 +640,7 @@ struct LandingPageView: View {
                                 .foregroundColor(.white.opacity(0.9))
                         }
                         .padding(.horizontal, 26)
-                        .padding(.vertical, 20)
+                        .padding(.vertical, 18)
                         .background(
                             ZStack {
                                 // Gradient background
@@ -749,7 +729,7 @@ struct LandingPageView: View {
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
                             }
                             .foregroundColor(.white)
-                            .padding(.vertical, 16)
+                            .padding(.vertical, 12)
                             .frame(maxWidth: .infinity)
                             .background(
                                 ZStack {
@@ -806,7 +786,7 @@ struct LandingPageView: View {
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
                             }
                             .foregroundColor(.white)
-                            .padding(.vertical, 16)
+                            .padding(.vertical, 12)
                             .frame(maxWidth: .infinity)
                             .background(
                                 ZStack {
@@ -869,7 +849,7 @@ struct LandingPageView: View {
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
                             }
                             .foregroundColor(.white)
-                            .padding(.vertical, 16)
+                            .padding(.vertical, 12)
                             .frame(maxWidth: .infinity)
                             .background(
                                 ZStack {
@@ -916,7 +896,7 @@ struct LandingPageView: View {
                     }
                 }
                 .padding(.horizontal, 24)
-                .padding(.bottom, 40)
+                .padding(.bottom, 24)
             }
             .frame(maxWidth: isIPad ? 900 : .infinity)
             .frame(maxWidth: .infinity) // Center on iPad
@@ -1243,6 +1223,7 @@ struct SettingsView: View {
     var onRestartApp: () -> Void
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var themeManager = ThemeManager.shared
+    @StateObject private var subscriptionManager = SubscriptionManager.shared
     @State private var snusInterval: Int
     @State private var paniksnus: Int
     @State private var showCheatAlert = false
@@ -1267,6 +1248,7 @@ struct SettingsView: View {
     @State private var showSoundPicker = false
     @State private var selectedTheme: AppColorTheme
     @State private var showThemePicker = false
+    @State private var showPaywall = false
 
     private let cheatMessages = [
         NSLocalizedString("cheat.no_discipline", comment: ""),
@@ -1564,6 +1546,72 @@ struct SettingsView: View {
                         }
                     }
                     .padding(.horizontal, 20)
+
+                    // Premium Button - ALWAYS VISIBLE
+                    if !subscriptionManager.isSubscribed {
+                        Button {
+                            let generator = UIImpactFeedbackGenerator(style: .medium)
+                            generator.impactOccurred()
+                            showPaywall = true
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: "star.circle.fill")
+                                    .font(.system(size: 20, weight: .bold))
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(NSLocalizedString("subscription.button_title", comment: ""))
+                                        .font(.system(size: 17, weight: .bold, design: .rounded))
+                                    Text(NSLocalizedString("subscription.button_subtitle", comment: ""))
+                                        .font(.system(size: 13, weight: .medium, design: .rounded))
+                                        .opacity(0.8)
+                                }
+                                Spacer()
+                                Image(systemName: "arrow.right.circle.fill")
+                                    .font(.system(size: 24, weight: .semibold))
+                            }
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 18)
+                            .background(
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [
+                                                    Color(red: 1.0, green: 0.84, blue: 0.0),
+                                                    Color(red: 1.0, green: 0.65, blue: 0.0)
+                                                ],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [.white.opacity(0.25), .clear],
+                                                startPoint: .top,
+                                                endPoint: .center
+                                            )
+                                        )
+
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(
+                                            LinearGradient(
+                                                colors: [.white.opacity(0.4), .white.opacity(0.15)],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            ),
+                                            lineWidth: 1.5
+                                        )
+                                }
+                            )
+                            .shadow(color: Color.yellow.opacity(0.5), radius: 20, x: 0, y: 10)
+                            .shadow(color: .black.opacity(0.25), radius: 10, x: 0, y: 5)
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, 8)
+                    }
 
                     // Reset Button
                     Button {
@@ -2153,6 +2201,9 @@ struct SettingsView: View {
         .onAppear {
             // Store initial values when settings view appears
             initialSnusLeft = snusManager.snusLeft
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
         }
     }
 

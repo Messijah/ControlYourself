@@ -202,7 +202,26 @@ struct ContentView: View {
     @State private var navigateToLandingPage = false
     @State private var restartApp = false
     @State private var showPaywall = false
+    @State private var showTrialWelcome = false
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+
+    /// Returns true if the 7-day free trial has expired
+    var isTrialExpired: Bool {
+        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
+            return false // No install date yet — still in onboarding
+        }
+        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
+        return daysSinceInstall >= 7
+    }
+
+    /// Days remaining in the free trial (0 if expired)
+    var trialDaysRemaining: Int {
+        guard let firstLaunch = UserDefaults.standard.object(forKey: "firstLaunchDate") as? Date else {
+            return 7
+        }
+        let daysSinceInstall = Calendar.current.dateComponents([.day], from: firstLaunch, to: Date()).day ?? 0
+        return max(0, 7 - daysSinceInstall)
+    }
 
     var hasConfiguredSettings: Bool {
         // Check if app has been installed before using standard UserDefaults
@@ -257,14 +276,14 @@ struct ContentView: View {
                     }
                 )
                 .onAppear {
-                    // Mark onboarding complete once user reaches the main screen
                     if !hasCompletedOnboarding {
+                        // First time reaching landing page — show trial welcome
                         hasCompletedOnboarding = true
-                        // First time reaching landing page — let user explore before paywall
-                        return
+                        showTrialWelcome = true
+                    } else if isTrialExpired && !subscriptionManager.isSubscribed {
+                        // Returning user with expired trial — show paywall
+                        showPaywall = true
                     }
-                    // Returning user: wait for entitlement check, then show paywall if needed
-                    // (don't show while still loading to avoid false-positive flash)
                 }
             } else if let selectedNjutning = selectedNjutning {
                 NjutningsInställningarView(
@@ -278,12 +297,16 @@ struct ContentView: View {
                 NjutningsValView(selection: $selectedNjutning)
             }
         }
+        .sheet(isPresented: $showTrialWelcome) {
+            TrialWelcomeView()
+        }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
+                .interactiveDismissDisabled(isTrialExpired && !subscriptionManager.isSubscribed)
         }
         .onChange(of: subscriptionManager.hasLoadedEntitlements) { _, loaded in
-            // Once entitlements are loaded, show paywall for returning non-subscribed users
-            if loaded && hasCompletedOnboarding && !subscriptionManager.isSubscribed {
+            // Once entitlements are loaded, show paywall if trial expired
+            if loaded && hasCompletedOnboarding && isTrialExpired && !subscriptionManager.isSubscribed {
                 showPaywall = true
             }
         }
@@ -880,6 +903,79 @@ struct CustomLogoView: View {
                         .rotationEffect(.degrees(Double(index) * 72)) // 360/5 = 72 degrees
                         .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
                 }
+            }
+        }
+    }
+}
+
+// MARK: - Trial Welcome View
+struct TrialWelcomeView: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        ZStack {
+            // Same mesh gradient background as PaywallView
+            MeshGradientBackground()
+                .ignoresSafeArea()
+
+            VStack(spacing: 32) {
+                Spacer()
+
+                // App icon
+                CustomLogoView()
+                    .frame(width: 140, height: 140)
+
+                // Title
+                Text(NSLocalizedString("trial_welcome.title", comment: ""))
+                    .font(.system(size: 34, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+
+                // Body text
+                Text(NSLocalizedString("trial_welcome.body", comment: ""))
+                    .font(.system(size: 17, weight: .medium, design: .rounded))
+                    .foregroundColor(.white.opacity(0.85))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 32)
+
+                Spacer()
+
+                // CTA button
+                Button {
+                    dismiss()
+                } label: {
+                    Text(NSLocalizedString("trial_welcome.button", comment: ""))
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 20)
+                        .background(
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 22)
+                                    .fill(AppTheme.successGradient)
+                                RoundedRectangle(cornerRadius: 22)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [.white.opacity(0.25), .clear],
+                                            startPoint: .top,
+                                            endPoint: .center
+                                        )
+                                    )
+                                RoundedRectangle(cornerRadius: 22)
+                                    .stroke(
+                                        LinearGradient(
+                                            colors: [.white.opacity(0.4), .white.opacity(0.1)],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        ),
+                                        lineWidth: 1.5
+                                    )
+                            }
+                        )
+                        .shadow(color: Color.green.opacity(0.5), radius: 20, x: 0, y: 10)
+                }
+                .padding(.horizontal, 24)
+                .padding(.bottom, 50)
             }
         }
     }
