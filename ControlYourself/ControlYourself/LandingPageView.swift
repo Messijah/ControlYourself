@@ -705,9 +705,9 @@ struct LandingPageView: View {
                             }
                         }
 
-                        // Status message - subtly embedded
+                        // Status message - subtly embedded, constrained to fit inside ring
                         Text(isFirstOfDay ? morningMessages[encouragementIndex] : (isReady ? celebrationMessages[encouragementIndex] : encouragementMessages[encouragementIndex]))
-                            .font(.system(size: 15, weight: .semibold, design: .rounded))
+                            .font(.system(size: 14, weight: .semibold, design: .rounded))
                             .foregroundStyle(
                                 LinearGradient(
                                     colors: [.white.opacity(0.9), .white.opacity(0.7)],
@@ -716,7 +716,9 @@ struct LandingPageView: View {
                                 )
                             )
                             .multilineTextAlignment(.center)
-                            .padding(.horizontal, 30)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.75)
+                            .frame(maxWidth: 200)
                     }
                 }
                 .padding(.vertical, 24)
