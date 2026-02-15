@@ -320,7 +320,7 @@ class LanguageManager: ObservableObject {
         }
     }
 
-    /// The custom bundle used for overriding localization. Accessed by BundleExtension.
+    /// The bundle used for localization override. nil means use system default.
     var customBundle: Bundle?
 
     /// Incremented to force SwiftUI view rebuilds after language change
@@ -356,19 +356,37 @@ class LanguageManager: ObservableObject {
         return NSLocalizedString(key, comment: comment)
     }
 
-    /// Swizzle Bundle.main to redirect localizedString calls through LanguageManager
+    /// Swizzle Bundle.main to redirect localizedString calls through LanguageManager.
+    /// Must be called once at app launch, before any UI is created.
     static func setupBundleSwizzling() {
         object_setClass(Bundle.main, BundleExtension.self)
     }
 }
 
-/// Bundle subclass that overrides localization to use LanguageManager's custom bundle
+/// Bundle subclass that overrides localization to use LanguageManager's custom bundle.
+/// When customBundle is nil (system mode), we resolve the device's preferred language
+/// ourselves using Bundle.preferredLocalizations, since the swizzled super call
+/// can cause infinite recursion.
 class BundleExtension: Bundle {
     override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
+        // If a custom language is selected, use that bundle
         if let bundle = LanguageManager.shared.customBundle {
             return bundle.localizedString(forKey: key, value: value, table: tableName)
         }
-        return super.localizedString(forKey: key, value: value, table: tableName)
+        // System mode: resolve the device's preferred language from our available localizations.
+        // We can't call super here (it would recurse), so we find the right .lproj manually.
+        let preferred = Bundle.preferredLocalizations(from: self.localizations, forPreferences: nil)
+        if let lang = preferred.first,
+           let path = self.path(forResource: lang, ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        }
+        // Ultimate fallback: English
+        if let path = self.path(forResource: "en", ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        }
+        return value ?? key
     }
 }
 
