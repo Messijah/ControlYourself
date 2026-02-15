@@ -320,7 +320,11 @@ class LanguageManager: ObservableObject {
         }
     }
 
-    private var customBundle: Bundle?
+    /// The custom bundle used for overriding localization. Accessed by BundleExtension.
+    var customBundle: Bundle?
+
+    /// Incremented to force SwiftUI view rebuilds after language change
+    @Published var refreshID = UUID()
 
     init() {
         let saved = UserDefaults.standard.string(forKey: "selectedLanguage") ?? "system"
@@ -341,6 +345,8 @@ class LanguageManager: ObservableObject {
             }
             UserDefaults.standard.set([currentLanguage.rawValue], forKey: "AppleLanguages")
         }
+        // Force all SwiftUI views to rebuild with new strings
+        refreshID = UUID()
     }
 
     func localizedString(_ key: String, comment: String = "") -> String {
@@ -348,6 +354,21 @@ class LanguageManager: ObservableObject {
             return bundle.localizedString(forKey: key, value: nil, table: nil)
         }
         return NSLocalizedString(key, comment: comment)
+    }
+
+    /// Swizzle Bundle.main to redirect localizedString calls through LanguageManager
+    static func setupBundleSwizzling() {
+        object_setClass(Bundle.main, BundleExtension.self)
+    }
+}
+
+/// Bundle subclass that overrides localization to use LanguageManager's custom bundle
+class BundleExtension: Bundle {
+    override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
+        if let bundle = LanguageManager.shared.customBundle {
+            return bundle.localizedString(forKey: key, value: value, table: tableName)
+        }
+        return super.localizedString(forKey: key, value: value, table: tableName)
     }
 }
 
