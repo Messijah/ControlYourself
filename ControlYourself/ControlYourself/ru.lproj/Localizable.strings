@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Оповещения о завершении";
 "settings.timer_notification_subtitle" = "Вибрация и звук при завершении";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Отображение таймера";
 "settings.timer_format_subtitle" = "Как отображается таймер";

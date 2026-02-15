@@ -180,6 +180,11 @@
 "theme.sunset_orange" = "Solnedgång";
 "theme.forest_green" = "Skogsgrönt";
 
+/* Language Settings */
+"settings.language_title" = "Språk";
+"settings.language_restart_hint" = "Starta om appen för full effekt";
+"language.system" = "Systemstandard";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer-format";
 "settings.timer_format_subtitle" = "Hur timern ska visas";

@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Varslinger ved fullføring";
 "settings.timer_notification_subtitle" = "Vibrer og lyd når ferdig";
 
+/* Language Settings */
+"settings.language_title" = "Språk";
+"settings.language_restart_hint" = "Start appen på nytt for full effekt";
+"language.system" = "Systemstandard";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timervisning";
 "settings.timer_format_subtitle" = "Hvordan timeren vises";

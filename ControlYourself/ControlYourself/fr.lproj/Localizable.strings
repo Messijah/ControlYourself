@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Alertes de fin";
 "settings.timer_notification_subtitle" = "Vibration et son à la fin";
 
+/* Language Settings */
+"settings.language_title" = "Langue";
+"settings.language_restart_hint" = "Redémarrez l'app pour un effet complet";
+"language.system" = "Langue du système";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Affichage du minuteur";
 "settings.timer_format_subtitle" = "Comment le minuteur est affiché";

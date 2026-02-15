@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "完成提醒";
 "settings.timer_notification_subtitle" = "完成时振动和声音";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "计时器显示";
 "settings.timer_format_subtitle" = "计时器显示方式";

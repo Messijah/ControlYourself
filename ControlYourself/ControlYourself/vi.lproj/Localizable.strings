@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Cảnh báo hoàn thành";
 "settings.timer_notification_subtitle" = "Rung và âm thanh khi hoàn thành";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Hiển thị bộ đếm thời gian";
 "settings.timer_format_subtitle" = "Cách hiển thị bộ đếm thời gian";

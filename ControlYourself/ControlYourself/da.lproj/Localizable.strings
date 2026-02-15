@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Færdighedsalarmer";
 "settings.timer_notification_subtitle" = "Vibration og lyd når færdig";
 
+/* Language Settings */
+"settings.language_title" = "Sprog";
+"settings.language_restart_hint" = "Genstart appen for fuld effekt";
+"language.system" = "Systemstandard";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timervisning";
 "settings.timer_format_subtitle" = "Hvordan timeren vises";

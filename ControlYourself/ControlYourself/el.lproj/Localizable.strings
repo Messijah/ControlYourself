@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Ειδοποιήσεις ολοκλήρωσης";
 "settings.timer_notification_subtitle" = "Δόνηση και ήχος όταν τελειώσει";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Εμφάνιση χρονομέτρου";
 "settings.timer_format_subtitle" = "Πώς εμφανίζεται το χρονόμετρο";

@@ -178,6 +178,11 @@
 "theme.sunset_orange" = "Sunset Orange";
 "theme.forest_green" = "Forest Green";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Timer display";
 "settings.timer_format_subtitle" = "How timer is shown";

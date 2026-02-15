@@ -237,6 +237,125 @@ class ThemeManager: ObservableObject {
     }
 }
 
+// MARK: - Language Manager
+enum AppLanguage: String, CaseIterable, Identifiable {
+    case system = "system"
+    case en = "en"
+    case sv = "sv"
+    case de = "de"
+    case fr = "fr"
+    case es = "es"
+    case nb = "nb"
+    case da = "da"
+    case nl = "nl"
+    case fi = "fi"
+    case it = "it"
+    case pt = "pt"
+    case pl = "pl"
+    case cs = "cs"
+    case hu = "hu"
+    case el = "el"
+    case tr = "tr"
+    case ru = "ru"
+    case ar = "ar"
+    case ja = "ja"
+    case ko = "ko"
+    case zhHans = "zh-Hans"
+    case zhHant = "zh-Hant"
+    case th = "th"
+    case vi = "vi"
+    case id = "id"
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        if self == .system {
+            return NSLocalizedString("language.system", comment: "")
+        }
+        let locale = Locale(identifier: rawValue)
+        // Show language name in its own language
+        let nativeName = locale.localizedString(forLanguageCode: rawValue)?.capitalized ?? rawValue
+        return nativeName
+    }
+
+    var flag: String {
+        switch self {
+        case .system: return "🌐"
+        case .en: return "🇬🇧"
+        case .sv: return "🇸🇪"
+        case .de: return "🇩🇪"
+        case .fr: return "🇫🇷"
+        case .es: return "🇪🇸"
+        case .nb: return "🇳🇴"
+        case .da: return "🇩🇰"
+        case .nl: return "🇳🇱"
+        case .fi: return "🇫🇮"
+        case .it: return "🇮🇹"
+        case .pt: return "🇵🇹"
+        case .pl: return "🇵🇱"
+        case .cs: return "🇨🇿"
+        case .hu: return "🇭🇺"
+        case .el: return "🇬🇷"
+        case .tr: return "🇹🇷"
+        case .ru: return "🇷🇺"
+        case .ar: return "🇸🇦"
+        case .ja: return "🇯🇵"
+        case .ko: return "🇰🇷"
+        case .zhHans: return "🇨🇳"
+        case .zhHant: return "🇹🇼"
+        case .th: return "🇹🇭"
+        case .vi: return "🇻🇳"
+        case .id: return "🇮🇩"
+        }
+    }
+}
+
+class LanguageManager: ObservableObject {
+    static let shared = LanguageManager()
+
+    @Published var currentLanguage: AppLanguage {
+        didSet {
+            UserDefaults.standard.set(currentLanguage.rawValue, forKey: "selectedLanguage")
+            applyLanguage()
+        }
+    }
+
+    private var customBundle: Bundle?
+
+    init() {
+        let saved = UserDefaults.standard.string(forKey: "selectedLanguage") ?? "system"
+        self.currentLanguage = AppLanguage(rawValue: saved) ?? .system
+        applyLanguage()
+    }
+
+    func applyLanguage() {
+        if currentLanguage == .system {
+            customBundle = nil
+            UserDefaults.standard.removeObject(forKey: "AppleLanguages")
+        } else {
+            if let path = Bundle.main.path(forResource: currentLanguage.rawValue, ofType: "lproj"),
+               let bundle = Bundle(path: path) {
+                customBundle = bundle
+            } else {
+                customBundle = nil
+            }
+            UserDefaults.standard.set([currentLanguage.rawValue], forKey: "AppleLanguages")
+        }
+    }
+
+    func localizedString(_ key: String, comment: String = "") -> String {
+        if let bundle = customBundle {
+            return bundle.localizedString(forKey: key, value: nil, table: nil)
+        }
+        return NSLocalizedString(key, comment: comment)
+    }
+}
+
+// Global helper function for localization
+func L(_ key: String) -> String {
+    return LanguageManager.shared.localizedString(key)
+}
+
 // MARK: - Timer Completion Sounds
 struct TimerSound: Identifiable, Hashable {
     let id: UInt32
@@ -1261,6 +1380,9 @@ struct SettingsView: View {
     @State private var showSoundPicker = false
     @State private var selectedTheme: AppColorTheme
     @State private var showThemePicker = false
+    @State private var showLanguagePicker = false
+    @State private var selectedLanguage: AppLanguage
+    @ObservedObject var languageManager = LanguageManager.shared
     @State private var showPaywall = false
     // Auto-progression state
     @State private var showProgressionSetup = false
@@ -1366,6 +1488,10 @@ struct SettingsView: View {
         // Load Theme setting (default to purpleDream)
         let savedTheme = UserDefaults.standard.string(forKey: "selectedTheme") ?? AppColorTheme.purpleDream.rawValue
         _selectedTheme = State(initialValue: AppColorTheme(rawValue: savedTheme) ?? .purpleDream)
+
+        // Load Language setting (default to system)
+        let savedLang = UserDefaults.standard.string(forKey: "selectedLanguage") ?? "system"
+        _selectedLanguage = State(initialValue: AppLanguage(rawValue: savedLang) ?? .system)
     }
 
     var body: some View {
@@ -2220,6 +2346,99 @@ struct SettingsView: View {
                                         .buttonStyle(PlainButtonStyle())
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+
+                    // Language Picker
+                    GlassCard {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button {
+                                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                    showLanguagePicker.toggle()
+                                }
+                            } label: {
+                                HStack(spacing: 14) {
+                                    Image(systemName: "globe")
+                                        .font(.system(size: 22, weight: .semibold))
+                                        .foregroundStyle(
+                                            LinearGradient(
+                                                colors: [.blue, .green],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(NSLocalizedString("settings.language_title", comment: ""))
+                                            .font(.system(size: 15, weight: .bold, design: .rounded))
+                                            .foregroundColor(.white)
+
+                                        Text("\(selectedLanguage.flag) \(selectedLanguage.displayName)")
+                                            .font(.system(size: 13, weight: .medium, design: .rounded))
+                                            .foregroundColor(.white.opacity(0.75))
+                                    }
+
+                                    Spacer()
+
+                                    Image(systemName: showLanguagePicker ? "chevron.up" : "chevron.down")
+                                        .font(.system(size: 14, weight: .semibold))
+                                        .foregroundColor(.white.opacity(0.6))
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+
+                            if showLanguagePicker {
+                                Divider()
+                                    .background(Color.white.opacity(0.2))
+                                    .padding(.vertical, 4)
+
+                                VStack(spacing: 8) {
+                                    ForEach(AppLanguage.allCases) { language in
+                                        Button {
+                                            let generator = UIImpactFeedbackGenerator(style: .light)
+                                            generator.impactOccurred()
+
+                                            selectedLanguage = language
+                                            languageManager.currentLanguage = language
+                                        } label: {
+                                            HStack {
+                                                Text(language.flag)
+                                                    .font(.system(size: 20))
+
+                                                Text(language.displayName)
+                                                    .font(.system(size: 14, weight: .medium, design: .rounded))
+                                                    .foregroundColor(.white.opacity(0.9))
+
+                                                Spacer()
+
+                                                if selectedLanguage == language {
+                                                    Image(systemName: "checkmark.circle.fill")
+                                                        .font(.system(size: 18))
+                                                        .foregroundColor(.green)
+                                                } else {
+                                                    Image(systemName: "circle")
+                                                        .font(.system(size: 18))
+                                                        .foregroundColor(.white.opacity(0.3))
+                                                }
+                                            }
+                                            .padding(.vertical, 8)
+                                            .padding(.horizontal, 12)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .fill(selectedLanguage == language ? Color.white.opacity(0.15) : Color.clear)
+                                            )
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
+                                    }
+                                }
+
+                                Text(NSLocalizedString("settings.language_restart_hint", comment: ""))
+                                    .font(.system(size: 11, weight: .regular, design: .rounded))
+                                    .foregroundColor(.white.opacity(0.5))
+                                    .padding(.top, 4)
                             }
                         }
                     }

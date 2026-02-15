@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Upozornění na dokončení";
 "settings.timer_notification_subtitle" = "Vibrace a zvuk při dokončení";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Zobrazení časovače";
 "settings.timer_format_subtitle" = "Jak se zobrazuje časovač";

@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "Alertas de finalización";
 "settings.timer_notification_subtitle" = "Vibración y sonido al finalizar";
 
+/* Language Settings */
+"settings.language_title" = "Idioma";
+"settings.language_restart_hint" = "Reinicia la app para efecto completo";
+"language.system" = "Predeterminado del sistema";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "Visualización del temporizador";
 "settings.timer_format_subtitle" = "Cómo se muestra el temporizador";

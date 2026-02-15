@@ -160,6 +160,11 @@
 "settings.timer_notification_title" = "完了アラート";
 "settings.timer_notification_subtitle" = "完了時に振動と音";
 
+/* Language Settings */
+"settings.language_title" = "Language";
+"settings.language_restart_hint" = "Restart the app for full effect";
+"language.system" = "System default";
+
 /* Timer Format Settings */
 "settings.timer_format_title" = "タイマー表示";
 "settings.timer_format_subtitle" = "タイマーの表示方法";
